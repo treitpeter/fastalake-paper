@@ -1,0 +1,1 @@
+{"bins": 1000, "bw": 1.0, "monotonic": true, "validated_by": "job 6057983 validate_0.tsv: p99 |dlog10PEP| 3e-5, 0 gate disagreements over 30 fold searches; max inf only where PEP=0"}

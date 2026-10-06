@@ -1,0 +1,24 @@
+{
+  "unit": "STab3",
+  "upstream": [
+    {
+      "id": "predict_rifaximin_sensitivity",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_rifaximin/rifaximin_sensitivity.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_rifaximin/run.sbatch",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/figure_sd/source_data/build/specials.py"
+      ],
+      "uses": "the whole analysis (four exposure definitions, paired inference, counts) and the workbook assembly; ported into tables/STab3/panels.py and recomputed by the notebook",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_clinical_refit",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/clinical_refit.py",
+        "LAB_ROOT/FIGURATOR/Figure4/v5_2026-09-07/derive_clinical.py"
+      ],
+      "uses": "acquisition_accounting.tsv (controlled: per-acquisition patient id, antibiotic state, origin fractions, protein-group count) as input; clinical_paired_statistics.tsv as the definition-A gate (source_data/STab3/primary_paired_statistics.tsv)",
+      "pipeline_dir": null
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+v28d_line	quote	printed_value	recomputed_value	code	source_data	status
+74	pathway-level RNA–protein agreement was weaker (ρ=0.16	0.16	0.15913466905788845	figures/SFig11/panels.py:stat_functional_family; stat_line139	source_data/SFig11/distances_PREDICT_functional.tsv	MATCH
+74	ρ=0.16, q=0.024; Supplementary Fig. 11a	0.024	0.02373913043478261	figures/SFig11/panels.py:stat_functional_family; stat_line139	source_data/SFig11/distances_PREDICT_functional.tsv	MATCH
+83	whereas 9 of 24 rank-based comparisons did not	9	9	figures/SFig11/panels.py:stat_controlled; stat_panel_f_counts (rank_not_significant)	source_data/SFig11/distances_CAPSCAN_controlled.tsv	MATCH
+83	whereas 9 of 24 rank-based comparisons did not	24	24	figures/SFig11/panels.py:stat_panel_f_counts (rank_n)	source_data/SFig11/distances_CAPSCAN_controlled.tsv	MATCH
+241	KEGG pathway distance correlations for 77 PREDICT patients	77	77	figures/SFig11/panels.py:stat_design (predict_patients)	source_data/SFig11/native_correlations_PREDICT.tsv; source_data/SFig11/controlled_176_comparisons.tsv	MATCH
+241	the CapScan roster of thirteen participants	thirteen	thirteen	figures/SFig11/panels.py:stat_design (capscan_participants)	source_data/Fig5/native_correlations.tsv; source_data/SFig11/controlled_176_comparisons.tsv	MATCH
+241	thirteen participants with all five sampling groups	five	five	figures/SFig11/panels.py:stat_design (capscan_groups_per_participant)	source_data/Fig5/native_correlations.tsv; source_data/SFig11/controlled_176_comparisons.tsv	MATCH
+241	after 1,999 design-preserving permutations	1,999	1999	figures/SFig11/panels.py:recompute_all; stat_design (permutations_from_min_p)	source_data/SFig11/distances_*.tsv; source_data/Fig5/*_distances_long.tsv	MATCH
+241	all 176 controlled estimates	176	176	figures/SFig11/panels.py:stat_design (controlled_estimates); stat_controlled	source_data/SFig11/controlled_176_comparisons.tsv	MATCH
+416	retained a median of 26.5% and 21.0% of sequence-resolved PREDICT DNA	26.5%	26.549664715807825	figures/SFig11/panels.py:stat_retention (DNA)	source_data/SFig11/predict_native_retained_signal.tsv	MATCH
+416	retained a median of 26.5% and 21.0% of sequence-resolved PREDICT DNA	21.0%	20.999248746383408	figures/SFig11/panels.py:stat_retention (RNA)	source_data/SFig11/predict_native_retained_signal.tsv	MATCH
+421	9 of 24 region-adjusted CapScan comparisons	9	9	figures/SFig11/panels.py:stat_controlled; stat_panel_f_counts (rank_not_significant)	source_data/SFig11/distances_CAPSCAN_controlled.tsv	MATCH
+421	9 of 24 region-adjusted CapScan comparisons	24	24	figures/SFig11/panels.py:stat_panel_f_counts (rank_n)	source_data/SFig11/distances_CAPSCAN_controlled.tsv	MATCH
+421	one of four non-host protein–metabolite	one	one	figures/SFig11/panels.py:stat_controlled; stat_panel_f_counts (rank_not_significant_by_pair)	source_data/SFig11/distances_CAPSCAN_controlled.tsv	MATCH
+421	all four host protein–metabolite	four	four	figures/SFig11/panels.py:stat_controlled; stat_panel_f_counts (rank_not_significant_by_pair)	source_data/SFig11/distances_CAPSCAN_controlled.tsv	MATCH
+421	two of four DNA–metabolite	two	two	figures/SFig11/panels.py:stat_controlled; stat_panel_f_counts (rank_not_significant_by_pair)	source_data/SFig11/distances_CAPSCAN_controlled.tsv	MATCH
+421	two of four DNA–host protein comparisons	two	two	figures/SFig11/panels.py:stat_controlled; stat_panel_f_counts (rank_not_significant_by_pair)	source_data/SFig11/distances_CAPSCAN_controlled.tsv	MATCH
+421	All 24 Hellinger-distance comparisons met it	24	24	figures/SFig11/panels.py:stat_controlled; stat_panel_f_counts (hellinger_significant)	source_data/SFig11/distances_CAPSCAN_controlled.tsv	MATCH
+427	within the thirteen-participant population	thirteen	thirteen	figures/SFig11/panels.py:stat_design (capscan_participants)	source_data/Fig5/functional_distances_long.tsv	MATCH
+427	using 1,999 whole-participant block permutations	1,999	1999	figures/SFig11/panels.py:stat_functional_family; stat_design (permutations_from_min_p)	source_data/Fig5/functional_distances_long.tsv	MATCH
+427	jointly across all 16 functional-profile comparisons	16	16	figures/SFig11/panels.py:stat_functional_family; stat_design (capscan_functional_family)	source_data/Fig5/functional_distances_long.tsv	MATCH

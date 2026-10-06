@@ -1,0 +1,127 @@
+rank	members	degree	n_peptides	drawn
+1	Bacteroides thetaiotaomicron	1	31263	True
+2	(none of the eight)	0	9246	False
+3	Blautia producta	1	7736	True
+4	Erysipelatoclostridium ramosum	1	7173	True
+5	Escherichia coli	1	5569	True
+6	Anaerostipes caccae	1	2538	True
+7	Anaerostipes caccae|Blautia producta	2	475	True
+8	Bifidobacterium longum	1	74	True
+9	Blautia producta|Clostridium butyricum	2	63	True
+10	Anaerostipes caccae|Blautia producta|Clostridium butyricum	3	51	True
+11	Blautia producta|Erysipelatoclostridium ramosum	2	46	True
+12	Anaerostipes caccae|Erysipelatoclostridium ramosum	2	45	True
+13	Bacteroides thetaiotaomicron|Escherichia coli	2	40	True
+14	Clostridium butyricum|Erysipelatoclostridium ramosum	2	35	False
+15	Anaerostipes caccae|Blautia producta|Erysipelatoclostridium ramosum	3	29	False
+16	Anaerostipes caccae|Clostridium butyricum	2	29	False
+17	Bacteroides thetaiotaomicron|Blautia producta	2	23	False
+18	Bacteroides thetaiotaomicron|Erysipelatoclostridium ramosum	2	21	False
+19	Clostridium butyricum	1	20	True
+20	Anaerostipes caccae|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum	4	19	False
+21	Bacteroides thetaiotaomicron|Clostridium butyricum	2	15	False
+22	Anaerostipes caccae|Bacteroides thetaiotaomicron	2	14	False
+23	Bacteroides thetaiotaomicron|Bifidobacterium longum	2	14	False
+24	Erysipelatoclostridium ramosum|Lactobacillus plantarum	2	12	False
+25	Anaerostipes caccae|Bacteroides thetaiotaomicron|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum	5	11	False
+26	Blautia producta|Escherichia coli	2	11	False
+27	Erysipelatoclostridium ramosum|Escherichia coli	2	11	False
+28	Escherichia coli|Lactobacillus plantarum	2	11	False
+29	Bacteroides thetaiotaomicron|Lactobacillus plantarum	2	10	False
+30	Anaerostipes caccae|Bacteroides thetaiotaomicron|Blautia producta|Clostridium butyricum	4	9	False
+31	Anaerostipes caccae|Blautia producta|Escherichia coli	3	9	False
+32	Bacteroides thetaiotaomicron|Blautia producta|Clostridium butyricum	3	9	False
+33	Blautia producta|Lactobacillus plantarum	2	9	False
+34	Clostridium butyricum|Escherichia coli	2	9	False
+35	Anaerostipes caccae|Blautia producta|Clostridium butyricum|Lactobacillus plantarum	4	8	False
+36	Anaerostipes caccae|Escherichia coli	2	7	False
+37	Anaerostipes caccae|Lactobacillus plantarum	2	7	False
+38	Lactobacillus plantarum	1	7	True
+39	Anaerostipes caccae|Bifidobacterium longum|Blautia producta	3	6	False
+40	Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum	3	6	False
+41	Anaerostipes caccae|Bacteroides thetaiotaomicron|Blautia producta|Clostridium butyricum|Escherichia coli	5	5	False
+42	Anaerostipes caccae|Bifidobacterium longum|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Lactobacillus plantarum	6	5	False
+43	Anaerostipes caccae|Clostridium butyricum|Erysipelatoclostridium ramosum	3	5	False
+44	Bacteroides thetaiotaomicron|Clostridium butyricum|Escherichia coli	3	5	False
+45	Bifidobacterium longum|Erysipelatoclostridium ramosum	2	5	False
+46	Bifidobacterium longum|Escherichia coli	2	5	False
+47	Blautia producta|Clostridium butyricum|Lactobacillus plantarum	3	5	False
+48	Erysipelatoclostridium ramosum|Escherichia coli|Lactobacillus plantarum	3	5	False
+49	Anaerostipes caccae|Bifidobacterium longum|Blautia producta|Clostridium butyricum	4	4	False
+50	Anaerostipes caccae|Bifidobacterium longum|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum	5	4	False
+51	Anaerostipes caccae|Bifidobacterium longum|Blautia producta|Clostridium butyricum|Escherichia coli|Lactobacillus plantarum	6	4	False
+52	Anaerostipes caccae|Blautia producta|Clostridium butyricum|Escherichia coli|Lactobacillus plantarum	5	4	False
+53	Anaerostipes caccae|Blautia producta|Lactobacillus plantarum	3	4	False
+54	Bacteroides thetaiotaomicron|Blautia producta|Erysipelatoclostridium ramosum	3	4	False
+55	Bacteroides thetaiotaomicron|Clostridium butyricum|Erysipelatoclostridium ramosum	3	4	False
+56	Clostridium butyricum|Erysipelatoclostridium ramosum|Lactobacillus plantarum	3	4	False
+57	Anaerostipes caccae|Bacteroides thetaiotaomicron|Bifidobacterium longum|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli|Lactobacillus plantarum	8	3	False
+58	Anaerostipes caccae|Bacteroides thetaiotaomicron|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli	6	3	False
+59	Anaerostipes caccae|Bacteroides thetaiotaomicron|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Lactobacillus plantarum	6	3	False
+60	Anaerostipes caccae|Bacteroides thetaiotaomicron|Escherichia coli	3	3	False
+61	Anaerostipes caccae|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Lactobacillus plantarum	5	3	False
+62	Anaerostipes caccae|Blautia producta|Erysipelatoclostridium ramosum|Escherichia coli	4	3	False
+63	Anaerostipes caccae|Erysipelatoclostridium ramosum|Lactobacillus plantarum	3	3	False
+64	Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Lactobacillus plantarum	4	3	False
+65	Anaerostipes caccae|Bacteroides thetaiotaomicron|Blautia producta	3	2	False
+66	Anaerostipes caccae|Bacteroides thetaiotaomicron|Blautia producta|Clostridium butyricum|Escherichia coli|Lactobacillus plantarum	6	2	False
+67	Anaerostipes caccae|Bacteroides thetaiotaomicron|Blautia producta|Erysipelatoclostridium ramosum|Escherichia coli	5	2	False
+68	Anaerostipes caccae|Bacteroides thetaiotaomicron|Erysipelatoclostridium ramosum	3	2	False
+69	Anaerostipes caccae|Bifidobacterium longum|Blautia producta|Erysipelatoclostridium ramosum|Escherichia coli	5	2	False
+70	Anaerostipes caccae|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli|Lactobacillus plantarum	6	2	False
+71	Bacteroides thetaiotaomicron|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum	4	2	False
+72	Bacteroides thetaiotaomicron|Blautia producta|Escherichia coli	3	2	False
+73	Bacteroides thetaiotaomicron|Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli	4	2	False
+74	Bifidobacterium longum|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli	5	2	False
+75	Bifidobacterium longum|Clostridium butyricum|Escherichia coli	3	2	False
+76	Bifidobacterium longum|Escherichia coli|Lactobacillus plantarum	3	2	False
+77	Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli|Lactobacillus plantarum	5	2	False
+78	Blautia producta|Erysipelatoclostridium ramosum|Escherichia coli	3	2	False
+79	Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli	3	2	False
+80	Clostridium butyricum|Escherichia coli|Lactobacillus plantarum	3	2	False
+81	Anaerostipes caccae|Bacteroides thetaiotaomicron|Bifidobacterium longum|Blautia producta	4	1	False
+82	Anaerostipes caccae|Bacteroides thetaiotaomicron|Bifidobacterium longum|Blautia producta|Clostridium butyricum|Escherichia coli	6	1	False
+83	Anaerostipes caccae|Bacteroides thetaiotaomicron|Bifidobacterium longum|Blautia producta|Clostridium butyricum|Lactobacillus plantarum	6	1	False
+84	Anaerostipes caccae|Bacteroides thetaiotaomicron|Bifidobacterium longum|Blautia producta|Erysipelatoclostridium ramosum|Escherichia coli|Lactobacillus plantarum	7	1	False
+85	Anaerostipes caccae|Bacteroides thetaiotaomicron|Bifidobacterium longum|Blautia producta|Erysipelatoclostridium ramosum|Lactobacillus plantarum	6	1	False
+86	Anaerostipes caccae|Bacteroides thetaiotaomicron|Bifidobacterium longum|Blautia producta|Escherichia coli|Lactobacillus plantarum	6	1	False
+87	Anaerostipes caccae|Bacteroides thetaiotaomicron|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli|Lactobacillus plantarum	7	1	False
+88	Anaerostipes caccae|Bacteroides thetaiotaomicron|Blautia producta|Escherichia coli	4	1	False
+89	Anaerostipes caccae|Bacteroides thetaiotaomicron|Clostridium butyricum	3	1	False
+90	Anaerostipes caccae|Bacteroides thetaiotaomicron|Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli|Lactobacillus plantarum	6	1	False
+91	Anaerostipes caccae|Bacteroides thetaiotaomicron|Escherichia coli|Lactobacillus plantarum	4	1	False
+92	Anaerostipes caccae|Bifidobacterium longum|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli|Lactobacillus plantarum	7	1	False
+93	Anaerostipes caccae|Bifidobacterium longum|Blautia producta|Clostridium butyricum|Escherichia coli	5	1	False
+94	Anaerostipes caccae|Bifidobacterium longum|Blautia producta|Erysipelatoclostridium ramosum	4	1	False
+95	Anaerostipes caccae|Bifidobacterium longum|Blautia producta|Erysipelatoclostridium ramosum|Lactobacillus plantarum	5	1	False
+96	Anaerostipes caccae|Bifidobacterium longum|Blautia producta|Escherichia coli|Lactobacillus plantarum	5	1	False
+97	Anaerostipes caccae|Bifidobacterium longum|Blautia producta|Lactobacillus plantarum	4	1	False
+98	Anaerostipes caccae|Bifidobacterium longum|Escherichia coli|Lactobacillus plantarum	4	1	False
+99	Anaerostipes caccae|Blautia producta|Clostridium butyricum|Escherichia coli	4	1	False
+100	Anaerostipes caccae|Blautia producta|Erysipelatoclostridium ramosum|Lactobacillus plantarum	4	1	False
+101	Anaerostipes caccae|Clostridium butyricum|Escherichia coli	3	1	False
+102	Anaerostipes caccae|Erysipelatoclostridium ramosum|Escherichia coli	3	1	False
+103	Anaerostipes caccae|Escherichia coli|Lactobacillus plantarum	3	1	False
+104	Bacteroides thetaiotaomicron|Bifidobacterium longum|Blautia producta|Clostridium butyricum	4	1	False
+105	Bacteroides thetaiotaomicron|Bifidobacterium longum|Blautia producta|Clostridium butyricum|Escherichia coli	5	1	False
+106	Bacteroides thetaiotaomicron|Bifidobacterium longum|Blautia producta|Erysipelatoclostridium ramosum|Lactobacillus plantarum	5	1	False
+107	Bacteroides thetaiotaomicron|Bifidobacterium longum|Clostridium butyricum	3	1	False
+108	Bacteroides thetaiotaomicron|Bifidobacterium longum|Clostridium butyricum|Escherichia coli	4	1	False
+109	Bacteroides thetaiotaomicron|Bifidobacterium longum|Clostridium butyricum|Escherichia coli|Lactobacillus plantarum	5	1	False
+110	Bacteroides thetaiotaomicron|Bifidobacterium longum|Erysipelatoclostridium ramosum	3	1	False
+111	Bacteroides thetaiotaomicron|Bifidobacterium longum|Erysipelatoclostridium ramosum|Escherichia coli	4	1	False
+112	Bacteroides thetaiotaomicron|Bifidobacterium longum|Escherichia coli	3	1	False
+113	Bacteroides thetaiotaomicron|Bifidobacterium longum|Lactobacillus plantarum	3	1	False
+114	Bacteroides thetaiotaomicron|Blautia producta|Erysipelatoclostridium ramosum|Lactobacillus plantarum	4	1	False
+115	Bacteroides thetaiotaomicron|Clostridium butyricum|Lactobacillus plantarum	3	1	False
+116	Bacteroides thetaiotaomicron|Escherichia coli|Lactobacillus plantarum	3	1	False
+117	Bifidobacterium longum|Blautia producta	2	1	False
+118	Bifidobacterium longum|Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli|Lactobacillus plantarum	6	1	False
+119	Bifidobacterium longum|Blautia producta|Clostridium butyricum|Escherichia coli|Lactobacillus plantarum	5	1	False
+120	Bifidobacterium longum|Blautia producta|Erysipelatoclostridium ramosum	3	1	False
+121	Bifidobacterium longum|Blautia producta|Escherichia coli	3	1	False
+122	Bifidobacterium longum|Clostridium butyricum|Erysipelatoclostridium ramosum	3	1	False
+123	Bifidobacterium longum|Erysipelatoclostridium ramosum|Escherichia coli|Lactobacillus plantarum	4	1	False
+124	Bifidobacterium longum|Erysipelatoclostridium ramosum|Lactobacillus plantarum	3	1	False
+125	Blautia producta|Clostridium butyricum|Erysipelatoclostridium ramosum|Escherichia coli	4	1	False
+126	Blautia producta|Erysipelatoclostridium ramosum|Lactobacillus plantarum	3	1	False

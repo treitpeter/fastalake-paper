@@ -1,0 +1,2 @@
+- PIPELINE: predict_eds_focused_pairs: no job id or resource record found for the original run of build_approved_eds_cr003.py.
+- PIPELINE: predict_eds_focused_pairs: plan names `focused_values.tsv` and `patients.tsv`; actual files are `focused_values.npz` and `patient_order_and_covariates.tsv` (clinical covariates, must stay controlled). Confirm the STab4 Focused_* sheets use these.

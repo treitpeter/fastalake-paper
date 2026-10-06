@@ -1,0 +1,11 @@
+acquisition_id	recorded_sample_number	participant_id	MG_set_in_frozen_manifest	MG_config_in_frozen_manifest	available_arms	reason
+20191024_QX7_PeTr_LC02_SA_MicrobPred_33	33	PREDICT_P081	False	False	FL_cohortMG;FL_public	no matched MG set/config in frozen comparison manifest; underlying cause not assigned
+20191024_QX7_PeTr_LC02_SA_MicrobPred_62	62	PREDICT_P059	False	False	FL_cohortMG;FL_public	no matched MG set/config in frozen comparison manifest; underlying cause not assigned
+20191116_QX7_PeTr_LC02_SA_MicrobPred_173	173	PREDICT_P022	False	False	FL_cohortMG;FL_public	no matched MG set/config in frozen comparison manifest; underlying cause not assigned
+20191116_QX7_PeTr_LC02_SA_MicrobPred_174	174	PREDICT_P022	False	False	FL_cohortMG;FL_public	no matched MG set/config in frozen comparison manifest; underlying cause not assigned
+20191116_QX7_PeTr_LC02_SA_MicrobPred_177	177	PREDICT_P055	False	False	FL_cohortMG;FL_public	no matched MG set/config in frozen comparison manifest; underlying cause not assigned
+20191211_QX7_PeTr_LC02_SA_MicrobPred_6	6	PREDICT_P034	False	False	FL_cohortMG;FL_public	no matched MG set/config in frozen comparison manifest; underlying cause not assigned
+20191213_QX7_PeTr_LC02_SA_MicrobPred_170	170	PREDICT_P068	False	False	FL_cohortMG;FL_public	no matched MG set/config in frozen comparison manifest; underlying cause not assigned
+20191213_QX7_PeTr_LC02_SA_MicrobPred_211	211	PREDICT_P089	False	False	FL_cohortMG;FL_public	no matched MG set/config in frozen comparison manifest; underlying cause not assigned
+20191213_QX7_PeTr_LC02_SA_MicrobPred_211_191217010211	211	PREDICT_P089	False	False	FL_cohortMG;FL_public	no matched MG set/config in frozen comparison manifest; underlying cause not assigned
+20191213_QX7_PeTr_LC02_SA_MicrobPred_213	213	PREDICT_P058	False	False	FL_cohortMG;FL_public	no matched MG set/config in frozen comparison manifest; underlying cause not assigned

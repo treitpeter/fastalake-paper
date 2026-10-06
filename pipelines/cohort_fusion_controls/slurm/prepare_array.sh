@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+COHORT_NAMES=(CAMPI_MOCK HSTOOL PREDICT CAPSCAN)
+CONTROL_SEEDS=(20260907 20260908)
+exec bash ${PIPELINE_DIR}/slurm/job.sh prepare --cohort "${COHORT_NAMES[SLURM_ARRAY_TASK_ID / 2]}" --seed "${CONTROL_SEEDS[SLURM_ARRAY_TASK_ID % 2]}"

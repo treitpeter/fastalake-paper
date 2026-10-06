@@ -1,0 +1,182 @@
+{
+  "unit": "supplementary_methods_6_7",
+  "upstream": [
+    {
+      "id": "scramble_end_to_end_workflow",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/search_worker.py",
+        "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/submit_search.py",
+        "LAB_ROOT/review/v15_integration/build_evidence.py"
+      ],
+      "uses": "scramble_end_to_end.tsv and scramble_lookup_comparison.tsv (Source Data Review_v16/Terminal_scramble): selected-FASTA sizes, accepted peptides and query-match fractions, line 667",
+      "pipeline_dir": null
+    },
+    {
+      "id": "cohort_database_sizes",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A01_4_1_database_sizes/frozen/audit_v2.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/fig1bd_n15/acquisition_sizes_726.tsv"
+      ],
+      "uses": "acquisition_sizes_726.tsv and human_reference.tsv: 726 selected FASTAs, 20,431 Swiss-Prot entries, reservoir sizes, lines 665, 673-675, 713",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_selection_sweep",
+      "original_code_paths": [
+        "LAB_ROOT/canonical/publication/analyses/length_score_sweep_hstool_2026-09-06/src/sweep_tables.py",
+        "LAB_ROOT/canonical/publication/analyses/length_score_sweep_hstool_2026-09-06/src/submit_arm.sh"
+      ],
+      "uses": "selection_grid_acquisitions.tsv: 58 acquisitions x 19 settings, line 679",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_variability",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/campi_variability_2026-09-30/analyze.py"
+      ],
+      "uses": "campi_spectral_inventory.tsv and the per-acquisition reference peptide frequencies (campi_reference_peptides.tsv): 38,254 MS2 spectra and 76,127 pooled reference peptides, line 687",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_reference_gap",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A14_4_3_campi_gap/frozen/search.py",
+        "LAB_ROOT/MM_review_analysis/A14_4_3_campi_gap/frozen/aggregate.py"
+      ],
+      "uses": "campi_member_summary.tsv and campi_recovery_summary.tsv (Source Data Figure2): eight members, pooled reference check, lines 683-687",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_candidate_clustering",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/analyses/clustering_90_95_2026-09-29/frozen/search.py",
+        "LAB_ROOT/review/v15_integration/analyses/clustering_90_95_2026-09-29/frozen/collect.py"
+      ],
+      "uses": "clustering_per_acquisition_identifications.tsv: 105 acquisition-arm configurations, line 695",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_fusion_375m",
+      "original_code_paths": [
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/campi_fusion_rerun/audit_fusion.py",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/campi_fusion_rerun/run_experiment.py",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/collision_repair/check_labels_repaired.py"
+      ],
+      "uses": "CAMPI rows of fusion_acquisition_components.tsv (lines 713-715), label-validity presence and result (line 721), CAMPI fusion searches under added gates (confidence_fusion_all.tsv, line 633)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_donor_entrapment",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A11_4_2_control_reconciliation/frozen/analysis.py",
+        "LAB_ROOT/MM_review_analysis/A11_4_2_control_reconciliation/frozen/donor_original.py"
+      ],
+      "uses": "donor_recount.tsv: 58 donor-selected and 5 self-selected targets, three seeds, zero score ties, lines 727-729",
+      "pipeline_dir": null
+    },
+    {
+      "id": "restricted_reference_simulation",
+      "original_code_paths": [
+        "LAB_ROOT/analyses/fdr_reference_benchmark_2026-09-10/generate.py",
+        "LAB_ROOT/analyses/fdr_reference_benchmark_2026-09-10/evaluate.py",
+        "LAB_ROOT/analyses/fdr_reference_benchmark_2026-09-10/collect.py",
+        "LAB_ROOT/analyses/fdr_reference_benchmark_2026-09-10/common.py"
+      ],
+      "uses": "simulation_all_outcomes.tsv (collect step primary.tsv) and design constants; the bootstrap of collect.py summarize() is ported as stats._sim_summary, line 733",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_database_transfer",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A15_4_4_transfer_pool/frozen/search.py",
+        "LAB_ROOT/MM_review_analysis/A15_4_4_transfer_pool/frozen/report.py"
+      ],
+      "uses": "transfer_pool_comparisons.tsv (results/all_comparisons.tsv): 58 targets and donor assignments, line 739",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_pooling_controls",
+      "original_code_paths": [
+        "LAB_ROOT/FIGURATOR/Figure3/review_2026-09-07/entrapment_pooling/prepare_record.py",
+        "LAB_ROOT/FIGURATOR/Figure3/review_2026-09-07/entrapment_pooling/run_task.py"
+      ],
+      "uses": "hstool_pooling_per_acquisition.tsv: shuffle-only observations, line 743",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_common_fasta",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A21_7_hstool_quant_comparison/frozen/search_revision2.py",
+        "LAB_ROOT/MM_review_analysis/A21_7_hstool_quant_comparison/frozen/compare_revision2.py",
+        "LAB_ROOT/MM_review_analysis/A21_7_hstool_quant_comparison/frozen/leaders_revision2.py"
+      ],
+      "uses": "common FASTA union summary (153,267, line 751) and the leading-species agreement table (line 769)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "peptide_centric_downstream",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/revised/derive_hstool_pc.py"
+      ],
+      "uses": "representative_presence.tsv: 43.2% of quantified features, line 751",
+      "pipeline_dir": null
+    },
+    {
+      "id": "cohort_selected_fasta_unions",
+      "original_code_paths": [
+        "LAB_ROOT/sample_specific_merge_all_raw/2026-09-11/code/workflow.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A7_other/union/scripts/run_union.py"
+      ],
+      "uses": "union_contributions.tsv (copied from source_data/methods): PREDICT 555,987 and CapScan 452,255 (331) or 460,977 (347) union sizes, line 751",
+      "pipeline_dir": null
+    },
+    {
+      "id": "cohort_spectrum_split_selection",
+      "original_code_paths": [
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/split_half_repair/pipeline.py",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/split_half_repair/v16_joint_disjoint_2026-09-27/code/completed_review/review.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/spectrum_split347/collect/collect347.py"
+      ],
+      "uses": "ACQUISITION_REVIEW.tsv (710 and the 726 re-run), SEARCH_MODEL_REVIEW.json (13 fallback searches, zero-yield arm), lines 755-761; roster counts reused for line 773",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_joint_search_q",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration2/joint_search/code/extract_fileq.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration2/joint_search/code/compare_fileq.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/proposals_science/slurm_joint_q/recount_joint_q.py"
+      ],
+      "uses": "joint_fileq coverage (permutation control), iteration-1 per-acquisition counts (32.0%, 32.9%, (D+1)/T control) and microbial_group_pairs.tsv, lines 765-769",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_crossfit_10fold",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/worker.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/sage_lda.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/run/analyze_final.py"
+      ],
+      "uses": "per-acquisition cross-fit table (Source Data package), fallback acquisitions, validation, one-fold control and pilot fold records; analyze_final.summarize() ported as stats.crossfit_bootstrap, lines 773-777",
+      "pipeline_dir": null
+    },
+    {
+      "id": "clinical_public_only_comparison",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A16_4_5_public_comparison/frozen/lib.py",
+        "LAB_ROOT/MM_review_analysis/A16_4_5_public_comparison/frozen/report.py",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/v15_MM_coauthor_2026-09-25/perfectification_2026-09-27/calibration_review_2026-09-27/summarize_ordinary.py"
+      ],
+      "uses": "confidence_ordinary_all_pairs.tsv (Review_v16/Confidence): 296/282 matched rosters (line 633) and same-spectrum gains at 9-50 and 5-8 residues (line 777)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "minlen7_search_sensitivity",
+      "original_code_paths": [
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/main_methods_pass_2026-09-24/review_decisions/M09_short_peptides/run_2026-09-24_minlen7/code"
+      ],
+      "uses": "minlen7_benchmark_per_acquisition.tsv (Supplementary_Figure_04 workbook sheet a_b): 14.5%/45.0% gains and 85.4%/84.0% recovery, line 777",
+      "pipeline_dir": null
+    }
+  ]
+}

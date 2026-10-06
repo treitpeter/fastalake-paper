@@ -1,0 +1,23 @@
+{
+  "null_control_by_acquisition_seed.tsv": {
+    "new_sha256": "3efbcb3f3dd8a19c141c836727bae8a2ee6676a8124b72b3fd580008c173e896",
+    "expected_sha256": "3efbcb3f3dd8a19c141c836727bae8a2ee6676a8124b72b3fd580008c173e896",
+    "identical": true
+  },
+  "null_control_summary.tsv": {
+    "new_sha256": "e794df7b7cbf3a57004123ee7b09405089c1f8a4b2d4cd942e1731bcdf720e2c",
+    "expected_sha256": "e794df7b7cbf3a57004123ee7b09405089c1f8a4b2d4cd942e1731bcdf720e2c",
+    "identical": true
+  },
+  "Supplementary_Table_6.xlsx": {
+    "identical": true,
+    "sheets": [
+      "Read me",
+      "Summary",
+      "Acquisition_seed_rows"
+    ],
+    "differences": [],
+    "expected_sha256": "11f7be117046d8eef2361ea05c2c710bed8728fa4587a96328bd6e9d74529ceb"
+  },
+  "result": "IDENTICAL"
+}

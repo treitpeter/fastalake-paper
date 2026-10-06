@@ -1,0 +1,167 @@
+{
+  "unit": "supplementary_methods_8_11",
+  "upstream": [
+    {
+      "id": "capscan_participant_roster",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/scripts/build_fixed_roster.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/scripts/make_design347.py"
+      ],
+      "uses": "347-acquisition CapScan design used by the own-stool distances (prepare_source_data.py)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_functional_profiles",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/scripts/capscan_fig5bcd.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5/mc/profiles.py"
+      ],
+      "uses": "regional human-share tests and own-stool test (source_data/Fig5 tables; own_stool_distance_matrices.tsv recomputed with this code)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_crossomics",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5g/crossomics_capscan.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5g/build_groups_capscan.py"
+      ],
+      "uses": "CapScan functional and native correlation families (source_data/Fig5)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_dominance_evenness",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C4_dominance_evenness_347/dominance_evenness_347.py"
+      ],
+      "uses": "evenness and leading-share tests (STATS.tsv rows; estimator mismatch in OPEN_ITEMS.md)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_crossomics_refit",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/crossomics.py"
+      ],
+      "uses": "PREDICT functional and native correlation families (source_data/SFig11)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "crossomics_distance_sensitivity",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/distance_sensitivity.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A4_controlled_distance/code"
+      ],
+      "uses": "176 controlled estimates and their 24 families (source_data/SFig11)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "native_crossomics_profiles",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/cohort_reconciliation/crossomics/native.py"
+      ],
+      "uses": "PREDICT native DNA/RNA feature counts; CapScan native DNA run membership (245 runs)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_function_correlations",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/individual_functions.py"
+      ],
+      "uses": "nine individual-function families (source_data/STab5)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_eds_screen",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/eds_biochemistry.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/eds_refit/analyze.py"
+      ],
+      "uses": "EDS screen families (source_data/SFig10)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_eds_heldout_prediction",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/eds_phenotype/code/analyze_score.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/nested_eds.py"
+      ],
+      "uses": "held-out EDS prediction metrics, permutations, folds and predictions (eds_prediction_*.tsv)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_rifaximin_sensitivity",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_rifaximin/rifaximin_sensitivity.py"
+      ],
+      "uses": "antibiotic endpoints by exposure definition (source_data/STab3); tests recomputed by tables/STab3",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_metagenome_profiles",
+      "original_code_paths": [
+        "LAB_ROOT/analyses/capscan_metag_analysis_2026-09-10"
+      ],
+      "uses": "301 runs of the functional DNA aggregate (capscan_dna_runs.tsv)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_nonspecific_search",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A05_4_7_unspecific",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A05"
+      ],
+      "uses": "CapScan non-specific search configurations and completion receipts (nonspecific_search_summary.tsv)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_nonspecific_search",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A13_4_7_predict_unspecific"
+      ],
+      "uses": "PREDICT non-specific search configurations and completion receipts",
+      "pipeline_dir": null
+    },
+    {
+      "id": "terminal_participant_inference",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A24_4_7_terminal_inference/frozen/search.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A24_fixed347"
+      ],
+      "uses": "terminal-fraction and residue-composition families (source_data/Fig6)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "terminal_histidine_inference",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A28_4_7_histidine_inference/frozen/collect_revision4.py",
+        "LAB_ROOT/MM_review_analysis/A28_4_7_histidine_inference/frozen/histidine_helpers.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A28_fixed347"
+      ],
+      "uses": "histidine source, complementary-product, spatial and motif families (source_data/Fig6)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "histidine_spectrum_evidence",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/recovery_2026-09-15/cohort_recovery/A25/frozen/search_revision2.py"
+      ],
+      "uses": "spectrum strata (source_data/SFig14/spectra/all_strata.tsv)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "peptide_centric_downstream",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5e_f"
+      ],
+      "uses": "leading-species cells and Fig. 5e mosaic (source_data/Fig5)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_study_grouping",
+      "original_code_paths": [
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/supplements/revision_2026-09-24/delivery/source_data/compute_records/HSTOOL_grouping_COMPLETE.json"
+      ],
+      "uses": "healthy-stool grouping counts (hstool_grouping_receipt.tsv)",
+      "pipeline_dir": null
+    }
+  ]
+}

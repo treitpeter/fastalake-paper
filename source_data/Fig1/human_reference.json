@@ -1,0 +1,15 @@
+{
+ "label": "UniProtKB/Swiss-Prot reviewed human canonical entries; local March 2026 archive; isoforms excluded",
+ "path": "human_swissprot_canonical_archived_2026_03.fasta",
+ "bytes": 13668570,
+ "sha256": "b205ed9970fee62413e2f192c6fb82daab86e4a5897ef521f907ecbfcd7b3e63",
+ "entries": 20431,
+ "residues": 11415371,
+ "unique_exact_sequences": 20353,
+ "duplicate_accession_count": 0,
+ "sequence_set_sha256": "4a3e23e57848e916ca9668b09dc22244797a62fbb042b9435a8d437dde023195",
+ "isoform_accessions": 0,
+ "nonhuman_headers": 0,
+ "nonreviewed_headers": 0,
+ "_origin_sha256": "b705dfc4aba8718c83939a812e3de6614ce0a72eb9260c3e0c7b6ff632cf1079"
+}

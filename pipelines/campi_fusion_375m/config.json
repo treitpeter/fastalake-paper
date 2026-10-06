@@ -1,0 +1,102 @@
+{
+  "experiment": "CAMPI broad-UniProt fusion-control rerun 2026-09-22",
+  "binaries": {
+    "extractor": {
+      "path": "${FASTALAKE_DATA_DIR}/00_PACKAGE_2026-09-17/cleanup_2026-09-22/campi_fusion_rerun/bin/fasta_extractor",
+      "origin": "LAB_ROOT/canonical/rust/fasta_extractor_v2/target/release/fasta_extractor",
+      "sha256": "92dc31e41427ba35e69516d049122f4425083beb65779f919a478043698fd77d",
+      "version": "fasta_extractor 1.0.0+a2c010d9beac-dirty",
+      "frozen_from": "LAB_ROOT/analyses/fusion_entrapment_2026-09-07/bin/fasta_extractor"
+    },
+    "parsimony": {
+      "path": "${FASTALAKE_DATA_DIR}/00_PACKAGE_2026-09-17/cleanup_2026-09-22/campi_fusion_rerun/bin/parsimony_engine",
+      "origin": "LAB_ROOT/canonical/rust/parsimony_engine/target/release/parsimony_engine",
+      "sha256": "3ac2eea59cca9164a756db6f1945a838da2506ba9b6f71eb7149003b26e19ab6",
+      "version": "parsimony_engine 1.0.0+a2c010d9beac-dirty",
+      "frozen_from": "LAB_ROOT/analyses/fusion_entrapment_2026-09-07/bin/parsimony_engine"
+    },
+    "sage": {
+      "path": "${FASTALAKE_DATA_DIR}/00_PACKAGE_2026-09-17/cleanup_2026-09-22/campi_fusion_rerun/bin/sage",
+      "origin": "sage",
+      "sha256": "d3820543a31bfa2a556e04f91719204ce0ac6f34dcca6670314a13df87064625",
+      "version": "sage 0.14.6",
+      "frozen_from": "LAB_ROOT/analyses/fusion_entrapment_2026-09-07/bin/sage"
+    },
+    "builder": {
+      "path": "${FASTALAKE_DATA_DIR}/00_PACKAGE_2026-09-17/cleanup_2026-09-22/campi_fusion_rerun/bin/build_fused_v2",
+      "sha256": "964d1c633a58cbf55b1439c7c7820b657243d7a26cae3d9ecb2ae2b2a0a4f1b2",
+      "frozen_from": "LAB_ROOT/analyses/fusion_entrapment_2026-09-07/bin/build_fused_v2"
+    }
+  },
+  "cohorts": {
+    "CAMPI_MOCK": {
+      "sample_list": "${FASTALAKE_DATA_DIR}/00_PACKAGE_2026-09-17/cleanup_2026-09-22/campi_fusion_rerun/inputs/CAMPI_MOCK_samples.tsv",
+      "sample_list_sha256": "415974d04ab3f8728ff3d79a7b4c6245a603b3b94cac8c63287b90a817b8f4b3",
+      "n": 15,
+      "reservoir": "${FASTALAKE_DATA_DIR}/canonical/publication_data/arms/uniprotkb_2026_03_noclust_2026-09-09/cohorts/CAMPI_MOCK/0_lake/CAMPI_MOCK_lake.fasta",
+      "reservoir_sequences": 375333654
+    }
+  },
+  "tasks": [
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 0
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 1
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 2
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 3
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 4
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 5
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 6
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 7
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 8
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 9
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 10
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 11
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 12
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 13
+    },
+    {
+      "cohort": "CAMPI_MOCK",
+      "index": 14
+    }
+  ]
+}

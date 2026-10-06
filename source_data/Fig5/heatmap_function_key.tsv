@@ -1,0 +1,25 @@
+row	KO	display_name	official_name	url
+1	K00134	Glyceraldehyde-3-phosphate dehydrogenase	glyceraldehyde 3-phosphate dehydrogenase (phosphorylating) [EC:1.2.1.12]	https://www.kegg.jp/entry/K00134
+2	K02358	Elongation factor Tu	elongation factor Tu	https://www.kegg.jp/entry/K02358
+3	K00262	Glutamate dehydrogenase (NADP)	glutamate dehydrogenase (NADP+) [EC:1.4.1.4]	https://www.kegg.jp/entry/K00262
+4	K03737	Pyruvate–ferredoxin oxidoreductase	pyruvate-ferredoxin/flavodoxin oxidoreductase [EC:1.2.7.1 1.2.8.1]	https://www.kegg.jp/entry/K03737
+5	K04077	Chaperonin GroEL	chaperonin GroEL [EC:5.6.1.7]	https://www.kegg.jp/entry/K04077
+6	K02355	Elongation factor G	elongation factor G	https://www.kegg.jp/entry/K02355
+7	K21572	Starch-binding protein SusD	starch-binding outer membrane protein, SusD/RagB family	https://www.kegg.jp/entry/K21572
+8	K01803	Triosephosphate isomerase	triosephosphate isomerase (TIM) [EC:5.3.1.1]	https://www.kegg.jp/entry/K01803
+9	K00927	Phosphoglycerate kinase	phosphoglycerate kinase [EC:2.7.2.3]	https://www.kegg.jp/entry/K00927
+10	K00261	Glutamate dehydrogenase (NAD or NADP)	glutamate dehydrogenase (NAD(P)+) [EC:1.4.1.3]	https://www.kegg.jp/entry/K00261
+11	K00656	Pyruvate formate-lyase	formate C-acetyltransferase [EC:2.3.1.54]	https://www.kegg.jp/entry/K00656
+12	K04043	Molecular chaperone DnaK	molecular chaperone DnaK	https://www.kegg.jp/entry/K04043
+13	K03286	Outer-membrane porin OmpA/OmpF	OmpA-OmpF porin, OOP family	https://www.kegg.jp/entry/K03286
+14	K02945	Ribosomal protein S1	small subunit ribosomal protein S1	https://www.kegg.jp/entry/K02945
+15	K01938	Formate–tetrahydrofolate ligase	formate--tetrahydrofolate ligase [EC:6.3.4.3]	https://www.kegg.jp/entry/K01938
+16	K01689	Enolase	enolase 1/2/3 [EC:4.2.1.11]	https://www.kegg.jp/entry/K01689
+17	K01818	Fucose/arabinose isomerase	L-fucose/D-arabinose isomerase [EC:5.3.1.25 5.3.1.3]	https://www.kegg.jp/entry/K01818
+18	K02982	Ribosomal protein S3	small subunit ribosomal protein S3	https://www.kegg.jp/entry/K02982
+19	K00626	Acetyl-CoA acetyltransferase	acetyl-CoA C-acetyltransferase [EC:2.3.1.9]	https://www.kegg.jp/entry/K00626
+20	K10117	Oligosaccharide-binding protein MsmE	raffinose/stachyose/melibiose transport system substrate-binding protein	https://www.kegg.jp/entry/K10117
+21	K03040	RNA polymerase subunit alpha	DNA-directed RNA polymerase subunit alpha [EC:2.7.7.6]	https://www.kegg.jp/entry/K03040
+22	K15771	Oligosaccharide transporter permease	arabinogalactan oligomer / maltooligosaccharide transport system permease protein	https://www.kegg.jp/entry/K15771
+23	K03798	Cell division protease FtsH	cell division protease FtsH [EC:3.4.24.-]	https://www.kegg.jp/entry/K03798
+24	K01687	Dihydroxy-acid dehydratase	dihydroxy-acid dehydratase [EC:4.2.1.9]	https://www.kegg.jp/entry/K01687

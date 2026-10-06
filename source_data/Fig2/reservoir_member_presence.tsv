@@ -1,0 +1,17 @@
+label	n_proteins	n_unique_il_sequences	n_present_exact	fraction	n_present_exact_raw	n_present_il_variant_only	n_kept_UHGG	n_kept_GMGC	n_kept_GMSC	n_kept_UNIPROT_SP	n_kept_UNIPROT_TR
+Bacteroides thetaiotaomicron	4782	4782	4782	1.0000	4782	0	3645	118	116	51	977
+Blautia producta	4502	4502	4112	0.9134	4112	0	279	441	11	0	3397
+Escherichia coli	4306	4270	4282	0.9944	4282	0	3411	312	135	967	44
+Clostridium butyricum	4245	4245	4245	1.0000	4245	0	1663	73	21	0	2521
+Anaerostipes caccae	3743	3743	3743	1.0000	3743	0	2614	211	85	0	863
+Erysipelatoclostridium ramosum	3166	3166	3166	1.0000	3166	0	2335	126	86	1	710
+Lactobacillus plantarum	3088	3088	3088	1.0000	3088	0	2033	70	3	95	908
+Bifidobacterium longum	1725	1725	1725	1.0000	1725	0	1184	54	37	58	477
+Bacteroides thetaiotaomicron_SHUFFLED	4782	4782	0	0.0000	0	0	0	0	0	0	0
+Blautia producta_SHUFFLED	4502	4502	0	0.0000	0	0	0	0	0	0	0
+Escherichia coli_SHUFFLED	4306	4306	0	0.0000	0	0	0	0	0	0	0
+Clostridium butyricum_SHUFFLED	4245	4245	0	0.0000	0	0	0	0	0	0	0
+Anaerostipes caccae_SHUFFLED	3743	3743	0	0.0000	0	0	0	0	0	0	0
+Erysipelatoclostridium ramosum_SHUFFLED	3166	3166	0	0.0000	0	0	0	0	0	0	0
+Lactobacillus plantarum_SHUFFLED	3088	3088	0	0.0000	0	0	0	0	0	0	0
+Bifidobacterium longum_SHUFFLED	1725	1725	0	0.0000	0	0	0	0	0	0	0

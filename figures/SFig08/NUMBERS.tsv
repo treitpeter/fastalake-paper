@@ -1,0 +1,11 @@
+v28d_line	quote	printed_value	recomputed_value	code	source_data	status
+123	identified a median 1.5% fewer peptides than the unselected metagenome search	1.5%	1.4689177825073951	figures/SFig08/panels.py:stat_a_paired_gain	source_data/SFig08/PREDICT_curation_counts_by_length.tsv	MATCH
+123	(fewer in 177 of 296 acquisitions)	177	177	figures/SFig08/panels.py:stat_a_paired_gain	source_data/SFig08/PREDICT_curation_counts_by_length.tsv	MATCH
+123	(fewer in 177 of 296 acquisitions)	296	296	figures/SFig08/panels.py:stat_a_paired_gain	source_data/SFig08/PREDICT_curation_counts_by_length.tsv	MATCH
+123	public-sequence FastaLake exceeded them by a median 10.6%	10.6%	10.600054160058402	figures/SFig08/panels.py:stat_a_paired_gain	source_data/SFig08/PREDICT_curation_counts_by_length.tsv	MATCH
+123	with higher peptide counts in 292 of 296 acquisitions	292	292	figures/SFig08/panels.py:stat_a_paired_gain	source_data/SFig08/PREDICT_curation_counts_by_length.tsv	MATCH
+123	with higher peptide counts in 292 of 296 acquisitions	296	296	figures/SFig08/panels.py:stat_a_paired_gain	source_data/SFig08/PREDICT_curation_counts_by_length.tsv	MATCH
+441	Accepted peptides of 9–50 residues in four PREDICT database arms	four	four	figures/SFig08/panels.py:stat_a_n_arms	source_data/SFig08/PREDICT_curation_counts_by_length.tsv	MATCH
+441	on the same 296 acquisitions	296	296	figures/SFig08/panels.py:stat_a_n_arms	source_data/SFig08/PREDICT_curation_counts_by_length.tsv	MATCH
+441	Dots are acquisitions (296 PREDICT	296	296	figures/SFig08/panels.py:stat_bcd_medians	source_data/SFig08/clinical_fixed_dictionary_ablation.tsv	MATCH
+441	282 CapScan) and bars are medians	282	282	figures/SFig08/panels.py:stat_bcd_medians	source_data/SFig08/clinical_fixed_dictionary_ablation.tsv	MATCH

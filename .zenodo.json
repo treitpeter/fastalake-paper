@@ -1,0 +1,128 @@
+{
+  "title": "FastaLake paper repository: code and source data for every figure and number",
+  "upload_type": "software",
+  "description": "Code, notebooks, source data and provenance that regenerate every figure panel and every printed number of the manuscript \"FastaLake selects compact metaproteomic databases from large sequence reservoirs by de novo peptide lookup\" (version v28f).",
+  "creators": [
+    {
+      "name": "Treit, Peter V.",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Rosenberger, Florian A.",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany; Karolinska Institutet, Stockholm, Sweden"
+    },
+    {
+      "name": "Hartout, Philip",
+      "affiliation": "Department of Machine Learning and Systems Biology, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Lebedev, Mikhail",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Xiao, Jinqiu",
+      "affiliation": "Computational Systems Biochemistry Research Group, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Zwiebel, Maximilian",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Geyer, Philipp E.",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Sinha, Ankit",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Wallmann, Georg",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Brennsteiner, Vincenth",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Korff, Kathrin",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Rodriguez, Edwin",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Zeng, Wen-Feng",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Strauss, Maximilian",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Keller, Marisa I.",
+      "affiliation": "Structural and Computational Biology Unit, European Molecular Biology Laboratory (EMBL), Heidelberg, Germany"
+    },
+    {
+      "name": "Kuhn, Michael",
+      "affiliation": "Structural and Computational Biology Unit, European Molecular Biology Laboratory (EMBL), Heidelberg, Germany"
+    },
+    {
+      "name": "Trebicka, Jonel",
+      "affiliation": "Department of Internal Medicine B, University Hospital Münster, University of Münster, Münster, Germany; European Foundation for the Study of Chronic Liver Failure (EF-Clif), Barcelona, Spain"
+    },
+    {
+      "name": "Junot, Christophe",
+      "affiliation": "Université Paris-Saclay, CEA, Institut Joliot, Gif-sur-Yvette, France"
+    },
+    {
+      "name": "Arumugam, Mani",
+      "affiliation": "Novo Nordisk Foundation Center for Basic Metabolic Research, Faculty of Health and Medical Sciences, University of Copenhagen, Copenhagen, Denmark"
+    },
+    {
+      "name": "Grembi, Jessica A.",
+      "affiliation": "Department of Veterinary and Biomedical Sciences, Pennsylvania State University, University Park, PA, USA"
+    },
+    {
+      "name": "Shalon, Dari",
+      "affiliation": "Envivo Bio, Inc., San Francisco, CA, USA"
+    },
+    {
+      "name": "Huang, Kerwyn Casey",
+      "affiliation": "Departments of Bioengineering and Microbiology and Immunology, Stanford University, Stanford, CA, USA"
+    },
+    {
+      "name": "Borgwardt, Karsten",
+      "affiliation": "Department of Machine Learning and Systems Biology, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Müller-Reif, Johannes B.",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    },
+    {
+      "name": "Mann, Matthias",
+      "affiliation": "Department of Proteomics and Signal Transduction, Max Planck Institute of Biochemistry, Martinsried, Germany"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "metaproteomics",
+    "protein database",
+    "de novo sequencing",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "AUTHOR INPUT NEEDED: article DOI",
+      "scheme": "doi"
+    },
+    {
+      "relation": "isCompiledBy",
+      "identifier": "https://github.com/MannLabs/fasta-lake",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Source data are released under CC BY 4.0 (LICENSE-DATA.md); both licences await author confirmation. The article DOI is added at release."
+}

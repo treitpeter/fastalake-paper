@@ -1,0 +1,19 @@
+# Open items: SFig11
+
+- UNTRACED: the v30 build (build_sfig11.py) asserted that the removed native, OG and KO matrices are identical to Fig. 4i and Fig. 5g using v29 build tables outside this repository (suppfigs_n15/SF11/shadow_n15/B/figures); `panels.render` does not repeat that assertion (panels.render docstring)
+- TEXT-GAP: NUMBERS.tsv and STATS.tsv of this unit use the v30 paragraph index (visible_v30f.txt) in the v28d_line column; the orchestrator should map it once the v30 reference text is registered in CONVENTIONS section 1 (all rows)
+- ZENODO: the v30 plotted values are `expected/plotted_values_v30.tsv` (174 values, byte-identical to the v30 build's plotted_values.tsv); the earlier `all_plotted_crossomics_values.tsv` and `supplementary_plotted_values.tsv` were removed from expected/ with the v28f panels
+
+- TEXT-GAP: the permutation seed of the functional-profile tests (20260907, the same as the native tests) is not stated; the text gives the seed only for the native comparisons (v28d line 815; functional Methods lines 827, 833-835).
+- TEXT-GAP: no confidence interval is reported for any distance correlation in this figure, and the upstream code computes none (STATS.tsv `uncertainty` = not computed); Codex register rows S084, S085, S090, S091.
+- TEXT-GAP: the software that computed these tests (numpy, scipy `rankdata`/`spearmanr`/`pearsonr`, statsmodels `multipletests` for the functional BH; versions in STATS.tsv) is not stated in the text.
+- TEXT-GAP: the two-sided permutation P counts permuted values with |null| >= |rho|; for native and controlled tests a tolerance of 1e-12 is subtracted (panels.P_TOLERANCE_NATIVE). The text says only "two-sided plus-one P values" (v28d line 815).
+- UNTRACED: no Slurm job id is recorded for the producer run `SF11/setup_and_build.sh n15` (log `SF11/logs/build_n15.log` has none); outputs are identified by sha256 only (PROVENANCE.md).
+- UNTRACED: package versions at the time of the upstream runs (jobs 5990407, 6044312, 6044329, 6048399, 6063849, 6064864) are not recorded; only the interpreter path is (PROVENANCE.md).
+- ZENODO: the Source Data package still holds 12-participant CapScan rows in `Biology_refit/cross_refit/{functional,native}_correlations.tsv`, `Biology_refit/cross_refit/*_distances.npz`, `Biology_refit/distance_refit/controlled_176_comparisons.tsv`, `Biology_refit/distance_refit/CAPSCAN_distances.npz` and `Biology_refit/figures/{all_plotted_crossomics_values,supplementary_plotted_values}.tsv`, and has no `Supplementary_Figure_11/` folder; the current sheets are `source_data/SFig11/*` and `source_data/Fig5/{functional,native}_correlations.tsv` (map rows SF11, SF11-perm, RES-80); in v30 the plotted-values sheet is `expected/plotted_values_v30.tsv`.
+- PIPELINE: predict_crossomics_refit: the profile building and distance computation (`crossomics.py` on the verified50 profiles) are not in `pipelines/`; this unit starts from the saved distance matrices (UPSTREAM.json).
+- PIPELINE: capscan_crossomics: not in `pipelines/` (shared with Figure 5g).
+- PIPELINE: crossomics_distance_sensitivity: `distance_sensitivity.py`, `experiment.py` and the 347 rerun `distance_capscan347.py` are not in `pipelines/`.
+- PIPELINE: native_crossomics_profiles: `native_pyramids.py` (gene-sequence profiles, retained-signal fractions, PREDICT DNA/RNA native distances) is not in `pipelines/`.
+- AUTHOR: shared request: this unit reads four Figure 5 tables (`source_data/Fig5/functional_correlations.tsv`, `native_correlations.tsv`, `functional_distances_long.tsv`, `native_distances_long.tsv`) and checks their sha256 (`panels.FIG5_SHA256`); they must not change without updating SFig11, and `source_data/Fig5/README.md` does not exist yet.
+- AUTHOR: shared request: upstream ids predict_crossomics_refit, crossomics_distance_sensitivity and native_crossomics_profiles are new; Figure 4i uses the same PREDICT analysis and should reuse A84.

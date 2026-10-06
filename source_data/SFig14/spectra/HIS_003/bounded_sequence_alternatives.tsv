@@ -1,0 +1,2 @@
+peptide	canonical_peptide	change	parents	isotope_errors	calculated_mass	matched_ions	original	at_least_original_matches
+VLEDAGYGPYFGH	VLEDAGYGPYFGH	same_canonical	MGYG000158117_01186	0	1423.640869140625	11	True	True

@@ -1,0 +1,19 @@
+{
+  "unit": "SFig13",
+  "upstream": [
+    {
+      "id": "terminal_histidine_inference",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A28_4_7_histidine_inference/frozen/collect_revision4.py",
+        "LAB_ROOT/MM_review_analysis/A28_4_7_histidine_inference/frozen/histidine_helpers.py",
+        "LAB_ROOT/MM_review_analysis/A28_4_7_histidine_inference/frozen/context_helpers.py",
+        "LAB_ROOT/MM_review_analysis/A28_4_7_histidine_inference/frozen/lib.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/jobs/A28_fixed347.sbatch",
+        "LAB_ROOT/MM_review_analysis/code/collect_repaired_predict_20260915.py",
+        "LAB_ROOT/MM_review_analysis/recovery_2026-09-15/cohort_recovery/A28.sbatch"
+      ],
+      "uses": "CapScan run on 347 acquisitions / 15 participants (Slurm 6064031_3): complete_statistical_families.tsv (panels a-f display cells and q values, via source_data/Fig6) and participant_motif_differences.tsv.gz (recomputation of the 32,400-test motif family). PREDICT run on 306 acquisitions / 93 patients (Slurm 5937597): acquisition_enrichment.tsv.gz (panels g,h patient means; recomputation of the 1,560-test source family) and complete_statistical_families.tsv (plotted means and 95% intervals). The sign-flip, bootstrap and BH functions and the motif and source-enrichment loops are moved into figures/SFig13/panels.py.",
+      "pipeline_dir": null
+    }
+  ]
+}

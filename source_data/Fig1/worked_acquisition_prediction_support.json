@@ -1,0 +1,79 @@
+{
+ "status": "PASS",
+ "sample": "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2",
+ "cohort": "HSTOOL",
+ "filtering": {
+  "total_rows": 189806,
+  "eligible_before_top_fraction": 121961,
+  "retained_rows": 36589,
+  "distinct_queries": 24560,
+  "score_threshold": 0.9832724332809448,
+  "filter_attrition": {
+   "length": 54099,
+   "low_complexity": 293,
+   "nonpositive_or_nan_score": 13453
+  }
+ },
+ "beam_rank_counts": {
+  "0": 189806
+ },
+ "schema_audit": {
+  "literal_unmatchable_parsimony_syntax": 11,
+  "lookup_queries_different_from_parsimony_literals": 0
+ },
+ "populations": {
+  "all_selected": {
+   "n": 12606,
+   "one_top_prediction": 2600,
+   "one_parsimony_prediction": 782,
+   "with_FL_corroborated_prediction": 12064
+  },
+  "identified_accessions": {
+   "n": 12186,
+   "one_top_prediction": 2283,
+   "one_parsimony_prediction": 585,
+   "with_FL_corroborated_prediction": 12017
+  },
+  "native_protein_q01": {
+   "n": 12186,
+   "one_top_prediction": 2283,
+   "one_parsimony_prediction": 585,
+   "with_FL_corroborated_prediction": 12017
+  }
+ },
+ "reference_agreement": null,
+ "accepted_peptides": 29663,
+ "accepted_not_predicted_any": 4258,
+ "accepted_not_in_top30": 17197,
+ "accepted_not_in_parsimony": 8675,
+ "inputs": [
+  {
+   "path": "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2_predictions.csv",
+   "bytes": 70961059,
+   "sha256": "8826920da56b6ed2fa443f519270c830f02294e40f36a7c497741f64b13cb15d"
+  },
+  {
+   "path": "parsimony.fasta",
+   "bytes": 5810984,
+   "sha256": "7cb88ecb6e46de4c7f2d28ae966be988f1eeea53cfae1546b2f66d5472353f50"
+  },
+  {
+   "path": "results.sage.tsv",
+   "bytes": 57711619,
+   "sha256": "92339fc9c159bd00ba24c0edd07e3955120962a98b1d0951c3a67dc012a391d4"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "prediction_protein_edges.tsv.gz",
+   "bytes": 1735423,
+   "sha256": "c992299e749ba11a7222fec1a6f7611b5a7e54f25f96cd25d69a2008431e672e"
+  },
+  {
+   "path": "protein_support.tsv",
+   "bytes": 660309,
+   "sha256": "de1c29cea726c53b483615bf00f9c45bdb9f1330d7d75391cdde17f9fb7cba4d"
+  }
+ ],
+ "_origin_sha256": "f4a34959914caa7dacbb3a3a9f85445d214cfbf6edf10f98134ba92e9c0fb066"
+}

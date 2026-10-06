@@ -1,0 +1,25 @@
+population	component	fraction	prevalence
+All five regions	Participant	0.44990207622070705	0.0
+All five regions	Residual	0.4017293050988243	0.0
+All five regions	Capsules versus stool	0.10678430875644904	0.0
+All five regions	Between capsule regions	0.041584309924019534	0.0
+Capsules only	Participant	0.5685695553980448	0.0
+Capsules only	Residual	0.37884050201067176	0.0
+Capsules only	Capsules versus stool	0.0	0.0
+Capsules only	Between capsule regions	0.05258994259128406	0.0
+All five regions	Participant	0.4500106288920836	0.1
+All five regions	Residual	0.40144181877846324	0.1
+All five regions	Capsules versus stool	0.10694722619589198	0.1
+All five regions	Between capsule regions	0.04160032613356077	0.1
+Capsules only	Participant	0.5688021603496572	0.1
+Capsules only	Residual	0.37858088178090293	0.1
+Capsules only	Capsules versus stool	0.0	0.1
+Capsules only	Between capsule regions	0.05261695786943937	0.1
+All five regions	Participant	0.4501316160612067	0.2
+All five regions	Residual	0.4010769736450121	0.2
+All five regions	Capsules versus stool	0.10716303455583331	0.2
+All five regions	Between capsule regions	0.04162837573794878	0.2
+Capsules only	Participant	0.5690552944333109	0.2
+Capsules only	Residual	0.3782853147230131	0.2
+Capsules only	Capsules versus stool	0.0	0.2
+Capsules only	Between capsule regions	0.05265939084367577	0.2

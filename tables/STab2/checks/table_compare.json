@@ -1,0 +1,114 @@
+{
+ "sheet_order_equal": true,
+ "sheets": {
+  "Read_me": {
+   "rows_rebuilt": 11,
+   "rows_published": 11,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "Cohort_overview": {
+   "rows_rebuilt": 5,
+   "rows_published": 5,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "Per_acquisition": {
+   "rows_rebuilt": 7101,
+   "rows_published": 7101,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "Stage_controls": {
+   "rows_rebuilt": 8521,
+   "rows_published": 8521,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "Baseline_comparison": {
+   "rows_rebuilt": 711,
+   "rows_published": 711,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "Quantile_summary": {
+   "rows_rebuilt": 241,
+   "rows_published": 241,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "Control_discoveries": {
+   "rows_rebuilt": 366746,
+   "rows_published": 366746,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "fusion_Read_me": {
+   "rows_rebuilt": 6,
+   "rows_published": 6,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "fusion_cohort_q001": {
+   "rows_rebuilt": 17,
+   "rows_published": 17,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "fusion_cohort_threshold_summary": {
+   "rows_rebuilt": 81,
+   "rows_published": 81,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "fusion_matched_seed_summary": {
+   "rows_rebuilt": 81,
+   "rows_published": 81,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "fusion_short_5_to_8_summary": {
+   "rows_rebuilt": 41,
+   "rows_published": 41,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "fusion_acquisition_outliers_q00": {
+   "rows_rebuilt": 2841,
+   "rows_published": 2841,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "fusion_completeness": {
+   "rows_rebuilt": 9,
+   "rows_published": 9,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "fusion_All_acquisitions": {
+   "rows_rebuilt": 14201,
+   "rows_published": 14201,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "indep_Read_me": {
+   "rows_rebuilt": 6,
+   "rows_published": 6,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "indep_Ordinary_counts": {
+   "rows_rebuilt": 19,
+   "rows_published": 19,
+   "differing_cells": 0,
+   "examples": []
+  },
+  "indep_Fusion_all_thresholds": {
+   "rows_rebuilt": 121,
+   "rows_published": 121,
+   "differing_cells": 0,
+   "examples": []
+  }
+ },
+ "identical": true
+}

@@ -1,0 +1,25 @@
+v28d_line	quote	printed_value	recomputed_value	code	source_data	status
+193	reservoirs containing 233–375 million sequences	233	233.497702	figures/SFig15/panels.py:stat_reservoir_range (min_millions)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+193	reservoirs containing 233–375 million sequences	375	375.333654	figures/SFig15/panels.py:stat_reservoir_range (max_millions)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+193	required 8–12 min per cohort on a single large-memory node	8	8.116666666666667	figures/SFig15/panels.py:stat_lookup_range (min, 02_evidence HSTOOL)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+193	required 8–12 min per cohort on a single large-memory node	12	12.033333333333333	figures/SFig15/panels.py:stat_lookup_range (max, 02_evidence PREDICT)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+299	CAMPI reservoir construction required 92 min	92	92.36666666666666	figures/SFig15/panels.py:stat_campi_lake (minutes, job 5895248)	source_data/SFig15/compute_task_records.tsv	MATCH
+299	on a 64-thread, 512-GB AMD EPYC node	64	64	figures/SFig15/panels.py:stat_campi_lake (program_threads)	source_data/SFig15/compute_task_records.tsv	MATCH
+299	on a 64-thread, 512-GB AMD EPYC node	512		none (node memory is not in any shipped table)		OPEN
+299	Pooled extraction took 11 min	11	11.066666666666666	figures/SFig15/panels.py:stat_stage_medians (CAMPI 02_evidence)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+299	extraction, selection, and Sage/LFQ searching were 0.48, 0.63, and 0.23 min	0.48	0.48333333333333334	figures/SFig15/panels.py:stat_stage_medians (CAMPI 05_persample)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+299	extraction, selection, and Sage/LFQ searching were 0.48, 0.63, and 0.23 min	0.63	0.6333333333333333	figures/SFig15/panels.py:stat_stage_medians (CAMPI 06_parsimony)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+299	extraction, selection, and Sage/LFQ searching were 0.48, 0.63, and 0.23 min	0.23	0.23333333333333334	figures/SFig15/panels.py:stat_stage_medians (CAMPI 07_sage)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+299	AlphaNovo required a median of 28 min per CAMPI acquisition	28	28.266666666666666	figures/SFig15/panels.py:stat_campi_inference (median_minutes, array 5450700)	source_data/SFig15/campi_alphanovo_inference_sacct.tsv	MATCH
+469	Acquisition stages use 15 CAMPI, 58 healthy-stool, 306 PREDICT and 331 CapScan	15	15	figures/SFig15/panels.py:stat_acquisition_counts (n CAMPI)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+469	Acquisition stages use 15 CAMPI, 58 healthy-stool, 306 PREDICT and 331 CapScan	58	58	figures/SFig15/panels.py:stat_acquisition_counts (n HSTOOL)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+469	Acquisition stages use 15 CAMPI, 58 healthy-stool, 306 PREDICT and 331 CapScan	306	306	figures/SFig15/panels.py:stat_acquisition_counts (n PREDICT)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+469	Acquisition stages use 15 CAMPI, 58 healthy-stool, 306 PREDICT and 331 CapScan	331	347	figures/SFig15/panels.py:stat_acquisition_counts (n CAPSCAN)	source_data/SFig15/compute_stage_summary.tsv	v28f_change:347
+469	retain their actual 97- and 368-acquisition execution scopes	97	97	figures/SFig15/panels.py:stat_acquisition_counts (shared_scope HSTOOL)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+469	retain their actual 97- and 368-acquisition execution scopes	368	368	figures/SFig15/panels.py:stat_acquisition_counts (shared_scope CAPSCAN)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+903	restricted by array-index/sample mapping to the 15 CAMPI, 58 healthy-stool, 306 PREDICT and 331 CapScan	15	15	figures/SFig15/panels.py:stat_acquisition_counts (n CAMPI)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+903	restricted by array-index/sample mapping to the 15 CAMPI, 58 healthy-stool, 306 PREDICT and 331 CapScan	58	58	figures/SFig15/panels.py:stat_acquisition_counts (n HSTOOL)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+903	restricted by array-index/sample mapping to the 15 CAMPI, 58 healthy-stool, 306 PREDICT and 331 CapScan	306	306	figures/SFig15/panels.py:stat_acquisition_counts (n PREDICT)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+903	restricted by array-index/sample mapping to the 15 CAMPI, 58 healthy-stool, 306 PREDICT and 331 CapScan	331	347	figures/SFig15/panels.py:stat_acquisition_counts (n CAPSCAN)	source_data/SFig15/compute_stage_summary.tsv	v28f_change:347
+903	retain their actual 97- and 368-acquisition execution scopes	97	97	figures/SFig15/panels.py:stat_acquisition_counts (shared_scope HSTOOL)	source_data/SFig15/compute_stage_summary.tsv	MATCH
+903	retain their actual 97- and 368-acquisition execution scopes	368	368	figures/SFig15/panels.py:stat_acquisition_counts (shared_scope CAPSCAN)	source_data/SFig15/compute_stage_summary.tsv	MATCH

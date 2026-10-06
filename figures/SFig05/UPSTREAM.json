@@ -1,0 +1,23 @@
+{
+  "unit": "SFig05",
+  "upstream": [
+    {
+      "id": "healthy_stool_donor_entrapment",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A11_4_2_control_reconciliation/frozen/analysis.py", "LAB_ROOT/MM_review_analysis/A11_4_2_control_reconciliation/frozen/donor_original.py", "LAB_ROOT/MM_review_analysis/A11_4_2_control_reconciliation/frozen/audit_fusion.py"],
+      "uses": "donor-selected and self-selected explicit-peptide entrapment recounts (donor_recount.tsv, donor_entrapment_seed_means.tsv; panel d, lines 65, 425, 727-729) and the healthy-stool, PREDICT and CapScan fusion recounts (fusion_acquisition_components.tsv, fusion_pooled_current.tsv; panels a-c)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_fusion_375m",
+      "original_code_paths": ["LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/campi_fusion_rerun/audit_fusion.py", "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/campi_fusion_rerun/run_experiment.py", "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/campi_fusion_rerun/driver.py", "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/campi_fusion_rerun/submit.py"],
+      "uses": "CAMPI fusion control on the 375,333,654-sequence reservoir, 15 acquisitions x 2 seeds: per-acquisition components (CAMPI_MOCK rows of fusion_acquisition_components.tsv), pooled values (CAMPI rows of fusion_pooled_current.tsv; panels a-c) and the decomposition (fusion_decomposition_current375.tsv; continuation page, lines 91, 429, 715)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "restricted_reference_simulation",
+      "original_code_paths": ["LAB_ROOT/analyses/fdr_reference_benchmark_2026-09-10/generate.py", "LAB_ROOT/analyses/fdr_reference_benchmark_2026-09-10/evaluate.py", "LAB_ROOT/analyses/fdr_reference_benchmark_2026-09-10/collect.py", "LAB_ROOT/analyses/fdr_reference_benchmark_2026-09-10/common.py"],
+      "uses": "known-truth simulation outcomes (simulation_all_outcomes.tsv, simulation_mixture_outcomes.tsv), bootstrap summaries (simulation_uncertainty.tsv) and design constants (simulation_design.tsv); panels e,f and lines 95, 259, 425, 733",
+      "pipeline_dir": null
+    }
+  ]
+}

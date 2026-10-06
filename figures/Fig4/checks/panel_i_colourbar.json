@@ -1,0 +1,25 @@
+{
+ "new": "build/Fig4/panel_i_colourbar.pdf",
+ "new_sha256": "abab8c14fe5d570836c9304e3b4c533221368377207f183bcbd0ccb9617f13e9",
+ "expected": "figures/Fig4/expected/panel_i_colourbar.pdf",
+ "expected_sha256": "6875c1815c92ee98f6eba0634a5de341b8c967f508ff2c7275117a0c7eb989fd",
+ "dpi": 300,
+ "page": 0,
+ "tolerance": 0,
+ "max_fraction": 0.0,
+ "new_size_px": [
+  2162,
+  2867
+ ],
+ "expected_size_px": [
+  2162,
+  2867
+ ],
+ "differing_pixels": 0,
+ "differing_fraction": 0.0,
+ "max_channel_difference": 0,
+ "diff_bbox_px": null,
+ "verdict": "IDENTICAL",
+ "passed": true,
+ "diff_png": "figures/Fig4/checks/panel_i_colourbar.diff.png"
+}

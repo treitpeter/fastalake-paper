@@ -1,0 +1,46 @@
+{
+  "unit": "SFig11",
+  "upstream": [
+    {
+      "id": "predict_crossomics_refit",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/crossomics.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/source_data/current/Crossomics/provenance/check_prevalence.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/source_data/current/Crossomics/native/native_pyramids.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/common.py"
+      ],
+      "uses": "PREDICT functional and native correlation tables and distance matrices (77 patients). crossomics.py run unchanged on the seed-ortholog-verified profiles (iteration1/fix_eggnog_native/downstream/verified50/B/cross_refit, Slurm job 6048399); its native outputs equal the production biology_refit/cross_refit run (job 6044312, identical native_distances.npz). Panels a and c, v28d line 139. The correlation, permutation and BH step is ported into panels.py (stat_functional_family, stat_native).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_crossomics",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5g/crossomics_capscan.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5g/build_groups_capscan.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5g/crossomics.sbatch"
+      ],
+      "uses": "CapScan functional and native correlation tables and distance matrices at 347 acquisitions, 13 DNA-complete participants (Slurm job 6063849): panels b and d, v28d line 835. Shared with Figure 5g; the CapScan tables are read from source_data/Fig5, the native prevalence-filtered matrices from source_data/SFig11.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "crossomics_distance_sensitivity",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/distance_sensitivity.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A4_controlled_distance/code/experiment.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A4_controlled_distance/code/distance_capscan347.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A4_controlled_distance/code/collect.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A4_controlled_distance/run347.sbatch"
+      ],
+      "uses": "176 controlled estimates and their distance matrices: PREDICT rows from the production distance_refit run (Slurm job 6044329), CapScan rows from the 347-acquisition rerun (run347, job 6064864; merged into the 176-row table by collect.py, job 6064865). Panels e and f, v28d lines 161, 453, 823. The correlation step experiment.correlate is ported into panels.py (stat_controlled).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "native_crossomics_profiles",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/source_data/current/Crossomics/native/native_pyramids.py"
+      ],
+      "uses": "Per-patient retained signal fractions of the at-least-10%-prevalence filter for PREDICT DNA and RNA (SOURCE_DATA_retained_signal_by_profile.tsv, PREDICT native run Slurm job 5990407), and the PREDICT DNA/RNA native distance matrices reused unchanged by A84. v28d line 813.",
+      "pipeline_dir": null
+    }
+  ]
+}

@@ -1,0 +1,839 @@
+# Receipts
+
+Original Slurm jobs, measured resources (from `sacct`, via `sacct -P -j`), and sha256 of every output file the figures and tables can draw on. Paths are relative to `LAB_ROOT`. Per-acquisition directories that carry a `COMPLETE.json` are summarised by the sha256 of the sorted list `<sha256 of COMPLETE.json>  <path>`; each `COMPLETE.json` itself records the sha256 of every output of its acquisition. Hashing was done on Slurm with `hashjob.py` (see the end of this file).
+
+## Slurm jobs
+
+| job id | stage | states | CPUs allocated | memory requested | wall time max (min) | peak RSS (GB) |
+|---|---|---|---|---|---|---|
+| 5928926 | pilot | COMPLETED: 3 | 2 | 16G | 0.2 | 0.0 |
+| 5928927 | full | COMPLETED: 14, CANCELLED: 1 | 0, 2 | 16G | 0.2 | 0.0 |
+| 5928961 | pilot_revision2 | COMPLETED: 3 | 2 | 16G | 0.2 | 0.0 |
+| 5928962 | full_revision2 | COMPLETED: 634 | 2 | 16G | 0.4 | 0.0 |
+| 6058101 | participant-15 run: denovo_threshold_routes_P15 | COMPLETED: 16 | 1 | 2G | 0.5 | 0.0 |
+| 6058102 | participant-15 run: A27_available_P15 | COMPLETED: 16 | 1 | 6G | 2.9 | 3.6 |
+| 6058103 | participant-15 run: terminal_route_counts_P15 | COMPLETED: 16 | 1 | 2G | 0.6 | 0.4 |
+| 6058104 | participant-15 run: A27_unspecific_P15 | COMPLETED: 16 | 1 | 6G | 1.1 | 1.6 |
+| 6058105 | participant-15 run: A24_baseline331 | FAILED: 1 | 1 | 3G | 0.1 | 0.0 |
+| 6058106 | participant-15 run: A28_baseline331 | FAILED: 1 | 1 | 3G | 0.1 | 0.0 |
+| 6058107 | participant-15 run: A24_fixed347 | CANCELLED: 1 | 0 | 3G | 0.0 | 0.0 |
+| 6058108 | participant-15 run: A28_fixed347 | OUT_OF_MEMORY: 1 | 1 | 3G | 281.6 | 2.6 |
+| 6058109 | participant-15 run: numbers_and_RESULTS_fig6 | CANCELLED: 1 | 0 | 8G | 0.0 | 0.0 |
+| 6058147 | participant-15 run: A24_baseline331_resubmit(6058105_failed_missing_parent_dir) | COMPLETED: 1 | 1 | 3G | 6.8 | 2.2 |
+| 6058148 | participant-15 run: A28_baseline331_resubmit(6058106_failed_missing_parent_dir) | OUT_OF_MEMORY: 1 | 1 | 3G | 308.1 | 2.6 |
+| 6058149 | participant-15 run: A24_fixed347_resubmit(6058107_cancelled) | COMPLETED: 1 | 1 | 3G | 7.3 | 2.2 |
+| 6058150 | participant-15 run: numbers_and_RESULTS_fig6_resubmit(6058109_cancelled) | CANCELLED: 1 | 0 | 8G | 0.0 | 0.0 |
+| 6064030 | participant-15 run: A28_baseline331_resubmit2(6G) | COMPLETED: 1 | 2 | 6G | 149.9 | 2.9 |
+| 6058023 | participant-15 run: extra | COMPLETED: 16 | 16 | 405G | 68.0 | 269.7 |
+| 6064031 | participant-15 run: extra | COMPLETED: 1 | 1 | 6G | 271.3 | 3.0 |
+
+## Output hashes
+
+### `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results`
+
+| sha256 | file |
+|---|---|
+| `1e881445c488d43badc6e766722142c96ad137f028dbd45ee35157e2bfbaa369` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1249/COMPLETE.json` |
+| `f75dbb46e825456994420e6f87c4bbc241b1fdde61881a9843c9c2638f8bf5be` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1249/peptide_contexts.tsv.gz` |
+| `9b5cae47dff45d4ebb0b3f03a8aa3a697e6ab602c53271360e668c78b625ea3b` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1249/terminal_counts.tsv` |
+| `1440d40d77341020422e855cd9a8203597259161a9e1ea7d340fbb672064809c` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1249/threshold_comparison.tsv` |
+| `4109fd0adf7f45f574cee389752456b3888f73191cd2b940b9b26e1ac1ce8af0` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1250/COMPLETE.json` |
+| `7269c05961c6561ee7b8c330578160b56d6a7027149c8e8c31526cb24e01673a` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1250/peptide_contexts.tsv.gz` |
+| `d11aafec62a0a031c4cd12a6edefdb8e64342568d5e0bb73d6754e0458b822a7` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1250/terminal_counts.tsv` |
+| `4f50417942792c9a7c23fcda5b19ba61196e115c95b9e56cfc894a856a851350` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1250/threshold_comparison.tsv` |
+| `ca7939312e85d6638ed3e0957082a570520049405107b4f8913536bd54fae12f` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1251_20210516193708/COMPLETE.json` |
+| `4315a4e8368594776bb9d45047487220d425982e2d6411e69ff7c6d27699f22e` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1251_20210516193708/peptide_contexts.tsv.gz` |
+| `52459cd28ee11e4220a5519424942adf2b25e7fc63168d513020ce5026126982` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1251_20210516193708/terminal_counts.tsv` |
+| `2bbee9fd0f37e5dc25f166df4cf3623bc44184734f6e919606c700327cf37afb` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1251_20210516193708/threshold_comparison.tsv` |
+| `71bc50a3873c8d94738cf26e6721b2661f1e817f49003d22585a5e4f71cbbc4b` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1252/COMPLETE.json` |
+| `b81c505a86a1a22d4054966aa61d2889104effd4744327b959240f19e3091829` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1252/peptide_contexts.tsv.gz` |
+| `204aa12a9d604c7ec1c8b4dd2c6f18159e18392cd585af2f91d409230668752c` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1252/terminal_counts.tsv` |
+| `9f3c41dad211d6424573e4760480a2454e8484427128ab4125ba977e9ebcf089` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1252/threshold_comparison.tsv` |
+| `663eddf482e868416cd0d99aa2fbcfc35a7d93242c1fc4f57c7caaccb4c85a87` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1253/COMPLETE.json` |
+| `6d305efe681f93f0c2cf521d8959b59cf01d05ac11d0a10474c53503d3662fd5` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1253/peptide_contexts.tsv.gz` |
+| `5389ae1c9abed52fc51c1a894c78a625e72077a3e69a937f032b396dd44f1323` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1253/terminal_counts.tsv` |
+| `bfbffc0f8b28d95ce7842646232400ba605632441bd80e45d522c2b1eeb32087` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1253/threshold_comparison.tsv` |
+| `93152c2631a2fe9009fc9cce11e61fc333966f75c2ef18a4d6708f8e8ed7021c` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1254/COMPLETE.json` |
+| `aaaf79ccf72d3df7626189aee26d557cac03b8ca21a9ea37597ffaf4e7a5cb40` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1254/peptide_contexts.tsv.gz` |
+| `459d173561132b899b98b7020f7336c616c972e984b381ec2442cfe6f1f5c9fd` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1254/terminal_counts.tsv` |
+| `769aed6e47a69e9e2c3fb960e8f91c202605aa0895037fc990bb8b18745f8d08` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1254/threshold_comparison.tsv` |
+| `3bf51761d1d9f73409d5c1bb1d5a52b865771c611fdb81325a37f95b97e91394` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1254_20210528055900/COMPLETE.json` |
+| `59868ac5c59ea68238c21ea54f75038e05e6edb1c98f7092de03f2a84fa5b35b` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1254_20210528055900/peptide_contexts.tsv.gz` |
+| `b37418e1bdccc12770e0b00d7d81265086e7cdd8c84f5ba0aae9ee08881c60bb` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1254_20210528055900/terminal_counts.tsv` |
+| `d9f5287f3ff381866c001ed1fabc907b28f114b86af3812fadb5494b571a7f38` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1254_20210528055900/threshold_comparison.tsv` |
+| `65009a73efa86cbc3781587fb4067e87d0d2cb995a54dc19a1617c9245877b42` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1255_1/COMPLETE.json` |
+| `94b2058711dc53e5116f0b90a6c6c872838c1439a6a1a295f03f410f0b083ecc` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1255_1/peptide_contexts.tsv.gz` |
+| `f9f15ebd94d6317a00f3baacb1c55f85d1ca963262e7a8f63b6628e8a1196d52` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1255_1/terminal_counts.tsv` |
+| `f6fb715a1a1be394efcf7e64235203ffe63dda42e5842309f547393ce24b01b7` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1255_1/threshold_comparison.tsv` |
+| `d80cf595a319e7bbf945098b2415d5d30dab10dc545b413496e1c89f54d0c9a9` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1256/COMPLETE.json` |
+| `66b0af49917f11a26e5198592f36aff2b15a2216485d99ba321fea1044f87ea4` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1256/peptide_contexts.tsv.gz` |
+| `ec90c218f6fedbafeeecd767a7a3df9c1b495c46af080f09bd0a8f816a0c79b0` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1256/terminal_counts.tsv` |
+| `410106fedcc0b75205a84f5df44910513626a8054fb92a88dce6461dcdbbc364` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1256/threshold_comparison.tsv` |
+| `db5ac3b5ab66ecf0f8bddd68d82b8f093ae03afa855a1146cba8bafb1dd28e2f` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1261/COMPLETE.json` |
+| `9a182a7c73bc05b370dd8a3d4eaf39f1b0f30f7792cc135ae3bbb357e4bcbdee` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1261/peptide_contexts.tsv.gz` |
+| `974f86d65805a99af5322af9b8c6d46d2665f8e241f851dcc4ce744c6a453e8e` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1261/terminal_counts.tsv` |
+| `a09ad08369d7fe10eec0154930c3e5f4cc44a48b2dcc379e98c0e9aa65053083` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1261/threshold_comparison.tsv` |
+| `99ae36e404628dbf96a66bcd403aa98a5359800cf9d933e10c1de6ba375b39a3` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1262/COMPLETE.json` |
+| `0ca6dde4f9c528e914461aaee5b4ff44beee04f43a434122279b29e51931b683` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1262/peptide_contexts.tsv.gz` |
+| `b87ae18b8654b1a826b51a42887197bdab632ab374fccab5aab7388f83be2dab` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1262/terminal_counts.tsv` |
+| `b2db0c67eeb6847b4216a701576f9b0a1d390dcd71bcaad07eee08ff15bd1b3e` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1262/threshold_comparison.tsv` |
+| `2c51a89663100e6cd15e34f5ab7e364f12b9d65b9e62ba5c1768cf90bde595f3` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1263/COMPLETE.json` |
+| `51f000acf3b2fb2a8ef521e7a227928b06c1ce843eec1972a2c71f89d2ee87d3` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1263/peptide_contexts.tsv.gz` |
+| `ff45aaf6385a00d69a3382c3b5129c70042e20c890de9b71cb487894382abb14` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1263/terminal_counts.tsv` |
+| `90d1f514ffa2df3df9f2271feae386367f0eedc011f635f842614a8f781a9aee` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1263/threshold_comparison.tsv` |
+| `82d08dd6501d0765317f09b3e0a259b8ae2507b7e6971e3fa956e0a1ee7a8ed7` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1264/COMPLETE.json` |
+| `1595056abb9a6a5880bc9f23253cd53a1494d8f9400dc491d6ea1c1cd444153c` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1264/peptide_contexts.tsv.gz` |
+| `cbeb50821d8ab26db8a748044c70763f46db8e81432f4ad47cd98679833fa8e0` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1264/terminal_counts.tsv` |
+| `53ea003d417c5583a1aaffe34f8137a73ef94bceb2ea98222115c951c35efd0a` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1264/threshold_comparison.tsv` |
+| `c41cbda8694aaac0ac95c36d528e295e0f8e7f59b75669a388ee296f9c5cfacc` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1265/COMPLETE.json` |
+| `4dbefad0cd3229973197fa1c2d212d4ca8d4b90f36ee4015cf4873bd03e22fae` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1265/peptide_contexts.tsv.gz` |
+| `9343ef6822a2f8384e06b519680d2ae7e64398b44d36b670d81ef6e15730cf8d` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1265/terminal_counts.tsv` |
+| `6ce311466c8bebbf487e490424d6aab833a71c56edc7a66511360ae77d9b89f1` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1265/threshold_comparison.tsv` |
+| `483693ebf6e5417b55a0f9cce19b5da5d0113cc363388b9930ff7a26ff0897ee` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1341_20210528032734/COMPLETE.json` |
+| `d25405a48b0356a329a0b50a06f7cb560df7e01e950d727faa0dfc1d73e60f34` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1341_20210528032734/peptide_contexts.tsv.gz` |
+| `2c59c84939ae1fe403ba5205faeda4cb7a6bdddc20ec7b8539dae255daafdd70` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1341_20210528032734/terminal_counts.tsv` |
+| `16727643f5ba0ae8b4c7da4a67b587f09e4723a77512485cfe8a6e1ae3f24804` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1341_20210528032734/threshold_comparison.tsv` |
+| `f32cba46f68e1e19b068606f012a6859bc0f8d70a762e477d3f86818c8356b3b` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2126/COMPLETE.json` |
+| `c22f81ead43dd0cd108350b99ce7eff0beae96203ddc9bca0a9e98b9107cbac0` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2126/peptide_contexts.tsv.gz` |
+| `162cef758d32e7e1f2f4031aa010057d836830f3ba327f8cc7b29e513759ad71` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2126/terminal_counts.tsv` |
+| `24b35fa06161459de0bf4fd29bd19dfa2bae0388880c8391fd7720481a1a9461` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2126/threshold_comparison.tsv` |
+| `c46e584922c92e67a00f9849c425194c19070b905c21bcff0b35cd3dda0a1929` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_10_191025211701/COMPLETE.json` |
+| `1e0d51678ed454c1e504eb847f3c3672e8ab4e495689187c34d4ac056238ec50` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_10_191025211701/peptide_contexts.tsv.gz` |
+| `0a09251f79dd8fcacf4006c5c2db4bbc02bf1a28cf0352828f7643abe0056ab6` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_10_191025211701/terminal_counts.tsv` |
+| `82e47df308d52344edd298b9cb8f7630b7877c825f1f832553437c19ae22f224` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_10_191025211701/threshold_comparison.tsv` |
+
+### `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2`
+
+`COMPLETE.json` aggregate: 637 receipts, sha256 `eaf09733a830e8d0386a7a6d3e86c2ce4192d87a70254adc38f010c52a885d8c`. List:
+
+    e4f1f7e0becbf619c5995e54a267901ce193789dcd69acff898cf57ec40ea06c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1249/COMPLETE.json
+    429f027889e5362b3e2bb6d61a55bc4bcbb9185adb3cebf1df3a6e935e4886b3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1250/COMPLETE.json
+    b4b1368e4b7ab58fd5b3c2566badab1c30db419e8c9040fe6010c7b3bba12012  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1251_20210516193708/COMPLETE.json
+    c44bfa1873b51c6e5e9e6148de23fdeff557351e1b9bf2642d37a32419f51f9f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1252/COMPLETE.json
+    0703b835e0e1beea678b93edb82d1ecd42ba640662b9f95a88867409ab2f20fb  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1253/COMPLETE.json
+    b8ca34689a659ffd28720ea8855c3426beb57c9ff9af38d74f57b5fb2efbe40e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1254/COMPLETE.json
+    5b2eacad25d9874139777fec09ad749fb31f8353472fd704338fc14ee101bcfd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1254_20210528055900/COMPLETE.json
+    34a357fa58b05021e0f0de5eb59e057bbe788db36604c13346e41f93b8722534  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1255_1/COMPLETE.json
+    d8fc719d8363848ddadb1bfa3bc5c34c40ac10bd2b956f432e076df9aac50fae  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1256/COMPLETE.json
+    51dc357d3b6b36bb5ef6a7ebc2fcda067b215f96ee33b899388d190534f6b40e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1261/COMPLETE.json
+    248452e10f644d390e32214ae9ba288ad39e662a4a6662c84f92e151ee68e68a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1262/COMPLETE.json
+    05e47332f897cf399c8f2188ea4ae5753f7ff64c3bd99a36a0ae16c5497ec843  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1263/COMPLETE.json
+    859af9ab89da1f9f6c0b84d36fdef6319a0a01a2c8f0abacda9af951fd26a358  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1264/COMPLETE.json
+    c6ae945f43bbeedeb66282b3e60f888a14c970c7d556db58b740c74d760fdfb7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1265/COMPLETE.json
+    c2d109392471668db5d310d479256ba4cb53d832fb3b8e0ac45199532452afe5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1266/COMPLETE.json
+    ebbd965f4c1e98e5fdd208f56d1d9d40ee3e02460e089cf1a1f39de845f8c37c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1267_20210528005618/COMPLETE.json
+    78f410b76854e509203856d69f3f31a59f35994c66676440149ba060ddc4df1c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1268/COMPLETE.json
+    b1a377338ba9c4103e23f43b97d4239a156814f7a45a5ecb7d3c9cbff73adc71  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1268_1/COMPLETE.json
+    7e7e692a6caa85f0e5f685b73c4ecba0c94cf2f44297b0711a92242696d5126c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1273/COMPLETE.json
+    d04dc592820dc19e696bbe6b74d635d289ba45b0a6a440a36bac01d601f6ebf3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1274/COMPLETE.json
+    e306fc0d93b4e8fe2cfb0794a495cb5c924410e605615c389042bd3a0ee8c897  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1275/COMPLETE.json
+    3a2ec444f02aa80ee6c2f4454d374f41f8028346fb64319e3d8299b1034808de  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1277/COMPLETE.json
+    455858b0c5e0daa47522ca3777a8dfbc22845d54af41dbd5129b623fe8bdc513  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1278/COMPLETE.json
+    5d14f4719ba20c86cbd3905777b0395332946d2ce92398c7a5d51122a64fc317  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1280/COMPLETE.json
+    c6b24cfc49bd017a0122c6eb3a7b14fa58f953f75e6dd22058ac14b0df3e6f6c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1285/COMPLETE.json
+    c73de883a20b5a9be5c4b2ab40adc952bfbd014b52a1ced474ee8fae6e5dbb99  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1286/COMPLETE.json
+    f224cad947fc759239159fe79555854f510a8967a4ce43547a634273bf058c82  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1287/COMPLETE.json
+    7f2eac4a63f3ca1bb430895d4892d624a7fa2b7587b31b3e23dce3bbaacaf839  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1288/COMPLETE.json
+    c7a1636e0d2d96b04ad84ccfb595be42bb842b84abb9f51b410ade160938aa6e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1288_20210518115807/COMPLETE.json
+    5fc835e869b56e01c84f51847b7010578f9c5928b05792ac308fb876cc5a3938  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1289/COMPLETE.json
+    9dd834daf3fadb933f09261d3b30f1c5cc76dcd820645217a3d73eb8e84cf1b5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1290/COMPLETE.json
+    93308ff76c26d4ef8899a99a51050558c23cd40337d59e40cbadc6c84e6e3732  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1291_1/COMPLETE.json
+    c75301924d952ec9fa83a84fbfb075560522ceb68824c87884500aaae6aed255  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1292/COMPLETE.json
+    bbf19eda6608d699d5c7c9d3bd4082c18fdfa632222a661e0e7d60f251d20a49  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1293_1/COMPLETE.json
+    37a07bf9ecf08451bf84f441e30186e4e653c503e2ea7dc9f69689e8ad5c1dd1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1297/COMPLETE.json
+    021f6341452167d7c4309c3f9f45b124fffadfda7917f7c7310f73450df79e37  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1298/COMPLETE.json
+    f0fab93b068e6232ca8d60247e96b83166333cd0b6749571a0481033423d3853  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1299/COMPLETE.json
+    60d50cbb93dee7321dcb489c4286c3e2089f62495c435e39f79a93144cf4f63d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1300/COMPLETE.json
+    974f2f0cd7268d6acb7351f53635e780f996c0317a25a6f3cbfa5da4700e35e9  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1301/COMPLETE.json
+    7eafea6ecdc60ea036fc105a22f328fea9d686b0cba3d0b1ed8be1a0135a04dd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1302/COMPLETE.json
+    a7ceba89e0ac62fd17d0831c0705137a754a60b735ada83fc58cc6af52c0d510  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1303/COMPLETE.json
+    aceb8710743c08310fca27c114cd43888c6ea16f12eb45d1515d84aac74f316e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1304/COMPLETE.json
+    9c45465003ebd9bfc474a8a8f3fb740c90644f3645c11b1c2e8ccc373fb3c29f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1305/COMPLETE.json
+    febf6a2706e226423d4dcc9bff70e907bcd543f9e9484affefb05b0d6d154ed7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1309/COMPLETE.json
+    bc6165acc17649da00b79cd1f4b6e9c8c1a9906bb14cf0773e1f33c4ce231e17  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1311/COMPLETE.json
+    1a3e275a8da07228d18e267205d36e6b2f6f77bab45d5fd5b4f89e9e564bdce4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1312/COMPLETE.json
+    f4cca0e9ad52b7a3fe58a93b22dbd86d478b8b5a4109c6f812a67b3c0d2240d4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1313/COMPLETE.json
+    2838c5b17ec3ef35a6d54c3b3ba5136f00746ba0a1816c0d8120e0d02f1bc22b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1314/COMPLETE.json
+    4a1b5694d668eb6e3566b28ba51d4a652d5935a96e55ec2ac9cbab3e862912eb  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1315_1/COMPLETE.json
+    1c55016d26f31a2ae9e9d37544a297558516898478a2a54e85355a67080a1bde  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1315_20210522173814/COMPLETE.json
+    009366b9dd829387d0f8bd41cba9212795729dc9ad6e620381b84c415bd1b303  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1316/COMPLETE.json
+    b58187dc8c068600bcca0737675b6d4a9c5acc14bf3b3e3ff470836898778bca  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1317_1/COMPLETE.json
+    12faf6af6fe5aefc64df7a9dbfbcab18e4dfd6448c89a5b19be972ffe08708ec  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1317_20210527222456/COMPLETE.json
+    ad6d10d1a0b1d4fbb4d6d039790c0b9791264a4e29bdc5d658a0ba4f11decb71  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1321/COMPLETE.json
+    891a9d6b2e001da7dc620f49baaab87fe486c184b020e6238b2c2019c72b3758  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1322/COMPLETE.json
+    dfcfd2096cc8d48a393cb294b80f9189a67a3bd155bd767116d00af81a0a33f5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1323/COMPLETE.json
+    80a8de065ba6f35f93c64ee1aef2db5a6cc2a25c56ff3019e13b36c45a660717  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1324/COMPLETE.json
+    56daf4afc71a54fef96c9e6226bffafa9299a3b0fc67becee7dba444685fe3ca  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1325/COMPLETE.json
+    1418bf894413cbd38736baebce482d79f80318f9f172f5e5fb4f80230cc3801b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1326/COMPLETE.json
+    2b7b14f68a2573b5f3d9c58f9773b2a468817cfb2c038a59fbc530f3602c670b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1327/COMPLETE.json
+    2e432d5954abb81d24ed3bf05bc04a56afba5edac4cf4c9eb21223bc482a2cc4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1327_1/COMPLETE.json
+    52396ee5c8fb4b74bca1930ab0c21ff1cc325f6c8d69cda0cd98eded078df7d4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1329_1/COMPLETE.json
+    ab4e334993e618454c79bb5568e334a7afd2358e1b222cd8a428519e3bbf6adc  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1334/COMPLETE.json
+    f193e52992ff5381bbca372bcd5af0d72d7bfa6d286bf4f05ce2b5f7b199469d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1334_20210518215835/COMPLETE.json
+    a4efdda416e138776fc943e75417a5619b202bfb86b3ff6a6e435f66ff11918e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1336/COMPLETE.json
+    04005fc7d9d42686595e4ec41343fd2483ee2768b77ef1a514e95085aaa11af2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1336_20210516220748/COMPLETE.json
+    3b9f3a03d7ccf1533e8fde9797c1c1af7b09512fed8fb3921d2e1499f6bbae5d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1337/COMPLETE.json
+    f5d6408f5e517970f162fd83e3d691794ad143b2ac6921579a4ad17bd735ccb6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1338/COMPLETE.json
+    adebd2c99bb159e96ee44ea669945e4bc2ef8180dd1d689bd06c50422ab92790  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1338_20210519230458/COMPLETE.json
+    f36504e61474500b18e4baab408a95c93e6a796c6a04908672dee1af6723a03f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1339/COMPLETE.json
+    7fbf5c1fcea18fa6fea2f097bfd62a0e0a723bf779d6d50da2fa37a4f5de2bb3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1339_1/COMPLETE.json
+    10d717b9bdacf1d2d840f5bb025544754fb9fb033eb28ac702a5f677604c9ea2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210513_EXPL0_PeTr_SA_T760_1341_20210528032734/COMPLETE.json
+    a03dfb2248f68f38767da82de69016c192b4a9a5de2ee2764f6b859cff096b87  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1258/COMPLETE.json
+    bdf756a82678e95ffc9381123403967b065edf282c47f04169e6bc629375c8cd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1259/COMPLETE.json
+    ce81daa1cb46f216869e739ec5c04b45f99b0dbd19a913b2c1696c4bd748988f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1260/COMPLETE.json
+    5b74c18da93d105b9bf567d89efc2067503bb0bbfdfe4e53b9ade4ea1876378a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1270_1/COMPLETE.json
+    8f6e92683106c531adbf645ae6bce66a6325ab622cbd52191c74ee3d351aa104  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1271/COMPLETE.json
+    ff6f205ac27bdea94eb25eb7e9efb7bf335ee27459756d8951beba2ee202fb4d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1272/COMPLETE.json
+    f835b7daf622c26452100d8315e4f629beddd8dc49dec2702968e9f6c10ac4be  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1283/COMPLETE.json
+    2a789cfd77f284fe77cf04e9e53c597f32f8a3d08661a53a0a20e4b01822b1c5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1284/COMPLETE.json
+    d2a55c85f3cc95aefc967ed215f6ad540df9dfebe6e7ceb5902102fd3a961db1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1294/COMPLETE.json
+    be2d5fd59baa44937c130016c6120bd36734595a8d9e254e5fe0dce72d0cd0ff  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1295/COMPLETE.json
+    9227129ee3ceeb2798bafc03a9b0c5b88cc7b0ef429ec68cb464e1d5cdfe5fd8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1296/COMPLETE.json
+    e51fedb112dbed759eb1f94a04d761d781691e35ff18b63ae599fb71c7e3a2ee  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1304_1/COMPLETE.json
+    27a77b176d14f73c7a6f18a43e0bcc40f92ee9e21035df974b9cca85c583e032  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1306/COMPLETE.json
+    9a6362905efeeb8aae13229076afc406faea60c189e6ad88615b05150b3bc08e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1307/COMPLETE.json
+    489df3ca711d289268aa6f56924a25cd1f2893cbfc5733ac1fdb1617b462e1d3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1308/COMPLETE.json
+    a4e0d770b3e2b966a55e83d4a7d592f59d347034423f7c81348b3ca1c08a66d8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1318/COMPLETE.json
+    30f267fac7b9cadc6808b49b0066a5b20f013bea2ea6de2a9b9f4fd30ed708b1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1319/COMPLETE.json
+    346848262e71dd04391c8f810cf422ef8d3815f7a7df31837f481832c365f105  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1320/COMPLETE.json
+    8db6220e69c457ad030612f58637ca5c3836f6c937035fd22cfc7ac135f80c59  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1330/COMPLETE.json
+    f50afdd2f4eb8bc06b31ae5d1d9db86e008abe080c7a9b0a4a34b1f0b79fe152  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1331/COMPLETE.json
+    155994968a187724a319dd5e9b016e0dd1da2814530d478d0454540b90452b6e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1332/COMPLETE.json
+    21ab071a6b433a5a859e9b08fbb57e4fcd8e376931483cd45123122fc6846e17  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1335/COMPLETE.json
+    fc574cf170829ef5510b22b272a5d9181f591356b37d55678e5542e92b464622  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1342/COMPLETE.json
+    5b2463c0bc33bf3fd173dcbb84349f5ffcb088d944ca3e4cbc5d06f3453e1cd9  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210524_EXPL0_PeTr_SA_T760_1343/COMPLETE.json
+    2bffcf152ac2b86a034efa67817b5f985d75353afe5c519f4f0331aec55c74fd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1251/COMPLETE.json
+    558d7ae0efddcec0b6282ffa7f3f85646355c205c01675054eb1ed57643ba7fb  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1257_1/COMPLETE.json
+    84989e686be028379f501bec3f1e62cedc1854b87cca4a697ca05d54a165c249  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1259/COMPLETE.json
+    5fbb725705d65e53c2f04242430e506808371aa694bb905a7891fe152aab03d3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1262/COMPLETE.json
+    9446c7afcff6aafa88337e03828bf5475040003b28b0b3b2d9d412fee0757eb1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1262_1/COMPLETE.json
+    71acb0e8b2889bf3e9f7457b4491ea88ff5f3d58fc575bc3270263db009a5c6c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1280_1/COMPLETE.json
+    d1233799ed7121c1a944dca2ddd9631e812b2d2eb84f4e4d662bc4b05092b6c6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1288/COMPLETE.json
+    bec3f2bc413d356684ad0fc7235ab5f6efbf38e2ab8f19aa2800ce1052a44ada  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1292/COMPLETE.json
+    8a7c2ca7584ebb569d3967cd2703e5b82ae40a11c408da6f11a1759656112e82  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1311_1/COMPLETE.json
+    1a099b16fe350de4071fcc8d0c720c5c1921d69329dcabfd4125c6d5370eaa0f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1316/COMPLETE.json
+    6013b8a11f29bcf6e5e5d6f186e2e76ae742024b8d19455f66f0bedee4d8f16e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1347/COMPLETE.json
+    fa80f83b7d26506e0e9ef568af6865ffd1eeb50ac8a6f741f266d128e09f64f7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1359/COMPLETE.json
+    8fe1b2371a56b04425cd4f1470889b1c27e33cb85a8f48defd63e2a70bd4bf7b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1371/COMPLETE.json
+    e0e11f658e04cfa8500051650ad1a9fe06c78576769f4b110dcef66c8c8e7872  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1383/COMPLETE.json
+    c3a982eb73b052ae2c850723f97554dcea476738182d4888e1c7e7b902228fb1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1395/COMPLETE.json
+    cffe3fca6856cb3bb40742076798cb2c3e56b9fc2b381090044e25b95e0bd624  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1740/COMPLETE.json
+    7f9eed09ed0a32b67374a2ca2b79b47a6937c919168eb2aa7ea7a3849ee3f021  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1752/COMPLETE.json
+    0e861890ff48b81bc81d0b77aedd14c815ba28ece654f9ddbdb58551d5381298  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1764/COMPLETE.json
+    60eb6e7a60b7ce3b6a14731d6c23d0b9afe56b0dec473275f70b53abec3cf7fa  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210526_EXPL0_PeTr_SA_T760_1768/COMPLETE.json
+    0f350c144eb7da75c6c49739e8f45fd6de38893c4de1ecb7a2bbaa4a80c71dc2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1258_1/COMPLETE.json
+    62acad40f542ad77e7c0e92592bdab72fb8cdae5014aeaf41a700eddd7dd03fd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1266_1/COMPLETE.json
+    3494d2b9f5485a1033a1b80ce499b80c09e96426e3fe59d256ad3357faa5a108  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1270/COMPLETE.json
+    3c3e30a388578619bdaaec2d153c8a6d371bcd5d490a6917d0c1037e1a6745e1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1294/COMPLETE.json
+    948a3d20496045799038d4a105926390f5e17a4fdf4f70fa094d9dda4d3f3b7b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1304/COMPLETE.json
+    bd7d979067bf02f40333455e4a3715ec9a5ed6e2806125eb24154749afae45fc  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1306/COMPLETE.json
+    54f313c11a4bedad7780c90d99a8a0961048aea9b406123d7a803ba390633e3b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1318/COMPLETE.json
+    26af64be8aa74e4f6df43ded64340aa4622e4b48d4dd5d62a9ae9852f080cf94  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1330/COMPLETE.json
+    4cedf55058f5090076521c7bd314a442fa2386d780004852f354bfad71fbf03e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1342/COMPLETE.json
+    e2df89a102c5e804ace9c5aa27f2f812bdbb25a0f042dee5bb620ed4db06a80e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1357/COMPLETE.json
+    6f4412878496a4684212efeaf3b9c353ddec94c7259001e9d2021e1799d81499  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1358/COMPLETE.json
+    27997ea4712321f4a81d4fec687dad45a8024f37f533a56b8e88565c4537bfb0  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1372/COMPLETE.json
+    ba3a3b1ea1b7c4cf54c442fb692ec96c553a054d655d11441d7b2a1587668790  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1373/COMPLETE.json
+    93e06a8a39197f7561ae47f06eab0a8541bb42a49f5c619be37ab54f5b597804  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1381/COMPLETE.json
+    1ed014fffd47a5567f925b270bc9c282cd32a66cc9e410b8e422fec8a72aed00  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1743/COMPLETE.json
+    497cd77b9cd85edf9ac1520b302745fa2ccdf6bf5faeafcbb19609355ba71b92  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1765/COMPLETE.json
+    90b0a4341b180ad1cac097d1db7dcf021a1965bcc2ca9844e00f42ffe8c700d4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210529_EXPL0_PeTr_SA_T760_1767/COMPLETE.json
+    22269968bf204bdb0d47294cd1ed41e58a69ff8f84a74a95230dd4567a860fd4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210530_EXPL0_PeTr_SA_T760_1345/COMPLETE.json
+    905ea8e4671003120038f2bc37b7bcabadc6dc5018c8f58b66aba3b142d15dd8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210530_EXPL0_PeTr_SA_T760_1357/COMPLETE.json
+    72757fbb2937e8304c80ea78eed3a4fb0be21f88ce7911bdaa27e55f01e3b50f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210530_EXPL0_PeTr_SA_T760_1369/COMPLETE.json
+    a480bb8cdcacb9e2c10d072c3b917298817eb8289dfb1acbc9ba20a75078f10b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210530_EXPL0_PeTr_SA_T760_1381/COMPLETE.json
+    0b47d57b90c5c5581072b837746641b4a06962963128a9ac662bc7e04357c362  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210530_EXPL0_PeTr_SA_T760_1393/COMPLETE.json
+    f79f2376df080ef6847d8c16d912443153451c8dd55e99fde00ea100c99ad3f8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210530_EXPL0_PeTr_SA_T760_1738/COMPLETE.json
+    bbdc17abafa616afede69cb331a7ebbcd83282d3570774b84970e831fa41b0aa  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210530_EXPL0_PeTr_SA_T760_1750/COMPLETE.json
+    d69a01b269e3b91039ad33ab0ea152730ec4c1e0506e5f440c57cc6980ef5687  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210530_EXPL0_PeTr_SA_T760_1762/COMPLETE.json
+    c8a4147b761feeb17713f0907bfd36f7108bd2a908901895894ca0cea3237cad  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210531_EXPL0_PeTr_SA_T760_1346/COMPLETE.json
+    5b72cd206958010d24ac8acafa073e6ca1b784c5e4be3263ae4bd0b4efbeb9f9  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210531_EXPL0_PeTr_SA_T760_1358/COMPLETE.json
+    8f572b855854f0e6a8a9059a16b53761091f34d7da64928caf91c3e28842c550  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210531_EXPL0_PeTr_SA_T760_1370/COMPLETE.json
+    dcc060a86ea3fe2b81238173a7d4840bb8122a9c8d8e770fe71f5a068c0026ce  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210531_EXPL0_PeTr_SA_T760_1382/COMPLETE.json
+    af0b0663df58b232f8d477e07c17a17657438ef80efb648db45eb4c61915ac38  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210531_EXPL0_PeTr_SA_T760_1394/COMPLETE.json
+    b599a729d1def41b1cc540edc815e5329c3f069e79b62a4f16d4855aeda2e5c3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210531_EXPL0_PeTr_SA_T760_1739/COMPLETE.json
+    4fc1205271575223f5708891bb0582c8d6cac3d76d70d26f4bd6ba77640a5e45  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210531_EXPL0_PeTr_SA_T760_1751/COMPLETE.json
+    12e2a37aac102e2ee08c7d211c15bffc774ff765b7b43406d5603eb0852cc292  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210531_EXPL0_PeTr_SA_T760_1763/COMPLETE.json
+    8c3f6696c56c0a41f0a884f8790367f630ef8680af681fe82297c1bab40a26b6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210602_EXPL0_PeTr_SA_T760_1348/COMPLETE.json
+    bdb497fc088956025129cce809d115955a81acc3fed30569930b941502b37ec2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210602_EXPL0_PeTr_SA_T760_1360/COMPLETE.json
+    1304ba29be7cea6955cf41f1a7580a1af9667c7ff098ae4ed7c096e78c2e0991  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210602_EXPL0_PeTr_SA_T760_1372/COMPLETE.json
+    f7be601de2ad2404b109dcbe8f041bcfe12da13f687a1058dd3a5eaa3ea11d7f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210602_EXPL0_PeTr_SA_T760_1384/COMPLETE.json
+    a94f3e9b178899ae8513ec1ba73f1354ea7994bb817aceabf919012f1ff7845a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210602_EXPL0_PeTr_SA_T760_1396/COMPLETE.json
+    d43de5725ec2292e0b94fa07c81705b0a93e202ef61f678b1e56643bd511a983  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210602_EXPL0_PeTr_SA_T760_1741_20210605094637/COMPLETE.json
+    c34db5c0ee920ca21e599cec667ab145d6680fe3288124bc35364b720200758b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210602_EXPL0_PeTr_SA_T760_1753/COMPLETE.json
+    54abecb9132131a5c18ca38fa41cf347812396b36fdf8418f327db9ba0127d20  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210602_EXPL0_PeTr_SA_T760_1765/COMPLETE.json
+    10094bc2d87b97466a34b79ffd819014360f763df26d6fb34e196a563b2acfa6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1349/COMPLETE.json
+    4db29c3a0e731ddcec934695078e86a610e6c2b4e051b036af9d59a3e0dc3e0c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1350/COMPLETE.json
+    c4b60049be6c9e9e268a300feed46d86898a2085662656d22dfbc4147d48ffc8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1361/COMPLETE.json
+    9256b386bb902f12ed8e134aee249abebcb10986745226abffb17c371f04f7c3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1362/COMPLETE.json
+    9a0a9d733e24f5b79dac13d25635aa0d308a3b5e85fa84efb834236e545a440f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1373/COMPLETE.json
+    a828ec1e379cc724f1da285196b3789ffd4238dd230b728b7789cc353d353fc3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1374/COMPLETE.json
+    fb2e8d2d122e5a6bccfabc8ba288263074fc8fa3af7f214a6963527e02452bf5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1385/COMPLETE.json
+    29d32e0144e74661e824e9dc029ba66e3aab4c2dbbabd270f848f5db0eab881a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1386/COMPLETE.json
+    ae1895bb7f0dff2889e6e85b0987ef2586d7af0480d4c9a3a173d6d4fd21d7bc  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1397/COMPLETE.json
+    2d5fdacae726d5502c6d89e3acd360e051b2350602bad0f6b887370bfe3e1224  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1398/COMPLETE.json
+    46e8a88d3df308fc87a8c6fcf77c56c0db3f647370ed73be5ad20177be117cdd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1742/COMPLETE.json
+    ff102378097b1c9ca046de2d57179a107ecce48b7a6da28ea6c7380531d6f758  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1743/COMPLETE.json
+    dd8045fb6b0a951620e66e5801ad8b6c8b1d8a1f9b330a806cb29c1109a058b6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1754/COMPLETE.json
+    9b60ca7bb1a2e18840c5710db399f0436475c8e43e21cd6ea1472abb4474f1ec  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1755/COMPLETE.json
+    b38c41e40ab4d24a49012129db06b92a8b102da593800f45b63d1cc251ae82b3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1766/COMPLETE.json
+    8eb4311e82cbf887a3d6cbe96bfa8033e82d0e26758c5d51b806c4775365c5c7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210606_EXPL0_PeTr_SA_T760_1767/COMPLETE.json
+    a7d5e89481eeb0399d7c2026f56bd3242a037e229228ebd1be301404e451ef2e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1351/COMPLETE.json
+    fc7d5d7eda49c24587a07c1761f604fe39f9ae60406cd83cdb0014cde6aee7a2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1352/COMPLETE.json
+    77f30f1d63c0961f50ea6cd3ccf109e9a90db49d53482d1833aca7a696c403c2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1353/COMPLETE.json
+    5fc1cd2a3d0c33d233c25578e10f60fdc92355b0ca51e840ab0d5d4eb0a1a8d4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1363/COMPLETE.json
+    166b8cc4af9e79f460cbf57f5bf3404635b2b84cd009162e82ea299045ea738e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1364/COMPLETE.json
+    4c478598bce53aac0a2158a247fcebe5be6cfb75f4e08d73e22c66564be99c96  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1365/COMPLETE.json
+    1026edef88a3356bf13b11887aaa2a7f60ce925c6e13c2afb15297a00169822b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1375/COMPLETE.json
+    dcfc9a8d23dc369e9415ac3458b6b4c91a8a9efd5028be7706f93671f3c475a4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1376/COMPLETE.json
+    d40e102846670493b88092a544e33ed7ce89a0d35fbcfd9672bdbbb8a33147b1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1377/COMPLETE.json
+    992fa96b8e0f3638b13ad83b0f555135e370b3ae40d8ec1db5372aa1b7424108  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1387/COMPLETE.json
+    ca47a3b69ddbe8ad0f38d14692795419b50ce1971fe645f74680d46360a4db5a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1388/COMPLETE.json
+    7fabdf47bb69fbaa573eee0c81c674eec0734112ad2753002f9f98be357bf614  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1389/COMPLETE.json
+    afd3745bc70f552d821f8d83bd5a052ace55a86541ae9c3ff838aea768224037  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1399/COMPLETE.json
+    e50e902117e3089c1e43159c28c425d9ddd7d812b0ea4b26537b7851c2dcc76f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1400/COMPLETE.json
+    fde2e5401d7532a32ab4c004630fcf5fa6c77220eb0453e9b794a493f1c29460  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1401/COMPLETE.json
+    7a457d96a57d3d1e7ce0fdd45b883f795c73c84bae832c086b83871e88f616da  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1744/COMPLETE.json
+    c43ec80edcf74e4e8da625027fa64defeb418e944d6edc67f972ca4e7df40e7c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1745/COMPLETE.json
+    9e0955056e4fb0e84a082a79986b4ce7db772caf1ee51399c342dbaf41251c63  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1746/COMPLETE.json
+    8d7fd0a8ae4efa58c796301d00235ac2349aec769863c476780b6254bebe4568  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1756/COMPLETE.json
+    44cb7885d297dee77c93d79ea4f655cb8dbcf6ab4cb54cd08c19fc66c40340d6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1757/COMPLETE.json
+    0cde4445fd2a8a80233a4665c09f560e62623bef60ceb435fa2c959ebec6525c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1758/COMPLETE.json
+    b9ed07838e5ab5b90ba08cd82ae64f9a4efc0e91ab9b19f77bd2ee0c8a2141ef  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1768/COMPLETE.json
+    f64b359e44bcba9670c8b3945108761df7282eff8180ac5f362242e346317c3f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1769/COMPLETE.json
+    575e614b7e508bc9f805f3e9b1837884950d47ee7eeb819651b91cbf3e383ec3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1770/COMPLETE.json
+    19266e0e1460742f2d5d4f5c0954dae216265b6cb715a4f968c4395bea72c2b6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210607_EXPL0_PeTr_SA_T760_1840/COMPLETE.json
+    ad917fcc8c1b2a2fab10ca3749032eeb5c3e1db93d07015bb73d6956698d9bd5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1354/COMPLETE.json
+    0f3003f2a3dbbc01fb59e98e7227d7a1bd43359ded071da500d5d00d599749f1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1355/COMPLETE.json
+    70f074821efa2c02390ad09892c4cade201dab727c683c83398367d8c9be95c5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1356/COMPLETE.json
+    1fef7f43cc0d5ae14de9bee66548445322ed59c25d0ffd684a7cbc60dc9908c9  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1366/COMPLETE.json
+    b36de1f14105af1321b585c4344fc8a89d3e714cf4d9403c9f5e3574b91a15ba  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1367/COMPLETE.json
+    ec17785beccab5aec2c21b16b7a987ba3f07c3b48d8298dc901b609003f05e0e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1368/COMPLETE.json
+    452e10d9a979c504505328efd818fbeb7feb1a6e309ef44d66fd164f4c3705bb  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1378/COMPLETE.json
+    c950f2d9a45a6f73d8972822f140bedd5ac814fe73dda2ce4cf866bd866474ca  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1379/COMPLETE.json
+    021b7ef99e47f9d47df2a899bf2f703c2a0967fb21b6296a79d9802af78d5f4c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1380/COMPLETE.json
+    9b51170dcc5f18322c7e42cc7db112741403ae99c4f05afedb9315ebb28c44c0  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1390/COMPLETE.json
+    9f421dbdd5b5bcee008d7000ecb729cdf1c6042fa82c0c0f47bbd0a3011a8521  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1391/COMPLETE.json
+    df8573ee4999b90be165959a31ca64bc45faf61a6081587158ac2f5c8e04b23e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1392/COMPLETE.json
+    48b04c75ff308be33a630391a40124647081ebaac53a89261219b6f706055ee8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1735/COMPLETE.json
+    c934443ffb528a88995f38f49a3358f25ecbeaeabba7e3b01635e482f6256e56  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1736/COMPLETE.json
+    68da4c86044c2d84f4955d8b518fac31f51977e93a5d73f275dc9411c8c98f1c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1737/COMPLETE.json
+    a608766865eaa16eb93483708e9711b621f5abdd561228f55e103b2dd4dd61d1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1747/COMPLETE.json
+    e6206cdbf9efb812918cbd2b9e9915ba2273fb6311b676460934e77f1005346f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1748/COMPLETE.json
+    e91362491c641f932f270a4a51062b928cc4ac0acd3785e0ccd4e1adfecdca56  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1749/COMPLETE.json
+    62c2968698b062bf1011b553672a82bd19a6a888d1464978cf960ee79ca43a58  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1759/COMPLETE.json
+    3c8a27f6a93bbfea92fa979391572fa8fdb826f8117ab59e3feb40f32024fb5d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1760/COMPLETE.json
+    25c1c4b6f34701258c9ad4e55290f08d02441be7bfbb6e8220a9e6a471114d62  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1761/COMPLETE.json
+    07dd889f45ae1a51dc7133c314f75b90bd226e1d231ee0fabdfa9852ee65132d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1771/COMPLETE.json
+    9b9aa0b4dbe320df77482a9a653e895e1c9209918a49fc1fb65c9b7f41c23d0e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1772/COMPLETE.json
+    5e53d86ee29625f85d3fdb302decb29d9ad58fe09060f8e1be57c17defe9932a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210612_EXPL0_PeTr_SA_T760_1773/COMPLETE.json
+    4b5b2b8e214b1c56fe2246738be18662711c075228d6efce0e7b25be33dae6cf  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1774/COMPLETE.json
+    9427b397961e4119157ae53056b4b19fe9eeda543d93ea745c5c0fd0a64dc43f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1775/COMPLETE.json
+    ea5772857dd8520bc8d19d08f2c1849a66f616401035044ab96d7c60aafa0fbf  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1776/COMPLETE.json
+    50073127ef5167dd926ed802cf29dce102c2fa7c5b646de5393a8f385eb14c61  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1786/COMPLETE.json
+    6d6aeca614572221dd54b1b5d8d4a9b7a579642ab038de109cf2cd2ae3afbba5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1787/COMPLETE.json
+    42e59cc32810baea8bd34bd4ba1213e30c35b0ecf7880ec550a383ee55e1289b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1788/COMPLETE.json
+    d0ed504774187e00ab097f9ef76a459db4bad348c5d9b4888cd7de2c81058d94  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1798/COMPLETE.json
+    72448c497133ec59df66c33ce0677bd42d5e5661c57d3164eb511929153b7e22  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1822/COMPLETE.json
+    53c3e7c16fa6435f956b000a08385e04a2d8d0b29459a6f5974c553e006f4c87  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1823/COMPLETE.json
+    d187f8653c5ee8dbcbdda77a617b3f381396c60155af1ccaa0ac36331e1cd664  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1824/COMPLETE.json
+    cb36ddc761d5382c92dbc45df28dc78f122055d57e1ffb42347aae938fc46411  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1835/COMPLETE.json
+    c8f3bfacbaacdf0a8a18a6b1646c9414c3512f7347b82e9fbfde031c30ffc142  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1836/COMPLETE.json
+    9b3642d478e4c68b7266688f244767e56a0b0a7e17d56e5dca76d221fe1b8fb7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1837/COMPLETE.json
+    34a3c89efa64557da52892e92efaacd0d42836180b436fedad874f89b457bbe1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1777/COMPLETE.json
+    ffdb4ea2652e3621bf8133bda969731ca9dbeeb740ec67db1f1d1de361d0d5bb  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1778/COMPLETE.json
+    ad7f6c1712253be1742eaf7b67d861cb30901730f1dca0a251c33704ed759b8a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1779/COMPLETE.json
+    68ad68a0c8a14662e5f086ef204cc6448e896c1293a773c50bb8134ca242dc38  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1789/COMPLETE.json
+    2783d538ca1e3f625c5a648eb4edcccff762dd3214cf264f916d80f484f53c0d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1790/COMPLETE.json
+    e2b83ec12b67ee8f2756754253d3980e636185ec8fd9cbbb0000de93feb64b55  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1791/COMPLETE.json
+    cd7d5cdbeb47a653fb86f6bb69c98f7d81b5930c70871be4850e759c382a29c1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1815/COMPLETE.json
+    ac6992573201bd185669b3abba528a3dba0e5a52cfca1177147a1bbd57ce322c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1825/COMPLETE.json
+    22d64acbeafe2f570e1db50a11e35f14f4d573843ccf99b1d3c74f473ed6bc21  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1826/COMPLETE.json
+    ddd1906b1a1711c882698fb57287033971bfbaa1ee12d76cc406f58208bea424  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1827/COMPLETE.json
+    9c1590ed8fc296b712a68e587e070f38e65ba2db1f01aa80e184c9686cb18de1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1838/COMPLETE.json
+    dff77aa2dcac27e9b960b33ac05658315df1b905ebc867f96049e69463d13c8c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1839/COMPLETE.json
+    95a68b7e7e2910e96d1c724de3084644c8bb1ef3c62dcb955d335954e438e7ea  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1783/COMPLETE.json
+    812aaf130d1671f5af795ef00cc9efc93fe558a4a149e648f7064785516b0326  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1784/COMPLETE.json
+    38b9d15e7f35bc582bf6148cac970ad76bed2b6a331ccdecc02ca6236ad1fddf  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1785/COMPLETE.json
+    505d09cb9f4f9700347117e737930621e51ed4b3f380095f7f024ce8e0966561  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1795/COMPLETE.json
+    f4e837312e9d099ab6c8dd30bd7967d43adeafade9710b096a5ea4746ca105fa  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1796/COMPLETE.json
+    63e1a3ec0dc56b1a9f959f9814382d82248162b5784267390f4ac0e9d8e609ca  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1797/COMPLETE.json
+    4f2cd804cf9b9423abc6129b64a8f2eb98a1ce35a175b04749ff52cbc1e6657a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1819/COMPLETE.json
+    f122f83a0b36695b6f52bab324a0dc30813a983cfa4dd38cf319fefe27559731  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1820/COMPLETE.json
+    2e9203f92ba2e12995fb60756fd25843f546526a5425c4f3c0c02e3938f01041  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1821/COMPLETE.json
+    069b89171bc4cfbdf4c56e41f462ac0f40e4ed643878b5f6f3b2a0f27bc1f771  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1832/COMPLETE.json
+    179b92b44d4af322b72611a519fda8dba63fd17411bcd5ea793da43a6870969a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1833/COMPLETE.json
+    9e0bb95fc3785ebc25fcabb7b482ddcd825f833fb72abd8ac4ae9c561ced42b7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1844/COMPLETE.json
+    bb6782011f81892e305bd9951b5121b514c89d8a327bb40b5003a734a7d5182d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1845/COMPLETE.json
+    40e5b6e99cc2de5b81ca6081ce10e5713861a79df4bf30194e497d3cc98626ee  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1780/COMPLETE.json
+    d38081d613809f8c381cf6392a037f503040b67ef3942c59eece9026feb9d836  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1781/COMPLETE.json
+    52a5cc8a111ae690d051925444d0847b0698bd90eea77759a3b7596078322f36  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1782/COMPLETE.json
+    16a649ce655bf20117728f797ff75bbcaaa01a4c6780e8ac4db43b55902ee957  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1792/COMPLETE.json
+    67555bc568308c229e30b55f1aca0dae72475b6eca539e0ac8ee1eab315fe6c9  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1793/COMPLETE.json
+    ebde568ad2d5bea227e26cb12f23bddee83f31f57da71cfc5ffaae6c6bab1c87  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1794/COMPLETE.json
+    0dc88b1f5001636720591be31a847385b8ae28bd002bd5836cbcc4a533956cf4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1816/COMPLETE.json
+    d3abd997c6a4ab9932e7dc95b57f9550e40c516a2aa57bd0d2d798f21717c6fd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1817/COMPLETE.json
+    b0e8ca3b83b7d9c9c1fbb6799f3f0b580a5d0096a3120a08a8e938e50301f198  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1818/COMPLETE.json
+    06229568e82b57501a473c9a8749f97af5d2734da0cb1642d274b3068c72937c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1828/COMPLETE.json
+    d0e06bfb31a430bf43a4468c1cc02227f63fd542dd23baa3d8fa5bea9ce57065  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1829/COMPLETE.json
+    e8bfee450f5abfac33f019f86ebfcd73746a961eca2ded626d3494c082a9b07a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1830/COMPLETE.json
+    7404d7c29fa21737b8bdaad05260ee4f45f36c1f85304619a2ace60dca760e7a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1841/COMPLETE.json
+    b55e731c8bcd80b1e06c3019ffb2b97f8831b1487f83596161ee847b14cf77f1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1842/COMPLETE.json
+    673c7511d2ce9b999e3e9a88fadbf89d24f07f3be453b528daef967e0dc7255b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1843/COMPLETE.json
+    b6d59007d94f3e2739368f27b5895518304685ee68ef9a1625e2186413a0b0f1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2126/COMPLETE.json
+    456f446ea0753dd2a307ddcffb0be4b95f4d5363aaf91d495a4d673288cd8f60  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2127/COMPLETE.json
+    b362d8154eb089f60d35dae4a7d9f01b7766449c89a0e114eac675832d7d5c38  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2128/COMPLETE.json
+    1e51b1f8630439e705e6072b68931cab509611685f74d81fb6aa114f615fb464  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2129/COMPLETE.json
+    6f741d391d3af3732d033b8279922a859ed4aedd21679d5b5f06e0f38c554157  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2130/COMPLETE.json
+    7e19a09f768a08e1f33001ba1ad1647542a7fa1212a7894a07feb8b45dd81ed3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2131/COMPLETE.json
+    8d79057d8039dfd3f225046845111911131c6997f9c2ef37e262ef8b64111f6c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2133/COMPLETE.json
+    91658452a8b9adfa34faff7ae451730d8eee71b90327ac159f4454483b26d607  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2134/COMPLETE.json
+    e17861a8ed5087afe5d04ab157730d354e4ae865064d0da17c12b0745b3b755a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2135/COMPLETE.json
+    3586883d74bd66073f486afb5bea3a8ba8e2c77f15aea1bccfd3bcbba355847b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2136/COMPLETE.json
+    680d667097d4ba1ff9147b1254f47ba3dc3efdda1f1df00bb6be4de54d107c07  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2137/COMPLETE.json
+    eb2c25702d12a03aa16cdedcc75ac875e2e5e1718dcd9ddbc8eb3556f9da7d08  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2137_2/COMPLETE.json
+    b2aec2c44b62bd0b86232f00432b0f5720f284285d540acc39248db73fb1b53b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2150/COMPLETE.json
+    5d351254f2f7a2e16b7658498d9c6d392a3700d5cd80314eade4291139ada3f2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2151/COMPLETE.json
+    e2167d5abbd98eeb51587cf7aea78f95013d6f6fecc5bf8cf056f45d64fdf024  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2159/COMPLETE.json
+    3f442336a05a88fc180452873f500643ebc21972d5949838598387f1bc2e92e0  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2161/COMPLETE.json
+    bd083eb8b5766f2ef3b14389bebe9348be6e9c7e45300ab1c5b745535c8e73d7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2163/COMPLETE.json
+    a4f9107fe76be6240dd90943a41ad72c9af35203a1cca95b0a99cd7b71a7aacd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2164/COMPLETE.json
+    e095224d52bb87ea456b1d97a14c15b4473f46a93623e45f894d1104ca8a6c15  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2165/COMPLETE.json
+    696f156dcd9ac332addb50ff253130aff9d5419715d907967e030b1679bcce7f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2166/COMPLETE.json
+    1039ebc67db08d2b86bbb5215d6b750e7a0956d08af677ff2b99fd8926f8ffdd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2167/COMPLETE.json
+    7ee7744a9c943a66c3bdcd9aa3622edb6de1bf8018eeaf52962210999a6b3067  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2168/COMPLETE.json
+    5864134b5c0f42a320871c43513bc1dd1a53dd91c37c4765a4993de9cba3fafd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2169/COMPLETE.json
+    b4a54e2e9a64fd074c217117f6be183df4de33d84db249e62d2d40838271c245  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2170/COMPLETE.json
+    6830ad51c0b721d2e1da475a58fc9233297e38da56bc222561328019ff02bc00  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2171/COMPLETE.json
+    cddd81ba8bcd56b846dbd6049d77e3c163fabf09a3454c23ab0b89dc5ecdd63f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2172/COMPLETE.json
+    b19ee11a01561f1d10cdceba4483f79e6808288c5daca0656d130e1115fda981  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2173/COMPLETE.json
+    a9d535c4222446cd93f456b55873aaa4dc118a6b64a3cb5f81585832d87ad5c6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2174/COMPLETE.json
+    9383788fdb688599498fb2cef04ef0071e51fca7bc470f9a11d066350fd6b7ea  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2175/COMPLETE.json
+    924a7fb934136b25308ebb528cf2ec9618cd3303c129dc1b042ac988cdeb3484  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2176/COMPLETE.json
+    db2902459aec47f70ec35b5a2b943ed275205eaa5b0e52f9861bdf05afd18bb2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20211017_EXPL0_PeTr_SA_T760_2177/COMPLETE.json
+    9124613c71dfdfd58313cfb2f1d58942901ef5369adf16ebdc494d9185edf84c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2162/COMPLETE.json
+    aca3a9c8dff367f255d6c6ed4c6db984e9543a7fe3d65447e174e521be4651e8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2179/COMPLETE.json
+    aded3e2c450be385cc1c738c073d4cbcd6aa58783eac0e1052f4c7a6d637c301  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2180/COMPLETE.json
+    536e1498b04d48167a6f3a023446026f3d94604f16027212a9f22cb3886d78ca  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2181/COMPLETE.json
+    41ea4619ec7170c79763a6cf7f9b0cec08385565390fd85978c09c3633203260  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2195/COMPLETE.json
+    72b188a0a10e8b3c642bfcd1f2d8a3494cf85e0ed9b3b1abb77cc28f40a97b0e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2196/COMPLETE.json
+    10c50f336096de447eb49b07383b8852a37ca0eab39cd9b3ed54db25231a7401  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2197/COMPLETE.json
+    b865a2679abd8c8323c1d5425198606e1e44583c1d44c109cc9bd55a6be49a64  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2198/COMPLETE.json
+    7735c8e9ac2d0570140fe8f20f7b4aa52e75822db61ec17ca0fa734fb5d07c32  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2199/COMPLETE.json
+    6141f978cd59afeb217b540649e590642d78761bbeacf07f9f274a711b6e8b27  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2200/COMPLETE.json
+    d9eeddfcbd255fb8b4fefa8378972c1ee4d1f9646ed56901c742a5a6e8ad7283  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2475/COMPLETE.json
+    a253afe6155c90ee40e8485bfff6d7e88df356db6121c1058e3c104c20aee9fd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2476/COMPLETE.json
+    804c3e5cc86cef2c59942edbf648dba893a483018bc3ba671994faedc6f9dcf2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2477/COMPLETE.json
+    a3bfed075364cfad9e560820f410dec3a4c9716e9b48df79e892ba627c9cc13d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2478/COMPLETE.json
+    e36033cb0612a1c2f400225dca0fef23ae26ef1a87c6c546807bd5a2a9a7388b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2479/COMPLETE.json
+    ea22b35981f9393f087d5144c6107efc653811dbfa5776e49f8a33f429c4de54  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2480/COMPLETE.json
+    f282bd6b68d12bcf59ac85c7ae2d24739badc6d98c8dff392bd482aa5d868cfa  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2481/COMPLETE.json
+    a46523274933765b2a79f51c2f597acf71b21b36e64b372371deb37f771bb479  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2482/COMPLETE.json
+    68d422752922273f12966dc5274d8f913369a11efcc616c1f877689193e46dee  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2483/COMPLETE.json
+    61ae7e9e5f286ec50037469611421d2887f589213effe6579add7cedec8220ea  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2484/COMPLETE.json
+    d3d2e86fb3e210b38b09e86f1514a36544dfe618f683bb522b46788fe73e09e1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2556/COMPLETE.json
+    d3dad7b347879ef8843857111e6791c77cfddc4094c3fb19ecb173c0c9183acc  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2557/COMPLETE.json
+    f36abb695607f84db352195229fa9f28d15dd695da4010eb4ca8cd9f3c8817cc  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2558/COMPLETE.json
+    8651de29de2c5c1b84d4373c1ea91a539226fe56cd5fcb3385d3ae72c6954d56  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2559/COMPLETE.json
+    ff8311fa0dc20d43f07bf31176d1fa5ee8bd9b025bb8a0f9ba448d5881d4b063  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2560/COMPLETE.json
+    91c4bbf35eb07114908a8b2b4bb895115aba76f8a14845fa9d95459b68a1cfd7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/CAPSCAN/20220301_EXPL0_PeTr_SA_T760_2561/COMPLETE.json
+    f256bd99aac6e9a174bab4880a87708971658f8fe5ecdade97ae09637e5867b5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_10_191025211701/COMPLETE.json
+    f5ea1e83b3c5115fb062540f0a7d0d41e227af78047ce3eb926c9c525d811788  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_11/COMPLETE.json
+    5a8cec60f2b7e4dc503402b812d6ba3c7887a2f2166e459eb7215e77788bab91  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_12/COMPLETE.json
+    864fd665e05fa9a520ac408d4ca97b66761881d6960a0c58603a5741f64d0f9e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_13/COMPLETE.json
+    51dcee90ed9f9eedc38cee077a91938a187794583715381de53b2c5a53f5c245  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_14/COMPLETE.json
+    41ae739cbbf5d30fb798ea18ec2490d4f8ff3bf04854a889e9c4307ec475255f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_15/COMPLETE.json
+    88b483870994869dd3cd19ecf26b7d1319e13cb2d59ba5cc74afec3405e689d8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_16/COMPLETE.json
+    3f45f161b75a509b4a928bd9b3be97520327621015c094be834895cc356f0ced  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_17/COMPLETE.json
+    46f8deeedb51193ec45af2ed48810505e4f8af007f9202b0fad7c9b29636cdc6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_18/COMPLETE.json
+    526b9ac2d317760885a84f507753164d014fda6684d52d3e38aebd883262d16a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_19/COMPLETE.json
+    237d51dba1e1db9119e5e83b50d8cd560bd13cffcd72b195b18f06e7e28c9584  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_20/COMPLETE.json
+    6b8298cc3f588da5b14972350f548d7021f610b7a10bbd47aba40f082793793b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_21/COMPLETE.json
+    8c751222b554a9654dce521486a34dd577f31d2f3f3a7e4c9cd83d75786febb3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_22/COMPLETE.json
+    40bc8830481161d2b4704810fd557e73bd69a1d87deedcbecc7351a845dd0409  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_23/COMPLETE.json
+    bc2263e2b877e15f9d8dec16364f08286a675f320ea087d72704f38aa97b65a2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_24/COMPLETE.json
+    b17458d9e627dcf784c00e6e86127f99049e23f41a8bd281d2aa2ee3ca59091c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_25/COMPLETE.json
+    fcbe1d6612298f7a108d66e6e6f7b99b4ccb905ed01f3a793f7e923252f4acbe  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_31/COMPLETE.json
+    92162305872288204b7d411faf6a6dada14dc2ee1449a0903878e94dfee45575  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_32/COMPLETE.json
+    9e9bdf78aca25dd3d301e8f8e6b54e2589bd840cfaf1e8898785e76f8e5ebbad  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_33/COMPLETE.json
+    4a5cce745becbcf2a17eb454758f9f16b8a1257fe614f04f72dfe38127853b85  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_34/COMPLETE.json
+    83cbe0c636a6ef337f1621a1a4fd2e83a479e81ef250fd1a5cd6335a136d8f7e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_35/COMPLETE.json
+    419c0fca357541292b290cadcf920941e8a85372174e1079e36dc4ddbf8b1319  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_36/COMPLETE.json
+    43070e943f98155f824ad481da6688fdbc40bd3302590f38de25676e01235d30  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_37_191027201659/COMPLETE.json
+    b71eaaaa6781e921a97e1c5f9cc029caa4767d28f53a084c77ea1960de72ff4e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_38/COMPLETE.json
+    544716fe8df870eb68f1a13d5cbb9147a5d270d1ebac642507fc7b74d4688792  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_39/COMPLETE.json
+    a04beff3757c205396758c731b04d3865a882ae01d637c88eaa3f9def840250f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_40/COMPLETE.json
+    2095eece7074797792a81d03f6b13b60f865ea499bb81e8a47c2ea36d5c35a54  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_41/COMPLETE.json
+    ba74dcfd1271b43ca13b6eb9f6f1628cf3c22a59cf07969af48490ee4e29f800  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_42/COMPLETE.json
+    46febde3d5346c87a9bb21f801987cbc91faa4d758964ba2798fa8909bafd971  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_43/COMPLETE.json
+    f1411506e4c0cd05d4421647fc38922e28dd1753844ea61c7b427675e5f03249  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_44/COMPLETE.json
+    158cf9d2c64b4e0d50ad16b765c6d1cff1df4f6c710706b93593b054dac28a91  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_45/COMPLETE.json
+    b030cf3e21b77c800f74ede0096e1239852f765ec1421b945b3e70e2116439d4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_46/COMPLETE.json
+    02bd0c9e1900eb25e7a1703a4c1e6f2fc6734bf58520ded461c3569549a6b1b7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_47/COMPLETE.json
+    d7c69b2ae622b02b2147d684c5f84505e127b15c4ec776513a81f326209b08a6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_48/COMPLETE.json
+    19c1227723bbe5536a0e04f1140efa27b80de8871cae5a6a946f8a6932e12766  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_49/COMPLETE.json
+    c65eeadbb9fe33b37a76968e4581a9986aaba5ad48170a245780f086b179c309  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_50/COMPLETE.json
+    bec5ba37b3bbf0623aa1168178adb08656c8fee8df818895b4d06c4b72c28637  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_51/COMPLETE.json
+    3317520acff3cd3babddf12fe1a18367fc232a9f6bd81edcc58e637585e2d64c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_54/COMPLETE.json
+    83f5886412b8f35a2ed8b4be4155fd7d72a887daff739c5fae51c0df1c53a4c4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_55/COMPLETE.json
+    7b38843f6dc9fab65fde7661c44986a0aa690f8922191cf27dacb783a5ab3095  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_56/COMPLETE.json
+    b61d26e8095bfd5a945614ffa4832633ae778e0f61520187e1e140c36b943e32  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_57/COMPLETE.json
+    f05f4a9faab5e7614ee1a8ac82c650d9934fbe34fa424bd8c7bb3b13b4c8e4fa  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_58/COMPLETE.json
+    82fcfb9277f2384778a2a405bdf0a6dc5b420320895719b88f6016adb7c1ba63  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_59/COMPLETE.json
+    116d65e032f5df55801034a1a6bd52ec618fa2e0377a97f280cfe130a63a76ef  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_61/COMPLETE.json
+    04cd443d7f1188f496455e4bf10e10cda435659d0d492b4bc523a69a9dda67e0  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_62/COMPLETE.json
+    2f0ed6a90c91d06e9d73d13314d944555fcf248d0494baa3a9166ff81283d05d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_63/COMPLETE.json
+    b8cb3209a259ab21050833fd0b50dd22d58b758382930e82ad9a009a42789053  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_64/COMPLETE.json
+    ba5902e01ed004606e4a1f0e24f918d31ebcd076550c876d713feff86986df43  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_65/COMPLETE.json
+    4ee10d7b3c35597d63b74d1231932b79fadddc714d7f8da4e730d3dcdbef87d0  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_66/COMPLETE.json
+    507ab9e13127315b2688a4ac43b398decdb8fc88891b738b0a75b14bd959fcae  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_68/COMPLETE.json
+    56d3f54ac682e0ee5b6139d28fe73c8b9bebcf6d1456d6e4b514e9196d043499  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_69/COMPLETE.json
+    cc3389d9d8cda36cfdbf918e9e8bbda40557cb373a95a83c7aaf171290fea514  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_70/COMPLETE.json
+    7e18ac2fec5b07220f85cea0fa110d9c2378500efbdcf63c9e4b850aaa8841dc  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_71/COMPLETE.json
+    b607f20fb4d25b68d026b460eb8b8f8f5cd4a0e0aef9523aaee952b4c6c4d72b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_72/COMPLETE.json
+    e48e7074b2b33843d6c0d97d4c9fb0f743c8b69c2347e4985db62e0cefab55e1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_73/COMPLETE.json
+    32ffb43e68dde675e11d7dbc1516d02f0131ddb54adc7bce83174aa3c6e50fb1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_74/COMPLETE.json
+    042fa5110cf5331e83ad03a120accc732dd395413c361f8a7a6527fbf1229732  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_75/COMPLETE.json
+    43b5e2c55f5a0c108a00e914dca55025d4a00096535addaa2d04794c788429fa  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_76/COMPLETE.json
+    b94eb59065abb4a3dc5fd27291526bafa906b3edeba62e64ef9a2e8e89e1956a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_77/COMPLETE.json
+    2a4a4df6d31e7faccb918659b29d2f848370629f1f389c11d488f8f3fe261138  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191024_QX7_PeTr_LC02_SA_MicrobPred_9/COMPLETE.json
+    cbd816abb5cd1781b288bd0c4b8d76421347a3ca0eef186fecb7dfcf8664c2d8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191104_QX7_PeTr_LC02_SA_MicrobPred_121/COMPLETE.json
+    15708493d80955c26dec016b9e360db5cecfe323acfdd30207a878ecd9f2f33f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191104_QX7_PeTr_LC02_SA_MicrobPred_122/COMPLETE.json
+    1e03afada34396d4bb2e912c11cc438cf96fd3375b57c55604fe41ed7d6e9b7c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191104_QX7_PeTr_LC02_SA_MicrobPred_123/COMPLETE.json
+    17a2d2a62c40d966167efec1f0acfed7dbd8798a8c90d5b0da958fba87fac9db  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191104_QX7_PeTr_LC02_SA_MicrobPred_124/COMPLETE.json
+    2e359ce3388a80b3b7f19dedb49887ef2fff607955f0f494bdebbd11d02ea462  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191104_QX7_PeTr_LC02_SA_MicrobPred_125/COMPLETE.json
+    934d68bc20bbe15e7d70b959250bc53cea1831514e27c64940172b89484bca1b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191104_QX7_PeTr_LC02_SA_MicrobPred_126/COMPLETE.json
+    e8e2dba7ff091cf70f52ca8a2d84cb7c09d872231b6b2051fd8354889c8555ac  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191104_QX7_PeTr_LC02_SA_MicrobPred_127/COMPLETE.json
+    f803ca96f00c78aaa33f99d58d9ae315fd0984643e127d9330a2ab43c52c7b5a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191104_QX7_PeTr_LC02_SA_MicrobPred_128/COMPLETE.json
+    fc9a21d4f08b346cc1b259440bf51d13a9379b07b55f065af4f6ab48cc213efa  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191104_QX7_PeTr_LC02_SA_MicrobPred_78/COMPLETE.json
+    ba9744deff225cf5cf4863acbfcfc314f602da2a7fc517979a0a6cb85887cbf2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191104_QX7_PeTr_LC02_SA_MicrobPred_79/COMPLETE.json
+    8a4bc5649f94471e9e1a4697458ee055c26660984a1976269f7e08ab174901db  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191104_QX7_PeTr_LC02_SA_MicrobPred_80/COMPLETE.json
+    99b107656783190315a1413f3c6991578e818fa9d5b5b82a07cd5fbed74d44be  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191106_QX7_PeTr_LC02_SA_MicrobPred_137_191106105035/COMPLETE.json
+    a0f6a76bc829a65492f561964ab93c007b5b2dc17f27fe805ea411614b65fe3c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191106_QX7_PeTr_LC02_SA_MicrobPred_138/COMPLETE.json
+    63ccdebc11d5a3472d01bb2725478040bf3e595915af1b9551bfddf6ce8f5f9b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191106_QX7_PeTr_LC02_SA_MicrobPred_139/COMPLETE.json
+    daad69f1c90954ad3a435020f610ae3512db24b5e2fd70df5d381e40d6523f91  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191106_QX7_PeTr_LC02_SA_MicrobPred_140/COMPLETE.json
+    28c3b317276f360b77ab1ebaf5546353ad2358cf5b19f11f6906e2167c563938  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191106_QX7_PeTr_LC02_SA_MicrobPred_141/COMPLETE.json
+    94b30baaf1374a89b6130ff41f9f79019d2fc281a7f3d55501a9884136e1ce58  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191106_QX7_PeTr_LC02_SA_MicrobPred_142/COMPLETE.json
+    9fe511633b70fe7947458784ebbc264d2757055579a8b08006c5b6c90c83cb61  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191106_QX7_PeTr_LC02_SA_MicrobPred_143/COMPLETE.json
+    da5f7573decf7974554e7e00202a2d52e874d21a149d39fe3f5ea1f15b43f2b4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191106_QX7_PeTr_LC02_SA_MicrobPred_144/COMPLETE.json
+    11f00b5648552e48e61c47f15b8637031a80dcf8a51f337d639a42ed11434289  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191106_QX7_PeTr_LC02_SA_MicrobPred_145/COMPLETE.json
+    be1b0ceaef1636f9b297862e104f5402358db959ea0f9900bd98e681ca2f549f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191106_QX7_PeTr_LC02_SA_MicrobPred_146/COMPLETE.json
+    9016d80a954b149dda0cfb127576dacef7aa773d76e675e36cdf8be9d3c34ca1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_147/COMPLETE.json
+    a1b13e0e0053c26b5ba039742c6841fb3a4eb471e035386c66d653d3b6afa2de  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_148/COMPLETE.json
+    09d0d4e41b25f35eebefe098bf0b3661faad272c5b3a3e1a78c91546abb1c5b9  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_149/COMPLETE.json
+    b6f9f937abf7e2b4bdcdafab6a05fad7d365e17b1d41bfb25f128134a7465f30  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_150/COMPLETE.json
+    b3064b16e1961dc320c1cb35e6f2ed8b99d59d485709bce2aec6a381853f14b5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_151/COMPLETE.json
+    24128cb3b1f92139fda1a84e8104f7f27f11701bbacc0f7832624039fd57fafb  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_152/COMPLETE.json
+    c9f0f73a3098b36361f39df460e8e7ae20a52e6ffb43fb13239ea6d95995f76e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_153/COMPLETE.json
+    27c8a5566b9d75c6994645010bf7aa30d2c36768406abf01e700d871eb39e1eb  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_154/COMPLETE.json
+    216b59c30446314e768799e9d4b8ffe940ee1c51e3bf1ef75b39c315a4d2880c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_155/COMPLETE.json
+    c887a12f88c1ec8476ee274ea03cce58785508102d23429da626e332c3e9cba8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_156/COMPLETE.json
+    3f0f5959680eaad27c0a458acab4ca417a86ed80dd51d7f1244daf727659039d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_157/COMPLETE.json
+    8441baff131e6aed504da9383a8ef7a0a1c6d8bc2c6c5ac300fbeaa471d6c793  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_158/COMPLETE.json
+    d032a23d325444f9843e8d0d73c64b93b8c237dd3410220f5d32276aaf07814c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_159/COMPLETE.json
+    e0b5031ea4ecd671b02375d1b05d1ad84a66280ebd1205a77bcc77a8eb33ffb9  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_160/COMPLETE.json
+    200c54284168071b82fdb6ed59e6fdd12497ca870fea5d6fd912c24810b4a495  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_161/COMPLETE.json
+    4da5c2b2d4d34deecc4080698e33448b101f0a46961f8bf3c64f5526c1f22cc3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_162/COMPLETE.json
+    7cb55009d7d62ec877de6cf4f4d675c1c011e960b45fea5c9962417f089115a7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_52/COMPLETE.json
+    39241e44dd43b9ae618d0b8874ba76b5fc921f410741fb1b9deb368788b87500  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_53/COMPLETE.json
+    3a44c94dd3a35b16eb43a03301f46d76ed2843295c711f0a58f29710159bf4dd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_67/COMPLETE.json
+    1c4fa4d8a6116c6c0cc2947abe6a76651049886156292a96327ea810629838bb  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_81_191109182155/COMPLETE.json
+    5b2bcabcb0331a3a00e1d0749469a177cb4223faa4c9e0522107eeaca4843f64  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_82/COMPLETE.json
+    483446cc84026084bc99226c01b247973550612435b30c3d76921b76e260d625  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_83/COMPLETE.json
+    47d436e9803f9dd01730d3c3f64acb37b4cd954ccc51b76d729d520fe313dbd5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_84/COMPLETE.json
+    a92f55c72bb4e96360f2698af8e679e06134a17a644510af3aa5bcc3d7ec4f74  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_85/COMPLETE.json
+    39df550881bb120a15ceee84b478d575e0f0be66e809fc4497932fa1dbccc0e5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_86/COMPLETE.json
+    ca1fc8e73d170fc2e7d55309caa142d00f0d4a22d71bf1da43901e308c4c3060  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_87/COMPLETE.json
+    a0ca6e0a647743778029f52726a03f58ea2fb257692e3e3db23631629ce16d37  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191108_QX7_PeTr_LC02_SA_MicrobPred_88/COMPLETE.json
+    74c8ab29ab2a4b675fa631d526f105991c1285f08ed869a1be47df45f660d923  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_100/COMPLETE.json
+    c3d1745f006cff5ae1326eacba0dddb4c58c1a371eaf3c8650c2c58bce81a300  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_101/COMPLETE.json
+    113c8b55e4e4c9bb16110c9e02366d012e63231b6a8f3b304d2802ed4343da55  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_102/COMPLETE.json
+    457f834db260078b47a231fbfc415ed8cb93b09c3e2c30aed3757c0e2933e09b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_103/COMPLETE.json
+    514dda51458ce674293ffedb1045279083bd26130229403ec42cedd7586bdc7b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_104/COMPLETE.json
+    14d04b9990675cec41b3b39c15b08e85c2ff0929403d6c28970595bef22fa631  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_89/COMPLETE.json
+    548da6c33227e87f63c26933242417f61eaebb9b3b74a1f7a404dd27a808e7f5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_90/COMPLETE.json
+    fa69ebb8184b10e2133256a7f045d1aca2099916e6b9697830d50f25f81adc14  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_91/COMPLETE.json
+    5e2532bea05b9e3d400e51342096bf26d9ca0453168a0fc39c22984494aad27e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_92/COMPLETE.json
+    c47f74b96ddf5a76cf70e1cfd332d1c622f5a3a39833cd1639c21dbbebb6eb12  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_93/COMPLETE.json
+    2dcc93dfdd9f76068f11a1ffd1d236983bb33b1a54853197e0cc9f63c55dcf9d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_94/COMPLETE.json
+    34686301ff474a7b1d61d76e80e0d439f80516aa5363e7129b60f04084f8d5fd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_95/COMPLETE.json
+    ebf54b46d3a422fdc134ce24e3f5e52410b046f61ccc843ea6ff5a0b4b433484  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_96/COMPLETE.json
+    1d15f80d0ad704978db1eea67f8a959e9f47b145811ca910ade23831220818a5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_97/COMPLETE.json
+    bd493319fe7c71b32ce5176fc31f19e7571c24b8f03a1889f8dcd494649522b2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_98/COMPLETE.json
+    5970c5d647a106fdd1e5e849a2ba33253cfbc746033526cb296c15ee87dceea6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191112_QX7_PeTr_LC02_SA_MicrobPred_99/COMPLETE.json
+    c38a21f5b38f2a0e5cfc8cd6bfa0ef8697d0b985365ae4f6439d5ac7890142b2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_105/COMPLETE.json
+    8df25b960279bf820f14ed93254c3563bfef75d69eb249d2883cae5f4daa74db  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_106/COMPLETE.json
+    d7aafa529af40331311a97e9aad987399c01bb3810ef537b87f43ecea8f688df  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_107/COMPLETE.json
+    997282f5961c17ceec21d0e9e106e4fed2345201199b186fe3de869bd037a7b2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_108/COMPLETE.json
+    f7be3233007e6aade038297853a50aa3c77e83ed78898f7b4e2f039dfde41db9  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_109/COMPLETE.json
+    14068f9be763001adf26b49c52975cf56291988b39ab7343aab9ad752a1f4711  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_110/COMPLETE.json
+    cbef3fc47b1cf480ac88b462f01567ab5c3326746ddc5aea559a0d052e080c58  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_111/COMPLETE.json
+    bfebac5d2640cd7baaa612569acdd1965b717e15ff7232fa991796472ba7e611  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_112/COMPLETE.json
+    e1f416d4563d5dfd6674588b15435021e81e1c68c15eccd9c76223a5b0bbdc7d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_113/COMPLETE.json
+    fd3bd3f3185907e22b45cc7e11df904d8c95a0dabac7e43b49c24025952e5dc8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_114/COMPLETE.json
+    3811ddc2df998e2604c835d184ae464b6467cbfceac95e997b2fd7daba4afcee  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_115/COMPLETE.json
+    148eb4cb34ef979c4977bb7e1a3a0ebe91f4a1716f4f984943e0599f8906422e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_116/COMPLETE.json
+    8151dc2a12ff57c0cc8ede9799a85bf1ecf4ac874782f47530b733e2780bf353  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_117/COMPLETE.json
+    a187b4f62c8f9aaf3a1c059360b27c8e80209268ffaa7f04e1d963623082c119  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_118/COMPLETE.json
+    b7f83e1ecadadcdf726887e27e47dcc61e91c9b4d529d8939bdb2c9a2078b8e6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_119/COMPLETE.json
+    f325d270eacbd2dac212ad3511f88caff6c1990e2329121a6d2767a30562b06f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191114_QX7_PeTr_LC02_SA_MicrobPred_120/COMPLETE.json
+    5a833af0080979e4ac32b9ad5e54514175c92cc88829ed3868e9bfac4feeae15  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_163/COMPLETE.json
+    c57aba9cfb98a413ea15a40e95a1e692e1c2e027bba64a27b9a7d2a6fb244bdd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_165/COMPLETE.json
+    7ce4273e31580c50b6f9308c4e209bbc4a001087ebab3d7518df426d7fbd1995  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_166/COMPLETE.json
+    048e992a036fc40d221e7695ca20b1e259bb88610be44c7ce3f6d797a7717e66  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_167/COMPLETE.json
+    8d579a27c424be103e6088259fced19841959033b19ad3873fc971a1633e805e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_168/COMPLETE.json
+    877e688cb8feda45fce58035464a101b81071cb64811325e2da1d930c06a0299  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_169/COMPLETE.json
+    c92917ff2eefe51a630dd87c2e79895551a79da41ceee880b5a71f82687546e5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_172/COMPLETE.json
+    61e9e2023b748b1594c90a15c6ec29cc55dab377267b04eb41d0c9db92419467  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_173/COMPLETE.json
+    cc3880f1e1bcfc3a098835dcfbc8c7d2aa6013617f9ed42e3862b01e0b899920  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_174/COMPLETE.json
+    99cd34cabc7428477e2091adca3ee9f7655a49e91f8b2ddee31f2a5fe1fab86a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_175/COMPLETE.json
+    bb8cdcb2206145c534cecf9ec80843dcf9cfda847779b6d65dd0fa28c8bb2fff  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_176/COMPLETE.json
+    59da9b13200b68a8145c78405c3fc38672fa205815341b57e54d8246b16466c1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_177/COMPLETE.json
+    709cce96eccd8c9554ebf64d5c2d04c895ed9e1a8d397b430d71c627da15a58f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191116_QX7_PeTr_LC02_SA_MicrobPred_178/COMPLETE.json
+    ca3c77cc08050d8499da1fdca195adb23cffae3d488e515efec81813d329d924  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_187/COMPLETE.json
+    3551afaeaa1eb3db806083bfc073d0f97ab84d7f40c3ff40de968b7b97678401  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_188/COMPLETE.json
+    a5db4845b3cb85c1e9380860b68b68aa085dbe22b47ac04143c9b65be2f89dd8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_189/COMPLETE.json
+    6bce3484c4610783c07f4b7844705b7b88f8c335a7b1fd47942b0e4427bd1975  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_190/COMPLETE.json
+    3a89bd997a250aead8bcd1c73a9200c75e3f586386a5bede0778e577a8176402  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_192/COMPLETE.json
+    2eba6d0713cffdf63888098e8ce42512f48332f1e8dc86432367e1d40845b87e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_193/COMPLETE.json
+    b2f38f94880424e3b2e3777e91926bb6643bf02db6556cac7f3ba3ffecc9155d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_194/COMPLETE.json
+    766a0c6d9797495dfbd8662e316358ceb478a80f40f7279c44fb5025aca3e04e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_195/COMPLETE.json
+    28eff8f0d72d2e88dade554c6e687a4b68eb664f5fb0c9bc4fd803d9028b4519  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_196/COMPLETE.json
+    480ad519384f7872790e7d13aed6b4d19e17eedc57001cc77311e5f72d63e5d7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_197/COMPLETE.json
+    aaca066a9343622b6b436579fa9db15c71b8cde4033d31bdc24e4a1af8a07ed3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_198/COMPLETE.json
+    5985ded993d02ada59beb4a01e8706b03507b1c1854ce506e4ab1d8c3608902f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_201/COMPLETE.json
+    941c816de1e53c1ea1480521c5e4a29bbdeca865641f4730ef23345152d1a516  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191118_QX7_PeTr_LC02_SA_MicrobPred_202/COMPLETE.json
+    5c02f0cb462656a69591dfc02c2edcc378572e1aecb0a37a12970a63ce70b573  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191120_QX7_PeTr_LC02_SA_MicrobPred_203/COMPLETE.json
+    1b48212e4dec5dbce2b5fd73322749a3f0e51546c0c057284bd17b806d09546d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191120_QX7_PeTr_LC02_SA_MicrobPred_204/COMPLETE.json
+    a1c7b9c2b633530a6fa8ad92e8606678e7666b45c2b4281a962808b5516641ec  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191120_QX7_PeTr_LC02_SA_MicrobPred_205/COMPLETE.json
+    1d67643589befe68ec1bd85d04eb787038bc9ec6c548fdd103ec39db8b00d1ea  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191120_QX7_PeTr_LC02_SA_MicrobPred_206/COMPLETE.json
+    9ea1436ad588b544a58412ffbe02a3e1667e034556d6d3ded50c4a3b65208033  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191122_QX7_PeTr_LC02_SA_MicrobPred_179/COMPLETE.json
+    f6b97bd0101363d1df6b3525ee73abb9501786719ca7b2c495156f46908d65f9  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191122_QX7_PeTr_LC02_SA_MicrobPred_180/COMPLETE.json
+    282158b7cb6bc6b13229a271e4b5bb2297f2db39d314d2ca65cf57449fd37bbc  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191122_QX7_PeTr_LC02_SA_MicrobPred_181/COMPLETE.json
+    2bbb9ee1e432d1e6b7788a0f025aae156d933141696d204c1ee9901b8415f825  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191122_QX7_PeTr_LC02_SA_MicrobPred_182/COMPLETE.json
+    0b79920e59aa4a495570eb43d4575b6d02c6260de6a5f71e33c1b152f444ee3a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191122_QX7_PeTr_LC02_SA_MicrobPred_183/COMPLETE.json
+    ac11310490cd6b20152c3a7f3c43d1871f16e16dd88ea6d324ee81d33d5e46d4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191122_QX7_PeTr_LC02_SA_MicrobPred_184/COMPLETE.json
+    f2ef710e592e53f4e29d01da4bc81a57e86fa253aa4d1edbf48d42db63067f0f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191122_QX7_PeTr_LC02_SA_MicrobPred_185/COMPLETE.json
+    9e3e7a681b0cfe2b91c82472e74ce08ac63f32edd8aa6839432a08701afdc96c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191122_QX7_PeTr_LC02_SA_MicrobPred_186/COMPLETE.json
+    a34df109551880a55a557938ef5bef6e25fbe696895c69f53e5f444ce90026a4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191122_QX7_PeTr_LC02_SA_MicrobPred_208/COMPLETE.json
+    4a2084aeac885618f0c00fd46ee510b14b5abe207b19e85ecbf27ded6a4f5596  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191122_QX7_PeTr_LC02_SA_MicrobPred_209/COMPLETE.json
+    87aa7592f9895d87c63dc9bb0141a2ff465e4fe06b0162f13cef1f711d471290  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191122_QX7_PeTr_LC02_SA_MicrobPred_210/COMPLETE.json
+    9f53f0f8aca4ab5bf43ae9b6c54ef40624f79d8c945aa44d3bcb9c4c2917fe76  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_242/COMPLETE.json
+    3d2cb806afefff4b8948be00a8ea68dc3f1bb2089b630d32fc163c7046e9a78e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_243/COMPLETE.json
+    25728c67b6eddda44a0a31dff1fa3f6aacc3282f9717bad6e7692de0aac31008  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_244/COMPLETE.json
+    f331382f678418f901e9ce2f7416b23e81f91a15b84712379c6570b6bb0d4355  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_245/COMPLETE.json
+    d033312b7eca9dcc77b6025fb30ddcc0094b2b0834ab9854e3c6232de94ce43f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_246/COMPLETE.json
+    1055163e78a910f3cb5432858d05f33ee8f14b1b0a5cc3c42f7bdd067d3f935f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_247/COMPLETE.json
+    4d471ed50c16de2e9f4b1a2ca7687e4af6e589f60506f08089f42ff8514577c6  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_248/COMPLETE.json
+    1d7250632fa7fc14128b4ca3b55e5b1e412b0d438d682abddb2389d8bf8c8c59  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_249/COMPLETE.json
+    76d2e7a9a41f25446a9c220d0aa03abe38b40557fa485efc20ca7be105a9fef2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_250/COMPLETE.json
+    7aa08abec5adfe796498cde52a582ca157c39f42f27b5cc24d533c56e528c3ba  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_251/COMPLETE.json
+    fbf618e35f03d0772b0e00d66bc9268820eb6779f212b8faa79bfe800706a3de  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_252/COMPLETE.json
+    762f8888ae75db6c5d354cc160f6db9d12843a4c12d1e3e76264114ec14bfa7e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_253/COMPLETE.json
+    db056fd56cf2da71fb941277fca137c927107fe2fef862795809375b13d86521  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_254/COMPLETE.json
+    81ca9c8e586fdabb52a1602dc7043f63c6acf639c7a55754bd8b4ca983c9c4f3  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_255/COMPLETE.json
+    ac114127079782a6e7785d0a88e2e12398469de02012e0735f998967d94c14c1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_256/COMPLETE.json
+    1e80b8d250a13b05e6b00c8e85463153c685ea5a88b0d15fa8fee7168f09bdb7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_257/COMPLETE.json
+    d4026c62b2d785cd528d8dd6fe14417ee770f61cf1671a94c703ccabbaf2c081  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_258/COMPLETE.json
+    00fcd5ba5e2d82607eac1f6851dab944bcd321382a8b2106cc408bf7e853a3de  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_259/COMPLETE.json
+    d34cd05b468c71b9e1e24e00dfdc0537a3381abb3b006def50435e0c4b629f38  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_260/COMPLETE.json
+    4e567154ff05b4fe934292bd612d21894669691c9ef653ae554f3685910a85a5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_261_191126225244/COMPLETE.json
+    ea1d8a7a694cb43c5f985bc7cdc34bf84163044653e8c82498f62e77ef80980e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_262_191127044457/COMPLETE.json
+    0ec2947b45c074e270e6bff094cb734562f04d703685d697ee1f057c86d8866d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_263/COMPLETE.json
+    27c7f9ed4d107062d3eb8d1c1eca03778f5006afa8c6253d333e7996657feda5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_264/COMPLETE.json
+    14b77f3e19bbf9ba038eaef3924c396b600b4a2d178348415971544b7d626433  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191123_QX7_PeTr_LC02_SA_MicrobPred_265/COMPLETE.json
+    c0d365284b8f5aa0639e0556b2be894a884151cdcb0474f6c94d7da78622f615  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_266_191202203122/COMPLETE.json
+    f73c17af97bd149cc641e3cdc8b249a1a425a0723a5c764472a85b9f0da55f65  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_267/COMPLETE.json
+    54da758fba1ee61d4cbedcdfa9901cc078ee73e6a5a96b67063a1c33277eac13  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_268/COMPLETE.json
+    b8f237d3a760aae5310a0c9e5fc74232f76ecc3ee08c53b05ecfe89affae0ac2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_269/COMPLETE.json
+    f8c2cf08351c056a5d6971507179f01b27ab62d3d3d70dd9b25bcb0bb6743d39  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_270/COMPLETE.json
+    9d389d298c6f692eab1bdc88ee943fa6df7d8bb0004dfbd53078c9f16de3b195  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_271/COMPLETE.json
+    ffa2a354bb6f8be108e90a1fad4ae35b265edc47d9565a9e93543ccc958fa779  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_272/COMPLETE.json
+    565ec04bec222e192ff4fc33547fc3a8e3ab9c6bc22f6baf640efe87c152ada7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_273/COMPLETE.json
+    e81c07a774ecb50ba94adee5534b1d2e27298e741e21c8e2f02f01e3e4d36893  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_274/COMPLETE.json
+    f15e8f04cf88298d8a25f49fd9f4c4ead64e5e7dbd7c60ea3aa9ee4c6df6aa4c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_275/COMPLETE.json
+    ed5f8d00ec1fd5b698b6e69d2e846006fc5785bf3462a3538b91cf572d99328d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_276/COMPLETE.json
+    a6fb54a2f5d3e2e9c219986c892d80049ec5f6a32b4ead3db8315948ce317951  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_277/COMPLETE.json
+    072feb5a7ec9275ded695cf5bd9852bbe375da3989fafae03c86734c1f15065f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_278_191202232903/COMPLETE.json
+    0dc7d138ba5ab3cd4385a4b4107215ce470f133fd5a26e744b6f2a6ea8fae392  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_279/COMPLETE.json
+    58abe6b601636d7b48e208b13e0214e1bdf6e1de8d6371c5ce9afe256addf426  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_280/COMPLETE.json
+    9fac4c8f16c4c8223b930977cf0d9da1048b06b7c431b423313370c646636589  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_281/COMPLETE.json
+    3ebe6e694b65b9410409a81790b53dd106f9fdd3cc2bb4a261f79c48f7f9c0ef  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_282/COMPLETE.json
+    db82a7a210dbbb22746144dc78a7da29b837b178607814f5955f23d9b63bbb7f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_283/COMPLETE.json
+    624a556d828b36b05978db9063fdba5eda8777658da16246bee3b44d49cefc1a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_284/COMPLETE.json
+    3edaf2c5d0443366d98e3db2ff6e3a24791c596a7029efeabeb2775fb80b0fb1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_285/COMPLETE.json
+    dea40cbbce95ca88c2099fe4d186389b8b91811f43227d34cae75e8e6117937b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_286/COMPLETE.json
+    d45fa61ea279d6c28fef2e3605b36631605a51e1d3083a709c655e71b34b2459  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_287/COMPLETE.json
+    80501a4da3e016d1cef379893868b611367cac7559d7e26d892bfff519fdec3d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_288/COMPLETE.json
+    6f874c2a1d69a1a71e3093c7f3652ba34b0843eb6ad538102c9202a8975e67ee  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191129_QX7_PeTr_LC02_SA_MicrobPred_289/COMPLETE.json
+    b0533873a04f237785405334345d83f6b1cba82162fa06a8a55be91cdb6eed56  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_227/COMPLETE.json
+    49f0ffd20e238c8991f5384172ec6d81013d88b3c9b0b47825415ba625f1fbce  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_290_191204143943/COMPLETE.json
+    2f479fdb37e173bae9dec3ca3d209e8c7fab5ac8fdf05a416a52d779e67e35b5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_291_191204173318/COMPLETE.json
+    62de3d6d4df57a8bd9d4e691136c1c2f9f07deaabb8b48a052669e7e7c763095  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_292_191204202716/COMPLETE.json
+    45808db31c869af58927f1f958a2e03c6db59fa2ce22f0cc06261c0c8b1715ff  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_293_191204232138/COMPLETE.json
+    54a6ac7c18d0e2ff28841d96b02ba4a14f4ff44be2f89e82b8beb9d05551146f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_294_191205021611/COMPLETE.json
+    a63c0d6fc2f501eccd5b1fd8e8c06ea6189ffbc0a33b8776d3b2e24380246073  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_295_191205051054/COMPLETE.json
+    e9deb0db7945e5749fd8bad74edabe1f94d37ac8c620e88af1b4cfc5f37614f5  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_296/COMPLETE.json
+    c270e5273d9ae325dedec25b4999c74c27c2685347aaf977127fc84676ea10de  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_297/COMPLETE.json
+    072d80ee5722ee9d2f4196e4aa428796a7d3ac98f15865b2cb1ee5735edcf07b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_298/COMPLETE.json
+    d4660741fc75c8e3ab4ae6e6dfb0920b626de9e2e37523dbc90bddefd8c02967  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_299/COMPLETE.json
+    e3515697aa47332d2e75a358a924cbbde6dc109b2c4d0ed77e6eb4a567229d56  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_300/COMPLETE.json
+    250e36dcb816764f0c5aa8c251306bc0960dfd61dbcce484457473052e2ef3a4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_301/COMPLETE.json
+    09cf75d6760afdfa3d986da2369fd66a1265247f02f9779659689e28100904d2  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_302/COMPLETE.json
+    126edb7bb224fd2d9e4ac574c095e4e62d5bcb7ded0ee9464435b7914858b18b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_303/COMPLETE.json
+    af7170b59dcb91ac3312809e965b96d98d26f2ca81eef42102f49c249c2b623b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_304/COMPLETE.json
+    a64f3a92ff41a537e2903ee32699dcb3779f5ab8308c629460721b414d9a1d63  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_305/COMPLETE.json
+    be51e4334c771c3a8ad8557186cfe37ef07c6d3eb4d9a7534e0e3e405b56b621  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_306/COMPLETE.json
+    5c81213a393bbcd9c3f9bd7aaa4dfc0a63f55c80e10fdcdad341773072ac1ed7  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_307/COMPLETE.json
+    e26216fd56e005384ac0d6156ef1f279605a3d795a814f689928ff79728c9799  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_308/COMPLETE.json
+    4244541d6e0f870d68273df029cb71e03d3d8aadf33a72d5bf88d216db06ac13  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191203_QX7_PeTr_LC02_SA_MicrobPred_309/COMPLETE.json
+    aaf3d252841c901c0e2b4cd3d4975db196c6f595ad8574185dcd8ff6ba8ec14d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_207/COMPLETE.json
+    f32064c493f5c6f0c60546ff7c6d6c3ba7aa9fcc6072c717b58a9059b837ebdf  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_212/COMPLETE.json
+    10eea906ea06c87fce5efe1b9117ce0758a40a2c31649034ff566115fd460284  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_213/COMPLETE.json
+    509db2be08d7b46e63c4fd0815f50d1432bb6508a304adb6d47ca885f51ea926  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_214/COMPLETE.json
+    ac0e6cb625c33e8980f8b866550d31773211b79bc2fd66fa38901589742bd871  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_215/COMPLETE.json
+    59bd3177b7c809103406bacc4a1504b0e7f86046292f21e09f84aaf093428b54  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_216/COMPLETE.json
+    9a929caf60a65cc4288868292ddf7ce7bb93b7d7f6ef79e16259d3988aba4729  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_217/COMPLETE.json
+    9dad5024ad024b8df1b846d3134c44ce810ee9776d26ce62f10dc1e055f2580f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_218/COMPLETE.json
+    f422690ac1f5439698ff79d2b2b6a95940f2bcfabd9815f2421f38502c859c45  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_219/COMPLETE.json
+    9ea2ba79bb49dc21b6651cc451561c2e66d588b265135f79ce276434e0cc426e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_220/COMPLETE.json
+    d37622c35d53b9d5feeb7186488ecad5682d76c564c9a3e39e116aa3e84fdea4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_221/COMPLETE.json
+    74b1fcf0668afe33670f0c4b6b22b520e8c456d0567c10eac5268d630b9db6dc  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_222/COMPLETE.json
+    b12e3627d6ecaf25dcf3946cdc4587b692d3b8678b2ca610c4a278c64f37445e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_223/COMPLETE.json
+    f239ac72299c98a597640be93bd97994bb528ad87b3779c731f034e295787c40  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_224/COMPLETE.json
+    efd47f7a43abd566531f19348badc76920f75e9b634fd5c644079e440737c449  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_225/COMPLETE.json
+    d6dd3449a0850816169909360ebb546f294a2551f26f49d618222a4cb9b17a5a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_226/COMPLETE.json
+    7b6a094a7ae5e9dc3da878eecedb9486db0df6f7b0f9ce140af24e16e6d695b8  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_228/COMPLETE.json
+    db86f936a251b7a9b6a7ce536b8f8a50d01d0fe9db8326264c8c6ba848048c6f  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_229/COMPLETE.json
+    6be925528bf799ffb6179e2e9141d1a09459d54d68727efee3daf47dd3ba9098  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_230/COMPLETE.json
+    91cc518b001a2015cc8e36b7247dfbfca12ec16d2350de30c3a000b39698d045  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_231/COMPLETE.json
+    e36313ec6e430dfdb431713e364a48d090ed26f41e0ca47fff1b126c78e08097  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_232/COMPLETE.json
+    8fbd9793176fc8f5147b8715877432ec831ff1467e88da9416523ff98860fb81  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_233/COMPLETE.json
+    bb99d563298fe7178dea9553118c72b52d2907842d32e0db12dc9386ede5e0ba  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_234/COMPLETE.json
+    6903ada31986c44fadacf2a7ef415c871906f8c88fdac396a8f503db4fd9c62a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_235/COMPLETE.json
+    5ce9b677e6cff3f55ab6a2fe295994c099d4efc53ad4069f7b7413d7758becb0  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_236/COMPLETE.json
+    4515e25e5579129778cb69373f1161004e7a00606ab35149fb12b2cad3a5c189  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_237/COMPLETE.json
+    760dece0f445037eb1b651559061220bb459531e37866d02f3ffc5fb2a918a25  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191207_QX7_PeTr_LC02_SA_MicrobPred_240/COMPLETE.json
+    a4aa3ed2a93da72933a544e0dee8b341cd7303e10381894c2c237fa3496ba9d0  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191211_QX7_PeTr_LC02_SA_MicrobPred_1/COMPLETE.json
+    4524e40554b99919c5466e32bb25b667dc3c89b6cda0042a8b415b10bb19ed1e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191211_QX7_PeTr_LC02_SA_MicrobPred_129/COMPLETE.json
+    3729db77a7a4ec5f88ab72c7029c411cce5fa7396bbb95a805460496b9e7a16c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191211_QX7_PeTr_LC02_SA_MicrobPred_2/COMPLETE.json
+    4379c74fbd045c9b2a05429050e4b95305eefe1eab121dbf2bc775bd88ef12db  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191211_QX7_PeTr_LC02_SA_MicrobPred_3/COMPLETE.json
+    873c17488ace2a365b1b6f118cda58626ffe3f1e416399169e4d5d7740aa0f3a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191211_QX7_PeTr_LC02_SA_MicrobPred_4/COMPLETE.json
+    17de8b3f3dde12b01d93d3fefb6560bc39236255b63a26ac4ed725f3a16b66c1  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191211_QX7_PeTr_LC02_SA_MicrobPred_5/COMPLETE.json
+    c69009a10fb0be06fe75bb538d3207b8794c51fe7e5062abc01a2d680dd6d5cd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191211_QX7_PeTr_LC02_SA_MicrobPred_6/COMPLETE.json
+    dcb957d7d1e68660a8780ca4c39843a387d47e2bd437ba8c910bf3aef6b00094  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191211_QX7_PeTr_LC02_SA_MicrobPred_7_191216023344/COMPLETE.json
+    fa5e378d06399da8741c9d675464981b8a14bc08659b553450298ed1c683f03a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191211_QX7_PeTr_LC02_SA_MicrobPred_8/COMPLETE.json
+    932f4b2d1ffeab0e476a8a1420640341bbce08ce9aa2cf7391abe40a949fc79d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_130/COMPLETE.json
+    d194bba8637bbf1a7b4afeaf56ee8439b4e2311c743b29c1b592ed58f283a368  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_131/COMPLETE.json
+    39928de2ca561ea9e25e02619a3b09778797cd63b9c38a0084a39d8f3f1f7a5e  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_132_191216190348/COMPLETE.json
+    f41b0b085232de50f0369cff31dc04914355c7b0e5e6cb027b99b3fd6be9a50c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_133_191217040348/COMPLETE.json
+    c70c746d5645eb4a785470a859b62c3dc7d6f5d6d1485f9d0e024eb46754181c  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_134/COMPLETE.json
+    f0064ad9b03244a871f9c3a0fce18256b1e68bda6f88aa7763fd2f1943f0308d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_135/COMPLETE.json
+    2b0d30184e9ce021d6453be17f94a709fa7363897f0f2eb5aae5f394afed397d  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_164/COMPLETE.json
+    52038c3dfbd99cef700f830a8ecbf8a0f92363161730c5c09e5d5ef74d170321  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_170/COMPLETE.json
+    a1bed4f0311c9aabf1dad5b12915e4d49a328a42af68afff58feedcf633e073b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_171/COMPLETE.json
+    0cc550020e284256f315f96fb98ffa182580e436e66ac24e51497837ff7693ec  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_191/COMPLETE.json
+    1d16f3c42ee0bc4f84ceecf6683b20420a2176d541df13ee99a4048242aeb0bd  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_211/COMPLETE.json
+    582f784eeb52acf08cf2ad19364f4ec96c191f1314334ed69d8ff658a77faf38  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_211_191217010211/COMPLETE.json
+    26cd1c7716e572a9f1cfba00d8c1c00ef7ced542ef9e1789212fb2589e1df6fe  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_213/COMPLETE.json
+    56cb274e7b065d4fae2aa74a28fea89191e579ebfd33322d31195fef539def7b  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_238/COMPLETE.json
+    0e51b10bbb13d813a4346d60a0bebde87430b2fcc2cff080a876e1de51361146  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_239/COMPLETE.json
+    88c1b0d05bd3f4dd76655cac65910f74f3b9dbc0f4f0f2403ee8f4a15675bb17  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_241/COMPLETE.json
+    f600fddb8ca6710861a7002af95012244c0493828c127cbbcf28b1d6b3496bad  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_26/COMPLETE.json
+    e552c3a85fd515a687d536dced548effd158cec60ce7c06087201f5bd9c218f4  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_27/COMPLETE.json
+    a4cd99ebf47ae6af507c03ae1a49bc7b5dd96d96f2b160c32ac5e7b2c584d000  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_29/COMPLETE.json
+    c5df1355663e98f2bb3c73bc6d707ca39d244c76a05b19b68cfff24f5143b61a  MM_review_analysis/A26_4_7_denovo_thresholds/results_revision2/PREDICT/20191213_QX7_PeTr_LC02_SA_MicrobPred_30/COMPLETE.json
+
+### `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/inputs/manifest_revision2.json`
+
+| sha256 | file |
+|---|---|
+| `924873dec18e56da10ac1471cefd8d2a1ff7ae8c56d00b63db8a44ead800a7a0` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/inputs/manifest_revision2.json` |
+
+### `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results`
+
+Directory not present at the time of hashing.
+
+### `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2`
+
+| sha256 | file |
+|---|---|
+| `8a355222fdfc5dc04c34dc56ef35e941ed4caaa2e5a5b9fcfe2facda93e9aaaf` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1799/COMPLETE.json` |
+| `e1555d3ce193bd74fc99db9f7a82cd5443310c209c90cf1d2dec337d758c92ac` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1799/peptide_contexts.tsv.gz` |
+| `e3417bb0aee6817c1c857a7db969ea00ff11a4785983fe55b1c941a2595cbe69` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1799/terminal_counts.tsv` |
+| `b0d07ef89b3e166cb716e3a7b05270517175de0a515462063e60db276c8c50c9` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1799/threshold_comparison.tsv` |
+| `d9051770389f05abbd79c9f53918862f620e39e41e7486473a16a855857c13ac` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1800/COMPLETE.json` |
+| `fd9979d2ff175419bd7132871c4f2d5eb92245397f9abfbc8d65b38b4aa29bf3` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1800/peptide_contexts.tsv.gz` |
+| `5786bb64cec12bb82870e27624414180787846bfdb653c03fb652e120cf0d232` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1800/terminal_counts.tsv` |
+| `bacfbd8edc6bf2947ed018936314c4136d0070af7b30a038405a8d63421cc3d9` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1800/threshold_comparison.tsv` |
+| `100d3a39a18c9f7259867572f0832496f46e20d4f11addf6c2e46d5c6a13c56a` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1810/COMPLETE.json` |
+| `30e8126c9a639cc3458a92bdd2dd790cb2bd61c8362b506dfd531288fdf5009a` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1810/peptide_contexts.tsv.gz` |
+| `40c7e632e9efa534df658bfcc395145e141c2dd93077dfa21b09254ce9f56429` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1810/terminal_counts.tsv` |
+| `d18e044a8085ed659a810511c157721c67f157e1e8d030dd8b927341f4f13123` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1810/threshold_comparison.tsv` |
+| `09412db4fc2ba8f466988b4f6f410c2e42db1652f99b5aff9304240c013f1f8d` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1811/COMPLETE.json` |
+| `8b5a045b82fa01124a33cf7996700078f5a59743cf0dd38b2c8362a4f5b726fc` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1811/peptide_contexts.tsv.gz` |
+| `0929c829ba2d62b45283923c25e71129f05a91a795dcab1e1076fdd2b9b11f67` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1811/terminal_counts.tsv` |
+| `d569a402f7ed493716b853b63c03eb168d4cfd0d3eb1d8d8c1785900b1eb8bad` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1811/threshold_comparison.tsv` |
+| `175d4794b21fe637f6a645c929191a4de0eb7ecaf494f9f032bb9c7cb3f4433e` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1812/COMPLETE.json` |
+| `6af52b530cc38e1ffbb79f35b98d6b59fd564f337bff48761acc5dcb0403ed45` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1812/peptide_contexts.tsv.gz` |
+| `5d19c52d3b920b45f9d9a8d510d5d39bd1bb3168e1b5e2c108a4cd5568beac94` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1812/terminal_counts.tsv` |
+| `15e32978888a3ae40a3129224f8769c43d7c2a12b10a61ef48a78c440580d8d6` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210615_EXPL0_PeTr_SA_T760_1812/threshold_comparison.tsv` |
+| `06f3fe12b7ac9193b704993ef09848028c212976cb70cc2bc5453ee164c42365` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1801/COMPLETE.json` |
+| `e7441d56c92d95b2a42cc12318e6da6bda00f02bfe09ee322cb82d2fce95aa40` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1801/peptide_contexts.tsv.gz` |
+| `b916197a48b151751ce577b2b817fc24032094f3aebbb0c09c49e4b1478d999f` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1801/terminal_counts.tsv` |
+| `375933fddfbca53a097e64aec3ed1fa881c3150b8af49f89ff102bb7446e5b66` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1801/threshold_comparison.tsv` |
+| `1e4141840587a34ae12c0f01fdb9a5bdc11c03ff061cb36cabef4d292ba5e9c4` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1802/COMPLETE.json` |
+| `6f34529991b89a1c96a64bd52bdbabf439dd289d74f188fe57dd5f7979772ddf` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1802/peptide_contexts.tsv.gz` |
+| `081c7ceeff2df709bb86e885f4da95ecdba6c5df58de20d2d9e70de7ea3356a9` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1802/terminal_counts.tsv` |
+| `7ea1c5bfd3eddd1912390be6b02ea6125d0e306bb329623f4d7627d3a3259e11` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1802/threshold_comparison.tsv` |
+| `680497c6d621851746c1d240bebdee723389eba62fc12349d0dfc91b54530f25` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1803/COMPLETE.json` |
+| `5ee1a0022e2ed6521a778fdac197b709eb4fe8a93191f18e500b0c03583ce503` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1803/peptide_contexts.tsv.gz` |
+| `63585dd08d07045e709fc0e65d00fc37c6057d65ae52c37453f6cc0a84e14314` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1803/terminal_counts.tsv` |
+| `4270e2eac0b8f906afabe03269e491aec2c1711f04f5ac8903034b1ac0ac5d12` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1803/threshold_comparison.tsv` |
+| `1b47fb34bff51f07e0cccc5792cb3be358cf120b1ff2fedd037c38980ba11e6d` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1813/COMPLETE.json` |
+| `d4975a836610a2bc255a039bc16982c0de466fc65244c91cf30dd9295cf7615e` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1813/peptide_contexts.tsv.gz` |
+| `e26969c59002b6b5585985ce7b718dd06dcacac951c5c51f4af042a36c0cec33` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1813/terminal_counts.tsv` |
+| `bcc576fc325527ffa89d32da34e38c6a7879266db103d762837160b26202636f` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1813/threshold_comparison.tsv` |
+| `6017e4ea1c02f48cf6bbaf9640cf01bcfadc6014ff877a8fbed8b8aade3a6fcd` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1814/COMPLETE.json` |
+| `09bf2838c93e2a95f2880b19a41cf18c16cd855cda082ed024ed8ae69ccbe616` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1814/peptide_contexts.tsv.gz` |
+| `eb9f85cf688fbf969e07a55c0f1ba5115cb89c403ec25a20a8595a8473d78774` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1814/terminal_counts.tsv` |
+| `1be8370be05a7c1ce0e9907729ef69cb61e0da7a0ec84da898854b443e3a00c7` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210618_EXPL0_PeTr_SA_T760_1814/threshold_comparison.tsv` |
+| `e5a2233ce4ed8b48d764431c619e2479e88399c2c7da1b6d7ff7124376e3eb3b` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1807/COMPLETE.json` |
+| `646100a91fb67bd3a81bf2ff5d46a4532a48f90227593f6b68add8e0442bb29e` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1807/peptide_contexts.tsv.gz` |
+| `c5e03882cd0d0f5d5871c94d855e5f04bc63cacbab88780bf5c515fb13351f6b` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1807/terminal_counts.tsv` |
+| `1133ebdefaa609256cecec50fc9073f2c43ef3f0453ec42b2ddcfd224a036c10` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1807/threshold_comparison.tsv` |
+| `30d25636da1027e1456e6957b2b365febd3f0d398c483f26547ad213a57497da` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1808/COMPLETE.json` |
+| `4e269f9a115544a7e31ad1b490c2578cb2445da9a1ae989148cd669eea66c113` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1808/peptide_contexts.tsv.gz` |
+| `a0dc1069af7bd897f589843f7548e18b1259bb4619716e2542a482c7b8bbb701` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1808/terminal_counts.tsv` |
+| `76651e1f4f106095e685a96c5237507278e59354f6669ede4736f6c70d644301` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1808/threshold_comparison.tsv` |
+| `6c2e518d5e516cc5c7a5a64d2f8c0c09242e97c92b568cd6b0ec53b714c49184` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1809/COMPLETE.json` |
+| `ead16f7961db5456d95efdbd3ecaef90e520aa5761693c72dfb68653be8eadfe` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1809/peptide_contexts.tsv.gz` |
+| `59ae460a9ce9b630905c10dfecf10d95ece03f56e06784e38c10dedb8a2cde77` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1809/terminal_counts.tsv` |
+| `0d7b6ebf5a9094cfbc8a749874877ee208aed2c3a7c902b11cc40502ee8702d8` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210620_EXPL0_PeTr_SA_T760_1809/threshold_comparison.tsv` |
+| `c592b2744ecd7a2d4ef95db2949a08a51acf699333bcccc674fabad88b751f57` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1804/COMPLETE.json` |
+| `466d70399d5a1b1426e720d059a4210513121f85696f69be8324c432ef49ff3a` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1804/peptide_contexts.tsv.gz` |
+| `f8ecbd76d3a563d6112f195c1fbdab41738cd54b1d3a4b4183b707dd01578cb9` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1804/terminal_counts.tsv` |
+| `fc1a9ca8e984b4ed024374abef3cea999d52aa81018773383ca66d0f4a8787ce` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1804/threshold_comparison.tsv` |
+| `cc6d0663821019530f29315fb2a99fe3fba0b4bd4673da0bc0c182b6a03871e3` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1805/COMPLETE.json` |
+| `ca588d01ae9870ba23986449e1794351c01dee98e83ad709a38e89de4d99d384` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1805/peptide_contexts.tsv.gz` |
+| `6bbca791ffb18081047284b6409d3b61e83a3f7c18b7e5168f50af35f9ae75e0` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1805/terminal_counts.tsv` |
+| `ea01654bb283aaa723b0ac579a900a2da3e1101b2c858f5b376f93a23dc0d30f` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1805/threshold_comparison.tsv` |
+| `8f78f83ca95bcb3bcdf5a0e312f7dbf6161c592b6a89793fca8a5e7fc418c3cf` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1806/COMPLETE.json` |
+| `099457df1341551e72b707a0de262a1c4ff5af9ed7e0731262b3d13d44d50892` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1806/peptide_contexts.tsv.gz` |
+| `602217d66ecb6fa14a875b601c2c7732ef941a3e4b644db35762630918d9b330` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1806/terminal_counts.tsv` |
+| `4dffb0781aba2be85f1c41ee4f6942e5594ae1e5ea7316e4e239357325d413c2` | `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/results_revision2/CAPSCAN/20210623_EXPL0_PeTr_SA_T760_1806/threshold_comparison.tsv` |
+
+## Released code versus origin
+
+| file | origin (LAB_ROOT relative) | sha256 at origin | sha256 here |
+|---|---|---|---|
+| `search.py` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/frozen/search.py` | `8dce0be3bdd74fbaa5cdf1765bcf6e12083694691b6e1ce49a7cd26ccbc7aac5` | `8dce0be3bdd74fbaa5cdf1765bcf6e12083694691b6e1ce49a7cd26ccbc7aac5` |
+| `search_revision2.py` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/frozen/search_revision2.py` | `30b46e73cad086fa9b9525f7285f3603dc050601f2f1cf5e0d8e19fb5cbc783c` | `30b46e73cad086fa9b9525f7285f3603dc050601f2f1cf5e0d8e19fb5cbc783c` |
+| `historical_denovo.py` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/frozen/historical_denovo.py` | `a7adc4b0a0b6f27b382efeae9aca38913a2374ae9c2f84ab513cd14c7aa3eb2c` | `0032978983f2d11a54fc337e9182fc95a75d5d8028000e0525a915d312e6134d` |
+| `context_helpers.py` | `LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds/frozen/context_helpers.py` | `1a4d4a8746e4ddc30fd25be5c224c829bb752f7710b9bbd3a82d0032ab0a7038` | `1174aea1f9d264abb45080687167e1db5ae89f931a886c185ac4793ebe7db662` |
+
+Static checks: `python -m py_compile` on every `.py` file; `tools/scan_release.py`.
+
+## Hashing code
+
+The hashes above were produced by a Slurm job (4 to 8 CPUs) that walks each root once, hashes every file with SHA-256 in 8 MiB blocks and, for roots with more than 20 per-acquisition directories, hashes only the `COMPLETE.json` of each. The code is kept in the work directory, not in the repository.

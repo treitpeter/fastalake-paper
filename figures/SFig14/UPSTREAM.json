@@ -1,0 +1,54 @@
+{
+  "unit": "SFig14",
+  "upstream": [
+    {
+      "id": "histidine_spectrum_evidence",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/recovery_2026-09-15/cohort_recovery/A25/frozen/search_revision2.py",
+        "LAB_ROOT/MM_review_analysis/recovery_2026-09-15/cohort_recovery/A25/frozen/fragment_helpers.py",
+        "LAB_ROOT/MM_review_analysis/recovery_2026-09-15/cohort_recovery/A25/frozen/context_helpers.py",
+        "LAB_ROOT/MM_review_analysis/recovery_2026-09-15/cohort_recovery/A25/frozen/lib.py",
+        "LAB_ROOT/MM_review_analysis/recovery_2026-09-15/cohort_recovery/A25/frozen/peptide.py",
+        "LAB_ROOT/MM_review_analysis/recovery_2026-09-15/cohort_recovery/A25/inputs/manifest_revision2.json"
+      ],
+      "uses": "Case selection (one PSM per origin x boundary side in PREDICT stool), observed and processed peaks read from the mzML, matched b/y fragments, bounded sequence alternatives and per-case provenance (Slurm job 5937598, results_revision2/PREDICT). All four panels plot its processed_peaks.tsv and matched_fragments.tsv; the notebook re-derives both from observed_peaks.tsv.gz and checks the selection rule.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "histidine_boundary_localisation",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A27_4_7_histidine_defence"
+      ],
+      "uses": "Per-acquisition site evidence (site_evidence.tsv.gz, route sage_unspecific_bothq, unambiguous internal H boundary) that defines the candidate peptides counted in complete_candidate_counts.tsv. Not shipped; used only through the candidate counts.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_nonspecific_search",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A13_4_7_predict_unspecific"
+      ],
+      "uses": "Non-specific Sage 0.14.6 searches of the 306 PREDICT stool acquisitions (results.sage.tsv, results.json). Cases HIS_001 to HIS_003 take their PSMs and q values from these searches (selected_cases.tsv, PROVENANCE.json). HIS_004 does not; see predict_truncated_mzml_repair.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_truncated_mzml_repair",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/code/repaired_predict_searches_20260915.py",
+        "LAB_ROOT/MM_review_analysis/recovery_2026-09-15/search_recovery/repaired_search_full.sbatch",
+        "LAB_ROOT/MM_review_analysis/recovery_2026-09-15/raw_recovery"
+      ],
+      "uses": "Non-specific Sage 0.14.6 search (Slurm array job 5937565) of the mzML reconverted from RAW for the truncated acquisition 20191024_QX7_PeTr_LC02_SA_MicrobPred_44 (mzML sha256 e677a105bba5e65d06a3e3a3d69c9b2d153a7895a596e71b24cd3c38e24d0119). Source of the HIS_004 PSM (panel d); results.json sha256 7ad4a697b5d4f06720ac3f246ad48dfb30002c69cbb8b878fd9e088d415535e6, as recorded in spectra/HIS_004/PROVENANCE.json.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_histidine_case_audit",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/predict_spectrum_review/frozen/audit_predict_spectrum_cases.py",
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/predict_spectrum_review/jobs/full.sbatch",
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/predict_spectrum_review/MANIFEST.json"
+      ],
+      "uses": "Independent case audit of the four PREDICT cases (Slurm jobs 5940795 pilot, 5940796 full) that wrote independent_case_review.tsv, shipped as PREDICT_spectrum_case_review.tsv (the table the producer iterates over for panels a-d).",
+      "pipeline_dir": null
+    }
+  ]
+}

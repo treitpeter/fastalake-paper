@@ -1,0 +1,11 @@
+v28d_line	quote	printed_value	recomputed_value	code	source_data	status
+81	in an average of 46.4% of comparisons	46.4%	46.42546916329173	figures/SFig12/panels.py:stat_f_recompute (primary, donor_balanced_agreement)	source_data/Fig5/contributor_cells.tsv; source_data/SFig12/capscan_contributor_region_cells_direct.tsv	MATCH
+81	then across the 15 participants	15	15	figures/SFig12/panels.py:stat_f_recompute (n_donors)	source_data/Fig5/contributor_cells.tsv; source_data/SFig12/capscan_contributor_region_cells_direct.tsv	MATCH
+81	increased agreement to 57.6% (Fig. 5f, Supplementary Fig. 12)	57.6%	57.56969912129997	figures/SFig12/panels.py:stat_f_recompute (strict_pair_filter, donor_balanced_agreement)	source_data/Fig5/contributor_cells.tsv; source_data/SFig12/capscan_contributor_region_cells_direct.tsv	MATCH
+82	a median of only 29.1% of non-host functional intensity	29.1%	29.078817438406556	figures/SFig12/panels.py:stat_cd_median_resolved	source_data/Fig5/contributor_cells.tsv	MATCH
+243	after rarefaction to eight resolved healthy-stool acquisitions	eight	eight	figures/SFig12/panels.py:stat_b_depth	source_data/SFig12/healthy_stool_leader_diversity.tsv	MATCH
+243	(21,168 cells, 1,467 functions, 15 participants)	21,168	21168	figures/SFig12/panels.py:stat_cd_counts (cells)	source_data/Fig5/contributor_cells.tsv	MATCH
+243	(21,168 cells, 1,467 functions, 15 participants)	1,467	1467	figures/SFig12/panels.py:stat_cd_counts (functions)	source_data/Fig5/contributor_cells.tsv	MATCH
+243	(21,168 cells, 1,467 functions, 15 participants)	15	15	figures/SFig12/panels.py:stat_cd_counts (participants)	source_data/Fig5/contributor_cells.tsv	MATCH
+402	across 21,168 eligible function–participant cells spanning 1,467 functions	21,168	21168	figures/SFig12/panels.py:stat_cd_counts (cells)	source_data/Fig5/contributor_cells.tsv	MATCH
+402	across 21,168 eligible function–participant cells spanning 1,467 functions	1,467	1467	figures/SFig12/panels.py:stat_cd_counts (functions)	source_data/Fig5/contributor_cells.tsv	MATCH

@@ -1,0 +1,2 @@
+source_fastas	input_records	duplicate_records_removed	unique_sequences	total_residues	union_sha256	identity	status
+58	709676	556409	153267	64714776	2221358735d92f285015c8930cbb2a9952a85920bb8a1846c0238b39590b7ec3	Exact full amino-acid sequence; uppercase and remove wrapping whitespace; retain I/L differences and stop symbols	PASS

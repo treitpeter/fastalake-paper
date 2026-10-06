@@ -1,0 +1,96 @@
+{
+  "unit": "Fig4",
+  "upstream": [
+    {
+      "id": "capscan_crossfit_10fold",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/worker.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/sage_lda.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/sage_q.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/common.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/run.sbatch",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/run/analyze_final.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/run/final.sbatch",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/review_0/recovery.py"
+      ],
+      "uses": "per-acquisition pooled cross-fitted FL and MG peptide counts (5-50 and 9-50 residues), frozen same-spectrum counts, LDA fallbacks and cross-fitted recovery (source_data/Fig4/crossfit_per_acquisition.tsv): panels b, c; text lines 123, 129 (mixed model input), 133. The bootstrap (analyze_final.py summarize) is ported into panels.py and recomputed.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "clinical_public_only_comparison",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A16_4_5_public_comparison/frozen/lib.py",
+        "LAB_ROOT/MM_review_analysis/A16_4_5_public_comparison/frozen/report.py",
+        "LAB_ROOT/MM_review_analysis/A16_4_5_public_comparison/frozen/search.py"
+      ],
+      "uses": "same-spectrum FL_public vs MG per-acquisition counts and recovery as packaged in Source Data Figure4/benchmark_{0,1}_per_acquisition.tsv (source_data/Fig4/same_spectrum_benchmark.tsv, predict_acquisition_roster.tsv): text lines 121, 123, legend line 127, panel a counts.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_fl_only_spectrum_audit",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/code/audit.py",
+        "LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/code/collect.py",
+        "LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/code/task.sh"
+      ],
+      "uses": "per-acquisition partition of FL-only spectra into five MG-search outcomes (source_data/Fig4/spectrum_audit_per_acquisition.tsv): panel d, text line 131, legend line 127.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_clinical_refit",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/clinical_refit.py"
+      ],
+      "uses": "paired antibiotic profiles (controlled) and the public aggregate statistics clinical_paired_statistics.tsv; derive() paired inference ported into panels.py:stat_eg_paired and recomputed: panels e, g, text line 137. Composition means (D12 builder, from the same paired profiles): panel f.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_eds_screen",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/eds_biochemistry.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/nested_eds.py"
+      ],
+      "uses": "85-patient within-feature z scores, feature list and patient order with EDS and human fraction (eds_refit/input_data): panel h.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_eds_feature_selection",
+      "original_code_paths": [],
+      "uses": "the fixed 20-feature selection shown in panel h (19 with any positive value); selection code not traced (OPEN_ITEMS).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_crossomics_refit",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/crossomics.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/source_data/current/Crossomics/native/native_pyramids.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/source_data/current/Crossomics/provenance/check_prevalence.py"
+      ],
+      "uses": "PREDICT native and functional correlation tables and the 77 x 77 distance matrices: panel i, text line 139; correlations recomputed from the distances in panels.py.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_region_mixed_model",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C3_region_test/region_test.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C3_region_test/run.sbatch"
+      ],
+      "uses": "linear mixed model of ln(FL/MG) by sampling site with participant random intercept (job 6057982); ported into panels.py:stat_mixed_model and recomputed: text line 129.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_metagenome_yield_join",
+      "original_code_paths": [],
+      "uses": "CapScan per-acquisition DNA amount, MG database size and same-spectrum counts as packaged in Source Data Figure4/capscan_assembly_dna_yield (source_data/Fig4/capscan_dna_yield_by_acquisition.tsv): text line 129. Producer not located (OPEN_ITEMS).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "source_data_package",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/figure_sd/source_data/build/build_package.py"
+      ],
+      "uses": "PREDICT participant pseudonyms (PREDICT_P###) reused for the participant_id columns.",
+      "pipeline_dir": null
+    }
+  ]
+}

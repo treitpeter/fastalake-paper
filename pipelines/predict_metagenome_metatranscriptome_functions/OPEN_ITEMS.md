@@ -1,0 +1,1 @@
+- PIPELINE: predict_metagenome_metatranscriptome_functions: producer of metaG_OG_TPM.tsv, metaT_OG_TPM.tsv and PREDICT_meta[GT]_{KO,Pathway}.tsv not found; only consumer scripts exist in the folder.

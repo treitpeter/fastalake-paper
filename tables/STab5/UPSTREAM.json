@@ -1,0 +1,40 @@
+{
+  "unit": "STab5",
+  "upstream": [
+    {
+      "id": "predict_function_correlations",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/individual_functions.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/common.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/scripts/run_downstream.sh"
+      ],
+      "uses": "The 30,581 revised-allocation tests, the 184,386-row eligibility table and the nine-family summary (refit mode, Slurm job 6048399), and the 17,914 previous-allocation tests (biology_refit/individual_baseline). The correlation, eligibility and Benjamini-Hochberg step is ported unchanged into panels.stat_individual_functions and recomputed from the patient-level profiles in source_data/STab5/ (all tests equal; TSV byte-identical).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_verified_functional_profiles",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/scripts/corrected_reproject.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/scripts/run.sh"
+      ],
+      "uses": "PREDICT non-host protein OG/KO/pathway profiles after the seed-orthologue check (profiles/verified50/PREDICT_noclust, *_other_unresolved, 306 acquisitions, Slurm job 6048301); collapsed to 77 patients by prepare_source_data.py and shipped as source_data/STab5/profiles_*_microbial_metaP.tsv.gz. Not re-run.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_metagenome_metatranscriptome_functions",
+      "original_code_paths": [],
+      "uses": "PREDICT metagenome and metatranscriptome OG (TPM), KO and pathway tables (LAB_ROOT/analyses/enterotypes_2026-09-07/{metaG_OG_TPM,metaT_OG_TPM,PREDICT_metaG_KO,PREDICT_metaT_KO,PREDICT_metaG_Pathway,PREDICT_metaT_Pathway}.tsv); shipped for the 77 patients as source_data/STab5/profiles_*_meta{G,T}.tsv.gz. Producer code not traced in this unit.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "STab5_workbook_build",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration2/cr003_followup/scripts/tables_cr003.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/figure_sd/source_data/build/specials.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/figure_sd/source_data/build/build_package.py"
+      ],
+      "uses": "Workbook assembly (verified50 variant), the common-eligibility comparison, and the Source Data package edit (Read_me sheet, column and label renames); ported to panels.build_table, panels.stat_eligibility_common and panels.package_support.",
+      "pipeline_dir": null
+    }
+  ]
+}

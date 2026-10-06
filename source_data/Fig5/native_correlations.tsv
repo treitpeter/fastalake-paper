@@ -1,0 +1,13 @@
+cohort	analysis	layer_a	layer_b	rho	p	permutations	n_profiles	n_participants	q
+CAPSCAN	primary_prevalence10	DNA	Non-host protein	0.5779273198903184	0.0005	1999	65	13	0.00075
+CAPSCAN	primary_prevalence10	DNA	Host protein	0.31662497094981473	0.0085	1999	65	13	0.0085
+CAPSCAN	primary_prevalence10	DNA	Metabolites	0.2515283131092838	0.002	1999	65	13	0.0024000000000000002
+CAPSCAN	primary_prevalence10	Non-host protein	Host protein	0.5250225187274683	0.0005	1999	65	13	0.00075
+CAPSCAN	primary_prevalence10	Non-host protein	Metabolites	0.3716805272787973	0.0005	1999	65	13	0.00075
+CAPSCAN	primary_prevalence10	Host protein	Metabolites	0.5170251300837558	0.0005	1999	65	13	0.00075
+CAPSCAN	sensitivity_all_features	DNA	Non-host protein	0.5118636969309722	0.0005	1999	65	13	0.00075
+CAPSCAN	sensitivity_all_features	DNA	Host protein	0.34820013666721983	0.002	1999	65	13	0.0024000000000000002
+CAPSCAN	sensitivity_all_features	DNA	Metabolites	0.2677099970348409	0.007	1999	65	13	0.007
+CAPSCAN	sensitivity_all_features	Non-host protein	Host protein	0.5481675873915182	0.0005	1999	65	13	0.00075
+CAPSCAN	sensitivity_all_features	Non-host protein	Metabolites	0.38212126119382245	0.0005	1999	65	13	0.00075
+CAPSCAN	sensitivity_all_features	Host protein	Metabolites	0.5230640001783682	0.0005	1999	65	13	0.00075

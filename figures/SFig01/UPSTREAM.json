@@ -1,0 +1,16 @@
+{
+  "unit": "SFig01",
+  "upstream": [
+    {
+      "id": "cohort_database_sizes",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A01_4_1_database_sizes/audit.py",
+        "LAB_ROOT/MM_review_analysis/A01_4_1_database_sizes/frozen/audit_v2.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/fig1bd_n15/code/sizes.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/fig1bd_n15/code/assemble.py"
+      ],
+      "uses": "Per-acquisition FASTA entry counts and per-cohort reservoir entry counts (acquisition_sizes_726.tsv: 710 rows from the A01 audit, Slurm jobs 5920000 and 5920375, plus 16 participant-15 CapScan rows counted with the same scan() function, Slurm job 6064318, inserted by assemble.py, Slurm job 6064327, the run whose time matches the table mtime); and the human Swiss-Prot reference FASTA the audit counted (20,431 entries). Used for panel a and every number in NUMBERS.tsv.",
+      "pipeline_dir": null
+    }
+  ]
+}

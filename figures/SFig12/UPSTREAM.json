@@ -1,0 +1,36 @@
+{
+  "unit": "SFig12",
+  "upstream": [
+    {
+      "id": "peptide_centric_functional_allocation",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/revised/build_variants.py",
+        "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/revised/run.sh",
+        "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/jobs/repaired_predict.sbatch",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/suppfigs_n15/SF12/alloc347/stage.sh"
+      ],
+      "uses": "KO x acquisition allocation matrices with the FunctionallyUnassigned remainder (HSTOOL, repaired PREDICT, CapScan rerun on the 347 roster, Slurm jobs 5973734 and 6066031); panel a.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "A33_hstool_leading_species",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/revised/derive_hstool_pc.py",
+        "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/render/Supp_9_10_19/build_supp_9_10_19.py"
+      ],
+      "uses": "Healthy-stool function x design leader diversity with the analytical rarefaction to eight acquisitions (function_tier_summary.tsv, panel b) and the grouping/filter leader-agreement summary (S10 SUMMARY.tsv, panel e).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "C2_capscan_participant15_contributors",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5e_f/scripts/fig5ef_run.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5e_f/scripts/build_gated_joint.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5e_f/scripts/build_design_347.py",
+        "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/revised/search_pc.py"
+      ],
+      "uses": "CapScan function x participant and function x participant x region leading-species cells under direct peptide assignment on the 347 roster (Slurm job 6058098; control 6058096); panels c, d, f and the numbers in v30 paragraphs 81, 82, 243, 402. Shared with Fig5.",
+      "pipeline_dir": null
+    }
+  ]
+}

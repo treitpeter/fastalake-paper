@@ -1,0 +1,175 @@
+panel	cohort	level	layer_a	layer_b	rho	q	label	analysis	features	distance	outer_correlation	coefficient
+a	PREDICT	Pathway	RNA	DNA	0.209482243791488	0.0007368421052631	0.21*					
+a	PREDICT	Pathway	Protein	DNA	0.3304043291564196	0.0014	0.33*					
+a	PREDICT	Pathway	Protein	RNA	0.1591346690578884	0.0237391304347826	0.16*					
+a	PREDICT	Pathway	Human protein	DNA	0.0224816606561881	0.8432307692307692	0.02					
+a	PREDICT	Pathway	Human protein	RNA	0.0238731976311319	0.78232	0.02					
+a	PREDICT	Pathway	Human protein	Protein	0.5109448507366264	0.0007368421052631	0.51*					
+a	PREDICT	Pathway	Metabolites	DNA	0.434127408203973	0.0007368421052631	0.43*					
+a	PREDICT	Pathway	Metabolites	RNA	0.1837308735055663	0.002	0.18*					
+a	PREDICT	Pathway	Metabolites	Protein	0.4335609748351374	0.0007368421052631	0.43*					
+b	CAPSCAN	Pathway	Protein	DNA	0.6056304539605837	0.0006153846153846	0.61*					
+b	CAPSCAN	Pathway	Human protein	DNA	0.3290441898322725	0.0035	0.33*					
+b	CAPSCAN	Pathway	Human protein	Protein	0.4484025891882692	0.0006153846153846	0.45*					
+b	CAPSCAN	Pathway	Metabolites	DNA	0.2683225632288583	0.0006153846153846	0.27*					
+b	CAPSCAN	Pathway	Metabolites	Protein	0.3575869455975174	0.0006153846153846	0.36*					
+c	PREDICT		DNA	RNA	0.5746345606514992			sensitivity_all_features				
+c	PREDICT		DNA	Non-host protein	0.440579504049556			sensitivity_all_features				
+c	PREDICT		DNA	Host protein	0.0382164858319714			sensitivity_all_features				
+c	PREDICT		DNA	Metabolites	0.2559079436737539			sensitivity_all_features				
+c	PREDICT		RNA	Non-host protein	0.4453703497157367			sensitivity_all_features				
+c	PREDICT		RNA	Host protein	0.2035490567488482			sensitivity_all_features				
+c	PREDICT		RNA	Metabolites	0.2960662473603693			sensitivity_all_features				
+c	PREDICT		Non-host protein	Host protein	0.4452171387851895			sensitivity_all_features				
+c	PREDICT		Non-host protein	Metabolites	0.4365606874380003			sensitivity_all_features				
+c	PREDICT		Host protein	Metabolites	0.2642400250448728			sensitivity_all_features				
+c	PREDICT		DNA	RNA	0.6623366362657533			primary_prevalence10				
+c	PREDICT		DNA	Non-host protein	0.4490870844342156			primary_prevalence10				
+c	PREDICT		DNA	Host protein	0.0001963033160774			primary_prevalence10				
+c	PREDICT		DNA	Metabolites	0.3119671860095862			primary_prevalence10				
+c	PREDICT		RNA	Non-host protein	0.4076298388585085			primary_prevalence10				
+c	PREDICT		RNA	Host protein	0.1473100654881893			primary_prevalence10				
+c	PREDICT		RNA	Metabolites	0.3345850117252487			primary_prevalence10				
+c	PREDICT		Non-host protein	Host protein	0.4365373215483801			primary_prevalence10				
+c	PREDICT		Non-host protein	Metabolites	0.428674177074731			primary_prevalence10				
+c	PREDICT		Host protein	Metabolites	0.2609848885582976			primary_prevalence10				
+d	CAPSCAN		DNA	Non-host protein	0.5118636969309722			sensitivity_all_features				
+d	CAPSCAN		DNA	Host protein	0.3482001366672198			sensitivity_all_features				
+d	CAPSCAN		DNA	Metabolites	0.2677099970348409			sensitivity_all_features				
+d	CAPSCAN		Non-host protein	Host protein	0.5481675873915182			sensitivity_all_features				
+d	CAPSCAN		Non-host protein	Metabolites	0.3821212611938224			sensitivity_all_features				
+d	CAPSCAN		Host protein	Metabolites	0.5230640001783682			sensitivity_all_features				
+d	CAPSCAN		DNA	Non-host protein	0.5779273198903184			primary_prevalence10				
+d	CAPSCAN		DNA	Host protein	0.3166249709498147			primary_prevalence10				
+d	CAPSCAN		DNA	Metabolites	0.2515283131092838			primary_prevalence10				
+d	CAPSCAN		Non-host protein	Host protein	0.5250225187274683			primary_prevalence10				
+d	CAPSCAN		Non-host protein	Metabolites	0.3716805272787973			primary_prevalence10				
+d	CAPSCAN		Host protein	Metabolites	0.5170251300837558			primary_prevalence10				
+e	PREDICT		DNA	RNA		0.0007142857142857			prevalence10	hellinger	pearson	0.6526228943009167
+e	PREDICT		DNA	RNA		0.000625			prevalence10	hellinger	spearman	0.6623366362657533
+e	PREDICT		DNA	RNA		0.000625			prevalence10	rank	pearson	0.8889751467956961
+e	PREDICT		DNA	RNA		0.000625			prevalence10	rank	spearman	0.8805873406617839
+e	PREDICT		DNA	RNA		0.0008333333333333			all_observed	hellinger	pearson	0.4071937224308118
+e	PREDICT		DNA	RNA		0.000625			all_observed	hellinger	spearman	0.5746345606514992
+e	PREDICT		DNA	RNA		0.000625			all_observed	rank	pearson	0.8855498078225578
+e	PREDICT		DNA	RNA		0.000625			all_observed	rank	spearman	0.8802754296512951
+e	PREDICT		DNA	Non-host protein		0.0007142857142857			prevalence10	hellinger	pearson	0.4561147574363072
+e	PREDICT		DNA	Non-host protein		0.000625			prevalence10	hellinger	spearman	0.4490870844342156
+e	PREDICT		DNA	Non-host protein		0.000625			prevalence10	rank	pearson	0.4584516251627961
+e	PREDICT		DNA	Non-host protein		0.000625			prevalence10	rank	spearman	0.4757891975262015
+e	PREDICT		DNA	Non-host protein		0.0008333333333333			all_observed	hellinger	pearson	0.4263706575642458
+e	PREDICT		DNA	Non-host protein		0.000625			all_observed	hellinger	spearman	0.440579504049556
+e	PREDICT		DNA	Non-host protein		0.000625			all_observed	rank	pearson	0.4785824833039625
+e	PREDICT		DNA	Non-host protein		0.000625			all_observed	rank	spearman	0.4865292732669065
+e	PREDICT		DNA	Host protein		0.821			prevalence10	hellinger	pearson	-0.0164427440083367
+e	PREDICT		DNA	Host protein		0.998			prevalence10	hellinger	spearman	0.0001963033160774
+e	PREDICT		DNA	Host protein		0.0411111111111111			prevalence10	rank	pearson	0.0870335830109684
+e	PREDICT		DNA	Host protein		0.0395			prevalence10	rank	spearman	0.0849873583162562
+e	PREDICT		DNA	Host protein		0.6745			all_observed	hellinger	pearson	0.0323506367203342
+e	PREDICT		DNA	Host protein		0.585			all_observed	hellinger	spearman	0.0382164858319714
+e	PREDICT		DNA	Host protein		0.0488888888888888			all_observed	rank	pearson	0.1537715757686834
+e	PREDICT		DNA	Host protein		0.0644444444444444			all_observed	rank	spearman	0.1342454372508496
+e	PREDICT		DNA	Metabolites		0.0007142857142857			prevalence10	hellinger	pearson	0.3029394071910308
+e	PREDICT		DNA	Metabolites		0.000625			prevalence10	hellinger	spearman	0.3119671860095862
+e	PREDICT		DNA	Metabolites		0.000625			prevalence10	rank	pearson	0.1927174810582405
+e	PREDICT		DNA	Metabolites		0.000625			prevalence10	rank	spearman	0.1903656877529893
+e	PREDICT		DNA	Metabolites		0.0021428571428571			all_observed	hellinger	pearson	0.2273441963696181
+e	PREDICT		DNA	Metabolites		0.000625			all_observed	hellinger	spearman	0.2559079436737539
+e	PREDICT		DNA	Metabolites		0.000625			all_observed	rank	pearson	0.1382060876769968
+e	PREDICT		DNA	Metabolites		0.000625			all_observed	rank	spearman	0.1385622396112749
+e	PREDICT		RNA	Non-host protein		0.0007142857142857			prevalence10	hellinger	pearson	0.3906426432615105
+e	PREDICT		RNA	Non-host protein		0.000625			prevalence10	hellinger	spearman	0.4076298388585085
+e	PREDICT		RNA	Non-host protein		0.000625			prevalence10	rank	pearson	0.4098319522321391
+e	PREDICT		RNA	Non-host protein		0.000625			prevalence10	rank	spearman	0.4288715167617584
+e	PREDICT		RNA	Non-host protein		0.0008333333333333			all_observed	hellinger	pearson	0.2920634086957576
+e	PREDICT		RNA	Non-host protein		0.000625			all_observed	hellinger	spearman	0.4453703497157367
+e	PREDICT		RNA	Non-host protein		0.000625			all_observed	rank	pearson	0.4506811570503738
+e	PREDICT		RNA	Non-host protein		0.000625			all_observed	rank	spearman	0.4608300908568832
+e	PREDICT		RNA	Host protein		0.0316666666666666			prevalence10	hellinger	pearson	0.1285591301869864
+e	PREDICT		RNA	Host protein		0.0122222222222222			prevalence10	hellinger	spearman	0.1473100654881893
+e	PREDICT		RNA	Host protein		0.0495			prevalence10	rank	pearson	0.0757638257527309
+e	PREDICT		RNA	Host protein		0.0327777777777777			prevalence10	rank	spearman	0.0892539535698509
+e	PREDICT		RNA	Host protein		0.0144444444444444			all_observed	hellinger	pearson	0.1354594205215692
+e	PREDICT		RNA	Host protein		0.0038888888888888			all_observed	hellinger	spearman	0.2035490567488482
+e	PREDICT		RNA	Host protein		0.1085			all_observed	rank	pearson	0.1120087453474107
+e	PREDICT		RNA	Host protein		0.157			all_observed	rank	spearman	0.0940917159189865
+e	PREDICT		RNA	Metabolites		0.0007142857142857			prevalence10	hellinger	pearson	0.316833925522017
+e	PREDICT		RNA	Metabolites		0.000625			prevalence10	hellinger	spearman	0.3345850117252487
+e	PREDICT		RNA	Metabolites		0.000625			prevalence10	rank	pearson	0.2230667193713819
+e	PREDICT		RNA	Metabolites		0.000625			prevalence10	rank	spearman	0.2139443498140206
+e	PREDICT		RNA	Metabolites		0.0008333333333333			all_observed	hellinger	pearson	0.2177940642431085
+e	PREDICT		RNA	Metabolites		0.000625			all_observed	hellinger	spearman	0.2960662473603693
+e	PREDICT		RNA	Metabolites		0.000625			all_observed	rank	pearson	0.2051177220564295
+e	PREDICT		RNA	Metabolites		0.000625			all_observed	rank	spearman	0.19817768718853
+e	PREDICT		Non-host protein	Host protein		0.0007142857142857			prevalence10	hellinger	pearson	0.4710535912781651
+e	PREDICT		Non-host protein	Host protein		0.000625			prevalence10	hellinger	spearman	0.4365373215483801
+e	PREDICT		Non-host protein	Host protein		0.000625			prevalence10	rank	pearson	0.2925538633649911
+e	PREDICT		Non-host protein	Host protein		0.000625			prevalence10	rank	spearman	0.2916037777577345
+e	PREDICT		Non-host protein	Host protein		0.0008333333333333			all_observed	hellinger	pearson	0.4718643343211236
+e	PREDICT		Non-host protein	Host protein		0.000625			all_observed	hellinger	spearman	0.4452171387851895
+e	PREDICT		Non-host protein	Host protein		0.000625			all_observed	rank	pearson	0.3410740246272669
+e	PREDICT		Non-host protein	Host protein		0.000625			all_observed	rank	spearman	0.3163899841849242
+e	PREDICT		Non-host protein	Metabolites		0.0007142857142857			prevalence10	hellinger	pearson	0.4356859901222558
+e	PREDICT		Non-host protein	Metabolites		0.000625			prevalence10	hellinger	spearman	0.428674177074731
+e	PREDICT		Non-host protein	Metabolites		0.000625			prevalence10	rank	pearson	0.247752540682669
+e	PREDICT		Non-host protein	Metabolites		0.000625			prevalence10	rank	spearman	0.262316472180353
+e	PREDICT		Non-host protein	Metabolites		0.0008333333333333			all_observed	hellinger	pearson	0.440064750986756
+e	PREDICT		Non-host protein	Metabolites		0.000625			all_observed	hellinger	spearman	0.4365606874380003
+e	PREDICT		Non-host protein	Metabolites		0.000625			all_observed	rank	pearson	0.2210112450450362
+e	PREDICT		Non-host protein	Metabolites		0.000625			all_observed	rank	spearman	0.2323505201515738
+e	PREDICT		Host protein	Metabolites		0.005			prevalence10	hellinger	pearson	0.2379854298375371
+e	PREDICT		Host protein	Metabolites		0.000625			prevalence10	hellinger	spearman	0.2609848885582976
+e	PREDICT		Host protein	Metabolites		0.000625			prevalence10	rank	pearson	0.1446672176520204
+e	PREDICT		Host protein	Metabolites		0.000625			prevalence10	rank	spearman	0.1479627952409496
+e	PREDICT		Host protein	Metabolites		0.004375			all_observed	hellinger	pearson	0.2420461921024969
+e	PREDICT		Host protein	Metabolites		0.000625			all_observed	hellinger	spearman	0.2642400250448728
+e	PREDICT		Host protein	Metabolites		0.000625			all_observed	rank	pearson	0.1219785584009605
+e	PREDICT		Host protein	Metabolites		0.000625			all_observed	rank	spearman	0.131669882751824
+f	CAPSCAN		DNA	Non-host protein		0.001			prevalence10	hellinger	pearson	0.6556921670908549
+f	CAPSCAN		DNA	Non-host protein		0.00075			prevalence10	hellinger	spearman	0.5779273198903184
+f	CAPSCAN		DNA	Non-host protein		0.00075			prevalence10	rank	pearson	0.6274258877189736
+f	CAPSCAN		DNA	Non-host protein		0.001			prevalence10	rank	spearman	0.4968420175051602
+f	CAPSCAN		DNA	Non-host protein		0.001			all_observed	hellinger	pearson	0.5983517299158541
+f	CAPSCAN		DNA	Non-host protein		0.00075			all_observed	hellinger	spearman	0.5118636969309722
+f	CAPSCAN		DNA	Non-host protein		0.0015			all_observed	rank	pearson	0.5013801592593399
+f	CAPSCAN		DNA	Non-host protein		0.0015			all_observed	rank	spearman	0.4436940362216671
+f	CAPSCAN		DNA	Host protein		0.014			prevalence10	hellinger	pearson	0.3763522136658511
+f	CAPSCAN		DNA	Host protein		0.0085			prevalence10	hellinger	spearman	0.3166249709498147
+f	CAPSCAN		DNA	Host protein		0.195			prevalence10	rank	pearson	0.2950641616203474
+f	CAPSCAN		DNA	Host protein		0.156			prevalence10	rank	spearman	0.2446794715775974
+f	CAPSCAN		DNA	Host protein		0.0125			all_observed	hellinger	pearson	0.3678719767657503
+f	CAPSCAN		DNA	Host protein		0.0024			all_observed	hellinger	spearman	0.3482001366672198
+f	CAPSCAN		DNA	Host protein		0.024			all_observed	rank	pearson	0.226985250040225
+f	CAPSCAN		DNA	Host protein		0.012			all_observed	rank	spearman	0.3142471109434108
+f	CAPSCAN		DNA	Metabolites		0.0018			prevalence10	hellinger	pearson	0.34460537065897
+f	CAPSCAN		DNA	Metabolites		0.0024			prevalence10	hellinger	spearman	0.2515283131092838
+f	CAPSCAN		DNA	Metabolites		0.00075			prevalence10	rank	pearson	0.4349943101704412
+f	CAPSCAN		DNA	Metabolites		0.001			prevalence10	rank	spearman	0.4224564545924469
+f	CAPSCAN		DNA	Metabolites		0.0036			all_observed	hellinger	pearson	0.359370556432799
+f	CAPSCAN		DNA	Metabolites		0.007			all_observed	hellinger	spearman	0.2677099970348409
+f	CAPSCAN		DNA	Metabolites		0.1866			all_observed	rank	pearson	0.2619447966968308
+f	CAPSCAN		DNA	Metabolites		0.3282			all_observed	rank	spearman	0.159083200157203
+f	CAPSCAN		Non-host protein	Host protein		0.001			prevalence10	hellinger	pearson	0.5533788815216213
+f	CAPSCAN		Non-host protein	Host protein		0.00075			prevalence10	hellinger	spearman	0.5250225187274683
+f	CAPSCAN		Non-host protein	Host protein		0.00075			prevalence10	rank	pearson	0.5689648066595285
+f	CAPSCAN		Non-host protein	Host protein		0.001			prevalence10	rank	spearman	0.5552607585164048
+f	CAPSCAN		Non-host protein	Host protein		0.001			all_observed	hellinger	pearson	0.5883374735698242
+f	CAPSCAN		Non-host protein	Host protein		0.00075			all_observed	hellinger	spearman	0.5481675873915182
+f	CAPSCAN		Non-host protein	Host protein		0.0015			all_observed	rank	pearson	0.6024407475005378
+f	CAPSCAN		Non-host protein	Host protein		0.0015			all_observed	rank	spearman	0.5413780450421488
+f	CAPSCAN		Non-host protein	Metabolites		0.0015			prevalence10	hellinger	pearson	0.4269628321475515
+f	CAPSCAN		Non-host protein	Metabolites		0.00075			prevalence10	hellinger	spearman	0.3716805272787973
+f	CAPSCAN		Non-host protein	Metabolites		0.00075			prevalence10	rank	pearson	0.4603683421944446
+f	CAPSCAN		Non-host protein	Metabolites		0.0015			prevalence10	rank	spearman	0.4337028367542543
+f	CAPSCAN		Non-host protein	Metabolites		0.0015			all_observed	hellinger	pearson	0.4372217231008253
+f	CAPSCAN		Non-host protein	Metabolites		0.00075			all_observed	hellinger	spearman	0.3821212611938224
+f	CAPSCAN		Non-host protein	Metabolites		0.02			all_observed	rank	pearson	0.3638868857480016
+f	CAPSCAN		Non-host protein	Metabolites		0.0539999999999999			all_observed	rank	spearman	0.3256975524875573
+f	CAPSCAN		Host protein	Metabolites		0.001			prevalence10	hellinger	pearson	0.5508862069672751
+f	CAPSCAN		Host protein	Metabolites		0.00075			prevalence10	hellinger	spearman	0.5170251300837558
+f	CAPSCAN		Host protein	Metabolites		0.331			prevalence10	rank	pearson	0.1473234545698453
+f	CAPSCAN		Host protein	Metabolites		0.24			prevalence10	rank	spearman	0.1725372563791593
+f	CAPSCAN		Host protein	Metabolites		0.001			all_observed	hellinger	pearson	0.5579719154796653
+f	CAPSCAN		Host protein	Metabolites		0.00075			all_observed	hellinger	spearman	0.5230640001783682
+f	CAPSCAN		Host protein	Metabolites		0.411			all_observed	rank	pearson	0.1103295043962386
+f	CAPSCAN		Host protein	Metabolites		0.4835			all_observed	rank	spearman	0.1239547747356492

@@ -1,0 +1,25 @@
+{
+ "new": "build/SFig11/SFig11_v30.png",
+ "new_sha256": "cb1e56e0c91cf3f2512a519525581f2bce4dedd4e5bb76af3720d438495b1438",
+ "expected": "figures/SFig11/expected/SFig11_v30.png",
+ "expected_sha256": "cb1e56e0c91cf3f2512a519525581f2bce4dedd4e5bb76af3720d438495b1438",
+ "dpi": 300,
+ "page": 0,
+ "tolerance": 0,
+ "max_fraction": 0.0,
+ "new_size_px": [
+  2125,
+  2244
+ ],
+ "expected_size_px": [
+  2125,
+  2244
+ ],
+ "differing_pixels": 0,
+ "differing_fraction": 0.0,
+ "max_channel_difference": 0,
+ "diff_bbox_px": null,
+ "verdict": "IDENTICAL",
+ "passed": true,
+ "diff_png": "figures/SFig11/checks/SFig11_v30.diff.png"
+}

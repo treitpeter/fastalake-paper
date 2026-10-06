@@ -1,0 +1,91 @@
+{
+ "inputs": {
+  "crossfit": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/run/PER_ACQUISITION.tsv",
+   "sha256": "f7616394a3ffd829c92c2256244f5ce174116f7596b579f5db06b7b56a95a6e3"
+  },
+  "crossfit_summary": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/run/SUMMARY.tsv",
+   "sha256": "abd33b20058b9cec3374d5b63f2afc9fd8718eeccf79e92421e17e54b070d85a"
+  },
+  "recovery": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/review_0/recovery_per_acquisition.tsv",
+   "sha256": "9f464d6a63b02934475e280ebf26120ccec0351d7452828abef9ae454de0af82"
+  },
+  "bench0": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/figure_sd/source_data/package/FastaLake_Source_Data/Figure4/benchmark_0_per_acquisition.tsv",
+   "sha256": "fdd5383ae384b7ec59202820a3e501ab2d80a32fd8e98318d5747d96ca667808"
+  },
+  "bench1": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/figure_sd/source_data/package/FastaLake_Source_Data/Figure4/benchmark_1_per_acquisition.tsv",
+   "sha256": "65ac87033c11d58c20246a6a70ac747109ce901c10dc952974262c8051ff8e31"
+  },
+  "audit": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/figure_sd/source_data/package/FastaLake_Source_Data/Figure4/scoring_counts_public_vs_specimen.tsv",
+   "sha256": "f005f7c000d0356b3796e9112df3a325240c238e8120b5ceb16b946121c4679f"
+  },
+  "clin_stats": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/clinical_refit/clinical_paired_statistics.tsv",
+   "sha256": "9518b0117267eb3198b1aafe785dab47b53b020bd4deb0d9d2fb24f67ccc3bc7"
+  },
+  "clin_paired": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/clinical_refit/paired_antibiotic_profiles.tsv",
+   "sha256": "b99dd07a5cf75150f7cb6520eedcc816cefcd6e562dea9b457c309dfa95f27ec"
+  },
+  "comp_means": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/figures/shadow_d12/B/figures/clinical_composition_means.tsv",
+   "sha256": "d68bc857489e99547b848f86fc62ef7ac14555911ec6fd435d35532e7b9b4cee"
+  },
+  "hm_values": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/eds_refit/input_data/heatmap_85_values.npz",
+   "sha256": "11c171206d200b9051c0f785041288bbc621be61695baae1bfa8eaffb88b7b37"
+  },
+  "hm_features": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/eds_refit/input_data/heatmap_features.tsv",
+   "sha256": "b883e1659743f5437c3d1d3981abd07a36d1ae41ee5d87b6321596fe90968e51"
+  },
+  "hm_order": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/eds_refit/input_data/heatmap_85_patient_order.tsv",
+   "sha256": "43dc72c4b31e4bcf44c2c6bfbcc16a0a713ea47a8f377e86c87280fc5327b9ba"
+  },
+  "native_corr": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/cross_refit/native_correlations.tsv",
+   "sha256": "dd1ddf3ff79eb8845de0162bcac3f9e5a722826226fba2ba9803728ebffaba00"
+  },
+  "functional_corr": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/cross_refit/functional_correlations.tsv",
+   "sha256": "4c05b200a276d48e3730276f328749bde336191d373bd7a58c609b5aec1276b6"
+  },
+  "native_dist": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/cross_refit/native_distances.npz",
+   "sha256": "8928b6d572273e1763cf3422fcd5fa28fd381fbbfce0e92ab5bd9d06efa65e51"
+  },
+  "functional_dist": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/cross_refit/functional_distances.npz",
+   "sha256": "a8e0d5a9f7f2aa52f9dfbfad87a6ac720934a5458bb6f341bbabc49bd53648d0"
+  },
+  "dna_yield": {
+   "path": "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/figure_sd/source_data/package/FastaLake_Source_Data/Figure4/capscan_assembly_dna_yield/capscan_assembly_dna_yield_gain_by_acquisition.tsv",
+   "sha256": "351bdf31dc30f108e11796f15614cb05299ba8d37a8991d6ca4f10f7fa1a9c4d"
+  }
+ },
+ "outputs": {
+  "capscan_dna_yield_by_acquisition.tsv": "351bdf31dc30f108e11796f15614cb05299ba8d37a8991d6ca4f10f7fa1a9c4d",
+  "clinical_composition_means.tsv": "c9c324f5be270ef15114c8c7ded33bba537edcd14e376cf1fb14512703d805a8",
+  "clinical_paired_statistics.tsv": "9518b0117267eb3198b1aafe785dab47b53b020bd4deb0d9d2fb24f67ccc3bc7",
+  "crossfit_per_acquisition.tsv": "5bcdbe883a9ddb41582de92d11c7ad3bc739fa272b71241fcc86244cd2b9b094",
+  "crossomics_distances_predict77.tsv": "9267915b97de32a65a40f54388cca27225ccbf9dda4136172df4f7a5e39bedf1",
+  "crossomics_functional_correlations.tsv": "4c05b200a276d48e3730276f328749bde336191d373bd7a58c609b5aec1276b6",
+  "crossomics_native_correlations.tsv": "dd1ddf3ff79eb8845de0162bcac3f9e5a722826226fba2ba9803728ebffaba00",
+  "heatmap_features.tsv": "edabc3ec0e045136b12e12c96a541611311cf1c4aa2558c5779145ec3f58dc5e",
+  "heatmap_tracks.tsv": "6aad0547cc064ff53582efbb8e68276a0bda252936c150c109a2f6c2a6a8e764",
+  "heatmap_z.tsv": "af4e6a5413c3baaf88142c3e76b7188366c2499490f7fb777db02c3266a55415",
+  "predict_acquisition_roster.tsv": "2622c52461d03bfa05055eae517c78a779c766e7460f64513ec28125901a78da",
+  "same_spectrum_benchmark.tsv": "cb8248852f55dee7a8ac5fca054e88fd83cd85e2a84edfaed8a6543c2ec2e16b",
+  "spectrum_audit_per_acquisition.tsv": "590dac79f3ea0ac369c899db85998bbcd118b005e91d387370fafed179fe404e"
+ },
+ "controlled": {
+  "heatmap_85_patient_order.tsv": "43dc72c4b31e4bcf44c2c6bfbcc16a0a713ea47a8f377e86c87280fc5327b9ba",
+  "paired_antibiotic_profiles.tsv": "b99dd07a5cf75150f7cb6520eedcc816cefcd6e562dea9b457c309dfa95f27ec"
+ }
+}

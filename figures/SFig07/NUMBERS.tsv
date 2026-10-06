@@ -1,0 +1,37 @@
+v28d_line	quote	printed_value	recomputed_value	code	source_data	status
+115	median 9–50-residue peptide counts by 11.4%	11.4%	11.372375880158048	figures/SFig07/panels.py:stat_identity	source_data/SFig07/identity_per_acquisition.tsv	MATCH
+115	gave a similar 11.6% increase	11.6%	11.618239886025217	figures/SFig07/panels.py:stat_identity	source_data/SFig07/identity_per_acquisition.tsv	MATCH
+115	Both retained about 94% of the original peptide identities	94%	93.70441065185946	figures/SFig07/panels.py:stat_identity	source_data/SFig07/identity_per_acquisition.tsv	MATCH
+115	Both retained about 94% of the original peptide identities	94%	93.64980444713049	figures/SFig07/panels.py:stat_identity	source_data/SFig07/identity_per_acquisition.tsv	MATCH
+115	Among the 12 technical replicates	12	12	figures/SFig07/panels.py:stat_complete_features	source_data/SFig07/completeness_by_length.tsv	MATCH
+115	from 10,493 to 13,149	10,493	10493	figures/SFig07/panels.py:stat_complete_features	source_data/SFig07/completeness_by_length.tsv	MATCH
+115	from 10,493 to 13,149	13,149	13149	figures/SFig07/panels.py:stat_complete_features	source_data/SFig07/completeness_by_length.tsv	MATCH
+115	increased the median per-acquisition gain to 34.2%	34.2%	34.22356228866281	figures/SFig07/panels.py:stat_identity	source_data/SFig07/identity_per_acquisition.tsv	MATCH
+269	(4.4% more distinct 9–50-residue peptides across the healthy-stool study	4.4%	4.4070221955671895	figures/SFig07/panels.py:stat_distinct_gain	source_data/SFig07/identity_summary_by_length.tsv	MATCH
+269	median participant-level increases of 2.4% in 93 PREDICT	2.4%	2.4223268501881945	figures/SFig07/panels.py:stat_participant_median	source_data/SFig07/common_search_participants.tsv	MATCH
+269	median participant-level increases of 2.4% in 93 PREDICT	93	93	figures/SFig07/panels.py:stat_participants	source_data/SFig07/common_search_participants.tsv	MATCH
+269	and 3.6% in fifteen CapScan participants	3.6%	3.5535273152426106	figures/SFig07/panels.py:stat_participant_median	source_data/SFig07/common_search_participants.tsv	MATCH
+437	in PREDICT (93 patients) and CapScan (15 participants)	93	93	figures/SFig07/panels.py:stat_participants	source_data/SFig07/common_search_participants.tsv	MATCH
+437	in PREDICT (93 patients) and CapScan (15 participants)	15	15	figures/SFig07/panels.py:stat_participants	source_data/SFig07/common_search_participants.tsv	MATCH
+437	(66 technical or 105 preparation pairs)	66	66	figures/SFig07/panels.py:stat_pairs_per_tier	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+437	(66 technical or 105 preparation pairs)	105	105	figures/SFig07/panels.py:stat_pairs_per_tier	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	technical replicates from 20.1% to 15.2%	20.1%	20.08222739823691	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	technical replicates from 20.1% to 15.2%	15.2%	15.20662680089535	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	increased Pearson correlation from 0.83 to 0.87	0.83	0.8291595091184634	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	increased Pearson correlation from 0.83 to 0.87	0.87	0.8670148297488702	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	CV increased from 32.9% to 35.1%	32.9%	32.85689311211884	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	CV increased from 32.9% to 35.1%	35.1%	35.05549472137518	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	correlation decreased from 0.76 to 0.72	0.76	0.7609581513959908	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	correlation decreased from 0.76 to 0.72	0.72	0.7215806767054745	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	were from 20.3% to 14.5%	20.3%	20.262727882069754	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	were from 20.3% to 14.5%	14.5%	14.521657741297783	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	and 0.83 to 0.87 for technical replicates	0.83	0.8250219649474542	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	and 0.83 to 0.87 for technical replicates	0.87	0.8714396335301307	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	from 33.1% to 33.6%	33.1%	33.09896626948943	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	from 33.1% to 33.6%	33.6%	33.63255869874291	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	and 0.75 to 0.74 for independent preparations	0.75	0.7525610727343645	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	and 0.75 to 0.74 for independent preparations	0.74	0.7378366408482787	figures/SFig07/panels.py:stat_pair_precision	source_data/SFig07/microbial_group_pairs.tsv	MATCH
+769	remained 74.9% among technical replicates under both strategies	74.9%	74.93051988814699	figures/SFig07/panels.py:stat_leading_species	source_data/SFig07/technical_agreement_summary.tsv	MATCH
+769	remained 74.9% among technical replicates under both strategies	74.9%	74.89749186783085	figures/SFig07/panels.py:stat_leading_species	source_data/SFig07/technical_agreement_summary.tsv	MATCH
+769	decreased from 70.8% to 66.5% among independent preparations	70.8%	70.75978885107517	figures/SFig07/panels.py:stat_leading_species	source_data/SFig07/technical_agreement_summary.tsv	MATCH
+769	decreased from 70.8% to 66.5% among independent preparations	66.5%	66.53706060345064	figures/SFig07/panels.py:stat_leading_species	source_data/SFig07/technical_agreement_summary.tsv	MATCH

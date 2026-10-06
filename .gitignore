@@ -1,0 +1,23 @@
+# build products and caches
+build/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+.venv/
+env/
+# controlled-access inputs never enter the repository (only controlled/CONTROLLED_INPUTS.md)
+controlled/*
+!controlled/CONTROLLED_INPUTS.md
+!controlled/README.md
+# licensed fonts
+*.otf
+*.ttf
+# editor and OS files
+.DS_Store
+*.swp
+# Fig4 published composites and panel-a vector artwork show the controlled panels e, g, h
+figures/Fig4/expected/Fig4_v28f.*
+figures/Fig4/expected/Fig4_v30.*
+figures/Fig4/artwork/panel_a.pdf
+figures/Fig4/checks/v30_vs_v28f.diff.png

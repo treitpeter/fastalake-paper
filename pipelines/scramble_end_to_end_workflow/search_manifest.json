@@ -1,0 +1,106 @@
+{
+  "tasks": [
+    {
+      "arm": "authentic",
+      "seed": 0,
+      "predictions": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/inputs/authentic.csv",
+      "predictions_sha256": "8826920da56b6ed2fa443f519270c830f02294e40f36a7c497741f64b13cb15d",
+      "candidate_union": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/derived/lookup/matches.fasta"
+    },
+    {
+      "arm": "all_position",
+      "seed": 20260901,
+      "predictions": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/derived/predictions/SIM_20260901/20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2_predictions.csv",
+      "predictions_sha256": "86c7586587c77dcada7f5606b490571d47e91999ccf6024729c8f05ef0f8818b",
+      "candidate_union": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/derived/lookup/matches.fasta"
+    },
+    {
+      "arm": "terminal",
+      "seed": 20260901,
+      "predictions": "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/Cterm_20260901/20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2_predictions.csv",
+      "predictions_sha256": "16bee2942bcd5b484a3c34316d171cff9fc66414b54f73b94c197adb67c52263",
+      "candidate_union": "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/full_reservoir/matches.fasta"
+    },
+    {
+      "arm": "all_position",
+      "seed": 20260913,
+      "predictions": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/derived/predictions/SIM_20260913/20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2_predictions.csv",
+      "predictions_sha256": "a7bbc8c1660e5dd36792f5e0ddc2d062dfaeb88a86e87dfc06fb8bbdc2e1578c",
+      "candidate_union": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/derived/lookup/matches.fasta"
+    },
+    {
+      "arm": "terminal",
+      "seed": 20260913,
+      "predictions": "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/Cterm_20260913/20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2_predictions.csv",
+      "predictions_sha256": "ec1c900d09d5681e9089e028e76a5cee6e09ca5af08a7b742d0741fb0b0a7c85",
+      "candidate_union": "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/full_reservoir/matches.fasta"
+    },
+    {
+      "arm": "all_position",
+      "seed": 20260914,
+      "predictions": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/derived/predictions/SIM_20260914/20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2_predictions.csv",
+      "predictions_sha256": "5c61c8fbc770cbe516c8cd54fb2b90819bf0ac41f5a9377f6593bb97cfae379f",
+      "candidate_union": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/derived/lookup/matches.fasta"
+    },
+    {
+      "arm": "terminal",
+      "seed": 20260914,
+      "predictions": "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/Cterm_20260914/20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2_predictions.csv",
+      "predictions_sha256": "f5950b9e7c416343347303df583322c5ae0ab2eff74a8d0e6cd77f95edd63f8d",
+      "candidate_union": "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/full_reservoir/matches.fasta"
+    },
+    {
+      "arm": "all_position",
+      "seed": 20260915,
+      "predictions": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/derived/predictions/SIM_20260915/20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2_predictions.csv",
+      "predictions_sha256": "943eed7f99dfafdcd5a6348a1478aaed41f542b15293f9cd8ca0273e5233185d",
+      "candidate_union": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/derived/lookup/matches.fasta"
+    },
+    {
+      "arm": "terminal",
+      "seed": 20260915,
+      "predictions": "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/Cterm_20260915/20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2_predictions.csv",
+      "predictions_sha256": "66df20b14c4949a2a0dd9b1dd3bc1c45c6bb35c06f01fb1b4950c032a8359b1d",
+      "candidate_union": "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/full_reservoir/matches.fasta"
+    },
+    {
+      "arm": "all_position",
+      "seed": 20260916,
+      "predictions": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/derived/predictions/SIM_20260916/20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2_predictions.csv",
+      "predictions_sha256": "e86d94fec18dc28272192ac1d5459a75e18db11e185a8ea648e1104504f6014e",
+      "candidate_union": "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/derived/lookup/matches.fasta"
+    },
+    {
+      "arm": "terminal",
+      "seed": 20260916,
+      "predictions": "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/Cterm_20260916/20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2_predictions.csv",
+      "predictions_sha256": "dbf000ed7f18055f71d5f0c10448161289230e4e6559231b54c51e21aac978a7",
+      "candidate_union": "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/full_reservoir/matches.fasta"
+    }
+  ],
+  "binaries": {
+    "extractor": {
+      "path": "LAB_ROOT/fasta_extractor",
+      "origin": "LAB_ROOT/canonical/rust/fasta_extractor_v2/target/release/fasta_extractor",
+      "sha256": "92dc31e41427ba35e69516d049122f4425083beb65779f919a478043698fd77d",
+      "version": "fasta_extractor 1.0.0+a2c010d9beac-dirty",
+      "frozen_from": "LAB_ROOT/analyses/fusion_entrapment_2026-09-07/bin/fasta_extractor"
+    },
+    "parsimony": {
+      "path": "LAB_ROOT/parsimony_engine",
+      "origin": "LAB_ROOT/canonical/rust/parsimony_engine/target/release/parsimony_engine",
+      "sha256": "3ac2eea59cca9164a756db6f1945a838da2506ba9b6f71eb7149003b26e19ab6",
+      "version": "parsimony_engine 1.0.0+a2c010d9beac-dirty",
+      "frozen_from": "LAB_ROOT/analyses/fusion_entrapment_2026-09-07/bin/parsimony_engine"
+    },
+    "sage": {
+      "path": "LAB_ROOT/sage",
+      "origin": "LAB_ROOT/sage",
+      "sha256": "d3820543a31bfa2a556e04f91719204ce0ac6f34dcca6670314a13df87064625",
+      "version": "sage 0.14.6",
+      "frozen_from": "LAB_ROOT/analyses/fusion_entrapment_2026-09-07/bin/sage"
+    }
+  },
+  "sage_config": "LAB_ROOT/canonical/publication_data/arms/fig1b_shuffle_control_2026-09-01/REAL/sage/config.json",
+  "sage_config_sha256": "c790d2559737e55acc0a2638032ebbec76edadfd790ced380c28a84f42261389"
+}

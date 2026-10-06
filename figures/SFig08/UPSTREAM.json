@@ -1,0 +1,28 @@
+{
+  "unit": "SFig08",
+  "upstream": [
+    {
+      "id": "predict_curated_mg_comparator",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/supplement6_repair/search.py",
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/supplement6_repair/collect_parallel.py",
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/supplement6_repair/PROTOCOL.md",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/len950/SFig08/build/recount_curation.py"
+      ],
+      "uses": "curation_counts.tsv (accepted 5-50-residue peptides per acquisition in FL_cohortMG, MG, FL_public and MG_own_curated arms, 296 PREDICT acquisitions) for panel a and the 9.1%, 8.2%, 286 and 18.8% values; v30: 9-50-residue recount of the same accepted sets (PREDICT_curation_counts_by_length.tsv, panel a)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "fixed_database_evidence_ablation",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/evidence_ablation/code/prepare.py",
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/evidence_ablation/code/partition.py",
+        "LAB_ROOT/Hartout_edits/H09_evidence_ablation/frozen/h09_evidence_ablation.py",
+        "LAB_ROOT/Hartout_edits/H09_evidence_ablation/frozen/h01_eligibility.py",
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/code/plot_corrected_ablation.py"
+      ],
+      "uses": "acquisition_summary.tsv of PREDICT (296) and CapScan (282), combined into plot_values.tsv, for panels b-d",
+      "pipeline_dir": null
+    }
+  ]
+}

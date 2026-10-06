@@ -1,0 +1,25 @@
+{
+ "new": "build/SFig14/panel_abcd.png",
+ "new_sha256": "f3723ba3a2fa4eb92ba842c47b4e5d44880b28a8002fdc8d552f69a9a4443e96",
+ "expected": "figures/SFig14/expected/panel_abcd.png",
+ "expected_sha256": "cf3013f9404667db0d069770d69d658edb7e6d2dcd212ae5533a4e27362507c3",
+ "dpi": 300,
+ "page": 0,
+ "tolerance": 0,
+ "max_fraction": 0.0,
+ "new_size_px": [
+  1278,
+  1584
+ ],
+ "expected_size_px": [
+  1278,
+  1584
+ ],
+ "differing_pixels": 0,
+ "differing_fraction": 0.0,
+ "max_channel_difference": 0,
+ "diff_bbox_px": null,
+ "verdict": "IDENTICAL",
+ "passed": true,
+ "diff_png": "figures/SFig14/checks/panel_abcd_png.diff.png"
+}

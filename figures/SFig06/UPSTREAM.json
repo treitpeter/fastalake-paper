@@ -1,0 +1,36 @@
+{
+  "unit": "SFig06",
+  "upstream": [
+    {
+      "id": "cohort_spectrum_split_selection",
+      "original_code_paths": [
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/split_half_repair/pipeline.py",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/split_half_repair/submit.py",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/split_half_repair/run.sbatch",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/split_half_repair/gate.sbatch",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/split_half_repair/v16_joint_disjoint_2026-09-27/code/completed_review/review.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/spectrum_split347/collect/collect347.py"
+      ],
+      "uses": "Per-acquisition all-prediction (full) / same-half (self) / disjoint accepted-peptide counts and identity overlaps on odd-scan spectra, 726 acquisitions with the 347-acquisition CapScan re-run (collect347.py, ACQUISITION_REVIEW.tsv), rows at 9-50 residues; panels b, c and visible_v30f lines 49, 64, 231.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "clinical_public_only_comparison",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A16_4_5_public_comparison/frozen/lib.py",
+        "LAB_ROOT/MM_review_analysis/A16_4_5_public_comparison/frozen/report.py",
+        "LAB_ROOT/MM_review_analysis/A16_4_5_public_comparison/frozen/search.py"
+      ],
+      "uses": "Matched public-sequence FastaLake (FL_public) versus metagenome (MG) per-acquisition peptide counts and identity recovery at 9-50 residues, 296 PREDICT and 282 CapScan acquisitions, as packaged in Source Data Figure4/benchmark_{0,1}_per_acquisition.tsv; panels d, e and visible_v30f lines 64, 65, 231. To be replaced by the CapScan benchmark extended to 295 acquisitions (OPEN_ITEMS.md). The writer of the packaged per-acquisition files (legacy_v12 archive) is not confirmed.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_public_only_search",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A08_4_5_capscan_public_only"
+      ],
+      "uses": "The 331 CapScan public-sequence FastaLake searches that clinical_public_only_comparison reads for the CapScan rows of panels d, e.",
+      "pipeline_dir": null
+    }
+  ]
+}

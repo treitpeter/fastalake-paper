@@ -1,0 +1,7 @@
+arm	definition
+original	acquisition-specific FastaLake searches; peptide q estimated by Sage within each acquisition
+original_fileq	acquisition-specific searches re-scored with the per-acquisition estimator used for joint_fileq (sensitivity)
+union_individual	separate search of each acquisition against the common 153,267-protein FASTA
+joint_corrected	joint search of all 58 acquisitions (corrected Sage build); study-level peptide q estimated once across the study
+joint_sageq_repro	joint_corrected re-extracted from the same PSMs with study-level q (reproduces joint_corrected; positive control)
+joint_fileq	joint search PSMs with peptide q re-estimated within each acquisition (per-acquisition confidence, the primary joint result)

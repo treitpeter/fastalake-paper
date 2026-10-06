@@ -1,0 +1,5 @@
+grouping	model	MAE_baseline_minus_model	ci_low	ci_high	bootstrap
+simplified	protein	0.03779957251393918	0.019710521103939102	0.056734486204092216	2000 patients; fixed held-out predictions
+simplified	combined	0.04193346612055114	0.024063898647506982	0.06092531556729175	2000 patients; fixed held-out predictions
+original	protein	0.03649506762574699	0.0181948451971791	0.05573059257590296	2000 patients; fixed held-out predictions
+original	combined	0.0412303877002486	0.02345274388260176	0.06052812848770669	2000 patients; fixed held-out predictions

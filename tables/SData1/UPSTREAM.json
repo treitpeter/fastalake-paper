@@ -1,0 +1,57 @@
+{
+  "unit": "SData1",
+  "upstream": [
+    {
+      "id": "sample_rosters_workbook",
+      "original_code_paths": [
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/main_methods_pass_2026-09-24/review_decisions/M01_sample_rosters/build_workbook.py",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/main_methods_pass_2026-09-24/review_decisions/M01_sample_rosters/capscan/build_rosters.py",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/main_methods_pass_2026-09-24/review_decisions/M01_sample_rosters/capscan/build_histidine_scope.py"
+      ],
+      "uses": "the roster tables and the workbook layout (all 34 sheets of the v28d workbook); build_workbook.py's sheet writer and final checks are ported into panels.py",
+      "pipeline_dir": null
+    },
+    {
+      "id": "source_data_package",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/figure_sd/source_data/build/build_package.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration3/source_data/build/derive_verified.py"
+      ],
+      "uses": "PREDICT pseudonymisation and path cleaning of the published workbook (build_package.py); the specimen-number discrepancy census (derive_verified.py, ported as panels.discrepancy_census)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_participant_roster",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/scripts/build_fixed_roster.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/scripts/make_design347.py"
+      ],
+      "uses": "participant15_added.tsv (the 16 added acquisitions and their join evidence) and design_347.tsv via source_data/Fig5/design_347.tsv; v28f CAPSCAN acquisitions, crosswalk and the CAPSCAN_SEARCH_ALL roster",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_crossomics",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5g/crossomics_capscan.py"
+      ],
+      "uses": "eligibility_audit.tsv (positive quantified profile per acquisition, 346 of 347): v28f CAPSCAN_QUANT_NONEMPTY, CAPSCAN_REGIONAL_DESCRIPTIVE15 and CAPSCAN_REGIONAL_PAIRED15",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_functional_profiles",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/scripts/capscan_fig5bcd.py"
+      ],
+      "uses": "own_stool_participants.tsv is cited as the source file of the v28f CAPSCAN_REGIONAL_PAIRED15 rows (15 participants, 75 cells; COMPLETE.json of that run reports 346 acquisitions, 15 participants, 75 cells)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_raw_header_audit",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/cohort_reconciliation/raw_identity_audit/audit_headers.py"
+      ],
+      "uses": "all_RAW_header_names.tsv (368 CapScan RAW files, instrument-record file names): the specimen-number discrepancy census",
+      "pipeline_dir": null
+    }
+  ]
+}

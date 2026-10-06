@@ -1,0 +1,8 @@
+family	endpoint	saved_tests	minimum_saved_n	maximum_saved_n	saved_estimable_tests	scope	source_file
+H_spatial_all_routes	ordinal_fluid_H_difference	90	0	15	68	Saved test n, not independently replayed endpoint eligibility or statistical tests	complete_statistical_families.tsv
+H_spatial_all_routes	ordinal_fluid_H_enrichment	90	0	15	68	Saved test n, not independently replayed endpoint eligibility or statistical tests	complete_statistical_families.tsv
+H_spatial_all_routes	spatial_H_difference	1170	0	15	886	Saved test n, not independently replayed endpoint eligibility or statistical tests	complete_statistical_families.tsv
+H_spatial_all_routes	spatial_H_enrichment	1170	0	15	886	Saved test n, not independently replayed endpoint eligibility or statistical tests	complete_statistical_families.tsv
+all_motif_positions_residues	motif	32400	15	15	32400	Saved test n, not independently replayed endpoint eligibility or statistical tests	complete_statistical_families.tsv
+all_reciprocal_controls	matched_reciprocal	90	15	15	90	Saved test n, not independently replayed endpoint eligibility or statistical tests	complete_statistical_families.tsv
+source_P1_all_residues	source_enrichment	9000	0	15	7100	Saved test n, not independently replayed endpoint eligibility or statistical tests	complete_statistical_families.tsv

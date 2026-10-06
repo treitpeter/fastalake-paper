@@ -1,0 +1,34 @@
+{
+  "unit": "SFig09",
+  "upstream": [
+    {
+      "id": "capscan_public_only_search",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A08_4_5_capscan_public_only",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/collect/collect_a08.py"
+      ],
+      "uses": "Per-acquisition FastaLake (public-sequence reservoir) and specimen-matched MG peptide counts at 5-50 residues, q <= 0.01, for the 282 matched CapScan acquisitions (FL_peptides, MG_peptides; panels a and b and the line-129 yields). a08_benchmark282_old.tsv is the collector's recount of the production arm and is used as a cross-check; a08_benchmark282_new.tsv is the 347-roster rerun, used as a roster check.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_metagenome_yield_join",
+      "original_code_paths": [
+        "LAB_ROOT/canonical/publication/chain/sanitize_assembly.py",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/main_methods_pass_2026-09-24/review_decisions/MM6_capsule_metagenome_2026-09-25/REPORT.md",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/v15_MM_coauthor_2026-09-25/build_figures_v15.py"
+      ],
+      "uses": "MG database size per specimen (sanitizer n_kept, CAPSCAN_sanitize_report.tsv), and the 282-row join of peptide counts, BioSample, region, participant and recorded DNA quantity (capscan_assembly_dna_yield_gain_by_acquisition.tsv; join code not saved). build_figures_v15.py aggregated the join into the three capsule_assembly_gain_*.tsv tables; that aggregation is ported in panels.py:derive_tables. Used by both panels and every number in NUMBERS.tsv.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_length_recount_9_50",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/collect/",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/len950/SFig09/build/build.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/len950/SFig09/build/build_ylim.py"
+      ],
+      "uses": "9-50-residue FastaLake and MG peptide counts per matched acquisition (a08_benchmark282_old.tsv n_fl_9, n_mg_9), combined into capscan_acquisitions_9_50.tsv (panels a, b; v30 text line 129). To be replaced by the 295-acquisition CapScan MG benchmark (lab final/mg295).",
+      "pipeline_dir": null
+    }
+  ]
+}

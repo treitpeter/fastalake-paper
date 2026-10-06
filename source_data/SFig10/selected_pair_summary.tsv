@@ -1,0 +1,4 @@
+metabolite	metabolite_label	KO	enzyme_label	reaction	reaction_url	n	rho	full_family_q	joint_adjusted_rho	joint_adjusted_full_family_q
+HILIC_FT23003	Glucuronic acid	K01812	Glucuronate isomerase	R01482	https://www.kegg.jp/entry/R01482	85	-0.5286691420754348	0.0001219470155995	-0.2498883521397166	0.4964961463884967
+HILIC_FT24070	Tryptophan	K01667	Tryptophanase	R00673	https://www.kegg.jp/entry/R00673	84	-0.439627417231953	0.0015707510151937	-0.0860691072618205	0.8669268410726807
+C18_F2423	Glycochenodeoxycholic acid	K01442	Bile salt hydrolase	R03975	https://www.kegg.jp/entry/R03975	85	-0.347312878639828	0.0206077263083669	-0.1251107408725471	0.775410855990051

@@ -1,0 +1,5 @@
+cohort	analysis	layer	input_features	retained_features	median_signal_fraction	minimum_signal_fraction	maximum_signal_fraction
+PREDICT	primary_prevalence10	DNA	14859507	153003	0.2654966471580782	0.0588954710234675	0.4781422341114386
+PREDICT	primary_prevalence10	RNA	14859507	63439	0.2099924874638341	0.0092636114668606	0.5253086563999595
+PREDICT	sensitivity_all_features	DNA	14859507	14822078	1.0	1.0	1.0
+PREDICT	sensitivity_all_features	RNA	14859507	5391526	1.0	1.0	1.0

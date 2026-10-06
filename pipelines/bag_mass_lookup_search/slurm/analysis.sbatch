@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euo pipefail
+export PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
+exec ${FASTALAKE_DATA_DIR}/python -B -u analyze.py

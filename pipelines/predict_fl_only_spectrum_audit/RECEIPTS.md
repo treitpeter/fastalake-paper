@@ -1,0 +1,344 @@
+# Receipts
+
+Original Slurm jobs, measured resources (from `sacct`, via `sacct -P -j`), and sha256 of every output file the figures and tables can draw on. Paths are relative to `LAB_ROOT`. Per-acquisition directories that carry a `COMPLETE.json` are summarised by the sha256 of the sorted list `<sha256 of COMPLETE.json>  <path>`; each `COMPLETE.json` itself records the sha256 of every output of its acquisition. Hashing was done on Slurm with `hashjob.py` (see the end of this file).
+
+## Slurm jobs
+
+| job id | stage | states | CPUs allocated | memory requested | wall time max (min) | peak RSS (GB) |
+|---|---|---|---|---|---|---|
+
+## Output hashes
+
+### `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out`
+
+| sha256 | file |
+|---|---|
+| `f2874cc91376b97678e6c35a2647220408445166751b7afb150597c4118fad24` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_10_191025211701.json` |
+| `85721055705700eb9ab2ec4a289883f96e45a5103e882d2fc9a83297a637fbbb` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_11.json` |
+| `ce5e086aba063a9c9b833666bbdd2ee410f0e093eb664ad2a869c38ab0bb6e23` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_12.json` |
+| `eedb2e298bac25ad821d3d875912c02ab3c958df47301953c335196aa373d320` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_13.json` |
+| `4f908ff3e5fd54fe65710f132658a5d3c919608142039cc175c6d09d186f61a4` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_14.json` |
+| `fbf651e78bb1d65942f1dccb2e4bcf5b8255461c923c4847a50ca66c6798a27a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_15.json` |
+| `aed2336f8700267289bad92aac93036047a2a62133c2ad7db465d2973fbcec13` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_16.json` |
+| `37d755ba799b45ae38e0626bf4e8c48dab3decd61b8e7bd94363e6823399171c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_17.json` |
+| `29255b57029a43c119d7f47d647bdf1fe426327382fb52deb299dbace4eee77f` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_18.json` |
+| `ad41956aec7661f6176722142a27446a803e40b3305e2f453d4e24d5f5c8894d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_19.json` |
+| `4297a02f29f0e7e3e811c628ad9f9e463746af937a1cd02216eb0dfbbd423143` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_20.json` |
+| `019e65b77a0c2affb9d51a8fcb442d60d6c80a41d18f2ba0077cab863e7c7344` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_21.json` |
+| `6ee4b15f0ff493e970570c81e2ebd7500982478939d3b39c74e8551e7077cf12` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_22.json` |
+| `c988afeb187306830a567a0c31a6f98e2938bba0391189ab37a269146c457ce3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_23.json` |
+| `a1ff5686550e2ddfdae64e3611dcf3ea995aa37a07d79a6686ddf713db994ea6` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_24.json` |
+| `2bb8f0a59f344cb4dee47d66d3109515d9b5136e71f92206e7c37dda452616c0` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_25.json` |
+| `1b340dcc024b5eff37950a526f40d72c6feafb58b3e5980ac683d81457289370` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_31.json` |
+| `73992658d2cd014c5acc5a84c75094a00bc85c62b9ccd5a4feb096805883c1ef` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_32.json` |
+| `371932fef0a32bfc5cc19152c976080115107be26f6fcb215401a8fc4ba2f0b3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_34.json` |
+| `49b432ad7dd9457ea219cc265bd7ea1997b17ea46547fa2f454a3d6272b45354` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_35.json` |
+| `f0977d5b00da1f57389d223b81a15e729c8a55da4705c2ecb151596b29da9094` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_36.json` |
+| `56c9c50b97c0d1e4d2bbd2cd547f4af5e47df838b1e9eb4744c10bf3887cb2f9` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_37_191027201659.json` |
+| `701811eb74d6809813847ba9724c88d31a9b5798ffe2199a9cf0c17c6be26df6` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_38.json` |
+| `d6bd97e965d17d4b02975ec0468f750e57c20e3aa6146443c2d471a669eba93a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_39.json` |
+| `0138a1040ffe3f93fa74be6e8f9b37b547614203f3ad21c8110ded7b6417cbe3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_40.json` |
+| `6c26e4998e5a448387656b8493ac2bfdc0d8c1f2e4e0376cd5cbb421213cd535` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_41.json` |
+| `cbd365ad52608b6b0ea6137e8ecd90ef3d7f0bd115dc52c43ba87aa4a73973cc` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_42.json` |
+| `c9ed1f2b3480e5e3e977a64fd1f932fdfcce63a70810fe01f6703d4d6b173f74` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_43.json` |
+| `f476380f212d96ff1ae5f6e6e71039d321ebb94e589f56064d6f089cae87f463` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_44.json` |
+| `109d1553b66499a7ec38e17032397db9e3a523d265ffa2bff1fefd70e6ef4895` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_45.json` |
+| `637da59e967f751d0db7c4501ba0e37d8278503ac6911c6f76a358caf749930c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_46.json` |
+| `e3bead2cbf361f39a84625b585cf925bacec351604ca37b5a5a30efe3adc292c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_47.json` |
+| `becf366fac490f709b18fa0cb6d9379ddb9ecb35605d70c5b8ab2339267a3906` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_48.json` |
+| `53bda2c5a2858df9ef3ceec82fba7e2aa5bc0477734628ce20cc049a182fceff` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_49.json` |
+| `027e937aacdd296359d44b8ae47812fa0e230c97802b4693ad21b012e3b72260` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_50.json` |
+| `300f77baea26a27b92578b706139a879a99e374bdfd0d3e05231e48dbfd78f1d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_51.json` |
+| `362005cf1d59a98286ad5addedaff158e1edaa01c745d5f620cef0173da16b74` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_54.json` |
+| `b7ae67da142ffa0fa8f744319057b77f538fad24f0e4e0a611d76d5f2062d939` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_55.json` |
+| `76e767f2e6658c6a8090bf94d69d4c50b9992c957babb924435392094ba2288a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_56.json` |
+| `952b5fd0da1906808ea0cbd8c1c2811a1b39d4d731b2f74e4e14ddc1095ec8cb` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_57.json` |
+| `a336ce8d1343b2477632a65ac9e37dfad2a11107f1150e3e2cc85fbfcaf116a3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_58.json` |
+| `b34d68db6c3b04f70bc3b95550ddc7560a03ca1dbd35b4ebed5c165b4f55826d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_59.json` |
+| `88bd53c1a6375bf945d454e85bbb0638c2188e7ead6e7a1117eafe8f25441fbd` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_61.json` |
+| `a2be01f57d5854b8bdcfeef8f19fa92eaeb2273d7eea38cb819f7d370cd98c40` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_63.json` |
+| `3cb19d449a05e01a48cdc046e73f7ec543904e33c6f04601783004dadd80672e` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_64.json` |
+| `a72321171d93b0045b20f985c1994787edfa3860ca3c754311f0a11e27e12c07` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_65.json` |
+| `c0e569cd0a4fc8783c2c2ee20c197c2b0e06a19aa35cb64bea1d3e932c43abe6` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_66.json` |
+| `30616e1874341468f6072461f03ce4f3c8a7029658a722429d7379d2373764bd` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_68.json` |
+| `fd600deac8f7a4bf0540ad67be0b2b3feb0b5903fe39f9e2e2432f0137fbfd4a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_69.json` |
+| `3ed95bf2c7022b34e4178051c4cf17df2b85ffb0cea1c00db8e71dde151bee57` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_70.json` |
+| `d946cbe82d3a90c227cd04806cfd4d31cd4732a7f50e68a566a9976d4699d351` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_71.json` |
+| `3fea90b1e619dc0c06c70447f584adf92f0130a72244435d59dbf264c8097af0` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_72.json` |
+| `0bc4a4a17e5ad3596d4a606bb8a22d8a4b49964785696c0447913d0254241f48` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_73.json` |
+| `f9ec649fb31c84f20ad2809eb25215ebceb97d04b14fb81b47ff4cde57212f55` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_74.json` |
+| `5ebb3463bf9a0ac68a2fd4f547426cf5bd47291ff2e11189d45b6300aa15d2e9` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_75.json` |
+| `70063f0faf594f2b006b5ecd7c7d2bfdc450e46f4a81e06eb83d39e439ed0771` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_76.json` |
+| `d760f1308c9d46cf3eaabad6942fe92c23387d4262ea453874fb044c99c6573f` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_77.json` |
+| `ba0cd9e601b4e4fff1bfebd8b559a1d4729a51d538f3d36856f8d00cebccd5a5` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191024_QX7_PeTr_LC02_SA_MicrobPred_9.json` |
+| `33bb08dfda55b179aaf1ab930fb512ca6e9bc867e2b1dce4355a8004cb2ecfe0` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191104_QX7_PeTr_LC02_SA_MicrobPred_121.json` |
+| `554a602e216be34ab53194bf6700782bf53e9276442ec506a2d98311a1b9bc3b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191104_QX7_PeTr_LC02_SA_MicrobPred_122.json` |
+| `ece35d659cced61d17f73cce8af57752616f2d7a17c1fccc1de88f3f7d8efc58` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191104_QX7_PeTr_LC02_SA_MicrobPred_123.json` |
+| `df47f96d97708985ed449857fe61dfeb4b6c6bd0887b6ba0b7b67a05f62d7269` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191104_QX7_PeTr_LC02_SA_MicrobPred_124.json` |
+| `1db00f0225faa4be8ca8612bd4d09196997358bfb92ca646b51f0328de76c598` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191104_QX7_PeTr_LC02_SA_MicrobPred_125.json` |
+| `8996b3fe65132436ecc7e86452b287f11516ae13c9a18b57a7d57f00f70a38c0` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191104_QX7_PeTr_LC02_SA_MicrobPred_126.json` |
+| `4c0f9dc8beccbce9a242a2fb652147d83e4c033602e276b5e801ce2307e199db` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191104_QX7_PeTr_LC02_SA_MicrobPred_127.json` |
+| `fc59f3cb7d7f3f4f08da8fdca5214505f666bccbc2bc47c296393e9e5b618802` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191104_QX7_PeTr_LC02_SA_MicrobPred_128.json` |
+| `1a2b08e21e0c4f0baba55a1cfa2df013fee727790cea1fe366bd9e425256654b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191104_QX7_PeTr_LC02_SA_MicrobPred_78.json` |
+| `dfd71a9df2b2e6624f935a9599a4b096246dd3b7dbc8f2fa4af43c409fc8ef40` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191104_QX7_PeTr_LC02_SA_MicrobPred_79.json` |
+| `70da37c9d90d0faa62471bbb764bec0370547fd9098dcfba05ee609343af4ad7` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191104_QX7_PeTr_LC02_SA_MicrobPred_80.json` |
+| `86de301727d6ee567c6968790dde9c519ab5e4f541c5173e7f5534f709876805` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191106_QX7_PeTr_LC02_SA_MicrobPred_137_191106105035.json` |
+| `0cf83b00c07ad0601533de8372779e30e8278e9433f9b8d266f2df8300881fe3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191106_QX7_PeTr_LC02_SA_MicrobPred_138.json` |
+| `c18fc19a6781fe8b4d41fba68ef72c61ee714167cc3731f725aee4f99a76f9bc` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191106_QX7_PeTr_LC02_SA_MicrobPred_139.json` |
+| `35fba7b003190a3ee0a9aace696606fe773ce4e51c4dea8e210e973d6b239c8a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191106_QX7_PeTr_LC02_SA_MicrobPred_140.json` |
+| `89d9f822b11e1e09c7203de9cc7601d65f4d60dc5eb0b67e65911ced3d61ebe2` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191106_QX7_PeTr_LC02_SA_MicrobPred_141.json` |
+| `b86d4537cee6b2903da19f470d24df4ab5f070dc549afd49e7ba6acc3dd68153` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191106_QX7_PeTr_LC02_SA_MicrobPred_142.json` |
+| `70dcf7de2f788cefe094b162266207d7ca49159b1b618d1fc8768c85ebee15a7` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191106_QX7_PeTr_LC02_SA_MicrobPred_143.json` |
+| `79239d74a893ae8e046f0fa45eeef2320ae539e88c7ee9d67406dab0ceac8689` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191106_QX7_PeTr_LC02_SA_MicrobPred_144.json` |
+| `be141862956fd86403b4470972f5b646b72badaa3849ca66881358a763591be2` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191106_QX7_PeTr_LC02_SA_MicrobPred_145.json` |
+| `64a969b0e60fee93506aaf6433c7981954ebe6424df0cbf9eeba22608f380412` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191106_QX7_PeTr_LC02_SA_MicrobPred_146.json` |
+| `eecb33935c98c0f60d17f9bde5b23b76c25833f2de38c56a767257fb105efdf7` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_147.json` |
+| `693ccdebb80a6eeb71187feddd1d8286ef50bb654bd0349fc3418bb41dbed6f4` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_148.json` |
+| `7628342cb907849aa496fbadb8875b6be299bc39102b4e93e8f2eda6a4348a9b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_149.json` |
+| `eab46b433542f6c7f9987f328416d47af83c8c1074d76005d4cfe9c76812486b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_150.json` |
+| `d11948ee2626e899303b4e073673c4a9a8ac561f9116d2450aed89c02dd8aec3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_151.json` |
+| `de2640a8dbda7eaa56ca9015b858609fdd57bf348c1036e20fdd3b6dcc9cee6f` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_152.json` |
+| `9e730285fa818ca33dd5652a9a2fc90dc9619f02ea5bb959699a6500a8b2cd2c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_153.json` |
+| `c8ca3fbf6828583f338e848c3a12e9742e56f34ef83dfb387b1eb544380b7872` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_154.json` |
+| `5c047d99c0f781469be7be46aff2f656fe433815054563251d227eda07f9ce41` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_155.json` |
+| `047214d14ab3474cd49b1b7097cde02bb9bc0327da2ee23fb1bae007bfdf7ed7` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_156.json` |
+| `b88e75825289d2bbd0adbc9d533401f2d6cf053e19cc5e0818e223022a4b69b3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_157.json` |
+| `a527fe9bcee61f5dc1d50f9376d038422d263d517a0ebc571e534907eb2d541c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_158.json` |
+| `8414376a9df56a8f1af49776198593a12663fcaecd0f94c5c225e108ebc63102` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_159.json` |
+| `9a777dfdfb430e66d03b0713db3bdd662123233f21c41ec5a7716cc55823e840` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_160.json` |
+| `8dfc448c84604dcc25bd1c9a94e958a302207ae35f3cadfb0a974992001c7cdd` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_161.json` |
+| `d5a199904d9173b3a5e75a12f3c0e332e05c2263c319be72a0fa660cf4f5db3c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_162.json` |
+| `6d11477cca0ba646439908b94cbdf2255cd14794ffe78483e2c71888f1fc445e` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_52.json` |
+| `c82e109d470b290f22702781a8737436d887427ba3f584c1500bb7729714252d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_53.json` |
+| `bd148236a58a85377f6f2b8c1fef3c086650425c82bcc47aaf07c3fa47d41b46` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_67.json` |
+| `ec53eaff1f0afe901b9c1db0f3b0e435ecc4198241c76a121c1590d64f2be2c8` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_81_191109182155.json` |
+| `7d46c394a9bb798a3d37db2f96bb2d929481867e51b0b7f4e8162b59b924346b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_82.json` |
+| `45dfec179cf96f791b300c3545f3780509480e95678c1371d1e477b6a468084e` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_83.json` |
+| `6c28345f567ac9602680ca2737f41e85f5f3af63a62eb1eb8321587cae697b83` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_84.json` |
+| `cb296910d34258e0e031538223193555606243153d500a101f1bb8ce27e163f1` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_85.json` |
+| `576b0ee866eca018a4bf543d3208277501964c0880cc737daf9cc1ae8945f3bf` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_86.json` |
+| `0bf351952d6c2799a52c8d1992b575a94dc1c243a7630c86112c519a78a658f4` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_87.json` |
+| `d53d5200eed944ab602f7d968940e8f3ac537f6d7f31412e3fdefc3bc433db02` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191108_QX7_PeTr_LC02_SA_MicrobPred_88.json` |
+| `a36a828bb7caa6f802db795aeb5364ce1a9d383eff20c3de8888c00554781233` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_100.json` |
+| `375125c9b315dfe0abe77ada63356871a34d8c559467f248baaac52657f01041` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_101.json` |
+| `90a85e5c8fc2529504fa2230f8600949dee044515b1ac9724e3a797660d70730` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_102.json` |
+| `009ae5a78ce217064126cf4c140d81d26ab41ab1b04132e192213a1e5c4895e3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_103.json` |
+| `9243292ff9c794a5b3857de46086bed4365dc537bbb05cfcc498ea4263ba870b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_104.json` |
+| `f1689b5279ec5c92402216c24809e528b8732fc29ca5e2228fc7c974ad8fcffb` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_89.json` |
+| `0cdb2b4824b1f9b6a8ed831445f4a566da60aa9ae75b2f4464d58073d296cfe7` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_90.json` |
+| `cc4a5c528f58e92c0b9b80e6d6d68f4ae2dfd7513b44a9a0f5643a1afb1e1fae` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_91.json` |
+| `b6e64650fa83f11c97a91bd057ef68330239332a83d8d0a8b0c7aa99d8a4de9d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_92.json` |
+| `d15b69e40e5e4e7ccc8701223e1524525ee12804f7e8c48d063047312ce2e4b3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_93.json` |
+| `3317e7040af323b94f212ed2b0eeca14961af72f0e95d9b00038f2c5bd9dbb74` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_94.json` |
+| `2384932786ce0f232f6a739a3bfcfb19e5b3ecc8e38e3980065c5f780fdaac66` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_95.json` |
+| `7231a8681a9bc9315c848728ff94ffd16a0c2c991c5fa2da19bbe714481f3e48` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_96.json` |
+| `37904d667775176b7e94302a399b02a31fefc8a0cbbf21c15ee03ecc2f0fae9d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_97.json` |
+| `baff0618e8b661f68e2f6719ced0a13893da1218e4688c40dd7b3771121c4146` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_98.json` |
+| `32bedc7d8f8b8de2bc0bc9d610bf3f59868b8b2cc5c2d81c41efabb39a71610e` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191112_QX7_PeTr_LC02_SA_MicrobPred_99.json` |
+| `3927f0e15f8bbf8568cb81eb48ad6d1b90f0b54230f4df25f325b06a2fe2e68d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_105.json` |
+| `87e734680bd4c6338fcc3ffcbd859182f902a63f690f2e5caa2e66446dd1dcea` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_106.json` |
+| `3434d6f82b4e97c97e0b02fdf0d9f559b39ea0a4f61f41f1339da7b4715d849b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_107.json` |
+| `f956822a77011982eb82277510280c4db8386208faac6d3518f7a209c016e5bf` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_108.json` |
+| `16fc28c22447b702d773bea5b210365662f22eb4976dd92e25336c6116cee9aa` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_109.json` |
+| `cbf938ff5292dc9d7ff0aadc64c62e1ba029eb3fe9c558b997cd7d5de96fe798` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_110.json` |
+| `86ef07ffa7026c6e75be71632f706f487887be4c497833314666bed10536354d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_111.json` |
+| `63d34383dcb033378f84acdc0fcbf31508f6196d7ffcf7da9e3a1af9756137f8` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_112.json` |
+| `70761f3f010e14c58382fa9595f1233383ee8c2a36858c081e0f719ffc32af5c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_113.json` |
+| `70189f2d28aac77b41434d1f149dda942240ebe745dbb4bf093f87d38c0af47b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_114.json` |
+| `ecd13707bb06dab91af9df214cfde5b29cca73c5ada5d019e94904989aa6cd6a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_115.json` |
+| `492754cce0e88d4d4dddb929c5e069e2e052fb9245641d1bcd7b1d962c7fe95d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_116.json` |
+| `418382c8e131c93899d1beb19a7d4627b7817f942e16dec7a5aa2f306343d926` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_117.json` |
+| `2a24352d49bb6f31af29bd50be0b0771a4e27cf8a9689743d1d07e4d8b5c4caa` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_118.json` |
+| `0b89fd61d2f3aca262e6ce505a735c97c6a39599ec90aa684781771221ec9077` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_119.json` |
+| `d0fc497edf1eaa887d553079c7d6035c10cf5dabc3125f201eb32db20300dce0` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191114_QX7_PeTr_LC02_SA_MicrobPred_120.json` |
+| `bd16b3cdaeb1a543ea61e184b783530f31252c4ad0e8c6217f540ffb137ca631` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191116_QX7_PeTr_LC02_SA_MicrobPred_163.json` |
+| `353f714d92c02eb75ccc191df06c0c7575f24fc2f6df8fef0ee096a4cd99f736` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191116_QX7_PeTr_LC02_SA_MicrobPred_165.json` |
+| `2ec6d43821df4c3350e6491a1258bdc902deb2ace59b507a0b0891e4f003e43a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191116_QX7_PeTr_LC02_SA_MicrobPred_166.json` |
+| `24e38a1885e3b201f76e98b2d7b910d1a6cb95860a7f6b578f6f3e4532623429` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191116_QX7_PeTr_LC02_SA_MicrobPred_167.json` |
+| `6e5745a2b71cbdeb0ccba190401ce253a50607889844ed5808d917abc653d9b2` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191116_QX7_PeTr_LC02_SA_MicrobPred_168.json` |
+| `044f34e048f18138ea087908065c7960cd6793aa6b1438e42e8dee525eb1d1a3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191116_QX7_PeTr_LC02_SA_MicrobPred_169.json` |
+| `fc8a2f27821ab9f30db4938a969cb54c9f9fc86bd2484edfbc2a6d6dddaf30b9` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191116_QX7_PeTr_LC02_SA_MicrobPred_172.json` |
+| `96273961a0b9a2a02fa05aab4023621d8153a75b3d05c309698c2333aff82075` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191116_QX7_PeTr_LC02_SA_MicrobPred_175.json` |
+| `279642b7648c3b0ad01baa85c3cc19f6b75d250fc2c0ca3149db5f5419f562df` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191116_QX7_PeTr_LC02_SA_MicrobPred_176.json` |
+| `81d2e5439b3405da7ed602b430dc4abede8b47fc7aaa6fb4e9120029ed7e3b89` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191116_QX7_PeTr_LC02_SA_MicrobPred_178.json` |
+| `77e34d247ab037f0b97242cfe6e57fce09a6df5b9418b96e2f32551ab085df08` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_187.json` |
+| `23bc73cf3022dc58d2e91974d947108e670b87dcc23579c8815d300e4b27cdc9` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_188.json` |
+| `f7421174d08701166e8b44437fb9174ee2383c7e0f64d02e99c27bbb3d23d141` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_189.json` |
+| `c3495a4b3cc15a42f893655741fd35b19ec09475a9259ac247cfee9af80271ec` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_190.json` |
+| `d67b0a660d7d74f5bcdd954fedf5051ea6641c60bf35fd368b32e83ad0065370` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_192.json` |
+| `c784ca5765db6f7444a794321386ab071c2750e423a5dd9941d61591ff61e8aa` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_193.json` |
+| `573719fb85639fa499ccd08f029b790c1a867afa696e79342d7c74ec1249fb78` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_194.json` |
+| `26c435f33695798d22776d03ada460a8b8f3967e6bf6c6f411e7e33d0fc5bec4` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_195.json` |
+| `eef039c3ee8787c9e83d34f5e98b736ca031daf0a5d8803f7eefd6484dd69edb` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_196.json` |
+| `40e2312056c6338fc40b1425e4cc9e1bfb6b40b304efce576ea8efc19c44d538` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_197.json` |
+| `df90f7bfeea0d6dfb4c9a3d4eba81e8155a826c12c8db6a72f40f60d8c23ff0f` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_198.json` |
+| `d4e9d3791c454a38c5a3bc2db64c5172284eea307d7bbc1c5e2bee3d4b9b22b6` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_201.json` |
+| `f7586cf16c750a3688ceae4530208c66bdd6dc7e277536ce4bf7292bfbbc8d19` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191118_QX7_PeTr_LC02_SA_MicrobPred_202.json` |
+| `47466c5bb6a448e14827016ffd1973a5e65c38cda62d0ffc370083c02d7cb6c1` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191120_QX7_PeTr_LC02_SA_MicrobPred_203.json` |
+| `099a78da9a3479e5745299bff9f81b4399f3ee781a99c2b6e9f6f6cfa2d7287a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191120_QX7_PeTr_LC02_SA_MicrobPred_204.json` |
+| `fd94c6e3ed834b966ce1c85e622a18e9b511625413a0b5111518d07a6fce40a6` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191120_QX7_PeTr_LC02_SA_MicrobPred_205.json` |
+| `ae1d9112544162404cb6a506621c49f75532491dca21a937368c675b350790b4` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191120_QX7_PeTr_LC02_SA_MicrobPred_206.json` |
+| `a00bf2bb04b011639be9c46e50af8ac82f1e4f0d4ac570ddac3c378421c4c47e` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191122_QX7_PeTr_LC02_SA_MicrobPred_179.json` |
+| `b9dac9139a9c585901a6baddce10087b416dc31783fb78722a68ec388e37ebda` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191122_QX7_PeTr_LC02_SA_MicrobPred_180.json` |
+| `719197515389b05716002547646061494dda7ea39daa34f26fea7cdf334ee46c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191122_QX7_PeTr_LC02_SA_MicrobPred_181.json` |
+| `2e470de4dc827ff3a75416006e2d69c2beb199e09a444246dd6b5c4e4364c710` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191122_QX7_PeTr_LC02_SA_MicrobPred_182.json` |
+| `207535cd8d282ae6b1fab7af79d329b43fd9e3cc167226e4b3822a614bbfbcea` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191122_QX7_PeTr_LC02_SA_MicrobPred_183.json` |
+| `3b8a5026bddf5cb2912e1388e900d70214074abab621878b575a9d8d1115e7d7` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191122_QX7_PeTr_LC02_SA_MicrobPred_184.json` |
+| `455eea2b7cf3866ffd145a0f2c00f56ef5360f49048bb7229bfee3c4e37490fd` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191122_QX7_PeTr_LC02_SA_MicrobPred_185.json` |
+| `2e6a80f071da481bc883d3a3af55ad4acbd87edfbaf6a10af999928dd90a3c70` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191122_QX7_PeTr_LC02_SA_MicrobPred_186.json` |
+| `354f924c084552735da3a5975894fa98c9a53d3a9a9a5181dfb633e2fd30d5e3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191122_QX7_PeTr_LC02_SA_MicrobPred_208.json` |
+| `f3e860bcaa89ddc8c3aa351f6ed5248d7d35ac49bbbe58c1595b1f2b01a1c328` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191122_QX7_PeTr_LC02_SA_MicrobPred_209.json` |
+| `5042e6f55838c6f2cf972c5424394d72a43c1c364ae4ed2c462a289f874b68c7` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191122_QX7_PeTr_LC02_SA_MicrobPred_210.json` |
+| `18d6787eadc36b1be35d41233dbde570cda744f24edb34cbe683fa6e29eeedf7` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_242.json` |
+| `8133158ad5d0e71365b69aeff93bfac4726bc23a2efd3149c25406e825dd8dd9` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_243.json` |
+| `59a8849d0a637503863d554738db7de0c446248a1fb958a4e11c59dc50e4d8f7` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_244.json` |
+| `019a17240d2afc06f74a630e59ab985dc2dc3e3faddf35d9b9d92af6d9ba7d16` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_245.json` |
+| `a1a271950433fc1d99c5c861f8afed56f09c42af9c4a69184e32b0eb0404d73d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_246.json` |
+| `f480ed165279c1c502c0a7b01a5256f505395cbf0b32a9830a928be0e2052fb1` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_247.json` |
+| `bc35590c018b7f5a0a223755c04fa1caad715a86b66d250689876a827f9d6745` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_248.json` |
+| `baba36301e118fa9d34a98bb2215dbf49623be62bd602e806526db6ec454fe8d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_249.json` |
+| `50b0b43cd2df01dd3d12f4c5b33b1ac6ade332a0094bb63dbc907a827a353c52` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_250.json` |
+| `ea33baecf513e0d1bfea4467f009c9b3d41f20cfd1a6bae9f8da73dc6a0d5e36` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_251.json` |
+| `309b7b1c46f56b0e45ef8a3aca5cb54a215816aaf100e8f4476362850257ee45` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_252.json` |
+| `96232b486c1bc15e981a71265fd51e2c5f56a019dbabe1f9086d9e5dc2809ed2` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_253.json` |
+| `5e8a24ba52ae2258066efee9bfe7b710b84cf9889c25fcbc1cc3516b1889170c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_254.json` |
+| `4bfb5f49742d2f0b956ab92c58f05b0bfa7947c6e814afb531e6f3f0b887328c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_255.json` |
+| `f1d0119e359cbe9318b6975f78e63632bb79cbd4efdbc1fa28e088cb0c56b90b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_256.json` |
+| `43e348a64529db2835aa5ed581ac68e2c60175d7af1a2cddc03caa58b0f465bf` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_257.json` |
+| `9c99a13ac5c386c6a10b1312779026c7ed5a8fbb305fd8c50d8beec19a72b1db` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_258.json` |
+| `ec1f30ceae9f81dc8e7efdc080db62b5874d49ab23c910af2fd601249f887c6a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_259.json` |
+| `98a1aa65beb753397bd87e6e300eb0d75f84df374e3577fb08d94846c5f82f60` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_260.json` |
+| `0b5d94ac07abda043e91c58278eb5b29914e8afd04e1e1c2bc9795988f2e1813` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_261_191126225244.json` |
+| `5cf6f7655ec8f59d6bee4764bb48e5ebea7984d1df67d1305d220ddb1ca77a8c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_262_191127044457.json` |
+| `39a2829f1ce8c5b8e7c498e053315892b06daf83e2a9db302416b182de9d2601` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_263.json` |
+| `8927ff41159cdab822a1e67799b5c20bd08379b852dbc9962dfba1ee3dca6d35` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_264.json` |
+| `511bed4bc54a5c51c4d8f40e9e6a891fdcd6cc8bceb4abe6bc9ea4b160932b84` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191123_QX7_PeTr_LC02_SA_MicrobPred_265.json` |
+| `3cee3edc82091180fe9b0392050320837ac884d1b380a3549c730382d7b9352f` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_266_191202203122.json` |
+| `c71b8a6ba580aa374bf6f63e157e0d9d243731840300fbf5038b38da5dc566de` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_267.json` |
+| `9d4a12eb1b25f9e376d98302ee09e7bd913a5a11d3b330876d37d602af55bd2b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_268.json` |
+| `962b98e42e1c65161b7367f0d215a73a1fba9ef913824eb10b20f5720268911c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_269.json` |
+| `cf940e58741973880afdb17111b9c05c6fa5ef36e50b513aa58c85c42909edbe` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_270.json` |
+| `2c3a54b4336a7a0f05b0ed36fb79267e448f13f026d31d2bbd42dc96d6857e01` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_271.json` |
+| `fe923d5d0dcdcd4fe225e8654d664227df42dc239a39c3bd0e23627e96368abb` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_272.json` |
+| `bfdcc201d366ad8a602025cbd4b2871940e7ab45f43db01d994a43c69b91317d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_273.json` |
+| `49bdfbde03549bebdb298fda45726436793c69681aa9cb97cb580758c06db610` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_274.json` |
+| `2843545804df55ad221580e87977c1ad47693fc791bc049bebc4196e12bcf804` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_275.json` |
+| `8da9c6000c97b702a715c4f8422309d081ffe9e20f3bf7a496c9b5675f1f149c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_276.json` |
+| `2c0ca2d585c2efdbf0e8a92bad7b8b4ed7db320b63ef45de78e588b1ae8cb3b0` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_277.json` |
+| `835c5cff2d701032bb1a7e08a24c56d19717d591b4ac543b718701c1ba87d26e` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_278_191202232903.json` |
+| `bf2513a69cbf20526238932d40b76ae9c5f2ffdb07790bc2eb7d12b3b47b5ee7` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_279.json` |
+| `ad482f566f4a7b1938e102bb4165f54cd60613a735a03cdc51eb8a6e6473d471` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_280.json` |
+| `a00c77fd8ebfeb1a60c113592e302e6138c09eb612b29d6fdb71e428b9804928` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_281.json` |
+| `2a15102f5172fa059741bc56a73cf1853f10cf26ce30ce6630571f0a425a5e06` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_282.json` |
+| `dc7a53fb45bd67f2140469c05618343ed860a6fa42c5d0f1d8255f6e3fcc70af` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_283.json` |
+| `bc080d67e8c15eab03c56946618810ab213ccb240c3c283e83cb1371465fda09` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_284.json` |
+| `98960e5b4b9e59c50a592c45a1c8932187cb0db25e332ad57e3eb9586aa47f1e` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_285.json` |
+| `49a772347e3ce1f80cbb374698a816e8facda445557da41f7baae523eb74cd05` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_286.json` |
+| `f924db2e2e1d16914070a8f6f086aa6a74c5ad1b0282d6f270175c9a758e3514` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_287.json` |
+| `8402968ea3794d3d79cf426ac8ec50a97a87464910b96b3c214ee21565944376` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_288.json` |
+| `8eb41b1192938b534283b5c29c0c4a8577ffdff66f0d9a3c227de48dc758f5d6` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191129_QX7_PeTr_LC02_SA_MicrobPred_289.json` |
+| `e38c4137f5700092ea690c1b0e4d0c1f5f73dad8892eda71e353092ae3dca61c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_227.json` |
+| `044f8503db919b06ad0b399ed874bf9893e73b2236e0749681c277d31568b7b8` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_290_191204143943.json` |
+| `dc600d7d4dcde1d9ef9a1ebedd8be08d0b0c761cc8cf2a05cc66219b92efcb1d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_291_191204173318.json` |
+| `5e373077a8990f2a5dafe35b1eebf2a9d9427e14da10b9424b5066a8a86e7a0a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_292_191204202716.json` |
+| `368ef14dc8137974e7e84ea3d70b1c7dda48b39e94dc2a204247a0dc638ac0cc` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_293_191204232138.json` |
+| `8945d7653bff0c984fdb17dc30b030d488b667406e1c2f3013d1e6159c97d827` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_294_191205021611.json` |
+| `242ca25485690b08606bb8bc9ab195357881c2099fb0cec31c874d22d82243b2` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_295_191205051054.json` |
+| `ee03a5729ab8b5ef7808b70a1bde74b01d20d7ad32b3b7d538c0128fe7181f9a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_296.json` |
+| `131f7162e221a69d5d63bf26f9863af977803a66a7348ea911d43af99ea5f982` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_297.json` |
+| `5c85de5c79c3162f44de2b14f0bbccaecb29a48782c321a4cf71e706dde3ea43` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_298.json` |
+| `475da3d578ceb912e7412d2db55b04f2b3d96321173a0b2fe2dbe5886290614b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_299.json` |
+| `d7f189fdd9eae7f2f8e37837c1ef0bc438dd624bb8a1f10cb04715093d2aeba7` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_300.json` |
+| `753d6894bc8acbac19f59dc47246c1e139f349f6cc04f8d9345b479091b87168` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_301.json` |
+| `35cc4fc8b002d3510ead04d263cb540909bc5ac0aed486b1b21473c90c411294` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_302.json` |
+| `85a240f4799464dca7c825ede854033689b47eba73bf3f0999873d029dd6ed0c` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_303.json` |
+| `5bb31f4c23c5faca95ef1c4431ef7840babe1ea0c2e44defce0aa6fd6990545e` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_304.json` |
+| `d9b36ee05eb5fa56520e9bb181a0a2461a277273522f53581846bc8cddf464ea` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_305.json` |
+| `72d775c5c25962a72d54aa07710c40407385d432810093048e9f953aa34837d9` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_306.json` |
+| `0c34db81dc02284d8726d1fff350da2d8fcfc81a0215f9927febcf3b8199a529` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_307.json` |
+| `a17096c3b3c1333b87a07e5e0b562dfd6b3dfc9d3cc000fd044a3074da7b2ea1` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_308.json` |
+| `a7c1acda23c85fa8ebffc15b73a34c69c2129ff4713db731c4e3d63a39508688` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191203_QX7_PeTr_LC02_SA_MicrobPred_309.json` |
+| `a5a97338abdcd13cd33d5b24abe8596083deb3ff9fbbc821d2542fd78bc6d680` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_207.json` |
+| `c5c4204c6cc9a4120e32b3cc325c0d42a7f4096586a292ddb07fd194b36da343` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_212.json` |
+| `f26b4566eebc31c1f5ac5d972c067cec5b110cbdbf19e5c39f9854f3792c212b` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_213.json` |
+| `79e86080f90e1b557d9979bb1773d947283cb97e6877b6613467a2192ba024b1` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_214.json` |
+| `2fa4a8aafb793aa16828a65ee8bb76b02abf7c9e7f096c583bbb6eb757c55774` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_215.json` |
+| `4154f8628b128eb18d6fda5b9384e3a702c2f84dff35d1e414630502a7f3df6e` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_216.json` |
+| `d4c4189659a147faeb5bef83df1a8528a87e90ca22e0b51ca864307817fb9fab` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_217.json` |
+| `19b5d8699a4fbf04f144168682121a51c4d58b2e24a442a11518908c7194a82f` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_218.json` |
+| `e611111497ce18febfc492ca4c49ecf99d2b9d631bfb1875f3d7a096946de110` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_219.json` |
+| `a6c04630e475ea54306148348d1935723102d32c90f6d3bca3becfc404f639e2` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_220.json` |
+| `de903a9dcc208ec9c3f77a5f2b8c660060890a4d585cad041c38130715e5eee8` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_221.json` |
+| `8a97bbc114bfd68cb4c6a153248a2a607576a73d53f9f0af4b04410afef91d55` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_222.json` |
+| `0915591f630f42082ca3dabd02ba1b82a7b24014e6035ca1bca704e4376e0200` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_223.json` |
+| `23d5306be1459586a857124dcb297972b57478db4d18aa52bc4464c218b13462` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_224.json` |
+| `5a6384f6fdb0fbb1e1e892b1f2fbb03d0278adc829d4254f98d7ed171c5eb635` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_225.json` |
+| `2831ab846392decc4fc877389680cb1b9609072d2d16cc7bbd9ed6e089feaaa3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_226.json` |
+| `36c5beb6f0a3e86a70f43d303c5a2f510e6adceb881d0ec05d817dc4d7a7a729` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_228.json` |
+| `d60dcacf8036e18c62bcb3f6422c7a38615baa544260d8c9ff2570bf40472ebc` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_229.json` |
+| `88986fb1fe6eef90bd9331be5d4a2f6cca8409465d7676e2c8c2b2592a9c8838` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_230.json` |
+| `453b4d4d98cb574041d26b39d39b2d01f7ee1011594809c4bee378f87467aab1` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_231.json` |
+| `76ec07f95bf80e77497fd7a1943399db239a3b15e2bcd655aaa3a008835d0e54` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_232.json` |
+| `9f2aed48d6e25630ef90d51935c351dad03e583a3749827b71920a1655c752cb` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_233.json` |
+| `1772c4b462748119e46f2a7b390a2c1080b0cd7a114a76da70384bef07a88272` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_234.json` |
+| `99f6e60c7a296630b893add518ad780703350d41e45731bb730becf359e1448d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_235.json` |
+| `41505691bce099d442975bab0d95904353e827f6fa431b7187b8bf8f74a200c0` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_236.json` |
+| `920511da7bbd7f715212590eae1dbf09a9e8d3d034bf77d52abdc46df1f9a88d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_237.json` |
+| `a7ad735f39703969e7794bbe8539d1155b33729274ee34fcc2d3cdc5014636cb` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191207_QX7_PeTr_LC02_SA_MicrobPred_240.json` |
+| `6821cac54a8b928f7ec296dc683929aa53f4f7c16fc32a89d9d2216553ebeb7a` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191211_QX7_PeTr_LC02_SA_MicrobPred_1.json` |
+| `95494216c5bdfc2ac950406c15d732b0d6977fb198c9a6edc11b465a8791e9da` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191211_QX7_PeTr_LC02_SA_MicrobPred_129.json` |
+| `53ea339ed9ab3cfb88b4532286bf378e4b5a0ef0be3977045880c64a92e51ba0` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191211_QX7_PeTr_LC02_SA_MicrobPred_2.json` |
+| `e37ba05d2c539465c458c50d234e9f138c737260d83627e6a51ff776eaa16f18` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191211_QX7_PeTr_LC02_SA_MicrobPred_3.json` |
+| `be609c75482a35292e9f8000192c52b30f3e754d9c3f4214d1efaf7e10602422` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191211_QX7_PeTr_LC02_SA_MicrobPred_4.json` |
+| `7ee0f64abe12f2943ea089286e8d214e39c330ed321e8440ac32cf39dac27051` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191211_QX7_PeTr_LC02_SA_MicrobPred_5.json` |
+| `acdb43c4add99cb6e932234c5854b09c5865fa67f20f8ca7b870c713738b9635` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191211_QX7_PeTr_LC02_SA_MicrobPred_7_191216023344.json` |
+| `7a4d31d69a15408d581cb094ed381e3f36e0d634edfe566794237547fb051a9d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191211_QX7_PeTr_LC02_SA_MicrobPred_8.json` |
+| `a93880b9b4afce90ca6906870f6c22fef2a0d467cf39e909754f3bb5439c18f2` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_130.json` |
+| `9c344e41f0c8a3bf277f27e7e82af0507f208619a66be0dfdb5981e98760fcbd` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_131.json` |
+| `b3a18296b9d394bea5fd23f69389d4852be42049648c6e3f552fc8639e303106` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_132_191216190348.json` |
+| `4683a187f696479150d35d3a85217927acc1af31dac591c9704171f9036680e2` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_133_191217040348.json` |
+| `8ad936e4b1f4ef501660351ae9715b47c8fc04058875408770cb7adb4c73e614` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_134.json` |
+| `a20ddea4a9165eae6f7fb324b46b76a3eb661c1c696ea76e1d682598bd7e6682` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_135.json` |
+| `f8064091b8ddaece58ecf2e427d7dee8bbfe7556a9783de71085660f1d040ecb` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_164.json` |
+| `0127a1b1055bc783da9df8328397aa35ec4c89e0473d9da58a6fc31941fec7a3` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_171.json` |
+| `8cbbb2e0a5c84fe75a4376b7c8fa4f0254b74fd253810993b1defa661040eafa` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_191.json` |
+| `2b84433fb12daabb457fd296dc3351d9e1f692f6c8e0c41c1edaa44500538fff` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_238.json` |
+| `9c58dc201afbc260409eeecbf010a50458ba387a6c43c68d762613007f2fe169` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_239.json` |
+| `9e011755523ecdd3e5ea6909693f0511e8d34068c8aa1fae211e262c87bd7859` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_241.json` |
+| `5e388722b6735fe9a71a38c6c4a9b894c0d3e4d2a90255a9c885e8c1ab18e789` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_26.json` |
+| `b323bd6a054841d85422a94c3b96890d05dbca55268b1f210b1e3689526b33da` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_27.json` |
+| `bbd9c0e6b962bfa6ab9aaf7b1335dab90b151ae2d46fbdaf5c2ca8c673725d5d` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_29.json` |
+| `bb8e71c50d1a459e6da606c3cf483945adaba5685f191a5f5fc5ed1cf8ff17c4` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/out/20191213_QX7_PeTr_LC02_SA_MicrobPred_30.json` |
+
+### `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/scoring_counts_public_vs_specimen.tsv`
+
+| sha256 | file |
+|---|---|
+| `f005f7c000d0356b3796e9112df3a325240c238e8120b5ceb16b946121c4679f` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/scoring_counts_public_vs_specimen.tsv` |
+
+### `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/SUMMARY.json`
+
+| sha256 | file |
+|---|---|
+| `2647acf2bef8661a977447b4bfcb50ffe43804b4ea9db4c818203de7353e910f` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/SUMMARY.json` |
+
+### `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/inputs/manifest.json`
+
+| sha256 | file |
+|---|---|
+| `c95d118f0382472683071ca5a70edc7e7745b35a9041346e59416772f8734fce` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/inputs/manifest.json` |
+
+## Released code versus origin
+
+| file | origin (LAB_ROOT relative) | sha256 at origin | sha256 here |
+|---|---|---|---|
+| `audit.py` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/code/audit.py` | `88809c03eca2ddd94fa05b244974d01ee96bb77d9726819cf5533deead4abd58` | `88809c03eca2ddd94fa05b244974d01ee96bb77d9726819cf5533deead4abd58` |
+| `collect.py` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/code/collect.py` | `2d87215ce4141056d71dfa355f0ae61de43a2d48cd3c24305d2b969cbe2faa96` | `2d87215ce4141056d71dfa355f0ae61de43a2d48cd3c24305d2b969cbe2faa96` |
+| `task.sh` | `LAB_ROOT/MM_review_analysis/A32_4_5_fig4d_public_vs_specimen/code/task.sh` | `810bcc2ddcfbad2ce1cc223ecc8b807bf028d42c88c504aa7e440aef4d50ea94` | `810bcc2ddcfbad2ce1cc223ecc8b807bf028d42c88c504aa7e440aef4d50ea94` |
+| `R3_digest.py` | `LAB_ROOT/canonical/final_revision/thread_selection_math/R3_digest.py` | `fc2a996fe0f7adddae1a19e087c603f1172ad2b97c2398ff6e85642c71d6b105` | `fc2a996fe0f7adddae1a19e087c603f1172ad2b97c2398ff6e85642c71d6b105` |
+
+Static checks: `python -m py_compile` on every `.py` file; `tools/scan_release.py`.
+
+## Hashing code
+
+The hashes above were produced by a Slurm job (4 to 8 CPUs) that walks each root once, hashes every file with SHA-256 in 8 MiB blocks and, for roots with more than 20 per-acquisition directories, hashes only the `COMPLETE.json` of each. The code is kept in the work directory, not in the repository.

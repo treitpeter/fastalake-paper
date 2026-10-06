@@ -1,0 +1,17 @@
+min_length	space	arm	tier	acquisitions	rows_complete_all
+5	features	original	TechnicalReplicates	12	11406
+5	features	original	WorkflowReplicates	15	4098
+9	features	original	TechnicalReplicates	12	10493
+9	features	original	WorkflowReplicates	15	3825
+5	features	union_individual	TechnicalReplicates	12	12389
+5	features	union_individual	WorkflowReplicates	15	4255
+9	features	union_individual	TechnicalReplicates	12	11616
+9	features	union_individual	WorkflowReplicates	15	4020
+5	features	joint_corrected	TechnicalReplicates	12	16618
+5	features	joint_corrected	WorkflowReplicates	15	7009
+9	features	joint_corrected	TechnicalReplicates	12	14913
+9	features	joint_corrected	WorkflowReplicates	15	6320
+5	features	joint_fileq	TechnicalReplicates	12	13992
+5	features	joint_fileq	WorkflowReplicates	15	5435
+9	features	joint_fileq	TechnicalReplicates	12	13149
+9	features	joint_fileq	WorkflowReplicates	15	5155

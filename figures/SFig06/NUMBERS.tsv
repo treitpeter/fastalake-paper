@@ -1,0 +1,36 @@
+v28d_line	quote	printed_value	recomputed_value	code	source_data	status	v30_para	v30_quote	v30_printed_value	v30_status
+101	Across 710 acquisitions	710	726	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:726	49	Across 726 acquisitions, the median ratios	726	MATCH
+101	were 93.5% in CAMPI	93.5%	92.35033259423504	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:92.4%	49	were 92.4% in CAMPI	92.4%	MATCH
+101	84.3% in healthy stool	84.3%	82.92418968145265	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:82.9%	49	82.9% in healthy stool	82.9%	MATCH
+101	88.6% in PREDICT	88.6%	86.46799130885695	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:86.5%	49	86.5% in PREDICT	86.5%	MATCH
+101	82.6% in CapScan	82.6%	79.94728750274544	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:79.9%	49	79.9% in CapScan	79.9%	MATCH
+101	ranging from 70.5% to 83.8%	70.5%	69.98474446987034	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:70.0%	49	ranging from 70.0% to 83.7%	70.0%	MATCH
+101	ranging from 70.5% to 83.8%	83.8%	83.7258699319048	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:83.7%	49	ranging from 70.0% to 83.7%	83.7%	MATCH
+123	In 296 matched PREDICT acquisitions	296	296	figures/SFig06/panels.py:stat_bench	source_data/SFig06/same_spectrum_benchmark_0_predict.tsv	MATCH	64	In 296 matched PREDICT acquisitions	296	MATCH
+123	5–50-residue peptides by a median 18.8%	18.8%	9.386055289278694	figures/SFig06/panels.py:stat_bench	source_data/SFig06/same_spectrum_benchmark_0_predict.tsv	v28f_change:9.4%	64	FastaLake identified a median 9.4% more 9–50-residue peptides	9.4%	MATCH
+123	more peptides identified in 294 acquisitions	294	272	figures/SFig06/panels.py:stat_bench	source_data/SFig06/same_spectrum_benchmark_0_predict.tsv	v28f_change:272	64	with higher counts in 272 acquisitions	272	MATCH
+123	and 85.6% of metagenome-search identities recovered	85.6%	87.73245932485992	figures/SFig06/panels.py:stat_bench	source_data/SFig06/same_spectrum_benchmark_0_predict.tsv	v28f_change:87.7%	64	while recovering 87.7% of metagenome-search peptide identities	87.7%	MATCH
+123	by a median 11.4% in PREDICT	11.4%	13.53200869114305	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:13.5%	64	reduced FastaLake peptide counts by a median 13.5% in PREDICT	13.5%	MATCH
+123	and 17.4% in CapScan	17.4%	20.052712497254554	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:20.1%	64	and 20.1% in CapScan (Supplementary Fig. 6)	20.1%	MATCH
+123	Across 282 matched acquisitions	282	282	figures/SFig06/panels.py:stat_bench	source_data/SFig06/same_spectrum_benchmark_1_capscan.tsv	MATCH	65	Across 282 matched CapScan acquisitions	282	MATCH
+123	peptide identifications by a median 51.7%	51.7%	42.44817334707096	figures/SFig06/panels.py:stat_bench	source_data/SFig06/same_spectrum_benchmark_1_capscan.tsv	v28f_change:42.4%	65	FastaLake identified a median 42.4% more 9–50-residue peptides	42.4%	MATCH
+123	and recovered 84.3% of metagenome-search identities	84.3%	86.37261339225655	figures/SFig06/panels.py:stat_bench	source_data/SFig06/same_spectrum_benchmark_1_capscan.tsv	v28f_change:86.4%	65	while recovering 86.4% of metagenome-search peptide identities	86.4%	MATCH
+433	All 710 acquisitions are retained	710	726	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:726	231	All 726 acquisitions (15 CAMPI, 58 healthy stool, 306 PREDICT and 347 CapScan) are retained	726	MATCH
+433	including one CapScan disjoint zero	one	two	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:two	231	including two CapScan disjoint zeros	two	MATCH
+433	(PREDICT 296, CapScan stool 56, CapScan intestinal fluid 226)	296				OPEN	68	(296 PREDICT, 56 CapScan stool and 226 CapScan intestinal-fluid acquisitions	296	OPEN
+433	(PREDICT 296, CapScan stool 56, CapScan intestinal fluid 226)	56				OPEN	68	(296 PREDICT, 56 CapScan stool and 226 CapScan intestinal-fluid acquisitions	56	OPEN
+433	(PREDICT 296, CapScan stool 56, CapScan intestinal fluid 226)	226				OPEN	68	(296 PREDICT, 56 CapScan stool and 226 CapScan intestinal-fluid acquisitions	226	OPEN
+433	Open circles mark three cross-fitted acquisitions	three				OPEN	398	In three acquisitions (two PREDICT and one CapScan region 3), the pooled fit was singular	three	OPEN
+433	the PREDICT median is 6.55% instead of 6.50%	6.55%				OPEN	398	changed the PREDICT medians from 6.50% to 6.55% at 5–50 residues	6.55%	OPEN
+433	the PREDICT median is 6.55% instead of 6.50%	6.50%				OPEN	398	changed the PREDICT medians from 6.50% to 6.55% at 5–50 residues	6.50%	OPEN
+433	moved 25 to 28 of the 578 cross-fitted points	25				OPEN	398	changed 25 and 28 of 578 acquisitions	25	OPEN
+433	moved 25 to 28 of the 578 cross-fitted points	28				OPEN	398	changed 25 and 28 of 578 acquisitions	28	OPEN
+433	moved 25 to 28 of the 578 cross-fitted points	578				OPEN	398	changed 25 and 28 of 578 acquisitions	578	OPEN
+433	no median by more than 0.16 points	0.16				OPEN	398	changed stratum medians by at most 0.16 points	0.16	OPEN
+NA	NA	NA	281	figures/SFig06/panels.py:stat_bench	source_data/SFig06/same_spectrum_benchmark_1_capscan.tsv	v28f_change:281	65	with higher counts in 281 acquisitions	281	MATCH
+NA	NA	NA	15	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:15	231	All 726 acquisitions (15 CAMPI, 58 healthy stool, 306 PREDICT and 347 CapScan) are retained	15	MATCH
+NA	NA	NA	58	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:58	231	All 726 acquisitions (15 CAMPI, 58 healthy stool, 306 PREDICT and 347 CapScan) are retained	58	MATCH
+NA	NA	NA	306	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:306	231	All 726 acquisitions (15 CAMPI, 58 healthy stool, 306 PREDICT and 347 CapScan) are retained	306	MATCH
+NA	NA	NA	347	figures/SFig06/panels.py:stat_split_text	source_data/SFig06/split_half_acquisitions_726.tsv	v28f_change:347	231	All 726 acquisitions (15 CAMPI, 58 healthy stool, 306 PREDICT and 347 CapScan) are retained	347	MATCH
+NA	NA	NA	296	figures/SFig06/panels.py:stat_bench	source_data/SFig06/same_spectrum_benchmark_0_predict.tsv	v28f_change:296	231	(296 PREDICT and 282 CapScan acquisitions)	296	MATCH
+NA	NA	NA	282	figures/SFig06/panels.py:stat_bench	source_data/SFig06/same_spectrum_benchmark_1_capscan.tsv	v28f_change:282	231	(296 PREDICT and 282 CapScan acquisitions)	282	MATCH

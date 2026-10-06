@@ -1,0 +1,5 @@
+cohort	acquisitions	specimens	participants	design	roster_sheet
+CAMPI	15	Defined SIHUMIx mixture; no individual specimen IDs in retained metadata	Not applicable	Twelve published workflow labels (S01–S12); S11 contributes four fractions	CAMPI acquisitions
+Healthy stool	58	Original specimen IDs unavailable; within-design relationships documented	Ten between-donor labels plus a shared experimental donor of unknown overlap	12 reinjections; 15 preparations; 10 spatial sections; 11 longitudinal samples; 10 between-donor samples	HS acquisitions
+PREDICT	306	300 explicit tube IDs in August metadata; four acquisitions lack tube links	93 recorded August patients; four acquisitions lack participant links	Analysis-specific subsets and later metadata are indexed separately	PREDICT metadata
+CapScan	331	292	15	Fourteen participants contribute capsule and stool; one contributes stool only	CAPSCAN acquisitions

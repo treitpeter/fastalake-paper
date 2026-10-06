@@ -1,0 +1,4 @@
+subject	relationship	object	source	scope
+TechnicalReplicates	same donor as	WorkflowReplicates and OnePiece	healthy_author_confirmation	Donor only; same physical stool specimen across these designs not confirmed
+OnePiece spatial sections	taken from	longitudinal sample 2	healthy_design_author_protocol,section2.1	Documented biological relationship; exact original specimen tube identifier unavailable
+HS_shared_donor	unknown overlap with	Ind1–Ind10	healthy_author_confirmation	Do not count labels as eleven demonstrably distinct people

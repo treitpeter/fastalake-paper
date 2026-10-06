@@ -1,0 +1,25 @@
+{
+ "new": "build/SFig13/panel_f.png",
+ "new_sha256": "bc0a4cedb9f9e71df54ac5e0e93a8d8bcb5ef1d27245a88d2d1b2a02ec33772a",
+ "expected": "build/SFig13/expected_panel_f.png",
+ "expected_sha256": "bc0a4cedb9f9e71df54ac5e0e93a8d8bcb5ef1d27245a88d2d1b2a02ec33772a",
+ "dpi": 300,
+ "page": 0,
+ "tolerance": 0,
+ "max_fraction": 0.0,
+ "new_size_px": [
+  1010,
+  778
+ ],
+ "expected_size_px": [
+  1010,
+  778
+ ],
+ "differing_pixels": 0,
+ "differing_fraction": 0.0,
+ "max_channel_difference": 0,
+ "diff_bbox_px": null,
+ "verdict": "IDENTICAL",
+ "passed": true,
+ "diff_png": "figures/SFig13/checks/panel_f.diff.png"
+}

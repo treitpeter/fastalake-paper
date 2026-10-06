@@ -1,0 +1,1 @@
+- PIPELINE: predict_crossomics_refit: the plan also lists `native_pyramids.py`; it is kept once in native_crossomics_profiles.

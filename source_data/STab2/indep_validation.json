@@ -1,0 +1,16 @@
+{
+  "ordinary_searches": 6,
+  "augmented_searches": 12,
+  "independent_biological_communities": 1,
+  "independent_spectral_acquisitions": 2,
+  "control_seeds": 2,
+  "independence": "evaluated acquisition excluded from ALL selection stages in independent arm",
+  "reservoir": "common SIHUMIx reference, not the full production reservoir",
+  "uncertainty": "two acquisitions and nested seeds; no biological significance or FDR certification",
+  "calibration_established": false,
+  "outputs": {
+    "ordinary_counts.tsv": "f0aa932eb0f90785f840eda9ddc2537d20602abf403bfd0d3cdb1c56b07adc44",
+    "fusion_diagnostics.tsv": "6c912a08e2ff8554d5ee807f3a9b46f033572902ee348b80c03dde41ab205a12"
+  },
+  "collector_sha256": "88b19c98b802091990e5d84f137e0cecab0d3fdb24d522781a47964d8c8960f1"
+}

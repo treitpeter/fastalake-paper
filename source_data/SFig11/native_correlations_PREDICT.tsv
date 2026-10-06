@@ -1,0 +1,21 @@
+cohort	analysis	layer_a	layer_b	rho	p	permutations	n_profiles	n_participants	q
+PREDICT	primary_prevalence10	DNA	RNA	0.6623366362657533	0.0005	1999	77	77	0.000625
+PREDICT	primary_prevalence10	DNA	Non-host protein	0.4490870844342156	0.0005	1999	77	77	0.000625
+PREDICT	primary_prevalence10	DNA	Host protein	0.0001963033160774691	0.998	1999	77	77	0.998
+PREDICT	primary_prevalence10	DNA	Metabolites	0.3119671860095862	0.0005	1999	77	77	0.000625
+PREDICT	primary_prevalence10	RNA	Non-host protein	0.4076298388585085	0.0005	1999	77	77	0.000625
+PREDICT	primary_prevalence10	RNA	Host protein	0.14731006548818934	0.011	1999	77	77	0.012222222222222221
+PREDICT	primary_prevalence10	RNA	Metabolites	0.33458501172524874	0.0005	1999	77	77	0.000625
+PREDICT	primary_prevalence10	Non-host protein	Host protein	0.43653732154838015	0.0005	1999	77	77	0.000625
+PREDICT	primary_prevalence10	Non-host protein	Metabolites	0.428674177074731	0.0005	1999	77	77	0.000625
+PREDICT	primary_prevalence10	Host protein	Metabolites	0.2609848885582976	0.0005	1999	77	77	0.000625
+PREDICT	sensitivity_all_features	DNA	RNA	0.5746345606514992	0.0005	1999	77	77	0.000625
+PREDICT	sensitivity_all_features	DNA	Non-host protein	0.44057950404955604	0.0005	1999	77	77	0.000625
+PREDICT	sensitivity_all_features	DNA	Host protein	0.0382164858319714	0.585	1999	77	77	0.585
+PREDICT	sensitivity_all_features	DNA	Metabolites	0.2559079436737539	0.0005	1999	77	77	0.000625
+PREDICT	sensitivity_all_features	RNA	Non-host protein	0.4453703497157367	0.0005	1999	77	77	0.000625
+PREDICT	sensitivity_all_features	RNA	Host protein	0.2035490567488482	0.0035	1999	77	77	0.003888888888888889
+PREDICT	sensitivity_all_features	RNA	Metabolites	0.2960662473603693	0.0005	1999	77	77	0.000625
+PREDICT	sensitivity_all_features	Non-host protein	Host protein	0.44521713878518954	0.0005	1999	77	77	0.000625
+PREDICT	sensitivity_all_features	Non-host protein	Metabolites	0.43656068743800036	0.0005	1999	77	77	0.000625
+PREDICT	sensitivity_all_features	Host protein	Metabolites	0.2642400250448728	0.0005	1999	77	77	0.000625

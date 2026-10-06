@@ -1,0 +1,36 @@
+sheet	data_rows	description	source_table
+Read me	11	How to interpret this workbook	Derived by build_workbook.py
+Cohorts	4	Four study acquisition rosters; biological denominators are not summed across designs	Derived by build_workbook.py
+Analyses	30	One row per analysis or experimental-design subset; follow roster_sheet and roster_filter	Derived by build_workbook.py
+HS acquisitions	58	58 healthy-stool acquisitions with documented relationships and explicit unknown identities	healthy_campi/HSTOOL_acquisitions.tsv
+HS relationships	3	Author confirmation and documentary links between designs	healthy_campi/HSTOOL_design_relationships.tsv
+HS excluded	39	39 historical differential-centrifugation acquisitions excluded from final study scope	healthy_campi/HSTOOL_excluded39.tsv
+HS CAMPI membership	591	Included and excluded acquisition membership for healthy-stool/CAMPI analyses	healthy_campi/analysis_membership.tsv
+HS transfer	174	Exact target-to-database-source links; biological independence is separately classified	healthy_campi/HSTOOL_transfer_links.tsv
+HS pools	288	Each target and every database-source acquisition in own/all-twelve/other-eleven pools	healthy_campi/HSTOOL_pool_links.tsv
+CAMPI acquisitions	15	Retained deposited acquisitions linked to published protocol and fraction labels	healthy_campi/CAMPI_acquisitions.tsv
+CAMPI search arms	120	75 primary and 45 second-engine acquisition/database searches	healthy_campi/CAMPI_search_arm_membership.tsv
+PREDICT metadata	306	August and later explicit metadata links side by side	predict/ACQUISITION_METADATA_LINKS.tsv
+PREDICT membership	2448	All 306 acquisitions classified for each PREDICT analysis	predict/ANALYSIS_MEMBERSHIP.tsv
+PREDICT patients	465	Patient eligibility relative to each documented source population	predict/PATIENT_MEMBERSHIP.tsv
+PREDICT mapping changes	4	Three later-resolved mappings and the remaining unmapped analytical sample	predict/METADATA_MAPPING_CHANGES_AND_UNRESOLVED.tsv
+PREDICT repeated tubes	4	Repeated measurements linked to the same recorded tube	predict/REPEATED_ACQUISITIONS_OF_RECORDED_TUBES.tsv
+PREDICT MG exclusions	10	Ten acquisitions lacking the matched comparator in the producing manifest	predict/PUBLIC_MG10_EXCLUDED.tsv
+PREDICT H patients	1116	Patient membership for each of twelve primary histidine endpoints	predict/HISTIDINE_ENDPOINT_PATIENT_ROSTER.tsv
+CAPSCAN H acquisitions	331	331 histidine search acquisitions; quantitative zero is retained	capscan/HISTIDINE_ACQUISITION_ROSTER.tsv
+CAPSCAN H finite n	7	Saved family-specific finite n ranges; no statistical replay	capscan/HISTIDINE_SAVED_FINITE_N_SUMMARY.tsv
+CAPSCAN H participants	467	Observed finite participant sets for H-source and reciprocal endpoints only	capscan/HISTIDINE_FINITE_PARTICIPANT_SETS.tsv
+CAPSCAN acquisitions	331	331 acquisition-to-specimen/participant/region links	capscan/BASE_ACQUISITIONS.tsv
+CAPSCAN membership	7599	Included entities; entity_type distinguishes acquisitions, specimens, DNA runs and aggregation units	capscan/ANALYSIS_MEMBERSHIP.tsv
+CAPSCAN exclusions	140	Documented omissions and source-specific nonmembership	capscan/EXCLUSIONS.tsv
+CAPSCAN MS nonmembership	188	Every acquisition absent from each MS analysis roster relative to the 331-search design	capscan/ACQUISITION_NONMEMBERSHIP.tsv
+CAPSCAN DNA materials	6	Upstream DNA specimen categories: 272 gut/stool and 29 saliva	capscan/DNA301_SOURCE_CATEGORIES.tsv
+PREDICT 85 to 77	8	Eight patients without any complete-stack specimen; matrix row absence is not a known laboratory cause	predict/EDS85_TO_NATIVE77_PATIENT_EXCLUSIONS.tsv
+CAPSCAN ID crosswalk	331	Exact linked biology/cross-omics specimen namespaces	capscan/IDENTIFIER_CROSSWALK.tsv
+CAPSCAN MG pairs	282	Matched benchmark pairs preserving A16 and biology specimen labels	capscan/BENCHMARK282_ACQUISITIONS.tsv
+CAPSCAN DNA runs	301	301 upstream completed DNA runs, including saliva; native subset is in membership	capscan/DNA301_RUN_SPECIMEN_ROSTER.tsv
+CAPSCAN DNA eligibility	210	Participant-region DNA availability across functional representations	capscan/DNA_CELL_ELIGIBILITY.tsv
+CAPSCAN regional pairs	56	Four capsule-versus-stool pairs for each of fourteen participants	capscan/REGIONAL_PAIRED_LINKS.tsv
+PREDICT stack eligibility	268	Recorded assay presence and complete-stack eligibility	predict/LATER268_ASSAY_ELIGIBILITY.tsv
+Sources	94	Exact inspected inputs; all recorded hashes freshly verified during workbook build	Derived by build_workbook.py
+Author confirmations	1	Author-confirmed relationships with explicit scope; verbatim record retained in AUTHOR_CONFIRMATIONS.jsonl	Derived by build_workbook.py

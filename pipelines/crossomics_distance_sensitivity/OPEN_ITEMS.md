@@ -1,0 +1,1 @@
+- PIPELINE: crossomics_distance_sensitivity: the original `distance_sensitivity.py` also executes functions from `experiment.py` of the native-pyramid method-comparison folder (hash 382d8f70...); the copy shipped is the one frozen in the 347 rerun folder.

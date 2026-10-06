@@ -1,0 +1,29 @@
+{
+  "unit": "SFig10",
+  "upstream": [
+    {
+      "id": "predict_eds_feature_selection",
+      "original_code_paths": [],
+      "uses": "fixed 20-feature overview selection (legacy_features.tsv), shown in Fig. 4h and counted in Methods and Supplementary Table 4; selection code not traced in this unit",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_eds_screen",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/eds_biochemistry.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/eds_refit/analyze.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/eds_refit/individual_followup.py"
+      ],
+      "uses": "augmented_pair_screen.tsv and all_EDS_associations.tsv (family q values, 21 candidates, panel a statistics); refitted 85-patient overview values legacy_85_values.tsv and legacy_259_values.tsv (counts in Methods and the legend; panel b was removed in v30); KO profile for ko_total_signal",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_eds_focused_pairs",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration2/cr003_followup/scripts/build_approved_eds_cr003.py"
+      ],
+      "uses": "focused_values.tsv, focused_features.tsv, patients.tsv, selected_pair_summary.tsv, separate_adjustments_all_models.tsv (panel a); its statistics are ported to panels.py and recomputed",
+      "pipeline_dir": null
+    }
+  ]
+}

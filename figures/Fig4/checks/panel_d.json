@@ -1,0 +1,25 @@
+{
+ "new": "build/Fig4/panel_d.pdf",
+ "new_sha256": "68970f06fe642bb348630f2369ee16631e56fa563208eb359f5817cb8c4ce51b",
+ "expected": "figures/Fig4/expected/panel_d.pdf",
+ "expected_sha256": "c8af16ca934c0a9659e944d6b79e526d8f8fb05c37d86db3d066257264110eae",
+ "dpi": 300,
+ "page": 0,
+ "tolerance": 0,
+ "max_fraction": 0.0,
+ "new_size_px": [
+  815,
+  532
+ ],
+ "expected_size_px": [
+  815,
+  532
+ ],
+ "differing_pixels": 0,
+ "differing_fraction": 0.0,
+ "max_channel_difference": 0,
+ "diff_bbox_px": null,
+ "verdict": "IDENTICAL",
+ "passed": true,
+ "diff_png": "figures/Fig4/checks/panel_d.diff.png"
+}

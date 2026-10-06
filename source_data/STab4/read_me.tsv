@@ -1,0 +1,10 @@
+line	text
+1	Supplementary Table 4. Enterotype Dysbiosis Score (EDS) displays in the PREDICT cohort.
+2	
+3	All20_features_259_observations, Fixed_feature_key, Observation_metadata, 85_patient_order, 85_patient_raw and 85_patient_z: the earlier 20-feature, 259-observation selection and its 85-patient display (Supplementary Fig. 10b). This selection was fixed earlier and was not repeated. HV366 remains in these tables and has no positive signal in the patient display.
+4	Focused_raw: the six measurements displayed for the three metabolite-enzyme pairs in Fig. 4h and Supplementary Fig. 10a, with the patient order. Non-detections remain missing in the plots.
+5	Focused_features: the associations of the six displayed features. Focused_pairs: q values saved from the complete screen families, not a correction restricted to the three displayed pairs. Focused_adjustments: all 192 descriptive model estimates. No new discovery P values or intervals were computed.
+6	Human rows are human-assigned peptide signal within retained reporting groups. Pathway rows exclude human-assigned signal and retain unresolved origin.
+7	Non-detections are not imputed. This descriptive display is not an independent validation of the EDS.
+8	KO and pathway values use native UHGG eggNOG annotations only when the protein aligned to the annotation seed orthologue with at least half of the reported bitscore (Methods). Values computed before this check are in Source Data, Annotation_verification.
+9	Complete screen tables: Source Data, EDS_focused_20261003 and eds_refit.

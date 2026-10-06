@@ -1,0 +1,29 @@
+{
+  "unit": "abstract_discussion",
+  "upstream": [
+    {
+      "id": "capscan_crossfit_10fold",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/worker.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/sage_lda.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/sage_q.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/run/analyze_final.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/run/analyze_final.py"],
+      "uses": "per-acquisition cross-fitted FL and MG 9-50-residue peptide counts (via source_data/Fig4/crossfit_per_acquisition.tsv) for the Abstract gains (line 35) and Discussion line 183; analyze_final.summarize is ported as stats._summarize",
+      "pipeline_dir": null
+    },
+    {
+      "id": "cohort_database_sizes",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A01_4_1_database_sizes/frozen/audit_v2.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/fig1bd_n15/code/sizes.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/fig1bd_n15/code/assemble.py"],
+      "uses": "entry counts of the 726 selected FASTAs, reservoir sizes and the human reference (via source_data/Fig1) for lines 35, 181 and 193",
+      "pipeline_dir": null
+    },
+    {
+      "id": "common_resource_accounting",
+      "original_code_paths": ["LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/supplements/revision_2026-09-24/build_revision.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A7_other/resource_accounting"],
+      "uses": "Slurm wall times per stage and task (via source_data/SFig15) for line 193",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_reference_gap",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A14_4_3_campi_gap/frozen/aggregate.py"],
+      "uses": "CAMPI member list (via source_data/Fig2/member_summary.tsv) for line 35",
+      "pipeline_dir": null
+    }
+  ]
+}

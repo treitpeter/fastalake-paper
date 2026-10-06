@@ -1,0 +1,9 @@
+node	role	CPUTot	RealMemory_MB	AvailableFeatures	Gres	queried_utc
+hpcl9202	CAMPI reservoir build, job 5895248	128	512000	genoa,mem512G	(null)	2026-10-06T05:43:32.628222+00:00
+hpcl9305	CAMPI AlphaNovo inference, array 5450700	256	760000	genoa,mem742G	gpu:l40s:4(S:0)	2026-10-06T05:43:32.659993+00:00
+hpcl9308	CAMPI AlphaNovo inference, array 5450700	256	760000	genoa,mem742G	gpu:l40s:4(S:0)	2026-10-06T05:43:32.695419+00:00
+hpcl9309	CAMPI AlphaNovo inference, array 5450700	256	760000	genoa,mem742G	gpu:l40s:4(S:0)	2026-10-06T05:43:32.727574+00:00
+hpcl9311	CAMPI AlphaNovo inference, array 5450700	256	760000	genoa,mem742G	gpu:l40s:4(S:0)	2026-10-06T05:43:32.760574+00:00
+hpcl9313	CAMPI AlphaNovo inference, array 5450700	256	760000	genoa,mem742G	gpu:l40s:4(S:0)	2026-10-06T05:43:32.792161+00:00
+hpcl9315	CAMPI AlphaNovo inference, array 5450700	256	760000	genoa,mem742G	gpu:l40s:4(S:0)	2026-10-06T05:43:32.820583+00:00
+hpcl9318	CAMPI AlphaNovo inference, array 5450700	256	760000	genoa,mem742G	gpu:l40s:4(S:0)	2026-10-06T05:43:32.852202+00:00

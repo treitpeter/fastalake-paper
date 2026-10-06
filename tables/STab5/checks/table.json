@@ -1,0 +1,34 @@
+{
+ "xlsx": {
+  "sheets": [
+   "Read_me",
+   "All_30581_tests",
+   "Nine_family_summary",
+   "All_eligibility",
+   "Eligibility_common"
+  ],
+  "expected_sheets": [
+   "Read_me",
+   "All_30581_tests",
+   "Nine_family_summary",
+   "All_eligibility",
+   "Eligibility_common"
+  ],
+  "cells": 1351138,
+  "exact_cells": 1351138,
+  "first_difference": null,
+  "identical": true,
+  "expected_sha256": "cef0a5eb4c7774120fc05e021660210a25b4220101c7b4fc72595ca4b63c5641"
+ },
+ "eligibility_matched_correlations.tsv": {
+  "new_sha256": "d1ad7b4296d71f20fc160a568eaec576631021f87ce4afca0b98f6351fa719aa",
+  "expected_sha256": "d1ad7b4296d71f20fc160a568eaec576631021f87ce4afca0b98f6351fa719aa",
+  "identical": true
+ },
+ "common_eligibility_summary.tsv": {
+  "new_sha256": "cbbfa654762645f458be66a90768d6af2371caab597fff3f4a7d77e42050db00",
+  "expected_sha256": "cbbfa654762645f458be66a90768d6af2371caab597fff3f4a7d77e42050db00",
+  "identical": true
+ },
+ "result": "IDENTICAL"
+}

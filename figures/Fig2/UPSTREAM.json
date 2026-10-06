@@ -1,0 +1,53 @@
+{
+  "unit": "Fig2",
+  "upstream": [
+    {
+      "id": "campi_reference_gap",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A14_4_3_campi_gap/frozen/search.py", "LAB_ROOT/MM_review_analysis/A14_4_3_campi_gap/frozen/aggregate.py", "LAB_ROOT/MM_review_analysis/A14_4_3_campi_gap/frozen/lib.py", "LAB_ROOT/MM_review_analysis/A14_4_3_campi_gap/jobs/audit.sbatch", "LAB_ROOT/MM_review_analysis/A14_4_3_campi_gap/jobs/aggregate.sbatch", "LAB_ROOT/MM_review_analysis/figure_restoration_2026-09-16/Figure2/derive_upset_a14.py"],
+      "uses": "Per-acquisition and pooled peptide identities, reference recovery, loss stages, member assignment, UpSet intersections and length tables for panels b, d, e, f, g, h and lines 79 and 83 (Slurm 5926806 audit array, 5927616 aggregate, 5948521 UpSet/length derivation); membership tables stored under source_data/SFig03.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_simplified_grouping",
+      "original_code_paths": ["LAB_ROOT/simplified_grouping/", "LAB_ROOT/simplified_grouping_results/manuscript_cohorts_2026-09-10_2200/cohorts/CAMPI_*/"],
+      "uses": "Quantified protein groups and groups with two or more assigned peptides per acquisition for the five CAMPI arms (panel c, line 77).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_database_metrics",
+      "original_code_paths": ["LAB_ROOT/canonical/publication/analyses/fig2_uniprot_2026-09-09/derive.py", "LAB_ROOT/canonical/publication/analyses/fig2_uniprot_2026-09-09/benchmark.py"],
+      "uses": "Database entries per acquisition and arm (db_records) for panel a and line 77.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "cohort_database_sizes",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A01_4_1_database_sizes/frozen/audit_v2.py"],
+      "uses": "CAMPI reservoir size 375,333,654 (line 75) from source_data/Fig1/acquisition_sizes_726.tsv.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_reservoir_containment",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/R8_open_requests_2026-09-17/B_blind_reservoir_overlap/overlap.py", "LAB_ROOT/MM_review_analysis/R8_open_requests_2026-09-17/B_blind_reservoir_overlap/full.sbatch"],
+      "uses": "Share of each member reference proteome present in the reservoir, 91.3-100% (line 75); Slurm 5954792.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_variability",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/campi_variability_2026-09-30/analyze.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/campi_variability_2026-09-30/mechanism_v2.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/campi_variability_2026-09-30/build_mechanistic_review.py"],
+      "uses": "Add-back gain availability and newly quantified peptides (98.4%, 99.9%) and equal-MS2 depth standardization (3.38-fold, 1.98-fold), line 77; Slurm 6031312, 6031313, 6031314, 6031428.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_near_miss_audit",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A03_4_2_near_misses/frozen/analysis.py", "LAB_ROOT/MM_review_analysis/A03_4_2_near_misses/frozen/lib.py", "LAB_ROOT/MM_review_analysis/A03_4_2_near_misses/frozen/report_v2.py"],
+      "uses": "Same-spectrum audit of discrepant de novo predictions (84.8%, 34,019 of 40,097; 20.3%), line 81; Slurm 5920659-5920662, 5920711.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_alphanovo_accuracy",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/alphanovo_accuracy/accuracy.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/alphanovo_accuracy/run.sbatch"],
+      "uses": "AlphaNovo top-prediction accuracy on CAMPI spectra (51.8% of 801,613; median 67.7%, range 26.3-79.2%; 85.3% of 271,469), line 81; Slurm 6064877.",
+      "pipeline_dir": null
+    }
+  ]
+}

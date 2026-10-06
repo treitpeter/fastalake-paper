@@ -1,0 +1,2 @@
+peptide	canonical_peptide	change	parents	isotope_errors	calculated_mass	matched_ions	original	at_least_original_matches
+SNLQVSEM[+15.9949]VHK	SNLQVSEMVHK	same_canonical	sp|P05154|IPSP_HUMAN	0	1286.62890625	8	True	True

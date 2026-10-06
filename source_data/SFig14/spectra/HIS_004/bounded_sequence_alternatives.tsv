@@ -1,0 +1,2 @@
+peptide	canonical_peptide	change	parents	isotope_errors	calculated_mass	matched_ions	original	at_least_original_matches
+FHPALAPLK	FHPALAPLK	same_canonical	MGYG000200818_00730	0	992.5806884765625	7	True	True

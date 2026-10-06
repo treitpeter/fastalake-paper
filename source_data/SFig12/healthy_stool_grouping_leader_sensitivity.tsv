@@ -1,0 +1,17 @@
+method	tier	subset	filter	n_kos	n_pairs	equal_KO_agreement	pooled_pair_agreement
+original	TechnicalReplicates	all_eligible	primary	709	45228	0.7371115955036971	0.7383921464579464
+original	TechnicalReplicates	all_eligible	well_resolved	648	29529	0.7867351869666684	0.8354160316976531
+original	TechnicalReplicates	author_top12	primary	12	792	0.8156565656565656	0.8156565656565656
+original	TechnicalReplicates	author_top12	well_resolved	11	553	0.8509641873278236	0.929475587703436
+original	WorkflowReplicates	all_eligible	primary	733	72180	0.6871775336986797	0.6877112773621502
+original	WorkflowReplicates	all_eligible	well_resolved	685	46721	0.7206971131058723	0.7796280045375741
+original	WorkflowReplicates	author_top12	primary	12	1260	0.8658730158730158	0.8658730158730159
+original	WorkflowReplicates	author_top12	well_resolved	11	864	0.890909090909091	0.9861111111111112
+simplified	TechnicalReplicates	all_eligible	primary	759	48839	0.7486006308140696	0.747435451176314
+simplified	TechnicalReplicates	all_eligible	well_resolved	694	31383	0.786896964706763	0.8387024822356053
+simplified	TechnicalReplicates	author_top12	primary	12	792	0.6969696969696969	0.696969696969697
+simplified	TechnicalReplicates	author_top12	well_resolved	9	431	0.7367724867724869	0.951276102088167
+simplified	WorkflowReplicates	all_eligible	primary	768	76433	0.7103210591491842	0.7086075386286028
+simplified	WorkflowReplicates	all_eligible	well_resolved	719	48813	0.7507875681728255	0.7989060291315838
+simplified	WorkflowReplicates	author_top12	primary	12	1260	0.688888888888889	0.6888888888888889
+simplified	WorkflowReplicates	author_top12	well_resolved	10	515	0.7777777777777778	0.9689320388349516

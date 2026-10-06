@@ -1,0 +1,46 @@
+{
+  "unit": "SFig07",
+  "upstream": [
+    {
+      "id": "healthy_stool_common_fasta",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A21_7_hstool_quant_comparison/frozen/search_revision2.py",
+        "LAB_ROOT/MM_review_analysis/A21_7_hstool_quant_comparison/frozen/compare_revision2.py",
+        "LAB_ROOT/MM_review_analysis/A21_7_hstool_quant_comparison/frozen/leaders_revision2.py",
+        "LAB_ROOT/MM_review_analysis/A21_7_hstool_quant_comparison/jobs/"
+      ],
+      "uses": "results/identity_comparison.tsv (panel a study-level, repeat and common-FASTA columns); results/leaders/technical_agreement_summary.tsv (line 769 leading-species agreement); the gated feature and protein-group matrices and accepted identities that A22 reads",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_joint_search_q",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration2/joint_search/code/extract_fileq.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration2/joint_search/code/compare_fileq.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration2/joint_search/slurm/"
+      ],
+      "uses": "out/compare/identity_per_acquisition.tsv (panel a acquisition-q column, line 115), identity_summary.tsv and completeness_all.tsv (line 115), microbial_group_pairs.tsv and microbial_group_pair_summary.tsv (panels c, d, line 769)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "clinical_common_fasta",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/clinical_quant_review/code/summarize_v2.py",
+        "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/clinical_quant_review/jobs/"
+      ],
+      "uses": "PREDICT/per_participant.tsv and CAPSCAN/per_participant.tsv, concatenated and pseudonymised as source_data/SFig07/common_search_participants.tsv (panel b)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_clinical_length_recount_9_50",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/len950/SFig07/work/hstool_recount.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/len950/SFig07/work/clin_recount.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/len950/SFig07/work/clin.sbatch",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/len950/SFig07/build_sfig07_len950.py"
+      ],
+      "uses": "9-50-residue recount of the accepted identities: identity_per_acquisition.tsv, identity_summary_by_length.tsv, completeness_by_length.tsv (panel a, Results, Methods) and the peptide columns of common_search_participants.tsv (panel b, Methods)",
+      "pipeline_dir": null
+    }
+  ]
+}

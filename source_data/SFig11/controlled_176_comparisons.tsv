@@ -1,0 +1,177 @@
+cohort	features	distance	adjustment	outer_correlation	layer_a	layer_b	coefficient	p	p_positive_tail	n_profiles	n_participants	q
+PREDICT	all_observed	hellinger	unadjusted	pearson	DNA	RNA	0.40719372243081187	0.0005	0.0005	77	77	0.0008333333333333334
+PREDICT	all_observed	hellinger	unadjusted	pearson	DNA	Non-host protein	0.4263706575642458	0.0005	0.0005	77	77	0.0008333333333333334
+PREDICT	all_observed	hellinger	unadjusted	pearson	DNA	Host protein	0.032350636720334246	0.6745	0.331	77	77	0.6745
+PREDICT	all_observed	hellinger	unadjusted	pearson	DNA	Metabolites	0.22734419636961814	0.0015	0.0015	77	77	0.002142857142857143
+PREDICT	all_observed	hellinger	unadjusted	pearson	RNA	Non-host protein	0.2920634086957576	0.0005	0.0005	77	77	0.0008333333333333334
+PREDICT	all_observed	hellinger	unadjusted	pearson	RNA	Host protein	0.13545942052156923	0.013	0.0075	77	77	0.014444444444444446
+PREDICT	all_observed	hellinger	unadjusted	pearson	RNA	Metabolites	0.21779406424310857	0.0005	0.0005	77	77	0.0008333333333333334
+PREDICT	all_observed	hellinger	unadjusted	pearson	Non-host protein	Host protein	0.4718643343211236	0.0005	0.0005	77	77	0.0008333333333333334
+PREDICT	all_observed	hellinger	unadjusted	pearson	Non-host protein	Metabolites	0.44006475098675607	0.0005	0.0005	77	77	0.0008333333333333334
+PREDICT	all_observed	hellinger	unadjusted	pearson	Host protein	Metabolites	0.24204619210249698	0.0035	0.0035	77	77	0.004375
+PREDICT	all_observed	hellinger	unadjusted	spearman	DNA	RNA	0.5746345606514992	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	hellinger	unadjusted	spearman	DNA	Non-host protein	0.44057950404955604	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	hellinger	unadjusted	spearman	DNA	Host protein	0.0382164858319714	0.585	0.2975	77	77	0.585
+PREDICT	all_observed	hellinger	unadjusted	spearman	DNA	Metabolites	0.2559079436737539	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	hellinger	unadjusted	spearman	RNA	Non-host protein	0.4453703497157367	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	hellinger	unadjusted	spearman	RNA	Host protein	0.2035490567488482	0.0035	0.0025	77	77	0.003888888888888889
+PREDICT	all_observed	hellinger	unadjusted	spearman	RNA	Metabolites	0.2960662473603693	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	hellinger	unadjusted	spearman	Non-host protein	Host protein	0.44521713878518954	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	hellinger	unadjusted	spearman	Non-host protein	Metabolites	0.43656068743800036	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	hellinger	unadjusted	spearman	Host protein	Metabolites	0.2642400250448728	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	pearson	DNA	RNA	0.8855498078225578	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	pearson	DNA	Non-host protein	0.4785824833039625	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	pearson	DNA	Host protein	0.15377157576868342	0.044	0.024	77	77	0.048888888888888885
+PREDICT	all_observed	rank	unadjusted	pearson	DNA	Metabolites	0.13820608767699688	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	pearson	RNA	Non-host protein	0.4506811570503738	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	pearson	RNA	Host protein	0.11200874534741077	0.1085	0.056	77	77	0.1085
+PREDICT	all_observed	rank	unadjusted	pearson	RNA	Metabolites	0.20511772205642956	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	pearson	Non-host protein	Host protein	0.3410740246272669	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	pearson	Non-host protein	Metabolites	0.22101124504503628	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	pearson	Host protein	Metabolites	0.12197855840096054	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	spearman	DNA	RNA	0.8802754296512951	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	spearman	DNA	Non-host protein	0.4865292732669065	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	spearman	DNA	Host protein	0.13424543725084967	0.058	0.0265	77	77	0.06444444444444446
+PREDICT	all_observed	rank	unadjusted	spearman	DNA	Metabolites	0.13856223961127492	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	spearman	RNA	Non-host protein	0.46083009085688326	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	spearman	RNA	Host protein	0.09409171591898655	0.157	0.082	77	77	0.157
+PREDICT	all_observed	rank	unadjusted	spearman	RNA	Metabolites	0.19817768718853002	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	spearman	Non-host protein	Host protein	0.3163899841849242	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	spearman	Non-host protein	Metabolites	0.23235052015157384	0.0005	0.0005	77	77	0.000625
+PREDICT	all_observed	rank	unadjusted	spearman	Host protein	Metabolites	0.13166988275182406	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	hellinger	unadjusted	pearson	DNA	RNA	0.6526228943009167	0.0005	0.0005	77	77	0.0007142857142857143
+PREDICT	prevalence10	hellinger	unadjusted	pearson	DNA	Non-host protein	0.45611475743630725	0.0005	0.0005	77	77	0.0007142857142857143
+PREDICT	prevalence10	hellinger	unadjusted	pearson	DNA	Host protein	-0.016442744008336774	0.821	0.574	77	77	0.821
+PREDICT	prevalence10	hellinger	unadjusted	pearson	DNA	Metabolites	0.30293940719103085	0.0005	0.0005	77	77	0.0007142857142857143
+PREDICT	prevalence10	hellinger	unadjusted	pearson	RNA	Non-host protein	0.39064264326151055	0.0005	0.0005	77	77	0.0007142857142857143
+PREDICT	prevalence10	hellinger	unadjusted	pearson	RNA	Host protein	0.12855913018698642	0.0285	0.0205	77	77	0.03166666666666667
+PREDICT	prevalence10	hellinger	unadjusted	pearson	RNA	Metabolites	0.31683392552201706	0.0005	0.0005	77	77	0.0007142857142857143
+PREDICT	prevalence10	hellinger	unadjusted	pearson	Non-host protein	Host protein	0.47105359127816515	0.0005	0.0005	77	77	0.0007142857142857143
+PREDICT	prevalence10	hellinger	unadjusted	pearson	Non-host protein	Metabolites	0.43568599012225584	0.0005	0.0005	77	77	0.0007142857142857143
+PREDICT	prevalence10	hellinger	unadjusted	pearson	Host protein	Metabolites	0.23798542983753718	0.004	0.004	77	77	0.005
+PREDICT	prevalence10	hellinger	unadjusted	spearman	DNA	RNA	0.6623366362657533	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	hellinger	unadjusted	spearman	DNA	Non-host protein	0.4490870844342156	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	hellinger	unadjusted	spearman	DNA	Host protein	0.0001963033160774691	0.998	0.488	77	77	0.998
+PREDICT	prevalence10	hellinger	unadjusted	spearman	DNA	Metabolites	0.3119671860095862	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	hellinger	unadjusted	spearman	RNA	Non-host protein	0.4076298388585085	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	hellinger	unadjusted	spearman	RNA	Host protein	0.14731006548818934	0.011	0.0085	77	77	0.012222222222222221
+PREDICT	prevalence10	hellinger	unadjusted	spearman	RNA	Metabolites	0.33458501172524874	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	hellinger	unadjusted	spearman	Non-host protein	Host protein	0.43653732154838015	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	hellinger	unadjusted	spearman	Non-host protein	Metabolites	0.428674177074731	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	hellinger	unadjusted	spearman	Host protein	Metabolites	0.2609848885582976	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	pearson	DNA	RNA	0.8889751467956961	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	pearson	DNA	Non-host protein	0.45845162516279614	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	pearson	DNA	Host protein	0.08703358301096847	0.037	0.0265	77	77	0.04111111111111111
+PREDICT	prevalence10	rank	unadjusted	pearson	DNA	Metabolites	0.19271748105824058	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	pearson	RNA	Non-host protein	0.40983195223213914	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	pearson	RNA	Host protein	0.07576382575273097	0.0495	0.032	77	77	0.0495
+PREDICT	prevalence10	rank	unadjusted	pearson	RNA	Metabolites	0.22306671937138195	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	pearson	Non-host protein	Host protein	0.2925538633649911	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	pearson	Non-host protein	Metabolites	0.24775254068266903	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	pearson	Host protein	Metabolites	0.1446672176520204	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	spearman	DNA	RNA	0.8805873406617839	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	spearman	DNA	Non-host protein	0.4757891975262015	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	spearman	DNA	Host protein	0.08498735831625623	0.0395	0.024	77	77	0.0395
+PREDICT	prevalence10	rank	unadjusted	spearman	DNA	Metabolites	0.19036568775298932	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	spearman	RNA	Non-host protein	0.42887151676175844	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	spearman	RNA	Host protein	0.08925395356985096	0.0295	0.02	77	77	0.032777777777777774
+PREDICT	prevalence10	rank	unadjusted	spearman	RNA	Metabolites	0.21394434981402066	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	spearman	Non-host protein	Host protein	0.29160377775773455	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	spearman	Non-host protein	Metabolites	0.262316472180353	0.0005	0.0005	77	77	0.000625
+PREDICT	prevalence10	rank	unadjusted	spearman	Host protein	Metabolites	0.14796279524094963	0.0005	0.0005	77	77	0.000625
+CAPSCAN	all_observed	hellinger	unadjusted	pearson	DNA	Non-host protein	0.5550148052462589	0.0005	0.0005	65	13	0.00075
+CAPSCAN	all_observed	hellinger	unadjusted	pearson	DNA	Host protein	0.2900596159583251	0.017	0.017	65	13	0.017
+CAPSCAN	all_observed	hellinger	unadjusted	pearson	DNA	Metabolites	0.2668167580177142	0.0015	0.0015	65	13	0.0018
+CAPSCAN	all_observed	hellinger	unadjusted	pearson	Non-host protein	Host protein	0.5727571477875162	0.0005	0.0005	65	13	0.00075
+CAPSCAN	all_observed	hellinger	unadjusted	pearson	Non-host protein	Metabolites	0.3925486435726368	0.0005	0.0005	65	13	0.00075
+CAPSCAN	all_observed	hellinger	unadjusted	pearson	Host protein	Metabolites	0.6345246670204296	0.0005	0.0005	65	13	0.00075
+CAPSCAN	all_observed	hellinger	unadjusted	spearman	DNA	Non-host protein	0.5588834079583719	0.0005	0.0005	65	13	0.0006
+CAPSCAN	all_observed	hellinger	unadjusted	spearman	DNA	Host protein	0.3460826441965318	0.0005	0.0005	65	13	0.0006
+CAPSCAN	all_observed	hellinger	unadjusted	spearman	DNA	Metabolites	0.2872322695724906	0.0025	0.0025	65	13	0.0025
+CAPSCAN	all_observed	hellinger	unadjusted	spearman	Non-host protein	Host protein	0.5500032803973216	0.0005	0.0005	65	13	0.0006
+CAPSCAN	all_observed	hellinger	unadjusted	spearman	Non-host protein	Metabolites	0.3702985945657738	0.0005	0.0005	65	13	0.0006
+CAPSCAN	all_observed	hellinger	unadjusted	spearman	Host protein	Metabolites	0.634561388742071	0.0005	0.0005	65	13	0.0006
+CAPSCAN	all_observed	hellinger	region_adjusted	pearson	DNA	Non-host protein	0.5983517299158541	0.0005	0.0005	65	13	0.001
+CAPSCAN	all_observed	hellinger	region_adjusted	pearson	DNA	Host protein	0.3678719767657503	0.0125	0.0125	65	13	0.0125
+CAPSCAN	all_observed	hellinger	region_adjusted	pearson	DNA	Metabolites	0.359370556432799	0.003	0.003	65	13	0.0036
+CAPSCAN	all_observed	hellinger	region_adjusted	pearson	Non-host protein	Host protein	0.5883374735698242	0.0005	0.0005	65	13	0.001
+CAPSCAN	all_observed	hellinger	region_adjusted	pearson	Non-host protein	Metabolites	0.4372217231008253	0.001	0.001	65	13	0.0015
+CAPSCAN	all_observed	hellinger	region_adjusted	pearson	Host protein	Metabolites	0.5579719154796653	0.0005	0.0005	65	13	0.001
+CAPSCAN	all_observed	hellinger	region_adjusted	spearman	DNA	Non-host protein	0.5118636969309722	0.0005	0.0005	65	13	0.00075
+CAPSCAN	all_observed	hellinger	region_adjusted	spearman	DNA	Host protein	0.3482001366672198	0.002	0.002	65	13	0.0024
+CAPSCAN	all_observed	hellinger	region_adjusted	spearman	DNA	Metabolites	0.2677099970348409	0.007	0.007	65	13	0.007
+CAPSCAN	all_observed	hellinger	region_adjusted	spearman	Non-host protein	Host protein	0.5481675873915182	0.0005	0.0005	65	13	0.00075
+CAPSCAN	all_observed	hellinger	region_adjusted	spearman	Non-host protein	Metabolites	0.3821212611938224	0.0005	0.0005	65	13	0.00075
+CAPSCAN	all_observed	hellinger	region_adjusted	spearman	Host protein	Metabolites	0.5230640001783682	0.0005	0.0005	65	13	0.00075
+CAPSCAN	all_observed	rank	unadjusted	pearson	DNA	Non-host protein	0.4807439594811421	0.006	0.006	65	13	0.009
+CAPSCAN	all_observed	rank	unadjusted	pearson	DNA	Host protein	0.1969650607974982	0.1185	0.1185	65	13	0.1185
+CAPSCAN	all_observed	rank	unadjusted	pearson	DNA	Metabolites	0.2701890595910131	0.001	0.001	65	13	0.002
+CAPSCAN	all_observed	rank	unadjusted	pearson	Non-host protein	Host protein	0.5974364598816966	0.0005	0.0005	65	13	0.0015
+CAPSCAN	all_observed	rank	unadjusted	pearson	Non-host protein	Metabolites	0.3165395983545765	0.0005	0.0005	65	13	0.0015
+CAPSCAN	all_observed	rank	unadjusted	pearson	Host protein	Metabolites	0.2488376938284338	0.106	0.106	65	13	0.1185
+CAPSCAN	all_observed	rank	unadjusted	spearman	DNA	Non-host protein	0.4120832341879915	0.0015	0.0015	65	13	0.003
+CAPSCAN	all_observed	rank	unadjusted	spearman	DNA	Host protein	0.3359208440659665	0.0145	0.0145	65	13	0.0174
+CAPSCAN	all_observed	rank	unadjusted	spearman	DNA	Metabolites	0.2509815228820514	0.005	0.005	65	13	0.0075
+CAPSCAN	all_observed	rank	unadjusted	spearman	Non-host protein	Host protein	0.5231846067862407	0.0005	0.0005	65	13	0.0015
+CAPSCAN	all_observed	rank	unadjusted	spearman	Non-host protein	Metabolites	0.2608729195946879	0.0005	0.0005	65	13	0.0015
+CAPSCAN	all_observed	rank	unadjusted	spearman	Host protein	Metabolites	0.3313433523068314	0.1355	0.1355	65	13	0.1355
+CAPSCAN	all_observed	rank	region_adjusted	pearson	DNA	Non-host protein	0.5013801592593399	0.0005	0.0005	65	13	0.0015
+CAPSCAN	all_observed	rank	region_adjusted	pearson	DNA	Host protein	0.226985250040225	0.016	0.016	65	13	0.024
+CAPSCAN	all_observed	rank	region_adjusted	pearson	DNA	Metabolites	0.2619447966968308	0.1555	0.1555	65	13	0.1866
+CAPSCAN	all_observed	rank	region_adjusted	pearson	Non-host protein	Host protein	0.6024407475005378	0.0005	0.0005	65	13	0.0015
+CAPSCAN	all_observed	rank	region_adjusted	pearson	Non-host protein	Metabolites	0.3638868857480016	0.01	0.01	65	13	0.02
+CAPSCAN	all_observed	rank	region_adjusted	pearson	Host protein	Metabolites	0.1103295043962386	0.411	0.411	65	13	0.411
+CAPSCAN	all_observed	rank	region_adjusted	spearman	DNA	Non-host protein	0.4436940362216671	0.0005	0.0005	65	13	0.0015
+CAPSCAN	all_observed	rank	region_adjusted	spearman	DNA	Host protein	0.3142471109434108	0.006	0.006	65	13	0.012
+CAPSCAN	all_observed	rank	region_adjusted	spearman	DNA	Metabolites	0.159083200157203	0.2735	0.2735	65	13	0.3282
+CAPSCAN	all_observed	rank	region_adjusted	spearman	Non-host protein	Host protein	0.5413780450421488	0.0005	0.0005	65	13	0.0015
+CAPSCAN	all_observed	rank	region_adjusted	spearman	Non-host protein	Metabolites	0.3256975524875573	0.036	0.036	65	13	0.0539999999999999
+CAPSCAN	all_observed	rank	region_adjusted	spearman	Host protein	Metabolites	0.1239547747356492	0.4835	0.4835	65	13	0.4835
+CAPSCAN	prevalence10	hellinger	unadjusted	pearson	DNA	Non-host protein	0.6116291996199038	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	hellinger	unadjusted	pearson	DNA	Host protein	0.2924434826857213	0.0075	0.0075	65	13	0.0075
+CAPSCAN	prevalence10	hellinger	unadjusted	pearson	DNA	Metabolites	0.2495770990268938	0.002	0.002	65	13	0.0024
+CAPSCAN	prevalence10	hellinger	unadjusted	pearson	Non-host protein	Host protein	0.5416767239320639	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	hellinger	unadjusted	pearson	Non-host protein	Metabolites	0.380145467409989	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	hellinger	unadjusted	pearson	Host protein	Metabolites	0.6366260160999846	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	hellinger	unadjusted	spearman	DNA	Non-host protein	0.5490093466787364	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	hellinger	unadjusted	spearman	DNA	Host protein	0.2590452275579618	0.002	0.002	65	13	0.002
+CAPSCAN	prevalence10	hellinger	unadjusted	spearman	DNA	Metabolites	0.1972622257341142	0.002	0.002	65	13	0.002
+CAPSCAN	prevalence10	hellinger	unadjusted	spearman	Non-host protein	Host protein	0.5232347101880979	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	hellinger	unadjusted	spearman	Non-host protein	Metabolites	0.3555385721651939	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	hellinger	unadjusted	spearman	Host protein	Metabolites	0.6358045339784888	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	hellinger	region_adjusted	pearson	DNA	Non-host protein	0.6556921670908549	0.0005	0.0005	65	13	0.001
+CAPSCAN	prevalence10	hellinger	region_adjusted	pearson	DNA	Host protein	0.3763522136658511	0.014	0.014	65	13	0.014
+CAPSCAN	prevalence10	hellinger	region_adjusted	pearson	DNA	Metabolites	0.34460537065897	0.0015	0.0015	65	13	0.0018
+CAPSCAN	prevalence10	hellinger	region_adjusted	pearson	Non-host protein	Host protein	0.5533788815216213	0.0005	0.0005	65	13	0.001
+CAPSCAN	prevalence10	hellinger	region_adjusted	pearson	Non-host protein	Metabolites	0.4269628321475515	0.001	0.001	65	13	0.0015
+CAPSCAN	prevalence10	hellinger	region_adjusted	pearson	Host protein	Metabolites	0.5508862069672751	0.0005	0.0005	65	13	0.001
+CAPSCAN	prevalence10	hellinger	region_adjusted	spearman	DNA	Non-host protein	0.5779273198903184	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	hellinger	region_adjusted	spearman	DNA	Host protein	0.3166249709498147	0.0085	0.0085	65	13	0.0085
+CAPSCAN	prevalence10	hellinger	region_adjusted	spearman	DNA	Metabolites	0.2515283131092838	0.002	0.002	65	13	0.0024
+CAPSCAN	prevalence10	hellinger	region_adjusted	spearman	Non-host protein	Host protein	0.5250225187274683	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	hellinger	region_adjusted	spearman	Non-host protein	Metabolites	0.3716805272787973	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	hellinger	region_adjusted	spearman	Host protein	Metabolites	0.5170251300837558	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	unadjusted	pearson	DNA	Non-host protein	0.5811432172439757	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	unadjusted	pearson	DNA	Host protein	0.2355399085680843	0.0585	0.0585	65	13	0.0702
+CAPSCAN	prevalence10	rank	unadjusted	pearson	DNA	Metabolites	0.3071225509563544	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	unadjusted	pearson	Non-host protein	Host protein	0.5214338593189122	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	unadjusted	pearson	Non-host protein	Metabolites	0.3858887334794064	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	unadjusted	pearson	Host protein	Metabolites	0.3911861913760044	0.201	0.201	65	13	0.2009999999999999
+CAPSCAN	prevalence10	rank	unadjusted	spearman	DNA	Non-host protein	0.4066835081731765	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	unadjusted	spearman	DNA	Host protein	0.1755196896114724	0.1015	0.1015	65	13	0.1217999999999999
+CAPSCAN	prevalence10	rank	unadjusted	spearman	DNA	Metabolites	0.2421688848286637	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	unadjusted	spearman	Non-host protein	Host protein	0.5011019161307484	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	unadjusted	spearman	Non-host protein	Metabolites	0.3196420537122123	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	unadjusted	spearman	Host protein	Metabolites	0.395791983658394	0.4265	0.4265	65	13	0.4265
+CAPSCAN	prevalence10	rank	region_adjusted	pearson	DNA	Non-host protein	0.6274258877189736	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	region_adjusted	pearson	DNA	Host protein	0.2950641616203474	0.1625	0.1625	65	13	0.195
+CAPSCAN	prevalence10	rank	region_adjusted	pearson	DNA	Metabolites	0.4349943101704412	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	region_adjusted	pearson	Non-host protein	Host protein	0.5689648066595285	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	region_adjusted	pearson	Non-host protein	Metabolites	0.4603683421944446	0.0005	0.0005	65	13	0.00075
+CAPSCAN	prevalence10	rank	region_adjusted	pearson	Host protein	Metabolites	0.1473234545698453	0.331	0.331	65	13	0.331
+CAPSCAN	prevalence10	rank	region_adjusted	spearman	DNA	Non-host protein	0.4968420175051602	0.0005	0.0005	65	13	0.001
+CAPSCAN	prevalence10	rank	region_adjusted	spearman	DNA	Host protein	0.2446794715775974	0.13	0.13	65	13	0.156
+CAPSCAN	prevalence10	rank	region_adjusted	spearman	DNA	Metabolites	0.4224564545924469	0.0005	0.0005	65	13	0.001
+CAPSCAN	prevalence10	rank	region_adjusted	spearman	Non-host protein	Host protein	0.5552607585164048	0.0005	0.0005	65	13	0.001
+CAPSCAN	prevalence10	rank	region_adjusted	spearman	Non-host protein	Metabolites	0.4337028367542543	0.001	0.001	65	13	0.0015
+CAPSCAN	prevalence10	rank	region_adjusted	spearman	Host protein	Metabolites	0.1725372563791593	0.24	0.24	65	13	0.24

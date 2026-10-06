@@ -1,0 +1,5 @@
+cohort	n_acquisitions	n_participants	n_specimens	n_acquisitions_without_participant	n_acquisitions_without_specimen
+HSTOOL	58	0	0	58	58
+CAMPI_MOCK	15	0	0	15	15
+PREDICT	306	93	304	4	0
+CAPSCAN	347	15	308	0	0

@@ -1,0 +1,45 @@
+{
+  "unit": "Fig3",
+  "upstream": [
+    {
+      "id": "healthy_stool_database_transfer",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A15_4_4_transfer_pool/frozen/digest.py",
+        "LAB_ROOT/MM_review_analysis/A15_4_4_transfer_pool/frozen/lib.py",
+        "LAB_ROOT/MM_review_analysis/A15_4_4_transfer_pool/frozen/parameters.py",
+        "LAB_ROOT/MM_review_analysis/A15_4_4_transfer_pool/frozen/peptide.py",
+        "LAB_ROOT/MM_review_analysis/A15_4_4_transfer_pool/frozen/report.py",
+        "LAB_ROOT/MM_review_analysis/A15_4_4_transfer_pool/frozen/search.py",
+        "LAB_ROOT/MM_review_analysis/A15_4_4_transfer_pool/jobs/",
+        "LAB_ROOT/MM_review_analysis/code/setup_transfer_pool.py"
+      ],
+      "uses": "results/all_comparisons.tsv (source_data/Fig3/transfer_pool_comparisons.tsv): panels b-e, Results lines 99 and 103, legend line 107, Methods line 739. 70 audited target experiments (58 transfer, 12 pool) over 210 saved Sage searches; aggregation Slurm job 5928359.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "peptide_centric_downstream",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/revised/derive_hstool_pc.py",
+        "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/revised/hstool_pc.py",
+        "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/revised/common_pepcentric.py",
+        "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/jobs/hstool.sbatch"
+      ],
+      "uses": "results/HSTOOL__simplified/source_data/Figure3/pyramid_pairwise_local_candidate.tsv and design.tsv (source_data/Fig3/protein_group_pairwise.tsv, design.tsv): panel f protein-group row and Results line 109 (protein groups). Slurm job 5974246.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_ko_precision_refit",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/hstool_precision.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/run_hstool_precision.sh",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/profiles.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/scripts/run_downstream.sh",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/scripts/make_shadow.sh",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/scripts/prep_native.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/scripts/verify_shard.py"
+      ],
+      "uses": "iteration1/fix_eggnog_native/downstream/verified50/hstool_precision_refit/pairwise_native_features.tsv (source_data/Fig3/ko_pairwise.tsv): panel f KO row, Results line 109 (KO r 0.90 and 0.81, KO above microbial protein groups), Methods line 747. Slurm job 6048365 (mode refit).",
+      "pipeline_dir": null
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "unit": "Fig5",
+  "upstream": [
+    {
+      "id": "capscan_participant_roster",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/scripts/build_fixed_roster.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/scripts/make_design347.py"],
+      "uses": "design_347.tsv (347 acquisitions, participant, region, specimen): panel a counts and the roster of every statistic",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_functional_profiles",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5/jobs/stage.sh", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5/mc/profiles.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/scripts/capscan_fig5bcd.py"],
+      "uses": "taxonomy_signal.tsv and OG_other_unresolved.npz (grouping, evidence, annotation repair, consensus, profiles); the statistics step capscan_fig5bcd.py is ported into panels.py (stat_b_region_tests, stat_cd_profiles); panels b, c, d",
+      "pipeline_dir": null
+    },
+    {
+      "id": "peptide_centric_downstream",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5e_f/scripts/fig5ef_run.py", "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/render/make_leader_tables.py", "LAB_ROOT/MM_review_analysis/A33_4_6_peptide_centric_downstream_2026-09-19/frozen/collector.py"],
+      "uses": "347-acquisition rerun (run347): mosaic_donor_regions.tsv, mosaic_abundance.tsv, participant_leaders_*.tsv, contributor_cells.tsv, function_species.npz; panels e, f and the 29.1% and evenness text statistics",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_crossomics",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5g/build_groups_capscan.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig5g/crossomics_capscan.py"],
+      "uses": "native_correlations.tsv, functional_correlations.tsv and the distance matrices (native_distances.npz, functional_distances.npz); the correlation and permutation step is ported into panels.py (stat_g_native, stat_g_functional); panel g",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_dominance_evenness",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C4_dominance_evenness_347/dominance_evenness_347.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C4_dominance_evenness/dominance_evenness.py"],
+      "uses": "per-acquisition leading-species share and Pielou evenness and the paired Wilcoxon tests; fully ported into panels.py (stat_evenness_per_acquisition, stat_evenness); text statistic on v28d line 159",
+      "pipeline_dir": null
+    }
+  ]
+}

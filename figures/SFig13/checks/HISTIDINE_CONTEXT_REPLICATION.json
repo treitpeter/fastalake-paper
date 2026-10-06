@@ -1,0 +1,25 @@
+{
+ "new": "build/SFig13/HISTIDINE_CONTEXT_REPLICATION.pdf",
+ "new_sha256": "79cac44f971a0cf7d3e958407ee1418c27df274d0bf8c3ba6a2c5e24ca8be7ad",
+ "expected": "figures/SFig13/expected/HISTIDINE_CONTEXT_REPLICATION.pdf",
+ "expected_sha256": "5e1983adc9aa79c778d14111a28634db8993eeb6e67e448b06f8a54bbedf1972",
+ "dpi": 300,
+ "page": 0,
+ "tolerance": 0,
+ "max_fraction": 0.0,
+ "new_size_px": [
+  2130,
+  3240
+ ],
+ "expected_size_px": [
+  2130,
+  3240
+ ],
+ "differing_pixels": 0,
+ "differing_fraction": 0.0,
+ "max_channel_difference": 0,
+ "diff_bbox_px": null,
+ "verdict": "IDENTICAL",
+ "passed": true,
+ "diff_png": "figures/SFig13/checks/HISTIDINE_CONTEXT_REPLICATION.diff.png"
+}

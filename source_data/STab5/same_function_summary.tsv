@@ -1,0 +1,10 @@
+level	layer_a	layer_b	features	median_rho	significant
+KO	metaG	metaT	3995	0.35188495714811496	2816
+KO	metaG	microbial_metaP	4784	0.041213807529596996	163
+KO	metaT	microbial_metaP	3814	0.04801174058140002	101
+OG	metaG	metaT	5796	0.3591143634487288	3954
+OG	metaG	microbial_metaP	6891	0.02895558223289316	138
+OG	metaT	microbial_metaP	4523	0.046053156676510505	79
+Pathway	metaG	metaT	249	0.23986539776013455	115
+Pathway	metaG	microbial_metaP	280	0.04933224670066775	9
+Pathway	metaT	microbial_metaP	249	0.08357432041642567	18

@@ -1,0 +1,9 @@
+source	rule	donor_balanced_agreement	pooled_cell_agreement	n_pairs	n_kos	n_donors	n_donor_regions
+A33_CAPSCAN__simplified	primary	0.4642546916329172	0.4684235843870258	58208	1442	15	60
+A33_CAPSCAN__simplified	strict_pair_filter	0.5756969912129997	0.5827933325182377	24537	1264	15	60
+A33_CAPSCAN__simplified	strict_donor_cell_eligibility	0.6298549693567558	0.6401482299140582	12683	380	15	60
+A33_CAPSCAN__simplified	strict_paired_donor_eligibility	0.6151830796332842	0.6270799347471452	9195	215	15	60
+A33_CAPSCAN__original	primary	0.4251151465557353	0.4299828994869846	52630	1360	15	60
+A33_CAPSCAN__original	strict_pair_filter	0.5554350065468132	0.5638263442600213	21629	1179	15	60
+A33_CAPSCAN__original	strict_donor_cell_eligibility	0.6108029166921809	0.6231276747503567	11216	330	15	60
+A33_CAPSCAN__original	strict_paired_donor_eligibility	0.6262473035496872	0.6420425747592499	7892	179	15	60

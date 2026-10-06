@@ -1,0 +1,11 @@
+# Open items: STab6
+
+- AUTHOR: The table is a 60-receipt snapshot of a run planned for 710 acquisitions (15 CAMPI, 58 HSTOOL, 306 PREDICT, 331 CapScan); 646 receipts are now complete (15 CAMPI, 50 HSTOOL, 292 PREDICT, 289 CapScan), and summed over all 646 at the same filter (q = 0.01, canonical_peptide) the exact route accepts 190 and the bag route 178 observations (mass 144,308, combined 144,564; selected entries 633,851 / 830,163 / 6,696,824 / 6,698,545), so the v28d statements "exact and bag routes each yielded zero" (line 485) and "no accepted peptides through the exact or bag route" (line 561) hold only for the 60-receipt snapshot; Peter decides whether v28f keeps the snapshot (and says it is the first 60 completed receipts) or rebuilds the table on the completed set, which would change both sentences and every number in NUMBERS.tsv (`<work>/tables/STab6/extract_result.json`, Slurm job 6069108; computed for this item only, not used in the table).
+- AUTHOR: The 60 acquisitions are the receipts that existed when `audit_remaining.py` froze the snapshot (completion order, not a designed subset), and the mix is 15 CAMPI, 43 healthy stool, 1 CapScan, 1 PREDICT; neither the legend (line 485) nor the table's Read me sheet states this (README.md, Known limitations).
+- TEXT-GAP: Line 485 states that protein entries are summed across acquisition-seed runs and that counts are not globally distinct sequences, but not that shuffled queries can retrieve real proteins (so accepted control hits are not known false identifications) or that every receipt records workflow FDR as unverified; line 561 says only "comparisons at nominal q" (panels.py README_ROWS, source_data/STab6/null_receipts.tsv).
+- UNTRACED: No Slurm job id or package versions are recorded for the snapshot step (`audit_remaining.py`) or the two packaging steps (`package_release.py`, `package_v15.py`); the outputs are hash-matched instead (PROVENANCE.md).
+- PIPELINE: bag_mass_paired_nulls: the paired-null run code (`run_bag_nulls.py`, `guard.py`, `finish.py`, `submit.py`, `manifest.json`) is not in `pipelines/`; the table is reproduced from the frozen receipts, not from the Sage searches.
+
+## v30 reference (added 2026-10-06)
+
+- none: every row is located in the v30 text and agrees.

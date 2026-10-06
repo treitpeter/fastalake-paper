@@ -1,0 +1,47 @@
+{
+  "unit": "Fig6",
+  "upstream": [
+    {
+      "id": "capscan_participant_roster",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/roster/fixed_roster_347.tsv"],
+      "uses": "fixed 347-acquisition CapScan roster (15 participants) behind every CapScan table; acquisition count in capscan_acquisition_design.tsv",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_nonspecific_search",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A05_4_7_unspecific", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A05", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/scripts/prep_A05_p15.py"],
+      "uses": "Sage non-specific searches (331 original plus 16 participant-15 acquisitions) feeding the non-specific route of panels a-f; not re-run here",
+      "pipeline_dir": null
+    },
+    {
+      "id": "terminal_route_counts",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A20_4_7_terminal_routes", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A20/frozen"],
+      "uses": "per-acquisition terminal counts and peptide-origin labels for the Sage routes (panels a-c); not re-run here",
+      "pipeline_dir": null
+    },
+    {
+      "id": "denovo_threshold_routes",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A26_4_7_denovo_thresholds", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A26/frozen"],
+      "uses": "de novo terminal counts (top-30% route, panel a); not re-run here",
+      "pipeline_dir": null
+    },
+    {
+      "id": "terminal_participant_inference",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A24_4_7_terminal_inference", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A24_fixed347/frozen/search.py"],
+      "uses": "participant-region terminal fractions and residue composition (panels a-c) and the families terminal_fraction__length_9 and all18_nonKR_composition__length_9; the statistics part is moved into panels.stat_terminal_families and re-run",
+      "pipeline_dir": null
+    },
+    {
+      "id": "histidine_boundary_localisation",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A27_4_7_histidine_defence", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A27/frozen"],
+      "uses": "per-acquisition boundary localisation, source expectations and complementary products feeding A28 (panels d-f); not re-run here",
+      "pipeline_dir": null
+    },
+    {
+      "id": "terminal_histidine_inference",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A28_4_7_histidine_inference", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A28_fixed347/frozen/collect_revision4.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/fig6/A28_fixed347/frozen/histidine_helpers.py", "LAB_ROOT/MM_review_analysis/recovery_2026-09-15/cohort_recovery/A28/results_revision4/full_PREDICT", "LAB_ROOT/MM_review_analysis/end_of_day_2026-09-15/code/review_histidine_predict.py"],
+      "uses": "participant- and patient-level histidine source enrichment and complementary-product differences and the families source_P1_all_residues and all_reciprocal_controls (panels d-f); the CapScan statistics and the PREDICT patient statistics are moved into panels.py and re-run",
+      "pipeline_dir": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+ "status": "IDENTICAL",
+ "sheets": [
+  "Read_me",
+  "Endpoints",
+  "Composition"
+ ],
+ "cells_compared": 213,
+ "n_differences": 0,
+ "differences": [],
+ "built": "build/STab3/Supplementary_Table_3.xlsx",
+ "expected": "tables/STab3/expected/Supplementary_Table_3.xlsx"
+}

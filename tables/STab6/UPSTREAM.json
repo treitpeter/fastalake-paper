@@ -1,0 +1,26 @@
+{
+  "unit": "STab6",
+  "upstream": [
+    {
+      "id": "bag_mass_paired_nulls",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/paired_nulls_2026-09-23/runtime/tools/run_bag_nulls.py",
+        "LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/paired_nulls_2026-09-23/guard.py",
+        "LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/paired_nulls_2026-09-23/finish.py",
+        "LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/paired_nulls_2026-09-23/submit.py",
+        "LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/paired_nulls_2026-09-23/manifest.json"
+      ],
+      "uses": "per-acquisition NULL_COMPARISON.json receipts (exact, bag, mass and combined routes, two shuffle seeds), frozen as a 60-receipt snapshot; all sheets of Supplementary Table 6 and v28d lines 485 and 561",
+      "pipeline_dir": null
+    },
+    {
+      "id": "bag_mass_lookup_search",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/prepare.py",
+        "LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/submit.py"
+      ],
+      "uses": "the original combined-route shuffled searches (arms shuffle_1, shuffle_2 in attempt_02) and candidate scans that the paired-null run reuses; the combined-route rows of Supplementary Table 6",
+      "pipeline_dir": null
+    }
+  ]
+}

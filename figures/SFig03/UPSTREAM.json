@@ -1,0 +1,28 @@
+{
+  "unit": "SFig03",
+  "upstream": [
+    {
+      "id": "A14_campi_member_gap",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A14_4_3_campi_gap/frozen/search.py",
+        "LAB_ROOT/MM_review_analysis/A14_4_3_campi_gap/frozen/aggregate.py",
+        "LAB_ROOT/MM_review_analysis/A14_4_3_campi_gap/frozen/lib.py",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/supplements/revision_2026-09-24/build_revision.py"
+      ],
+      "uses": "Per-acquisition peptide membership in the eight reference proteomes for the five Sage arms (CAMPI_membership_*.tsv), and the member-support, per-acquisition member counts and paired reference-recovery tables derived from it (panels a, b, c; v28d lines 83, 417, 685). The Sage searches themselves come from LAB_ROOT/MM_review_analysis/A10_4_3_4_5_identity_recovery. Slurm jobs 5926805, 5926806 (audit), 5927616 (aggregate).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_second_engine",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A07_4_2_second_engine/frozen/search.py",
+        "LAB_ROOT/MM_review_analysis/A07_4_2_second_engine/frozen/collect.py",
+        "LAB_ROOT/MM_review_analysis/A07_4_2_second_engine/frozen/lib.py",
+        "LAB_ROOT/MM_review_analysis/A07_4_2_second_engine/frozen/peptide.py",
+        "LAB_ROOT/MM_review_analysis/A07_4_2_second_engine/frozen/closed_fragger.params"
+      ],
+      "uses": "45 MSFragger 4.1 + Percolator 3.06.5 searches (15 CAMPI acquisitions x FL, REF, MG; Percolator --seed 913): within-engine comparison table (panel d; v28d line 89), between-engine identities (Source Data) and per-search receipts (v28d line 253). Slurm jobs 5921018, 5921084, 5921179 (searches), 5922739 (aggregate).",
+      "pipeline_dir": null
+    }
+  ]
+}

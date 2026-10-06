@@ -1,0 +1,75 @@
+{
+  "unit": "Fig1",
+  "upstream": [
+    {
+      "id": "cohort_database_sizes",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A01_4_1_database_sizes/frozen/audit_v2.py",
+        "LAB_ROOT/MM_review_analysis/A01_4_1_database_sizes/jobs/audit_v2.sbatch",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/fig1bd_n15/code/sizes.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/fig1bd_n15/code/assemble.py"
+      ],
+      "uses": "acquisition_sizes_726.tsv and human_reference.json for panel b and Results line 55",
+      "pipeline_dir": null
+    },
+    {
+      "id": "database_selection_specificity",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/frozen/worker.py",
+        "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/frozen/lib.py",
+        "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/frozen/report.py",
+        "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/composition.cpp",
+        "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/jobs/lookup.sbatch"
+      ],
+      "uses": "length_by_arm.tsv and five_seed_summary.tsv for panel c, Results line 59 and the 36,588 typed in panel a",
+      "pipeline_dir": null
+    },
+    {
+      "id": "cohort_prediction_support",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A09_4_1_prediction_support/frozen/analysis.py",
+        "LAB_ROOT/MM_review_analysis/A09_4_1_prediction_support/frozen/collect.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/fig1bd_n15/code/summarize.py"
+      ],
+      "uses": "acquisition_support_summary_726.tsv for panel d and Results line 63; worked_acquisition_prediction_support.json for the 4,258 of 29,663",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_donor_entrapment",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A11_4_2_control_reconciliation/frozen/analysis.py",
+        "LAB_ROOT/MM_review_analysis/A11_4_2_control_reconciliation/frozen/donor_original.py",
+        "LAB_ROOT/MM_review_analysis/A11_4_2_control_reconciliation/jobs/donor_array.sbatch",
+        "LAB_ROOT/MM_review_analysis/A11_4_2_control_reconciliation/jobs/report.sbatch"
+      ],
+      "uses": "donor_recount.tsv and donor_seed_means.tsv for panel e and Results line 65",
+      "pipeline_dir": null
+    },
+    {
+      "id": "scramble_end_to_end_workflow",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/search_worker.py",
+        "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/submit_search.py",
+        "LAB_ROOT/review/v15_integration/analyses/terminal_scramble/search_manifest.json"
+      ],
+      "uses": "scramble_end_to_end.tsv for panel a (6.67 M, 12,606, 29,663, 5,841, 525, 0) and Results lines 53, 59, 61",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_stage1_lookup",
+      "original_code_paths": [
+        "LAB_ROOT/canonical/publication/chain (stage 02_evidence, fasta_extractor; run of 2026-09-06, Slurm jobs 5872582-5872587)"
+      ],
+      "uses": "stage1_stats.json for panel a (233 M, 18 M) and Results lines 51, 53",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_selection_sweep",
+      "original_code_paths": [
+        "LAB_ROOT/00_PACKAGE_2026-09-17/.../reappraisal_2026-09-24/supplements/revision_2026-09-24/delivery (selection grid of 2026-09-24)"
+      ],
+      "uses": "selection_grid_acquisitions.tsv for the 24,560 queries in panel a and Results line 53",
+      "pipeline_dir": null
+    }
+  ]
+}

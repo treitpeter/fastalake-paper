@@ -1,0 +1,35 @@
+{
+  "unit": "SFig02",
+  "upstream": [
+    {
+      "id": "database_selection_specificity",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/frozen/prepare.py",
+        "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/frozen/worker.py",
+        "LAB_ROOT/MM_review_analysis/A02_4_2_lookup_specificity/frozen/report_figure_v2.py"
+      ],
+      "uses": "five-seed composition-preserving scramble and exact reservoir lookup of one healthy-stool acquisition (Slurm job 5920360): length_by_arm.tsv and query_source_data.tsv, for panels a,b and v28d lines 59 and 665",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_selection_sweep",
+      "original_code_paths": [
+        "LAB_ROOT/canonical/publication/analyses/length_score_sweep_hstool_2026-09-06/src/sweep_tables.py",
+        "LAB_ROOT/canonical/publication/analyses/length_score_sweep_hstool_2026-09-06/src/submit_arm.sh"
+      ],
+      "uses": "19-arm by 58-acquisition selection sweep (workbook SupplementaryTable_selection_sensitivity.xlsx, sheets Per_acquisition and Arm_summary), for panels c,d and v28d line 679",
+      "pipeline_dir": null
+    },
+    {
+      "id": "bag_mass_lookup_search",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/bounded_sweep_2026-09-25/run_bounded.py",
+        "LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/prepare.py",
+        "LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/submit.py",
+        "LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/gain_loss_2026-09-24"
+      ],
+      "uses": "48-acquisition bounded bag and mass-substitution searches (SEARCHES_COMPLETE.json rows and BOUNDS.json histograms) for panel e and v28d lines 67, 561, 579; six-acquisition fragment audit (LOCAL_DIAGNOSTIC_SUMMARY.tsv) for panel f and v28d lines 67, 581",
+      "pipeline_dir": null
+    }
+  ]
+}

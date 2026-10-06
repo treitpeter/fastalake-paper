@@ -1,0 +1,468 @@
+endpoint_kind	route	side	origin	region	finite_participants	participant_ids	source_rows	source_file
+H_source_difference	denovo_score09	C	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	C	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	C	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_score09_eligible	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	C	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	denovo_top30	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	C	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	C	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_semi_bothq	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	C	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	C	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	sage_unspecific_bothq	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	All	colon	8	1;3;4;5;6;8;9;14	8	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	All	duodenum	11	1;3;4;5;6;8;9;10;11;13;15	11	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	All	ileum	8	1;3;4;5;6;8;9;13	8	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	All	jejunum	11	1;4;5;6;7;8;10;11;12;13;14	11	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	All	stool	4	4;8;9;10	4	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	Human	duodenum	8	1;3;4;5;8;9;10;15	8	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	Human	jejunum	5	1;5;7;8;13	5	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	Human	colon	6	3;4;5;8;9;14	6	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	Human	ileum	2	6;9	2	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	Human	stool	1	8	1	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	Microbial	colon	5	1;3;5;6;9	5	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	Microbial	duodenum	8	1;3;4;6;10;11;13;15	8	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	Microbial	ileum	8	1;3;4;5;6;8;9;13	8	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	Microbial	jejunum	8	1;4;5;6;10;11;12;14	8	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	C	Microbial	stool	4	4;8;9;10	4	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	Human	colon	5	1;3;4;5;9	5	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	Human	duodenum	9	1;2;3;5;8;9;10;13;14	9	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	Human	ileum	7	1;4;5;6;9;11;12	7	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	Human	jejunum	7	1;4;5;6;12;13;14	7	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	Human	stool	5	6;8;10;11;15	5	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.5_0.7	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	C	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.7_0.9	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	C	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.95_0.99	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	C	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.99_plus	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	C	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0.9_0.95	N	Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	C	All	colon	1	1	1	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	C	All	jejunum	1	1	1	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	C	Microbial	jejunum	1	1	1	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	All	colon	11	1;4;5;6;8;9;10;11;12;13;15	11	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	All	duodenum	8	1;3;4;5;6;7;11;13	8	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	All	ileum	8	1;4;5;6;7;9;11;12	8	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	All	jejunum	4	1;4;5;6	4	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	All	stool	5	1;9;11;13;14	5	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	Human	duodenum	1	4	1	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	Human	ileum	2	4;5	2	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	Human	jejunum	2	4;5	2	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	Human	colon	1	5	1	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	Microbial	colon	10	1;4;6;8;9;10;11;12;13;15	10	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	Microbial	duodenum	8	1;3;4;5;6;7;11;13	8	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	Microbial	ileum	8	1;4;5;6;7;9;11;12	8	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	Microbial	jejunum	3	1;4;6	3	participant_region_enrichment.tsv
+H_source_difference	score_0_0.5	N	Microbial	stool	4	9;11;13;14	4	participant_region_enrichment.tsv
+complementary_product_difference	denovo_score09		All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_score09		Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	denovo_top30		Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi		Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_semi_bothq		Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific		Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		All	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		All	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		All	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		All	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		All	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		Human	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		Human	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		Human	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		Human	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		Human	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		Microbial	colon	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		Microbial	duodenum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		Microbial	ileum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		Microbial	jejunum	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv
+complementary_product_difference	sage_unspecific_bothq		Microbial	stool	15	1;2;3;4;5;6;7;8;9;10;11;12;13;14;15	15	participant_reciprocal_controls.tsv

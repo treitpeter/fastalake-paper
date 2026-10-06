@@ -1,0 +1,18 @@
+panel	group	n	median	value_pct
+a	HSTOOL	58	85.06863734330975	
+a	PREDICT	306	86.53788053042501	
+a	CAPSCAN	346	86.73116581191913	
+b	Interindividual	740	4.0	
+b	Intra	773	2.7272727272727275	
+b	OnePiece	822	2.0	
+b	Technical	759	1.6666666666666667	
+b	Workflow	768	1.871794871794872	
+c,d	participants	15		
+e	TechnicalReplicates/primary	759		74.86006308140696
+e	TechnicalReplicates/well_resolved	694		78.6896964706763
+e	WorkflowReplicates/primary	768		71.03210591491842
+e	WorkflowReplicates/well_resolved	719		75.07875681728255
+f	primary	1442		46.42546916329172
+f	strict_pair_filter	1264		57.56969912129997
+f	strict_donor_cell_eligibility	380		62.98549693567558
+f	strict_paired_donor_eligibility	215		61.518307963328425

@@ -1,0 +1,2 @@
+- PIPELINE: native_crossomics_profiles: outputs of native.py (expanded 16-participant cohort) not mapped to the '245 runs' statement; confirm which output carries it.
+- PIPELINE: native_crossomics_profiles: the input manifest holds absolute lab paths; a relative copy has to be regenerated at release.

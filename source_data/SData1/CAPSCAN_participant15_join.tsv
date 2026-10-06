@@ -1,0 +1,17 @@
+sample_id	region	region_ordinal	subject_id	how	overview_rows	workbook_Main	workbook_Super	overview_Pellet	workbook_Subject	workbook_Set	workbook_Type	overview_Type	subject_and_type_agree
+20210615_EXPL0_PeTr_SA_T760_1799	jejunum	2	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1637	1961	1961	15	1	Type2	Type2	True
+20210615_EXPL0_PeTr_SA_T760_1800	duodenum	1	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1638	1962	1962	15	2	Type1	Type1	True
+20210615_EXPL0_PeTr_SA_T760_1810	colon	4	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1648	1972	1972	15	4	Type4	Type4	True
+20210615_EXPL0_PeTr_SA_T760_1811	duodenum	1	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1649	1973	1973	15	5	Type1	Type1	True
+20210615_EXPL0_PeTr_SA_T760_1812	jejunum	2	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1650	1974	1974	15	5	Type2	Type2	True
+20210618_EXPL0_PeTr_SA_T760_1801	jejunum	2	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1639	1963	1963	15	2	Type2	Type2	True
+20210618_EXPL0_PeTr_SA_T760_1802	ileum	3	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1640	1964	1964	15	2	Type3	Type3	True
+20210618_EXPL0_PeTr_SA_T760_1803	colon	4	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1641	1965	1965	15	2	Type4	Type4	True
+20210618_EXPL0_PeTr_SA_T760_1813	ileum	3	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1651	1975	1975	15	5	Type3	Type3	True
+20210618_EXPL0_PeTr_SA_T760_1814	colon	4	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1652	1976	1976	15	5	Type4	Type4	True
+20210620_EXPL0_PeTr_SA_T760_1807	colon	4	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1645	1969	1969	15	3	Type4	Type4	True
+20210620_EXPL0_PeTr_SA_T760_1808	duodenum	1	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1646	1970	1970	15	4	Type1	Type1	True
+20210620_EXPL0_PeTr_SA_T760_1809	ileum	3	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1647	1971	1971	15	4	Type3	Type3	True
+20210623_EXPL0_PeTr_SA_T760_1804	duodenum	1	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1642	1966	1966	15	3	Type1	Type1	True
+20210623_EXPL0_PeTr_SA_T760_1805	jejunum	2	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1643	1967	1967	15	3	Type2	Type2	True
+20210623_EXPL0_PeTr_SA_T760_1806	ileum	3	15	bridge_workbook_Pellet_to_Main_to_overview_Main	1	1644	1968	1968	15	3	Type3	Type3	True

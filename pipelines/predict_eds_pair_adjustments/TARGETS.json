@@ -1,0 +1,32 @@
+[
+  {
+    "id": "hydroxytryptophan_TnaA",
+    "metabolite": "C18_F1906",
+    "protein": "K01667",
+    "layer": "KO"
+  },
+  {
+    "id": "trimethyllysine_lysine_degradation",
+    "metabolite": "C18_F1515",
+    "protein": "map00310",
+    "layer": "Pathway"
+  },
+  {
+    "id": "dihydrothymine_consuming",
+    "metabolite": "C18_F0345",
+    "protein": "K01464",
+    "layer": "KO"
+  },
+  {
+    "id": "dihydrothymine_PreT",
+    "metabolite": "C18_F0345",
+    "protein": "K17722",
+    "layer": "KO"
+  },
+  {
+    "id": "hydroxytryptophan_pathway",
+    "metabolite": "C18_F1906",
+    "protein": "map00380",
+    "layer": "Pathway"
+  }
+]

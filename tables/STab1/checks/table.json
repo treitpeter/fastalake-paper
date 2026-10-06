@@ -1,0 +1,31 @@
+{
+  "tsv": {
+    "new_sha256": "4de2e9be55a9ec95587edb24a349803651ccccbce921f3ea1e5b414b0761c085",
+    "expected_sha256": "4de2e9be55a9ec95587edb24a349803651ccccbce921f3ea1e5b414b0761c085",
+    "identical": true
+  },
+  "checks_tsv": {
+    "new_sha256": "77af7022363ba41a7359ddd63622071ec077f03659915f6c3e6ec91e3ad01cce",
+    "expected_sha256": "77af7022363ba41a7359ddd63622071ec077f03659915f6c3e6ec91e3ad01cce",
+    "identical": true
+  },
+  "xlsx": {
+    "sheets": [
+      [
+        "Supplementary_Table_1"
+      ],
+      [
+        "Supplementary_Table_1"
+      ]
+    ],
+    "cells_compared": 2226,
+    "cells_differing": 0,
+    "freeze_panes": [
+      "C2",
+      "C2"
+    ],
+    "identical": true,
+    "expected_sha256": "1bd83133aeca8a1cbe0b56970ad8c8a3e57e3a5b9a9e3a616e9dff39f7bdfd5e"
+  },
+  "result": "IDENTICAL"
+}

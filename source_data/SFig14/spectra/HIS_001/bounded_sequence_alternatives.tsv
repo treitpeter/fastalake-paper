@@ -1,0 +1,2 @@
+peptide	canonical_peptide	change	parents	isotope_errors	calculated_mass	matched_ions	original	at_least_original_matches
+SLFVGVDTLHVH	SLFVGVDTLHVH	same_canonical	sp|Q99895|CTRC_HUMAN	0	1322.6982421875	13	True	True

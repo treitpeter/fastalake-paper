@@ -1,0 +1,12 @@
+sheet	rows	reference_rows	columns	cells	differing	first_difference
+Read_me	9	9	1	9	0	
+All20_features_259_observations	21	21	260	5460	0	
+Fixed_feature_key	21	21	5	105	0	
+Observation_metadata	260	260	8	2080	0	
+85_patient_order	86	86	9	774	0	
+85_patient_raw	21	21	86	1806	0	
+85_patient_z	21	21	86	1806	0	
+Focused_raw	86	86	15	1290	0	
+Focused_features	7	7	6	42	0	
+Focused_pairs	4	4	11	44	0	
+Focused_adjustments	193	193	8	1544	0	

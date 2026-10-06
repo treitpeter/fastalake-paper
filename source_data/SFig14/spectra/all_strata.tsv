@@ -1,0 +1,5 @@
+cohort	compartment	origin	side	status	case_id
+PREDICT	stool	Human	C	SELECTED	HIS_001
+PREDICT	stool	Human	N	SELECTED	HIS_002
+PREDICT	stool	Microbial	C	SELECTED	HIS_003
+PREDICT	stool	Microbial	N	SELECTED	HIS_004

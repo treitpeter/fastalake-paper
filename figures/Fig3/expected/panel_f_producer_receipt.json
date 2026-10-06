@@ -1,0 +1,396 @@
+{
+ "note": "Extract of the producer receipt FIGURE_VALIDATION.json written by build_fig3f_cr003.py (verified50, Slurm job 6048652): the 20 summary records and 10 heatmap matrix hashes. File paths omitted.",
+ "producer_receipt_sha256": "4281dfe6b75eb274daca44e287ea69446a26e50ddf31e0c1b5e9feb1992324ab",
+ "builder_sha256": "65b68dac85e1b69860b491136b3e949c9891ae5178f4d76023099d7d948f8409",
+ "variant": "verified50",
+ "summary_values": [
+  {
+   "space": "groups",
+   "tier": "TechnicalReplicates",
+   "cls": "host",
+   "median_r": 0.9155916647697084,
+   "median_cv": 18.491939406867193,
+   "median_features": 190.0
+  },
+  {
+   "space": "groups",
+   "tier": "TechnicalReplicates",
+   "cls": "microbial",
+   "median_r": 0.8216390692410767,
+   "median_cv": 21.073313105192938,
+   "median_features": 7021.0
+  },
+  {
+   "space": "groups",
+   "tier": "WorkflowReplicates",
+   "cls": "host",
+   "median_r": 0.8786531498023716,
+   "median_cv": 30.538066013723963,
+   "median_features": 170.0
+  },
+  {
+   "space": "groups",
+   "tier": "WorkflowReplicates",
+   "cls": "microbial",
+   "median_r": 0.7473711852412631,
+   "median_cv": 33.55389550319951,
+   "median_features": 6635.0
+  },
+  {
+   "space": "groups",
+   "tier": "OnePiece",
+   "cls": "host",
+   "median_r": 0.8076646711734696,
+   "median_cv": 49.23815173309273,
+   "median_features": 168.0
+  },
+  {
+   "space": "groups",
+   "tier": "OnePiece",
+   "cls": "microbial",
+   "median_r": 0.6115417261191263,
+   "median_cv": 45.23598539395996,
+   "median_features": 6280.0
+  },
+  {
+   "space": "groups",
+   "tier": "Intra",
+   "cls": "host",
+   "median_r": 0.5897293361890689,
+   "median_cv": 47.26348148767134,
+   "median_features": 165.0
+  },
+  {
+   "space": "groups",
+   "tier": "Intra",
+   "cls": "microbial",
+   "median_r": 0.5308042828270279,
+   "median_cv": 48.63716328978768,
+   "median_features": 6139.0
+  },
+  {
+   "space": "groups",
+   "tier": "Interindividual",
+   "cls": "host",
+   "median_r": 0.6720518381348319,
+   "median_cv": 50.89596399261913,
+   "median_features": 159.0
+  },
+  {
+   "space": "groups",
+   "tier": "Interindividual",
+   "cls": "microbial",
+   "median_r": 0.4831057614351533,
+   "median_cv": 52.07203244252325,
+   "median_features": 5007.0
+  },
+  {
+   "space": "KO",
+   "tier": "TechnicalReplicates",
+   "cls": "all",
+   "median_r": 0.8951563068271853,
+   "median_cv": 21.976065545846367,
+   "median_features": 6858.0
+  },
+  {
+   "space": "KO",
+   "tier": "TechnicalReplicates",
+   "cls": "other",
+   "median_r": 0.8922003883978662,
+   "median_cv": 22.097560294831403,
+   "median_features": 6788.5
+  },
+  {
+   "space": "KO",
+   "tier": "WorkflowReplicates",
+   "cls": "all",
+   "median_r": 0.8701300318211205,
+   "median_cv": 35.65362298438293,
+   "median_features": 6203.0
+  },
+  {
+   "space": "KO",
+   "tier": "WorkflowReplicates",
+   "cls": "other",
+   "median_r": 0.8647878101042612,
+   "median_cv": 35.848504309445445,
+   "median_features": 6134.0
+  },
+  {
+   "space": "KO",
+   "tier": "OnePiece",
+   "cls": "all",
+   "median_r": 0.8196770971842994,
+   "median_cv": 53.79368342331855,
+   "median_features": 5585.0
+  },
+  {
+   "space": "KO",
+   "tier": "OnePiece",
+   "cls": "other",
+   "median_r": 0.8136615093002931,
+   "median_cv": 54.72427002100459,
+   "median_features": 5496.0
+  },
+  {
+   "space": "KO",
+   "tier": "Intra",
+   "cls": "all",
+   "median_r": 0.7806696997054086,
+   "median_cv": 49.37694330817392,
+   "median_features": 5405.0
+  },
+  {
+   "space": "KO",
+   "tier": "Intra",
+   "cls": "other",
+   "median_r": 0.7758386663278649,
+   "median_cv": 49.73910322288831,
+   "median_features": 5338.0
+  },
+  {
+   "space": "KO",
+   "tier": "Interindividual",
+   "cls": "all",
+   "median_r": 0.8099346902420237,
+   "median_cv": 42.93300514369606,
+   "median_features": 6643.0
+  },
+  {
+   "space": "KO",
+   "tier": "Interindividual",
+   "cls": "other",
+   "median_r": 0.8084059686533773,
+   "median_cv": 42.48211312471676,
+   "median_features": 6577.0
+  }
+ ],
+ "heatmap_matrices": [
+  {
+   "space": "groups",
+   "tier": "TechnicalReplicates",
+   "samples": [
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_10",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_11",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_12",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_1_190104120800",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_2_190104150314",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_3_190104175825",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_4_190104205346",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_5_190104234917",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_6",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_7",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_8",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_9"
+   ],
+   "shape": [
+    12,
+    12
+   ],
+   "matrix_sha256": "799a553ec0b55debc3dd225acd04b2479a3eccd3bee5d80a88bacae1c1c084d8"
+  },
+  {
+   "space": "groups",
+   "tier": "WorkflowReplicates",
+   "samples": [
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_10",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_11",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_12",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_13",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_14",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_15_190104091344",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_1_190101200553",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_3",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_4",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_5",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_6",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_7",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_8",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_9"
+   ],
+   "shape": [
+    15,
+    15
+   ],
+   "matrix_sha256": "ed65655b042cc63ebb1768127b338eff3aa5c0bff2b0975532766690f72b365a"
+  },
+  {
+   "space": "groups",
+   "tier": "OnePiece",
+   "samples": [
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut1",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut10",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut2",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut3",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut4",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut5",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut6",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut7",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut8",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut9"
+   ],
+   "shape": [
+    10,
+    10
+   ],
+   "matrix_sha256": "d0b7e540f65306a0dedafb4b448050967d713936ea4f36cde6692e2c9b4a7f95"
+  },
+  {
+   "space": "groups",
+   "tier": "Intra",
+   "samples": [
+    "20190514_QX4_PeTr_SA_Intra_10",
+    "20190514_QX4_PeTr_SA_Intra_11",
+    "20190514_QX4_PeTr_SA_Intra_13",
+    "20190514_QX4_PeTr_SA_Intra_14",
+    "20190514_QX4_PeTr_SA_Intra_1_190518164624",
+    "20190514_QX4_PeTr_SA_Intra_2",
+    "20190514_QX4_PeTr_SA_Intra_3",
+    "20190514_QX4_PeTr_SA_Intra_4",
+    "20190514_QX4_PeTr_SA_Intra_6",
+    "20190514_QX4_PeTr_SA_Intra_7",
+    "20190514_QX4_PeTr_SA_Intra_8"
+   ],
+   "shape": [
+    11,
+    11
+   ],
+   "matrix_sha256": "18e45d2ad8da627912720c7e0fb15fe3bfb8611bdbd4ed309b073caa81e916d6"
+  },
+  {
+   "space": "groups",
+   "tier": "Interindividual",
+   "samples": [
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_1",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_10",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_2",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_3",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_4",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_5",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_6",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_7",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_8",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_9"
+   ],
+   "shape": [
+    10,
+    10
+   ],
+   "matrix_sha256": "0db593b55c42c0cbaf5d1a01f6aa22058815cc2a0d1495ffe487b01ef99d7f3c"
+  },
+  {
+   "space": "KO",
+   "tier": "TechnicalReplicates",
+   "samples": [
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_10",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_11",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_12",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_1_190104120800",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_2_190104150314",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_3_190104175825",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_4_190104205346",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_5_190104234917",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_6",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_7",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_8",
+    "20181231_QX7_PhGe_LC95_SA_TechnicalReplicates_9"
+   ],
+   "shape": [
+    12,
+    12
+   ],
+   "matrix_sha256": "b9de844b8ca44789acb6a51c1f38ed531612ae344c21572efbef9e1b5ed8c63b"
+  },
+  {
+   "space": "KO",
+   "tier": "WorkflowReplicates",
+   "samples": [
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_10",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_11",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_12",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_13",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_14",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_15_190104091344",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_1_190101200553",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_2",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_3",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_4",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_5",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_6",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_7",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_8",
+    "20181231_QX7_PhGe_LC95_SA_WorkflowReplicates_9"
+   ],
+   "shape": [
+    15,
+    15
+   ],
+   "matrix_sha256": "dbe2e664ae7d5a131c54038981d219fd8c8a655a5b86e753f24f9b7e61ffa6e4"
+  },
+  {
+   "space": "KO",
+   "tier": "OnePiece",
+   "samples": [
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut1",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut10",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut2",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut3",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut4",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut5",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut6",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut7",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut8",
+    "20190105_Qx7_PhGe_LC95_SA_OnePiece_FinestCut9"
+   ],
+   "shape": [
+    10,
+    10
+   ],
+   "matrix_sha256": "5d28ce0d0f40d4f51332c24c38d4ac9c96ce61aebde7be4873feda7b0fd3f74b"
+  },
+  {
+   "space": "KO",
+   "tier": "Intra",
+   "samples": [
+    "20190514_QX4_PeTr_SA_Intra_10",
+    "20190514_QX4_PeTr_SA_Intra_11",
+    "20190514_QX4_PeTr_SA_Intra_13",
+    "20190514_QX4_PeTr_SA_Intra_14",
+    "20190514_QX4_PeTr_SA_Intra_1_190518164624",
+    "20190514_QX4_PeTr_SA_Intra_2",
+    "20190514_QX4_PeTr_SA_Intra_3",
+    "20190514_QX4_PeTr_SA_Intra_4",
+    "20190514_QX4_PeTr_SA_Intra_6",
+    "20190514_QX4_PeTr_SA_Intra_7",
+    "20190514_QX4_PeTr_SA_Intra_8"
+   ],
+   "shape": [
+    11,
+    11
+   ],
+   "matrix_sha256": "64f901f87e42af99dd9833c7d5f6c9b21c3a9f414dfb19a5475dc2130e9de395"
+  },
+  {
+   "space": "KO",
+   "tier": "Interindividual",
+   "samples": [
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_1",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_10",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_2",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_3",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_4",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_5",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_6",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_7",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_8",
+    "20190105_Qx7_PhGe_LC95_SA_Interindividual_Ind_9"
+   ],
+   "shape": [
+    10,
+    10
+   ],
+   "matrix_sha256": "ea6fa1fc93e54701d511c1f3a6b3de492e8384103454c2e8007708a6603028d9"
+  }
+ ]
+}

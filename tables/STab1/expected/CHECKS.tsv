@@ -1,0 +1,11 @@
+check	rows_or_value	expected_or_value	missing	int_mismatches	float_not_bit_identical	float_max_abs_diff
+current_45_rows_vs_mapping	45	45	0	0	29	1.11e-16
+new_60_rows_vs_mapping	60	60	0	0	0	0
+independent_recount_vs_table	105	105	0	0		
+median_cluster_050	reduction 8.774%	KO 96.40%				
+median_cluster_075	reduction 7.226%	KO 96.53%				
+median_cluster_090	reduction 4.149%	KO 97.77%				
+median_cluster_095	reduction 2.457%	KO 98.41%				
+median_cluster_097	reduction 2.157%	KO 98.92%				
+median_cluster_099	reduction 0.871%	KO 99.01%				
+clustered_rows_below_baseline	90	90				

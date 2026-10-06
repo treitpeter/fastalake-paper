@@ -1,0 +1,5 @@
+case_id	sample	compartment	origin	side	peptide	matched_ions	backbone_coverage	peptide_q	spectrum_q	accepted_in_semi	nonoriginal_alternatives	nonoriginal_matching_at_least_original	N_flanking_H_inferred	parents
+HIS_001	20191207_QX7_PeTr_LC02_SA_MicrobPred_224	stool	Human	C	SLFVGVDTIHVH	13	0.8181818181818182	4.859065e-05	2.3720291e-05	False	0	0	False	sp|Q99895|CTRC_HUMAN
+HIS_002	20191213_QX7_PeTr_LC02_SA_MicrobPred_133_191217040348	stool	Human	N	SNIQVSEM[+15.9949]VHK	8	0.6	0.0020350472	0.0009510869	False	0	0	True	sp|P05154|IPSP_HUMAN
+HIS_003	20191114_QX7_PeTr_LC02_SA_MicrobPred_114	stool	Microbial	C	VIEDAGYGPYFGH	11	0.75	6.179722e-05	3.1654585e-05	False	0	0	False	MGYG000158117_01186
+HIS_004	20191024_QX7_PeTr_LC02_SA_MicrobPred_44	stool	Microbial	N	FHPALAPIK	7	0.75	0.006456049	0.0042834054	False	0	0	True	MGYG000200818_00730

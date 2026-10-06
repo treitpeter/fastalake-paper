@@ -1,0 +1,30 @@
+{
+ "new": "build/Fig3/bands/composite_band_f_regenerated.png",
+ "new_sha256": "ed93dc6b1e11fd554402ac60e8797279f4b89d44692b40d7da32379698af5634",
+ "expected": "build/Fig3/bands/composite_band_f_v28f.png",
+ "expected_sha256": "7dcba5832fb4b2f205c018fd470b9c6e6b13960bac95822f61e70d10af60584c",
+ "dpi": 300,
+ "page": 0,
+ "tolerance": 0,
+ "max_fraction": 0.0,
+ "new_size_px": [
+  2162,
+  846
+ ],
+ "expected_size_px": [
+  2162,
+  846
+ ],
+ "differing_pixels": 10629,
+ "differing_fraction": 0.00581120711712953,
+ "max_channel_difference": 177,
+ "diff_bbox_px": [
+  0,
+  0,
+  2160,
+  845
+ ],
+ "verdict": "DIFFERENT",
+ "passed": false,
+ "diff_png": "figures/Fig3/checks/composite_band_f.diff.png"
+}

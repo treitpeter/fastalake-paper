@@ -1,0 +1,30 @@
+{
+  "unit": "STab1",
+  "upstream": [
+    {
+      "id": "campi_candidate_clustering",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/analyses/clustering_90_95_2026-09-29/prepare.py",
+        "LAB_ROOT/review/v15_integration/analyses/clustering_90_95_2026-09-29/frozen/selection.py",
+        "LAB_ROOT/review/v15_integration/analyses/clustering_90_95_2026-09-29/frozen/search.py",
+        "LAB_ROOT/review/v15_integration/analyses/clustering_90_95_2026-09-29/frozen/collect.py",
+        "LAB_ROOT/review/v15_integration/analyses/clustering_90_95_2026-09-29/pilot.sh",
+        "LAB_ROOT/review/v15_integration/analyses/clustering_90_95_2026-09-29/full.sh",
+        "LAB_ROOT/review/v15_integration/analyses/clustering_90_95_2026-09-29/collect.sh",
+        "LAB_ROOT/review/v15_integration/analyses/clustering_90_95_2026-09-29/PROTOCOL.md",
+        "LAB_ROOT/release_prep/fasta-lake-paper_2026-10-06/code/Hartout_edits/H04_cluster_retention/attempt_v2/frozen/h04_cluster_retention_v2.py",
+        "LAB_ROOT/release_prep/fasta-lake-paper_2026-10-06/code/Hartout_edits/H08_cluster_searches/attempt_v2/frozen/h08_cluster_searches_v2.py"
+      ],
+      "uses": "per_acquisition_identifications.tsv and per_acquisition_KO_coverage.tsv (all 105 table rows and the line-89 medians); the 97/99% H04/H08 runs supply the unclustered baseline, the 97% and 99% arms and the eight support_97_99_* tables",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_clustering_recount",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/clustering_check/recount.py"
+      ],
+      "uses": "independent_recount_identifications.tsv and independent_recount_KO.tsv, used only by the consistency check in panels.py:checks",
+      "pipeline_dir": null
+    }
+  ]
+}

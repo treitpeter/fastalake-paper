@@ -1,0 +1,21 @@
+v28d_line	quote	printed_value	recomputed_value	code	source_data	status
+55	All 726 acquisition-specific databases contained fewer entries than	726	726	figures/SFig01/panels.py:stat_entries (n_below_human)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+55	fewer entries than the 20,431-entry human reference proteome	20,431	20431	figures/SFig01/panels.py:stat_human_reference	source_data/SFig01/human_swissprot_canonical_2026_03.fasta.gz	MATCH
+55	median sizes ranging from 3,100 proteins in CAMPI	3,100	3057.0	figures/SFig01/panels.py:stat_entries (median CAMPI)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+55	to 12,200 in healthy stool	12,200	12212.5	figures/SFig01/panels.py:stat_entries (median HSTOOL)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+57	which contained 233.5 million sequences for healthy stool	233.5	233.497702	figures/SFig01/panels.py:stat_reservoirs (HSTOOL, /1e6)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+57	272.9 million for PREDICT	272.9	272.919212	figures/SFig01/panels.py:stat_reservoirs (PREDICT, /1e6)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+57	264.9 million for CapScan	264.9	264.925283	figures/SFig01/panels.py:stat_reservoirs (CapScan, /1e6)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+57	375.3 million for CAMPI	375.3	375.333654	figures/SFig01/panels.py:stat_reservoirs (CAMPI, /1e6)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+57	public-sequence benchmarks used the 233.5-million-sequence reservoir	233.5	233.497702	figures/SFig01/panels.py:stat_reservoirs (HSTOOL, /1e6)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+405	Blue points show the entry counts of all 710 acquisition-specific FASTAs	710	726	figures/SFig01/panels.py:stat_counts (total)	source_data/Fig1/acquisition_sizes_726.tsv	v28f_change:726
+405	the dashed line marks the 20,431-entry human reference proteome	20,431	20431	figures/SFig01/panels.py:stat_human_reference	source_data/SFig01/human_swissprot_canonical_2026_03.fasta.gz	MATCH
+405	Their public-sequence benchmarks used the separate 233,497,702-entry reservoir	233,497,702	233497702	figures/SFig01/panels.py:stat_reservoirs (HSTOOL)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+405	Cohorts comprise 15 CAMPI	15	15	figures/SFig01/panels.py:stat_counts (CAMPI)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+405	58 healthy-stool	58	58	figures/SFig01/panels.py:stat_counts (HSTOOL)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+405	306 PREDICT	306	306	figures/SFig01/panels.py:stat_counts (PREDICT)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+405	331 CapScan acquisitions	331	347	figures/SFig01/panels.py:stat_counts (CapScan)	source_data/Fig1/acquisition_sizes_726.tsv	v28f_change:347
+673	as FASTA entries for all 726 primary acquisitions	726	726	figures/SFig01/panels.py:stat_counts (total)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH
+673	compared with the 20,431 canonical entries	20,431	20431	figures/SFig01/panels.py:stat_human_reference	source_data/SFig01/human_swissprot_canonical_2026_03.fasta.gz	MATCH
+675	we used the same 710 selected FASTAs	710	726	figures/SFig01/panels.py:stat_counts (total)	source_data/Fig1/acquisition_sizes_726.tsv	v28f_change:726
+675	public-sequence identification benchmark used 233,497,702 entries	233,497,702	233497702	figures/SFig01/panels.py:stat_reservoirs (HSTOOL)	source_data/Fig1/acquisition_sizes_726.tsv	MATCH

@@ -1,0 +1,3 @@
+arm	originals	swap_only_variants	(a) proteins_by_originals	(b) additional_by_swaps_only	b/a	originals_without_exact_hit	rescued_by_swap	(c) swap_only_in_razor_cover	razor_cover_size_B	razor_cover_size_A
+REAL	24560	273601	6671447	102918	0.0154	2696	292	3665	13095	8466
+SIM	36589	417160	11401	47389	4.1566	36032	1758	-	-	-

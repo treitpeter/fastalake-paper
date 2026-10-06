@@ -1,0 +1,25 @@
+{
+ "new": "build/SFig10/panel_a.png",
+ "new_sha256": "9b85a672a7c39d87371ec10e5d5a8c5e7361590e150a33303d8c13bebb5a6fd8",
+ "expected": "SFig10_v30.png",
+ "expected_sha256": "9b85a672a7c39d87371ec10e5d5a8c5e7361590e150a33303d8c13bebb5a6fd8",
+ "dpi": 300,
+ "page": 0,
+ "tolerance": 0,
+ "max_fraction": 0.0,
+ "new_size_px": [
+  2125,
+  732
+ ],
+ "expected_size_px": [
+  2125,
+  732
+ ],
+ "differing_pixels": 0,
+ "differing_fraction": 0.0,
+ "max_channel_difference": 0,
+ "diff_bbox_px": null,
+ "verdict": "IDENTICAL",
+ "passed": true,
+ "diff_png": "build/SFig10/SFig10_v30.diff.png"
+}

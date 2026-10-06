@@ -1,0 +1,31 @@
+# Fusion-linked full-route assessment — 7 September 2026
+
+All four cohorts, no more than eight concurrent Slurm jobs. Preserve the completed 6 September experiment.
+
+## Scope and provenance
+
+710 frozen acquisitions: CAMPI_MOCK 15, HSTOOL 58, PREDICT 306, CAPSCAN 331. Two independent seed settings, 20260907 and 20260908: 1,420 new searches. Exact original stage-0 reservoirs, predictions, acquisition lists, production extractor/razor/SAGE binaries and original search settings are taken from the frozen 6 September experiment. Binary SHA-256 and source manifest are verified at runtime. This dated experiment has its own local source commit and does not edit the canonical pipeline.
+
+## Literature review and material adaptation
+
+Yi & Fu (2026), DOI 10.1016/j.mcpro.2026.101636, authors' code https://github.com/YiCITI/FusionEntrapment at 2107cc8fb69d7c867d0ce4664c15d910120dda30. The paper's abstract and released implementation were inspected; the full publisher article was not retrievable. The code uses FDRBench peptide-level generation, linked protein membership for filtering, Comet 2025.02, and a no-cut peptide database. Its first search is not de novo prediction. Its optional fusion-TD reduction is a distinct intervention from fusion-entrapment assessment. It is not proof about FastaLake. The upstream real-data preparation documents >800 GB RAM for 9.9 million proteins; direct application to 233–273 million proteins is not feasible on tonight's nodes.
+
+This experiment is a **FastaLake adaptation of the linked-retention principle**, not an exact reproduction of that paper or its globally collision-checked FDRBench pairing. Every original protein has a control transformed by a seeded positional permutation inside each tryptic segment, fixing K/R/P and the segment's first residue. The permutation depends only on positions and fixed residues, preserves segment composition, and is invertible for a fixed segment pattern. The first residue is fixed to preserve initiator-methionine clipping. It does not guarantee disjoint original/control peptide sets across the full reservoir.
+
+Target and control are represented as one FASTA record with the original accession and a separator of 51 X residues. Exact prediction matching cannot cross this separator under the 50-residue maximum. The full original reservoir is transformed before cohort evidence selection. Both partners pass together through cohort selection, acquisition selection and production razor. Both partners can supply selection evidence. The separator is removed after razor; each selected group becomes separate T_/E_ search records. SAGE receives full protein sequences with the original digestion/modification settings and generates its usual internal decoys. This is not merely appending controls to an archived final FASTA.
+
+## Checks and reporting
+
+The production-binary regression fixture requires a group supported only by its entrapment member to retain the original and control through extractor and razor. Further tests cover fixed-pattern permutation injectivity, cleavage/missed-cleavage intervals, composition, peptide canonicalisation, empty populations, and a known-labelled score fixture where injected false discoveries must raise the diagnostic. That score fixture is a unit test, not independent spectral or biological validation. No claim that a defined-mixture/spectral simulation calibration has completed is made.
+
+Enumerate I/L-normalised 5–50 residue peptides with up to two missed cleavages and initiator-M clipping in each final selected group. Audit target/control overlaps and one-to-many/many-to-one peptide mappings. Only disjoint one-to-one pairs enter the paired component. Every accepted sequence outside that subset contributes one possible false discovery to the conservative unknown component. Report the paired-style and combined-style diagnostics with this worst-case component at q thresholds .001, .005, .01, .02 and .05, separately for lengths 5–50 and 9–50. Empty discovery fractions remain undefined. Q values are aggregated by minimum over canonical-sequence rows; equal q ties in paired comparisons are counted conservatively.
+
+**These remain assumption-dependent diagnostics.** Unique pairing over the full original reservoir, null equal-chance behaviour after de novo selection, and peptide-level calibration of this adaptation have not been established. Numerical upper diagnostics are not confidence bounds or validated whole-procedure upper bounds. No output may automatically set FDR control to established. Do not interpret E labels as proof of biological absence, or extrapolate augmented-search results to target-only/protein-group reporting. Independent known-truth spectral validation and assessment of the adapted null construction remain required before a calibration claim. The current jobs produce full-scale exposure and diagnostic results, not a guaranteed solution to the FDR question.
+
+## Scheduling and limits
+
+Eight preparation tasks run on p.hpcl92, at most eight at a time. One full CAMPI acquisition is the pilot. All 710 acquisitions for seed 1 then run on p.hpcl92 with array throttle eight; seed 2 follows with throttle eight on p.hpcl92/p.hpcl8/p.hpcl93, beginning no earlier than 22:00 and with a 07:00 deadline. Phases are dependency-ordered so the cap is global. A final collector runs after the search phases. Early results appear acquisition by acquisition. Completion tonight is a target, not a promise; prior unfused acquisition stages took about 1.5–3 minutes, and fusion adds work. No existing jobs are cancelled or modified.
+
+## Preparation repair before any searches
+
+The first preparation array 5881251 stopped because some original proteins contain at least 51 consecutive X residues. The explicit guard rejected those sequences. This guard is unnecessary: the reader uses the known midpoint and equal target/control lengths, not a delimiter search. Remove the guard and retain the complete original proteins without filtering or sequence replacement. Add a regression fixture with 60 embedded X residues. Preserve failed outputs under runs/; corrected outputs are under runs_v2/. The old builder binary remains retained. No completed scientific search is overwritten.

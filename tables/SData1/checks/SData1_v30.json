@@ -1,0 +1,257 @@
+{
+ "unit": "SData1",
+ "build": "v30",
+ "mode": "complete",
+ "positive_controls": {
+  "CAPSCAN_FUNCTIONAL_NONDNA14": true,
+  "CAPSCAN_NATIVE12": true,
+  "CAPSCAN_FUNCTIONAL_DNA12": true,
+  "CAPSCAN_FUNCTIONAL_NONDNA12_SENS": true
+ },
+ "changes_from_v28f": {
+  "Analyses": {
+   "rows_v28d": 30,
+   "rows_v28f": 30,
+   "rows_removed": 5,
+   "rows_added": 5
+  },
+  "CAPSCAN H acquisitions": {
+   "rows_v28d": 331,
+   "rows_v28f": 347,
+   "rows_removed": 0,
+   "rows_added": 16
+  },
+  "CAPSCAN H finite n": {
+   "rows_v28d": 7,
+   "rows_v28f": 7,
+   "rows_removed": 7,
+   "rows_added": 7
+  },
+  "CAPSCAN H participants": {
+   "rows_v28d": 467,
+   "rows_v28f": 467,
+   "rows_removed": 349,
+   "rows_added": 349
+  },
+  "CAPSCAN membership": {
+   "rows_v28d": 7753,
+   "rows_v28f": 8005,
+   "rows_removed": 3458,
+   "rows_added": 3710
+  },
+  "CAPSCAN exclusions": {
+   "rows_v28d": 139,
+   "rows_v28f": 118,
+   "rows_removed": 88,
+   "rows_added": 67
+  },
+  "CAPSCAN MS nonmembership": {
+   "rows_v28d": 200,
+   "rows_v28f": 184,
+   "rows_removed": 132,
+   "rows_added": 116
+  },
+  "CAPSCAN DNA eligibility": {
+   "rows_v28d": 210,
+   "rows_v28f": 225,
+   "rows_removed": 0,
+   "rows_added": 15
+  },
+  "Sheet directory": {
+   "rows_v28d": 33,
+   "rows_v28f": 33,
+   "rows_removed": 5,
+   "rows_added": 5
+  }
+ },
+ "counts": {
+  "acquisitions_CAMPI": 15,
+  "acquisitions_Healthy stool": 58,
+  "acquisitions_PREDICT": 306,
+  "acquisitions_CapScan": 347,
+  "acquisitions_total": 726,
+  "CAPSCAN_SEARCH_ALL": "347/308/15/75/0",
+  "CAPSCAN_PUBLIC_MG_282": "282/250/15/69/0",
+  "CAPSCAN_QUANT_NONEMPTY": "346/307/15/75/0",
+  "CAPSCAN_REGIONAL_DESCRIPTIVE15": "346/307/15/75/0",
+  "CAPSCAN_REGIONAL_PAIRED15": "346/307/15/75/0",
+  "CAPSCAN_FUNCTIONAL_NONDNA15": "342/303/15/75/0",
+  "CAPSCAN_NATIVE13": "310/277/13/65/245",
+  "CAPSCAN_DNA_COMPLETED301": "0/0/15/88/301",
+  "CAPSCAN_FUNCTIONAL_DNA13": "310/277/13/65/245",
+  "CAPSCAN_FUNCTIONAL_NONDNA13_SENS": "310/277/13/65/0",
+  "CAPSCAN_HISTIDINE_ROUTES": "347/308/15/75/Not applicable"
+ },
+ "sheets": {
+  "Read me": {
+   "data_rows": 11,
+   "sha256_public": "15be0c76da66ab4859bbf16decce3da0907e0bbc0e4c9fcd1a807ee3db197119",
+   "sha256_full": "15be0c76da66ab4859bbf16decce3da0907e0bbc0e4c9fcd1a807ee3db197119"
+  },
+  "Cohorts": {
+   "data_rows": 4,
+   "sha256_public": "85115a8da982cae1e9b435ad94735edf3c83fd9906ef195a981d17f97b6ad9d6",
+   "sha256_full": "85115a8da982cae1e9b435ad94735edf3c83fd9906ef195a981d17f97b6ad9d6"
+  },
+  "Analyses": {
+   "data_rows": 30,
+   "sha256_public": "399deeec70e7bf02df96b1b088ae42c7c6bdafc031429d1952efaf0b86c528c4",
+   "sha256_full": "399deeec70e7bf02df96b1b088ae42c7c6bdafc031429d1952efaf0b86c528c4"
+  },
+  "HS acquisitions": {
+   "data_rows": 58,
+   "sha256_public": "e8231bd74d416a14b8994bf0d97fb651794138b954fa75ebfe03461b8ab3b395",
+   "sha256_full": "e8231bd74d416a14b8994bf0d97fb651794138b954fa75ebfe03461b8ab3b395"
+  },
+  "HS relationships": {
+   "data_rows": 3,
+   "sha256_public": "d4d5ccd72d5b0cc88ce96830126fd82bb2912b8140e183aeb96e7246302e57ff",
+   "sha256_full": "d4d5ccd72d5b0cc88ce96830126fd82bb2912b8140e183aeb96e7246302e57ff"
+  },
+  "HS excluded": {
+   "data_rows": 39,
+   "sha256_public": "3d722509b96f579543f0a9bc03e165d6e835b85e4636c604b9395372cfd407e0",
+   "sha256_full": "3d722509b96f579543f0a9bc03e165d6e835b85e4636c604b9395372cfd407e0"
+  },
+  "HS CAMPI membership": {
+   "data_rows": 591,
+   "sha256_public": "032e99fdfb1311507b5bb944b591355308fe03f3cbd14671c77fc8b1b366eb77",
+   "sha256_full": "032e99fdfb1311507b5bb944b591355308fe03f3cbd14671c77fc8b1b366eb77"
+  },
+  "HS transfer": {
+   "data_rows": 174,
+   "sha256_public": "fe087c3fbcd285e37b88c85e3fc5127a2b21ba98aebdfe9d1a75685e8be2fa02",
+   "sha256_full": "fe087c3fbcd285e37b88c85e3fc5127a2b21ba98aebdfe9d1a75685e8be2fa02"
+  },
+  "HS pools": {
+   "data_rows": 288,
+   "sha256_public": "10748ef2191b98b5e720f80c9f6c6dfc119301b297c9df97494eabc890bb0522",
+   "sha256_full": "10748ef2191b98b5e720f80c9f6c6dfc119301b297c9df97494eabc890bb0522"
+  },
+  "CAMPI acquisitions": {
+   "data_rows": 15,
+   "sha256_public": "12a68ec2fdd8ff26af71833e5648ddc98849853d29995c4b7d9ac63b959a3985",
+   "sha256_full": "12a68ec2fdd8ff26af71833e5648ddc98849853d29995c4b7d9ac63b959a3985"
+  },
+  "CAMPI search arms": {
+   "data_rows": 120,
+   "sha256_public": "c3e23a483d2a7016839cdf1030ccede882882327a4199415f49a7015e2f30a98",
+   "sha256_full": "c3e23a483d2a7016839cdf1030ccede882882327a4199415f49a7015e2f30a98"
+  },
+  "PREDICT metadata": {
+   "data_rows": 306,
+   "sha256_public": "ed617c34c305a103119b5a78f0bec1520696dd2529621ca51ee09a489068a8a3",
+   "sha256_full": "3a2c215f4aec9cfd46f3bce47140da60fa9f9a3c6e6683e3128d959be1b3aa0e"
+  },
+  "PREDICT membership": {
+   "data_rows": 2448,
+   "sha256_public": "dcb0b12ba1f9fabfeae9528301a734d577ecaa291a8436b53eb1f2e8c1f958f5",
+   "sha256_full": "135e9c86f9a7789f518de76156ca61219b5d71f4ef26541244d303ea61bb4e57"
+  },
+  "PREDICT patients": {
+   "data_rows": 465,
+   "sha256_public": "b2e4d1d1b2ad6c27485143e90aacd4aa3338972600a5b3d08a1fcad4f9d5945f",
+   "sha256_full": "b3d6a2feb92c3463c9cce522b19d24d593968e29db170841d17310535125964a"
+  },
+  "PREDICT mapping changes": {
+   "data_rows": 4,
+   "sha256_public": "e20452df063f030fa51ae4de6fa9c790df586a939ff1ca582800de7d7f7f5386",
+   "sha256_full": "15d314c1d01b1bbd48c859e8274fab9e55bc69c36172457996f996198b5a8d3a"
+  },
+  "PREDICT repeated tubes": {
+   "data_rows": 4,
+   "sha256_public": "ca496194a0181230476808aaefb8f0bee28bc7880e007064d20dd8096a3afa29",
+   "sha256_full": "21f1dab7961c615e9ea59e911dad4ebd83ec669e805a019d776867bcdc8cfa9b"
+  },
+  "PREDICT MG exclusions": {
+   "data_rows": 10,
+   "sha256_public": "64cf1502359c898a48146c578b85720c2f707fed1f5f6791ce7bdb2d87a73f5a",
+   "sha256_full": "64cf1502359c898a48146c578b85720c2f707fed1f5f6791ce7bdb2d87a73f5a"
+  },
+  "PREDICT H patients": {
+   "data_rows": 1116,
+   "sha256_public": "e4cc6af0db07401cbcc7df588e8d742b78357059300cc260b55eb8233a76290c",
+   "sha256_full": "e4cc6af0db07401cbcc7df588e8d742b78357059300cc260b55eb8233a76290c"
+  },
+  "CAPSCAN H acquisitions": {
+   "data_rows": 347,
+   "sha256_public": "164e7745299a49b086e2cd1824b077c03a85ac9515fa78f29eb969d0b21703d7",
+   "sha256_full": "164e7745299a49b086e2cd1824b077c03a85ac9515fa78f29eb969d0b21703d7"
+  },
+  "CAPSCAN H finite n": {
+   "data_rows": 7,
+   "sha256_public": "b9d374e66792e2b74ba165e784fe12980835f5cb142f932e2f8b972f8229029e",
+   "sha256_full": "b9d374e66792e2b74ba165e784fe12980835f5cb142f932e2f8b972f8229029e"
+  },
+  "CAPSCAN H participants": {
+   "data_rows": 467,
+   "sha256_public": "42de614359e490e70818471159831ffe15409ba97ea2bd6ef17ed3512413d32f",
+   "sha256_full": "42de614359e490e70818471159831ffe15409ba97ea2bd6ef17ed3512413d32f"
+  },
+  "CAPSCAN acquisitions": {
+   "data_rows": 347,
+   "sha256_public": "817f890a337869ab6bb1e9ca398086a1207f6df86fd4dbe7a06acfd8e4c421c4",
+   "sha256_full": "817f890a337869ab6bb1e9ca398086a1207f6df86fd4dbe7a06acfd8e4c421c4"
+  },
+  "CAPSCAN membership": {
+   "data_rows": 8005,
+   "sha256_public": "39d22b52ec81bbc1ba56011fbe186bff94fc9bcaf0ef97bd089f0f570123ac4e",
+   "sha256_full": "39d22b52ec81bbc1ba56011fbe186bff94fc9bcaf0ef97bd089f0f570123ac4e"
+  },
+  "CAPSCAN exclusions": {
+   "data_rows": 118,
+   "sha256_public": "96e76acc9c7f006a66f7b4de589cdfd01fd1e23dc8f708039fac93c826a84e51",
+   "sha256_full": "96e76acc9c7f006a66f7b4de589cdfd01fd1e23dc8f708039fac93c826a84e51"
+  },
+  "CAPSCAN MS nonmembership": {
+   "data_rows": 184,
+   "sha256_public": "d23267c515217b3cea0c51acea0686ede19c5071f2740b0a5d19209703e566ae",
+   "sha256_full": "d23267c515217b3cea0c51acea0686ede19c5071f2740b0a5d19209703e566ae"
+  },
+  "CAPSCAN DNA materials": {
+   "data_rows": 6,
+   "sha256_public": "1bde51285dceb71e35d9ce1a8bac144de8e3ce1204d7704224e16fec0cae67c9",
+   "sha256_full": "1bde51285dceb71e35d9ce1a8bac144de8e3ce1204d7704224e16fec0cae67c9"
+  },
+  "PREDICT 85 to 77": {
+   "data_rows": 8,
+   "sha256_public": "4bf7b6279d6eb5242e54c78a14ef762aa2d21f65d37b483ae64aa906afd5985e",
+   "sha256_full": "4bf7b6279d6eb5242e54c78a14ef762aa2d21f65d37b483ae64aa906afd5985e"
+  },
+  "CAPSCAN ID crosswalk": {
+   "data_rows": 347,
+   "sha256_public": "3776b70b4104c5f65d14de0603e4e11263abeeb03e4aa8d128b6ef9859eb8562",
+   "sha256_full": "3776b70b4104c5f65d14de0603e4e11263abeeb03e4aa8d128b6ef9859eb8562"
+  },
+  "CAPSCAN MG pairs": {
+   "data_rows": 282,
+   "sha256_public": "f8e31247da901dd94983ee60b9c03b7dd934081732e90ca4acff5aa5fd22ec52",
+   "sha256_full": "f8e31247da901dd94983ee60b9c03b7dd934081732e90ca4acff5aa5fd22ec52"
+  },
+  "CAPSCAN DNA runs": {
+   "data_rows": 301,
+   "sha256_public": "3a8978311c2fc38e03ce7cfeb6998c3c6f868df2bcb44c20e2d4ef850f47593f",
+   "sha256_full": "3a8978311c2fc38e03ce7cfeb6998c3c6f868df2bcb44c20e2d4ef850f47593f"
+  },
+  "CAPSCAN DNA eligibility": {
+   "data_rows": 225,
+   "sha256_public": "cffe3d1c480e5bb341fa1497a88295c83cd943321418f9a32c62b8154eef09f2",
+   "sha256_full": "cffe3d1c480e5bb341fa1497a88295c83cd943321418f9a32c62b8154eef09f2"
+  },
+  "CAPSCAN regional pairs": {
+   "data_rows": 60,
+   "sha256_public": "c28526edf8d47b8f5c496f5fb4326a10c5243077d832ef0b809f94cbf6a3b1fd",
+   "sha256_full": "c28526edf8d47b8f5c496f5fb4326a10c5243077d832ef0b809f94cbf6a3b1fd"
+  },
+  "PREDICT stack eligibility": {
+   "data_rows": 268,
+   "sha256_public": "8bcec9d7e42903251849ea6e6a5feb724963e8791213b09705829b12498416d0",
+   "sha256_full": "90720d8e37356160c848148061d5019fa43d6a5bdbbaa6b3f28a8af61ad91923"
+  },
+  "Sheet directory": {
+   "data_rows": 33,
+   "sha256_public": "344ffeb268c59159903df151f2a9737f357b194c374438b0cd331818c9aefcce",
+   "sha256_full": "344ffeb268c59159903df151f2a9737f357b194c374438b0cd331818c9aefcce"
+  }
+ }
+}

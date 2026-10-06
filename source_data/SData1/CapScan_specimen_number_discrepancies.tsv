@@ -1,0 +1,17 @@
+acquisition	in_analysis_roster	roster_participant	specimen_number_in_file_name	specimen_number_in_instrument_record	status
+20210513_EXPL0_PeTr_SA_T760_1255_1	yes	1	1255	1329	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1256	yes	1	1256	1340	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1268_1	yes	1	1268	1328	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1291_1	yes	1	1291	1303	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1293_1	yes	1	1293	1305	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1303	yes	3	1303	1291	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1305	yes	3	1305	1293	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1315_1	yes	4	1315	1279	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1317_1	yes	4	1317	1281	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1327_1	yes	4	1327	1267	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1329_1	yes	5	1329	1269	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1339_1	yes	5	1339	1255	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1340	no	5	1340	1341	unresolved: analysis labels follow the frozen roster
+20210513_EXPL0_PeTr_SA_T760_1341	no	5	1341	1257	unresolved: analysis labels follow the frozen roster
+20210524_EXPL0_PeTr_SA_T760_1304_1	yes	3	1304	1282	unresolved: analysis labels follow the frozen roster
+20210529_EXPL0_PeTr_SA_T760_1304	yes	3	1304	1282	unresolved: analysis labels follow the frozen roster

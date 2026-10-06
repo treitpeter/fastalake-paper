@@ -1,0 +1,89 @@
+{
+  "unit": "supplementary_methods_1_5",
+  "upstream": [
+    {
+      "id": "campi_alphanovo_accuracy",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/alphanovo_accuracy/accuracy.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/alphanovo_accuracy/run.sbatch"],
+      "uses": "Per-acquisition permuted-prediction exact matches (source_data/Fig2/alphanovo_accuracy_per_acquisition.tsv, owned by Fig2) for the 0.006% control, line 553; Slurm 6064877.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "bag_mass_lookup_search",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A04_4_2_expansion/alphanovo_bags_2026-09-23/bounded_sweep_2026-09-25/run_bounded.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/bags_prominence_review_2026-09-30/audit_and_plot.py"],
+      "uses": "336 arm-acquisition rows and ordering counts (source_data/SFig02/bags_bounded48_*.tsv, owned by SFig02) for lines 561 and 579.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_stage1_lookup",
+      "original_code_paths": ["LAB_ROOT/canonical/publication (chain stage 02_evidence, fasta_extractor; run of 2026-09-06)"],
+      "uses": "18,007,876 study-supported proteins (source_data/Fig1/stage1_stats.json, owned by Fig1), line 567.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_97_study_lookup",
+      "original_code_paths": ["LAB_ROOT/canonical/publication (chain stage 02_evidence, production run of 2026-08-02; output LAB_ROOT/canonical/publication_data/cohorts/HSTOOL/1_evidence/evidence_lake.stats.json)"],
+      "uses": "26,881,038 study-supported proteins and the 97 pooled prediction files, line 567.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "prediction_parser_audit",
+      "original_code_paths": ["LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/main_methods_pass_2026-09-24/review_decisions/M07_parser_audit/collect.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A7_other/parser_audit/fixed726/collect.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A7_other/parser_audit/bin (Rust binary m07_parser_audit)"],
+      "uses": "Per-file parser comparison for 726 prediction files (parser_audit_acquisitions_726.tsv), line 573; Slurm 6064887, 6064888 (original audit 6000982).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_reservoir_containment",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/R8_open_requests_2026-09-17/B_blind_reservoir_overlap/overlap.py"],
+      "uses": "Member proteome sizes (source_data/Fig2/reservoir_protein_presence_by_proteome.tsv, owned by Fig2), line 611; Slurm 5954792.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "sage_input_completeness",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/completeness_653/code/sage_input_integrity.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/completeness_653/code/run653.py"],
+      "uses": "Closing tag, declared spectra and highest scored scan of the 653 public-sequence and 58 healthy-stool searches (search_input_completeness.tsv), line 629; Slurm 6065843 (original check 6048085). Same id as text_statistics/methods.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "origin_annotation_share",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/verify_proposals_methods/partial_human.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A7_other/partial_origin_share/fixed347/partial_human.py"],
+      "uses": "Annotated-origin rows and pooled intensity of the annotated-origin consensus (origin_rows_*.tsv), line 651; Slurm 6064869, 6064870.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "mgnify_seed_ortholog_check",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/scripts/verify_shard.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/scripts/prep_native.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/scripts/summarize_verification.py"],
+      "uses": "9,368,708-row verification table, aggregated per genome (mgnify_seed_ortholog_check_by_genome.tsv), line 657; Slurm 6048172, 6048175, 6048176, 6048298.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "annotation_repair_coverage",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/github_workflow_reconciliation_2026-09-30/resumed_audit/annotation_repair/evidence_repaired/repair_projection.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/github_workflow_reconciliation_2026-09-30/resumed_audit/annotation_repair/evidence_repaired/collect.py"],
+      "uses": "Gene-sequence-verified MGnify annotations per compatible protein for 8 study arms plus the 347-roster CapScan arm (annotation_mgnify_coverage_by_arm.tsv), line 657 (88-95%).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_supplemental_eggnog",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/github_workflow_reconciliation_2026-09-30/resumed_audit/annotation_repair/prepare_supplement.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/github_workflow_reconciliation_2026-09-30/resumed_audit/annotation_repair/run_supplement.py"],
+      "uses": "17,935 previously unannotated CAMPI reference proteins (campi_supplemental_annotation_queries.tsv), line 657; Slurm 6034650, 6034651.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "functional_allocation_sensitivity",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/proposals_methods/alloc_sensitivity/alloc_sensitivity.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A3_allocation_sensitivity/code/alloc_capscan347.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A3_allocation_sensitivity/code/collect.py"],
+      "uses": "Per-acquisition allocated intensity, CapScan own-stool distances, PREDICT distance matrices and healthy-stool per-pair correlations under four allocation rules (allocation_*.tsv), line 657; Slurm 6048205, 6048208 (HSTOOL, PREDICT, CapScan 331), 6064925, 6064926 (CapScan 347).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_crossomics_refit",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/source_data/current/Crossomics/provenance/check_prevalence.py"],
+      "uses": "transform() and evaluate() (Mantel test) called by A107 for the PREDICT rows; ported in stats.py:mantel.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_ko_precision_refit",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/hstool_precision.py"],
+      "uses": "measure() and pairs() called by A107 for the healthy-stool KO correlations.",
+      "pipeline_dir": null
+    }
+  ]
+}

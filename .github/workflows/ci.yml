@@ -1,0 +1,38 @@
+# Continuous integration for the paper repository.
+# Runs: release scan (with self-test), number check (with self-test), and every notebook.
+# Pixel checks are NOT run here: the Söhne fonts are licensed and absent in CI, so text
+# pixels cannot match. Pixel checks run locally with FASTALAKE_FONT_DIR set; their
+# receipts (figures/<U>/checks/*.json and *.diff.png) are committed. Notebooks that need
+# controlled clinical inputs skip those cells with a message (FASTALAKE_CONTROLLED_DIR unset).
+name: ci
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+      - uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b  # v5.3.0
+        with:
+          python-version: "3.12.4"
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip==25.2
+          python -m pip install -r environment/requirements.lock.txt
+          python -m ipykernel install --user --name python3
+      - name: Release scan
+        run: |
+          python tools/scan_release.py --self-test
+          python tools/scan_release.py
+      - name: Number check
+        run: |
+          python tools/check_numbers.py --self-test
+          python tools/check_numbers.py
+      - name: Run notebooks
+        env:
+          MPLBACKEND: Agg
+        run: python tools/run_notebooks.py --no-write

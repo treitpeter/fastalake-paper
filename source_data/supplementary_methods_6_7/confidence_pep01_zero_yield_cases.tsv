@@ -1,0 +1,4 @@
+index	cohort	sample	gate	q	min_length	max_length	n_fl	n_mg	shared	fl_only	mg_only	removed_fl	removed_mg	group	gain_pct	fl_retained	mg_retained
+168	PREDICT	20191122_QX7_PeTr_LC02_SA_MicrobPred_182	pep01	0.01	5	50	0	4643	0	0	4643	8353	1071		-100.0	0.0	0.8125656282814141
+174	PREDICT	20191122_QX7_PeTr_LC02_SA_MicrobPred_209	pep01	0.01	5	50	0	15345	0	0	15345	17100	3167		-100.0	0.0	0.8289217804667243
+185	PREDICT	20191123_QX7_PeTr_LC02_SA_MicrobPred_251	pep01	0.01	5	50	0	11812	0	0	11812	15336	3189		-100.0	0.0	0.7874141723885074

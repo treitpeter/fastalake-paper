@@ -1,0 +1,21 @@
+block	feature_id	label	n_positive_85	rho_EDS_85
+Host proteome	sp|O14558|HSPB6_HUMAN	HSPB6	29	-0.5448275862068965
+Host proteome	sp|Q13642|FHL1_HUMAN	FHL1	29	-0.17290640394088666
+Host proteome	sp|O60635|TSN1_HUMAN	TSN1	38	-0.3101165403777311
+Host proteome	sp|A0A0C4DH42|HV366_HUMAN	HV366	0	
+Host proteome	sp|P15144|AMPN_HUMAN	AMPN	83	0.2763795890703522
+Host proteome	sp|P04179|SODM_HUMAN	SODM	43	0.4555442295691997
+Microbial KEGG pathway	map00910	Nitrogen metabolism	85	-0.3622505814758886
+Microbial KEGG pathway	map00220	Arginine biosynthesis	85	-0.41167503769905023
+Microbial KEGG pathway	map01210	2-Oxocarboxylic acid metabolism	85	-0.3661591980218089
+Microbial KEGG pathway	map01212	Fatty acid metabolism	85	-0.39957786948942703
+Microbial KEGG pathway	map00720	Other carbon fixation pathways	85	-0.37522718840834385
+Microbial KEGG pathway	map00250	Alanine, aspartate and glutamate metabolism	85	-0.3322128633204916
+Metabolomics	C18_F1541	Hydroxyindoleacetic acid	85	-0.44560182931763787
+Metabolomics	HILIC_FT18241	Dimethylsuccinic acid	85	-0.42480798929334224
+Metabolomics	C18_F1699	Sebacic acid	85	-0.39176063639758657
+Metabolomics	C18_F1515	N6,N6,N6-Trimethyl-L-lysine	85	0.4391526120168695
+Metabolomics	C18_F1906	Hydroxytryptophan	85	0.46127538166677823
+Metabolomics	C18_F2190	Asp-Phe	85	0.5662608220901959
+Metabolomics	HILIC_FT14792	Threitol	85	0.42938107065206893
+Metabolomics	C18_F0345	Dihydrothymine	85	0.37088862404237244

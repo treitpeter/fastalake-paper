@@ -1,0 +1,49 @@
+{
+  "unit": "STab2",
+  "upstream": [
+    {
+      "id": "cohort_full_route_controls",
+      "original_code_paths": [
+        "LAB_ROOT/canonical/publication/analyses/full_route_entrapment_2026-09-06/src/full_route_entrapment.py",
+        "LAB_ROOT/canonical/publication/analyses/full_route_entrapment_2026-09-06/src/prepare_experiment.py",
+        "LAB_ROOT/canonical/publication/analyses/full_route_entrapment_2026-09-06/src/make_controls.cpp",
+        "LAB_ROOT/canonical/publication/analyses/full_route_entrapment_2026-09-06/src/scan_overlap.cpp",
+        "LAB_ROOT/canonical/publication/analyses/full_route_entrapment_2026-09-06/src/run_stage.sbatch",
+        "LAB_ROOT/canonical/publication/analyses/full_route_entrapment_2026-09-06/src/collect_cohort.py",
+        "LAB_ROOT/canonical/publication/analyses/full_route_entrapment_2026-09-06/src/collect.sbatch"
+      ],
+      "uses": "tables/<cohort>/{per_acquisition,stage_control_counts,baseline_comparison,summary,control_discoveries}.tsv for sheets Cohort_overview, Per_acquisition, Stage_controls, Baseline_comparison, Quantile_summary, Control_discoveries. Slurm jobs in jobs.json (controls 5876947; collect 5876980-5876983; publication build 5877268).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "cohort_fusion_controls",
+      "original_code_paths": [
+        "LAB_ROOT/analyses/fusion_entrapment_2026-09-07",
+        "LAB_ROOT/../BiorXiv/99_archive/2026-09-11_before_weekend_organisation/review_2026-09-08_v10_AP/source_data/completed_fusion/audit_completed.py"
+      ],
+      "uses": "cohort_q001, cohort_threshold_summary, matched_seed_summary, short_5_to_8_summary, acquisition_outliers_q001, completeness, snapshot/per_acquisition.tsv and VALIDATION.json for the fusion_* sheets.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_independent_selection",
+      "original_code_paths": [
+        "LAB_ROOT/../BiorXiv/99_archive/2026-09-11_before_weekend_organisation/review_2026-09-08_v10_AP/source_data/campi_independent_selection/run_campi_reference.py",
+        "LAB_ROOT/../BiorXiv/99_archive/2026-09-11_before_weekend_organisation/review_2026-09-08_v10_AP/source_data/campi_independent_selection/collect_campi.py"
+      ],
+      "uses": "ordinary_counts.tsv, fusion_diagnostics.tsv and VALIDATION.json for the indep_* sheets.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "healthy_stool_pooling_controls",
+      "original_code_paths": [
+        "LAB_ROOT/FIGURATOR/Figure3/review_2026-09-07/entrapment_pooling/prepare_record.py",
+        "LAB_ROOT/FIGURATOR/Figure3/review_2026-09-07/entrapment_pooling/run_task.py",
+        "LAB_ROOT/FIGURATOR/Figure3/review_2026-09-07/entrapment_pooling/search.sbatch",
+        "LAB_ROOT/FIGURATOR/Figure3/review_2026-09-07/entrapment_pooling/reduce.py",
+        "LAB_ROOT/FIGURATOR/Figure3/review_2026-09-07/entrapment_pooling/reduce.sbatch"
+      ],
+      "uses": "per_acquisition.tsv (arms own, pool_all12, pool_other11) for the two counts at v28d line 743. Search array job 5879093 (24 new searches), reduce job 5879104; the own arm reuses 12 A91 searches.",
+      "pipeline_dir": null
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+source_data_file	package_sheet	package_rows	compared_rows	values_agree	comparison
+benchmark_matched_per_acquisition.tsv	a_b_benchmark_per_acquisition	1734	1734	True	sorted gain_pct of populations baseline5, fresh7, nested9
+per_acquisition_length_counts.tsv	c_per_arm_change	6	6	True	medians on the 331 roster; the package sheet is the 331 version, v28f CapScan FL uses 347 (adds participant15 table)
+campi_member_counts.tsv	d_member_counts	27	27	True	sorted pooled_specific
+campi_fusion_pooled_q01.tsv	e_fusion	10	10	True	sorted pooled diagnostic (%)
+healthy_strategies_per_acquisition.tsv	f_healthy	4	4	True	sorted median count change (%)
+grouping_study_groups.tsv	g_grouping	8	8	True	non-CapScan rows equal; CapScan row differs by design (package 331: 174,673 -> 175,282; v28f 347: 177,717 -> 178,357)

@@ -1,0 +1,28 @@
+{
+ "tests": {
+  "rows_new": 30581,
+  "rows_old": 30581,
+  "keys_equal": true,
+  "max_abs_diff_rho": 9.974659986866641e-17,
+  "max_abs_diff_p": 1.1102230246251565e-16,
+  "max_abs_diff_q": 1.1102230246251565e-16,
+  "equal_n_patients": true
+ },
+ "eligibility": {
+  "rows_new": 184386,
+  "rows_old": 184386,
+  "keys_equal": true,
+  "equal_n_patients": true,
+  "equal_eligible": true
+ },
+ "summary": {
+  "rows_new": 9,
+  "rows_old": 9,
+  "keys_equal": true,
+  "max_abs_diff_median_rho": 9.71445146547012e-17,
+  "equal_features": true,
+  "equal_significant": true
+ },
+ "tests_tsv_byte_identical": true,
+ "result": "MATCH"
+}

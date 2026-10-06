@@ -1,0 +1,2 @@
+- PIPELINE: predict_verified_functional_profiles: the replay variant for PREDICT (job id) was not located; only verified50 job 6048301 was recorded here.
+- PIPELINE: predict_verified_functional_profiles: per-input sha256 of the PREDICT_noclust task should be expanded into a relative-path manifest at release.

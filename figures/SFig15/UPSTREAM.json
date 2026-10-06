@@ -1,0 +1,33 @@
+{
+  "unit": "SFig15",
+  "upstream": [
+    {
+      "id": "common_resource_accounting",
+      "original_code_paths": [
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/supplements/revision_2026-09-24/source_data/compute/original_collect_sacct.py",
+        "LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/supplements/revision_2026-09-24/build_revision.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A7_other/resource_accounting/scripts/compute_block.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A7_other/resource_accounting/scripts/collect.py",
+        "LAB_ROOT/Hartout_edits/H10_compute_provenance/frozen/h10_compute_provenance_v2.py"
+      ],
+      "uses": "Slurm accounting of the production chain (sacct collection), restricted by array index to the manuscript acquisitions (Computing block of build_revision.py, rerun for the 347 CapScan roster as Slurm job 6064882, gated by job 6064883): compute_task_records.tsv and compute_stage_summary.tsv for panels a-d and the numbers on v28d lines 193, 299, 469, 903; and the CAMPI AlphaNovo inference sacct export (H10 compute provenance) for the 28-min median on line 299.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_participant_roster",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/roster/fixed_roster_347.tsv"
+      ],
+      "uses": "The 347-acquisition CapScan roster that selects which CapScan per-acquisition tasks enter the task records (CapScan column of panels a-d; n = 347 on lines 469 and 903).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "cohort_database_sizes",
+      "original_code_paths": [
+        "LAB_ROOT/MM_review_analysis/A01_4_1_database_sizes/audit.py"
+      ],
+      "uses": "Reservoir sizes per cohort (source_data/Fig1/acquisition_sizes_726.tsv, owned by Fig1) for the 233-375 million range on v28d line 193.",
+      "pipeline_dir": null
+    }
+  ]
+}

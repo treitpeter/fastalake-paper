@@ -1,0 +1,59 @@
+v28d_line	quote	printed_value	recomputed_value	code	source_data	status
+59	fell from 8.1–8.9% for nine-residue queries	8.1	8.076094759511845	figures/SFig02/panels.py:stat_ab_lookup[scrambled_len9_min_pct]	source_data/SFig02/selection_length_lookup.tsv;source_data/SFig02/lookup_query_outcomes.tsv	MATCH
+59	fell from 8.1–8.9% for nine-residue queries	8.9%	8.883704235463028	figures/SFig02/panels.py:stat_ab_lookup[scrambled_len9_max_pct]	source_data/SFig02/selection_length_lookup.tsv;source_data/SFig02/lookup_query_outcomes.tsv	MATCH
+59	to 0.7–1.1% at ten residues	0.7	0.7009345794392523	figures/SFig02/panels.py:stat_ab_lookup[scrambled_len10_min_pct]	source_data/SFig02/selection_length_lookup.tsv;source_data/SFig02/lookup_query_outcomes.tsv	MATCH
+59	to 0.7–1.1% at ten residues	1.1%	1.0903426791277258	figures/SFig02/panels.py:stat_ab_lookup[scrambled_len10_max_pct]	source_data/SFig02/selection_length_lookup.tsv;source_data/SFig02/lookup_query_outcomes.tsv	MATCH
+59	with no match in 86,000 query–seed evaluations at ≥13 residues	86,000	85835	figures/SFig02/panels.py:stat_ab_lookup[scrambled_ge13_query_seed_evaluations]	source_data/SFig02/selection_length_lookup.tsv;source_data/SFig02/lookup_query_outcomes.tsv	v28f_change:85,835
+67	In an exploratory comparison of 48 acquisitions	48	48	figures/SFig02/panels.py:stat_e_bags[acquisitions]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+67	admitting recorded bags gained 6,961 and lost 5,941	6,961	6961	figures/SFig02/panels.py:stat_e_bags[bags_all_gained]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+67	admitting recorded bags gained 6,961 and lost 5,941	5,941	5941	figures/SFig02/panels.py:stat_e_bags[bags_all_lost]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+67	relative to exact lookup (net +1,020)	+1,020	1020	figures/SFig02/panels.py:stat_e_bags[bags_all_net]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+67	at most eight orderings gave a net gain of 1,733	1,733	1733	figures/SFig02/panels.py:stat_e_bags[bags_le8_net]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+67	substitutions instead gave a net loss of 2,195	2,195	2195	figures/SFig02/panels.py:stat_e_bags[mass_all_net_loss]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+67	In six acquisitions, 193 of 215 gained identifications	six	six	figures/SFig02/panels.py:stat_f_fragment[acquisitions_word]	source_data/SFig02/bags_fragment_audit_summary.tsv	MATCH
+67	In six acquisitions, 193 of 215 gained identifications	193	193	figures/SFig02/panels.py:stat_f_fragment[zero_diagnostic]	source_data/SFig02/bags_fragment_audit_summary.tsv	MATCH
+67	In six acquisitions, 193 of 215 gained identifications	215	215	figures/SFig02/panels.py:stat_f_fragment[pairs]	source_data/SFig02/bags_fragment_audit_summary.tsv	MATCH
+409	Orange traces are five composition-preserving scrambled sets	five	five	figures/SFig02/panels.py:stat_ab_lookup[n_scrambled_seeds_word]	source_data/SFig02/selection_length_lookup.tsv;source_data/SFig02/lookup_query_outcomes.tsv	MATCH
+409	with 58-acquisition upstream pools and evaluated rosters	58	58	figures/SFig02/panels.py:stat_cd_grid[acquisitions]	source_data/SFig02/selection_grid_acquisitions.tsv;source_data/SFig02/selection_grid_summary.tsv	MATCH
+409	Source Data contain all 1,102 arm–acquisition records	1,102	1102	figures/SFig02/panels.py:stat_cd_grid[observations]	source_data/SFig02/selection_grid_acquisitions.tsv;source_data/SFig02/selection_grid_summary.tsv	MATCH
+413	relative to exact lookup in the 48-acquisition panel	48	48	figures/SFig02/panels.py:stat_e_bags[acquisitions]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+413	f, Separate six-acquisition fragment audit	six	six	figures/SFig02/panels.py:stat_f_fragment[acquisitions_word]	source_data/SFig02/bags_fragment_audit_summary.tsv	MATCH
+413	193 of 215 gained composition-preserving rearrangement pairs	193	193	figures/SFig02/panels.py:stat_f_fragment[zero_diagnostic]	source_data/SFig02/bags_fragment_audit_summary.tsv	MATCH
+413	193 of 215 gained composition-preserving rearrangement pairs	215	215	figures/SFig02/panels.py:stat_f_fragment[pairs]	source_data/SFig02/bags_fragment_audit_summary.tsv	MATCH
+413	whereas 22 had at least one	22	22	figures/SFig02/panels.py:stat_f_fragment[positive_diagnostic]	source_data/SFig02/bags_fragment_audit_summary.tsv	MATCH
+561	Over 48 acquisitions (15 CAMPI, 32 healthy stool and one CapScan	48	48	figures/SFig02/panels.py:stat_e_bags[acquisitions]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	Over 48 acquisitions (15 CAMPI, 32 healthy stool and one CapScan	15	15	figures/SFig02/panels.py:stat_e_bags[cohort_CAMPI]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	Over 48 acquisitions (15 CAMPI, 32 healthy stool and one CapScan	32	32	figures/SFig02/panels.py:stat_e_bags[cohort_HSTOOL]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	Over 48 acquisitions (15 CAMPI, 32 healthy stool and one CapScan	one	one	figures/SFig02/panels.py:stat_e_bags[cohort_CAPSCAN_word]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	admitting recorded bags added 6,961 peptide–acquisition events	6,961	6961	figures/SFig02/panels.py:stat_e_bags[bags_all_gained]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	and removed 5,941 (net +1,020, positive in 38 of 48)	5,941	5941	figures/SFig02/panels.py:stat_e_bags[bags_all_lost]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	and removed 5,941 (net +1,020, positive in 38 of 48)	+1,020	1020	figures/SFig02/panels.py:stat_e_bags[bags_all_net]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	and removed 5,941 (net +1,020, positive in 38 of 48)	38	38	figures/SFig02/panels.py:stat_e_bags[bags_all_positive_acquisitions]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	which covers 908,037 of 976,861 eligible prediction rows (93.0%)	908,037	908037	figures/SFig02/panels.py:stat_e_bags[le8_eligible_rows]	source_data/SFig02/bags_bounded48_orderings.tsv	MATCH
+561	which covers 908,037 of 976,861 eligible prediction rows (93.0%)	976,861	976861	figures/SFig02/panels.py:stat_e_bags[eligible_rows]	source_data/SFig02/bags_bounded48_orderings.tsv	MATCH
+561	which covers 908,037 of 976,861 eligible prediction rows (93.0%)	93.0%	92.95457593250217	figures/SFig02/panels.py:stat_e_bags[le8_eligible_pct]	source_data/SFig02/bags_bounded48_orderings.tsv	MATCH
+561	(+5,051, −3,318, net +1,733, positive in 37 of 48)	+5,051	5051	figures/SFig02/panels.py:stat_e_bags[bags_le8_gained]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	(+5,051, −3,318, net +1,733, positive in 37 of 48)	3,318	3318	figures/SFig02/panels.py:stat_e_bags[bags_le8_lost]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	(+5,051, −3,318, net +1,733, positive in 37 of 48)	+1,733	1733	figures/SFig02/panels.py:stat_e_bags[bags_le8_net]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	(+5,051, −3,318, net +1,733, positive in 37 of 48)	37	37	figures/SFig02/panels.py:stat_e_bags[bags_le8_positive_acquisitions]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	Restricting it to at most 2 orderings was net negative (−793)	−793	-793	figures/SFig02/panels.py:stat_e_bags[bags_le2_net]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	added 31,111 and removed 33,306 events (net −2,195, positive in 13 of 48)	31,111	31111	figures/SFig02/panels.py:stat_e_bags[mass_all_gained]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	added 31,111 and removed 33,306 events (net −2,195, positive in 13 of 48)	33,306	33306	figures/SFig02/panels.py:stat_e_bags[mass_all_lost]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	added 31,111 and removed 33,306 events (net −2,195, positive in 13 of 48)	−2,195	-2195	figures/SFig02/panels.py:stat_e_bags[mass_all_net]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	added 31,111 and removed 33,306 events (net −2,195, positive in 13 of 48)	13	13	figures/SFig02/panels.py:stat_e_bags[mass_all_positive_acquisitions]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	In the 32 healthy-stool acquisitions the mass arm was net −5,242 and positive in 3	32	32	figures/SFig02/panels.py:stat_e_bags[hstool_acquisitions]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	In the 32 healthy-stool acquisitions the mass arm was net −5,242 and positive in 3	−5,242	-5242	figures/SFig02/panels.py:stat_e_bags[hstool_mass_net]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	In the 32 healthy-stool acquisitions the mass arm was net −5,242 and positive in 3	3	3	figures/SFig02/panels.py:stat_e_bags[hstool_mass_positive]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+561	13,512 peptide–acquisition–seed observations through the mass route	13,512				OPEN
+561	through the mass route across 60 acquisitions and two seeds	60				OPEN
+579	The 48-acquisition comparison contained seven search arms per acquisition	48	48	figures/SFig02/panels.py:stat_e_bags[acquisitions]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+579	The 48-acquisition comparison contained seven search arms per acquisition	seven	seven	figures/SFig02/panels.py:stat_e_bags[arms_word]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+579	All 336 arm–acquisition rows, including losses	336	336	figures/SFig02/panels.py:stat_e_bags[arm_rows]	source_data/SFig02/bags_bounded48_per_acquisition.tsv	MATCH
+581	Of 215 comparison pairs across six acquisitions	215	215	figures/SFig02/panels.py:stat_f_fragment[pairs]	source_data/SFig02/bags_fragment_audit_summary.tsv	MATCH
+581	Of 215 comparison pairs across six acquisitions	six	six	figures/SFig02/panels.py:stat_f_fragment[acquisitions_word]	source_data/SFig02/bags_fragment_audit_summary.tsv	MATCH
+581	193 had no such ion and 22 had at least one	193	193	figures/SFig02/panels.py:stat_f_fragment[zero_diagnostic]	source_data/SFig02/bags_fragment_audit_summary.tsv	MATCH
+581	193 had no such ion and 22 had at least one	22	22	figures/SFig02/panels.py:stat_f_fragment[positive_diagnostic]	source_data/SFig02/bags_fragment_audit_summary.tsv	MATCH
+665	matched against the same 233,497,702-sequence reservoir	233,497,702				OPEN
+679	Selection sensitivity used the same 58 healthy-stool acquisitions for 19 settings	58	58	figures/SFig02/panels.py:stat_cd_grid[acquisitions]	source_data/SFig02/selection_grid_acquisitions.tsv;source_data/SFig02/selection_grid_summary.tsv	MATCH
+679	Selection sensitivity used the same 58 healthy-stool acquisitions for 19 settings	19	19	figures/SFig02/panels.py:stat_cd_grid[arms]	source_data/SFig02/selection_grid_acquisitions.tsv;source_data/SFig02/selection_grid_summary.tsv	MATCH
+679	All 1,102 acquisition–setting observations	1,102	1102	figures/SFig02/panels.py:stat_cd_grid[observations]	source_data/SFig02/selection_grid_acquisitions.tsv;source_data/SFig02/selection_grid_summary.tsv	MATCH

@@ -1,0 +1,30 @@
+{
+ "new": "build/Fig6/v30/Figure6_v30.png",
+ "new_sha256": "1d8dfe0f95be762bf559c178b4e78be8a0dc84d0e6423a0ae8b4806752c3872b",
+ "expected": "figures/Fig6/expected/Fig6_v30.png",
+ "expected_sha256": "ca90228f7902a7528a5abf340637a9bba6c47793bb3b767d498076c88f0913d1",
+ "dpi": 300,
+ "page": 0,
+ "tolerance": 0,
+ "max_fraction": 0.0,
+ "new_size_px": [
+  2162,
+  1905
+ ],
+ "expected_size_px": [
+  2162,
+  1905
+ ],
+ "differing_pixels": 5884,
+ "differing_fraction": 0.0014286373315268986,
+ "max_channel_difference": 177,
+ "diff_bbox_px": [
+  1266,
+  535,
+  1882,
+  589
+ ],
+ "verdict": "DIFFERENT",
+ "passed": false,
+ "diff_png": "figures/Fig6/checks/Fig6_v30_png.diff.png"
+}

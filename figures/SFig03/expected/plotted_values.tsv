@@ -1,0 +1,129 @@
+panel	group	arm	min_length	sample	x	value	acquisitions_with_support	label	source
+a	Bacteroides thetaiotaomicron	FL	5		0.0	36747.0	15	36,747; 15/15	CAMPI_member_support_recount.tsv
+a	Blautia producta	FL	5		1.0	9223.0	15	9,223; 15/15	CAMPI_member_support_recount.tsv
+a	Escherichia coli	FL	5		2.0	6401.0	15	6,401; 15/15	CAMPI_member_support_recount.tsv
+a	Clostridium butyricum	FL	5		3.0	36.0	15	36; 15/15	CAMPI_member_support_recount.tsv
+a	Anaerostipes caccae	FL	5		4.0	2880.0	15	2,880; 15/15	CAMPI_member_support_recount.tsv
+a	Erysipelatoclostridium ramosum	FL	5		5.0	8255.0	15	8,255; 15/15	CAMPI_member_support_recount.tsv
+a	Lactobacillus plantarum	FL	5		6.0	12.0	7	12; 7/15	CAMPI_member_support_recount.tsv
+a	Bifidobacterium longum	FL	5		7.0	86.0	15	86; 15/15	CAMPI_member_support_recount.tsv
+b	Bacteroides thetaiotaomicron	FL	9		0.0	31263.0	15	31,263; 15/15	CAMPI_member_support_recount.tsv
+b	Blautia producta	FL	9		1.0	7736.0	15	7,736; 15/15	CAMPI_member_support_recount.tsv
+b	Escherichia coli	FL	9		2.0	5569.0	15	5,569; 15/15	CAMPI_member_support_recount.tsv
+b	Clostridium butyricum	FL	9		3.0	20.0	15	20; 15/15	CAMPI_member_support_recount.tsv
+b	Anaerostipes caccae	FL	9		4.0	2538.0	15	2,538; 15/15	CAMPI_member_support_recount.tsv
+b	Erysipelatoclostridium ramosum	FL	9		5.0	7173.0	15	7,173; 15/15	CAMPI_member_support_recount.tsv
+b	Lactobacillus plantarum	FL	9		6.0	7.0	5	7; 5/15	CAMPI_member_support_recount.tsv
+b	Bifidobacterium longum	FL	9		7.0	74.0	14	74; 14/15	CAMPI_member_support_recount.tsv
+c	FL	FL	9	S01	-0.16	75.62656345872469			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S02	-0.13714285714285715	74.90638679394547			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S03	-0.1142857142857143	84.29981241334312			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S04	-0.09142857142857143	84.46358391169831			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S05	-0.06857142857142857	85.04208935894668			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S06	-0.04571428571428572	85.04709436644748			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S07	-0.022857142857142854	87.21044045676999			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S08	0.0	84.00047511580948			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S09	0.022857142857142854	88.07058823529412			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S10	0.04571428571428571	88.04191667370912			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S11_Fraction1	0.06857142857142856	89.63285975523983			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S11_Fraction2	0.09142857142857144	90.95574513463076			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S11_Fraction3	0.1142857142857143	86.88449748907586			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S11_Fraction4	0.13714285714285715	81.89907504975999			CAMPI_reference_recovery.tsv
+c	FL	FL	9	S12	0.16	86.30502445531347			CAMPI_reference_recovery.tsv
+c	FL	FL	9	median	0.0	85.04709436644748			median of the points above
+c	FL + Reference	FL_R	9	S01	0.84	98.89082928210696			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S02	0.8628571428571429	98.97157322926006			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S03	0.8857142857142857	98.95603947475736			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S04	0.9085714285714286	98.92131449117821			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S05	0.9314285714285714	98.8632275703288			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S06	0.9542857142857143	98.81642082815			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S07	0.9771428571428571	98.9820554649266			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S08	1.0	98.96068416676565			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S09	1.022857142857143	98.44117647058825			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S10	1.0457142857142858	98.49150680300852			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S11_Fraction1	1.0685714285714285	98.57926571951047			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S11_Fraction2	1.0914285714285714	98.4337509997334			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S11_Fraction3	1.1142857142857143	98.46083610513273			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S11_Fraction4	1.1371428571428572	97.75201966982789			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	S12	1.16	99.42752334370833			CAMPI_reference_recovery.tsv
+c	FL + Reference	FL_R	9	median	1.0	98.8632275703288			median of the points above
+c	FL + Reference + MG	FL_R_M	9	S01	1.84	98.43300136876387			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S02	1.8628571428571428	98.52328463688625			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S03	1.8857142857142857	98.58902210260175			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S04	1.9085714285714286	98.6579145413496			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S05	1.9314285714285715	98.60061874955032			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S06	1.9542857142857142	98.47520881464368			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S07	1.977142857142857	98.70799347471451			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S08	2.0	98.75282100011879			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S09	2.0228571428571427	98.14705882352939			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S10	2.045714285714286	98.22530212118652			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S11_Fraction1	2.0685714285714285	98.38936559291041			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S11_Fraction2	2.0914285714285716	98.2138096507598			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S11_Fraction3	2.1142857142857143	98.1608295832518			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S11_Fraction4	2.137142857142857	97.56468797564688			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	S12	2.16	99.17185415740329			CAMPI_reference_recovery.tsv
+c	FL + Reference + MG	FL_R_M	9	median	2.0	98.47520881464368			median of the points above
+c	Reference	REF	9	S01	2.84	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S02	2.862857142857143	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S03	2.8857142857142857	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S04	2.9085714285714284	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S05	2.9314285714285715	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S06	2.954285714285714	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S07	2.9771428571428573	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S08	3.0	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S09	3.0228571428571427	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S10	3.045714285714286	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S11_Fraction1	3.0685714285714285	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S11_Fraction2	3.0914285714285716	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S11_Fraction3	3.1142857142857143	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S11_Fraction4	3.137142857142857	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	S12	3.16	100.0			CAMPI_reference_recovery.tsv
+c	Reference	REF	9	median	3.0	100.0			median of the points above
+c	MG	MG	9	S01	3.84	92.60395525558124			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S02	3.862857142857143	93.1385475449607			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S03	3.8857142857142857	92.1417502650681			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S04	3.9085714285714284	92.19416339158792			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S05	3.9314285714285715	91.837542269228			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S06	3.954285714285714	91.70783721343524			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S07	3.9771428571428573	92.6394779771615			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S08	4.0	91.62608385794037			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S09	4.022857142857143	93.54117647058824			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S10	4.045714285714285	93.1040310994676			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S11_Fraction1	4.0685714285714285	93.95836263890843			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S11_Fraction2	4.091428571428572	94.23487070114635			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S11_Fraction3	4.114285714285714	91.05850127176677			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S11_Fraction4	4.137142857142857	89.20501112281934			CAMPI_reference_recovery.tsv
+c	MG	MG	9	S12	4.16	96.37616718541574			CAMPI_reference_recovery.tsv
+c	MG	MG	9	median	4.0	92.60395525558124			median of the points above
+d	Reference	REF	9	S01	-0.16	75.50833065589572			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S02	-0.13714285714285715	74.28974410638727			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S03	-0.1142857142857143	84.25910931174089			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S04	-0.09142857142857143	84.6853234349585			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S05	-0.06857142857142857	84.99156224193027			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S06	-0.04571428571428572	85.33053440546503			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S07	-0.022857142857142854	87.76103621464446			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S08	0.0	83.60864777140208			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S09	0.022857142857142854	88.07861542974479			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S10	0.04571428571428571	88.1520591341077			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S11_Fraction1	0.06857142857142856	90.0			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S11_Fraction2	0.09142857142857144	90.90607808046663			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S11_Fraction3	0.1142857142857143	86.73738347798135			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S11_Fraction4	0.13714285714285715	82.12290502793296			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	S12	0.16	86.39096070355116			CAMPI_within_MSFragger.tsv
+d	Reference	REF	9	median	0.0	85.33053440546503			median of the points above
+d	MG	MG	9	S01	0.84	74.66021846076877			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S02	0.8628571428571429	73.10654104004348			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S03	0.8857142857142857	84.25043164927558			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S04	0.9085714285714286	84.56069855498029			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S05	0.9314285714285714	85.20066334991708			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S06	0.9542857142857143	85.32427709452999			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S07	0.9771428571428571	87.8039367039753			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S08	1.0	83.73842267751894			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S09	1.022857142857143	88.3368374460551			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S10	1.0457142857142858	88.80239520958084			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S11_Fraction1	1.0685714285714285	90.1446594887377			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S11_Fraction2	1.0914285714285714	91.59947496718543			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S11_Fraction3	1.1142857142857143	87.35199802664036			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S11_Fraction4	1.1371428571428572	81.98187995469989			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	S12	1.16	86.06624692033945			CAMPI_within_MSFragger.tsv
+d	MG	MG	9	median	1.0	85.32427709452999			median of the points above

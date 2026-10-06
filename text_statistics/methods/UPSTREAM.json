@@ -1,0 +1,65 @@
+{
+  "unit": "methods",
+  "upstream": [
+    {
+      "id": "cohort_database_sizes",
+      "original_code_paths": ["LAB_ROOT/MM_review_analysis/A01_4_1_database_sizes/frozen/audit_v2.py", "LAB_ROOT/canonical/publication/chain/00_lake.sbatch"],
+      "uses": "Lake-builder statistics of the public, PREDICT, CapScan and CAMPI reservoirs (line 215); reservoir sizes cross-checked against source_data/Fig1/acquisition_sizes_726.tsv.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "campi_comparator_fastas",
+      "original_code_paths": ["LAB_ROOT/canonical/publication_data/arms/uniprotkb_2026_03_noclust_campi_ref_append_2026-09-09/SPEC.md", "LAB_ROOT/canonical/publication_data/arms/uniprotkb_2026_03_noclust_campi_ref_metag_append_2026-09-09/SPEC.md"],
+      "uses": "Frozen supplied CAMPI reference and MG target FASTAs (inputs/campi_ref_targets.faa, inputs/campi_mo_targets_fixed.faa) for line 227.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "sage_input_completeness",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/completeness_653/code/sage_input_integrity.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/second_engine_all/truncation_check/check.sh"],
+      "uses": "Reconverted flag of the 306 PREDICT public-sequence searches and the end-of-file check of the original mzML files (lines 233 and 303).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "metagenome_split_spectra_comparison",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration3/disjoint/analyze.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration3/disjoint/worker.py"],
+      "uses": "Per-acquisition counts and gains of the matched MG searches on odd-scan spectra (Source Data package sheet), and the 10,000-draw participant bootstrap ported into stats.py:split_bootstrap (line 267).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "cohort_spectrum_split_selection",
+      "original_code_paths": ["LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/split_half_repair/v16_joint_disjoint_2026-09-27/code/completed_review/review.py"],
+      "uses": "FastaLake full, same-half and disjoint counts that enter the split-spectra MG table (line 267); not read directly.",
+      "pipeline_dir": null
+    },
+    {
+      "id": "A95_spectrum_crossfit",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/worker.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/design/sage_lda.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration4/crossfit/run/analyze_final.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/run/analyze_final.py"],
+      "uses": "578-acquisition roster and lda_fallback (source_data/Fig4/crossfit_per_acquisition.tsv and the 347-roster rerun), interpreter of design/run.sbatch (line 267).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "cohort_selected_fasta_unions",
+      "original_code_paths": ["LAB_ROOT/sample_specific_merge_all_raw/2026-09-11/code/workflow.py", "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/reruns_347/A7_other/union/scripts/run_union.py"],
+      "uses": "Selected FASTAs of the HSTOOL58, PREDICT306 and CapScan 331/347 rosters, recounted independently in prepare_source_data.py and checked against the original union_summary.json files (line 269).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "capscan_participant_roster",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C2_participant15/roster/participant15_added.tsv"],
+      "uses": "The 16 participant-15 acquisitions added to the CapScan union (line 269, v28f value).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_clinical_refit",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/clinical_refit.py"],
+      "uses": "Paired antibiotic statistics (public aggregate, source_data/Fig4/clinical_paired_statistics.tsv) and the controlled per-patient profiles; derive() paired part ported into stats.py:clinical_paired_tests (line 275).",
+      "pipeline_dir": null
+    },
+    {
+      "id": "common_resource_accounting",
+      "original_code_paths": ["LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/v28/ANSWERS_A.md"],
+      "uses": "Slurm accounting of the CAMPI chain and AlphaNovo inference as shipped in source_data/SFig15 (line 299).",
+      "pipeline_dir": null
+    }
+  ]
+}

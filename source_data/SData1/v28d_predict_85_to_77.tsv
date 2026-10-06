@@ -1,0 +1,9 @@
+participant_id	n_later_samples	n_EDS_eligible_samples	n_native_complete_samples	reason	absent_assays_across_EDS_eligible_samples
+PREDICT_P031	4	4	0	no specimen for this patient belongs to the full required assay/metadata intersection	DNA_OG: 1/4;RNA_OG: 4/4;DNA_KO: 1/4;RNA_KO: 4/4;DNA_Pathway: 1/4;RNA_Pathway: 4/4
+PREDICT_P081	3	3	0	no specimen for this patient belongs to the full required assay/metadata intersection	DNA_OG: 1/3;RNA_OG: 3/3;DNA_KO: 1/3;RNA_KO: 3/3;DNA_Pathway: 1/3;RNA_Pathway: 3/3
+PREDICT_P041	1	1	0	no specimen for this patient belongs to the full required assay/metadata intersection	RNA_OG: 1/1;RNA_KO: 1/1;RNA_Pathway: 1/1
+PREDICT_P018	4	4	0	no specimen for this patient belongs to the full required assay/metadata intersection	DNA_OG: 1/4;RNA_OG: 4/4;DNA_KO: 1/4;RNA_KO: 4/4;DNA_Pathway: 1/4;RNA_Pathway: 4/4
+PREDICT_P071	2	2	0	no specimen for this patient belongs to the full required assay/metadata intersection	RNA_OG: 2/2;RNA_KO: 2/2;RNA_Pathway: 2/2
+PREDICT_P075	2	2	0	no specimen for this patient belongs to the full required assay/metadata intersection	DNA_OG: 1/2;RNA_OG: 2/2;DNA_KO: 1/2;RNA_KO: 2/2;DNA_Pathway: 1/2;RNA_Pathway: 2/2
+PREDICT_P066	2	2	0	no specimen for this patient belongs to the full required assay/metadata intersection	RNA_OG: 2/2;RNA_KO: 2/2;RNA_Pathway: 2/2
+PREDICT_P089	2	1	0	no specimen for this patient belongs to the full required assay/metadata intersection	DNA_OG: 1/1;RNA_OG: 1/1;DNA_KO: 1/1;RNA_KO: 1/1;DNA_Pathway: 1/1;RNA_Pathway: 1/1

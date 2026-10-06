@@ -1,0 +1,29 @@
+cohort	stage	n_tasks	n_memory_sampled	wall_median_min	memory_median_GiB	allocated_CPU_hours	population_scope
+CAMPI	02_evidence	1	1	11.066666666666666	138.8577241897583	11.804444444444444	current broad-reservoir production: 15 acquisitions
+CAMPI	05_persample	15	5	0.48333333333333334	0.74725341796875	2.1422222222222222	current broad-reservoir production: 15 acquisitions
+CAMPI	06_parsimony	15	9	0.6333333333333333	6.077881813049316	2.5422222222222226	current broad-reservoir production: 15 acquisitions
+CAMPI	07_sage	15	1	0.23333333333333334	2.032705307006836	2.1777777777777776	current broad-reservoir production: 15 acquisitions
+CAMPI	08_aggregate	1	0	0.11666666666666667		0.09333333333333334	current broad-reservoir production: 15 acquisitions
+CAMPI	09_entrap_shuffle	0	0				
+CAMPI	10_fdp_shuffle	0	0				
+HSTOOL	02_evidence	1	1	8.116666666666667	79.4586877822876	8.657777777777778	shared stage as run: 97 acquisitions
+HSTOOL	05_persample	58	58	1.4	12.82553243637085	11.855555555555556	current manuscript acquisition subset
+HSTOOL	06_parsimony	58	58	1.7416666666666667	8.972407341003418	14.024444444444445	current manuscript acquisition subset
+HSTOOL	07_sage	58	58	0.7583333333333333	2.7106313705444336	17.480000000000004	current manuscript acquisition subset
+HSTOOL	08_aggregate	1	1	2.3333333333333335	9.088629722595217	0.9333333333333333	shared stage as run: 97 acquisitions
+HSTOOL	09_entrap_shuffle	58	58	0.8666666666666667	5.032314300537109	27.035555555555554	current manuscript acquisition subset
+HSTOOL	10_fdp_shuffle	1	1	2.683333333333333	0.2380075454711914	0.35777777777777775	shared stage as run: 97 acquisitions
+PREDICT	02_evidence	1	1	12.033333333333333	98.58338737487792	12.835555555555555	shared stage as run: 306 acquisitions
+PREDICT	05_persample	306	306	1.65	11.238235473632812	68.56888888888889	current manuscript acquisition subset
+PREDICT	06_parsimony	306	251	1.4416666666666667	9.21946907043457	52.64	current manuscript acquisition subset
+PREDICT	07_sage	306	303	0.9666666666666667	1.9184579849243164	77.2	current manuscript acquisition subset
+PREDICT	08_aggregate	1	1	11.133333333333333	49.54896926879883	4.453333333333333	shared stage as run: 306 acquisitions
+PREDICT	09_entrap_shuffle	306	303	1.15	3.898250579833984	91.28444444444445	current manuscript acquisition subset
+PREDICT	10_fdp_shuffle	1	1	8.883333333333333	0.752415657043457	1.1844444444444444	shared stage as run: 306 acquisitions
+CAPSCAN	02_evidence	1	1	11.133333333333333	90.20949459075928	11.875555555555556	shared stage as run: 368 acquisitions
+CAPSCAN	05_persample	347	347	1.5833333333333333	15.081741333007812	73.73333333333333	current manuscript acquisition subset
+CAPSCAN	06_parsimony	347	307	1.35	8.847774505615234	59.96666666666667	current manuscript acquisition subset
+CAPSCAN	07_sage	347	262	0.6833333333333333	2.067321300506592	62.36	current manuscript acquisition subset
+CAPSCAN	08_aggregate	1	1	12.433333333333334	56.68386459350586	4.973333333333334	shared stage as run: 368 acquisitions
+CAPSCAN	09_entrap_shuffle	347	285	0.85	3.8784122467041016	77.79555555555555	current manuscript acquisition subset
+CAPSCAN	10_fdp_shuffle	1	1	6.85	0.8706855773925781	0.9133333333333333	shared stage as run: 368 acquisitions

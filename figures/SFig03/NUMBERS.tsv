@@ -1,0 +1,32 @@
+v28d_line	quote	printed_value	recomputed_value	code	source_data	status
+83	FastaLake recovered member-specific peptides for all eight community members	eight	eight	figures/SFig03/panels.py:stat_line83_member_support	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+83	Lactiplantibacillus plantarum (twelve pooled peptides at 5–50 residues	twelve	twelve	figures/SFig03/panels.py:stat_line83_member_support	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+83	twelve pooled peptides at 5–50 residues	5	5	figures/SFig03/panels.py:MIN_LENGTHS	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+83	twelve pooled peptides at 5–50 residues	50	50	figures/SFig03/panels.py:MAX_LENGTH	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+83	and seven at 9–50 residues	seven	seven	figures/SFig03/panels.py:stat_line83_member_support	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+83	and seven at 9–50 residues	9	9	figures/SFig03/panels.py:MIN_LENGTHS	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+83	and seven at 9–50 residues	50	50	figures/SFig03/panels.py:MAX_LENGTH	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+83	At 9–50 residues, the metagenome database recovered member-specific peptides for only six members	six	six	figures/SFig03/panels.py:stat_line83_member_support	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+83	At 9–50 residues, the metagenome database	9	9	figures/SFig03/panels.py:MIN_LENGTHS	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+83	At 9–50 residues, the metagenome database	50	50	figures/SFig03/panels.py:MAX_LENGTH	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+83	FastaLake recovered 3- to 17-fold fewer member-specific peptides than the reference search	3	3.372093023255814	figures/SFig03/panels.py:stat_line83_member_support	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+83	FastaLake recovered 3- to 17-fold fewer member-specific peptides than the reference search	17	16.75	figures/SFig03/panels.py:stat_line83_member_support	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+89	median paired FastaLake peptide-count ratios of 0.99 relative to the reference database	0.99	1.0028744939271257	figures/SFig03/panels.py:stat_line89_msfragger	source_data/SFig03/CAMPI_within_MSFragger.tsv	v28f_change:1.00
+89	0.94 relative to MG	0.94	0.9444444444444444	figures/SFig03/panels.py:stat_line89_msfragger	source_data/SFig03/CAMPI_within_MSFragger.tsv	MATCH
+89	recovering a median 84.6% of the corresponding comparator peptide identities	84.6%	85.32740574999751	figures/SFig03/panels.py:stat_line89_msfragger	source_data/SFig03/CAMPI_within_MSFragger.tsv	v28f_change:85.3%
+253	for all 15 CAMPI acquisitions with MSFragger 4.1 and Percolator 3.06.5	15	15	figures/SFig03/panels.py:stat_msfragger_receipts	source_data/SFig03/CAMPI_MSFragger_search_receipts.tsv	MATCH
+253	for all 15 CAMPI acquisitions with MSFragger 4.1 and Percolator 3.06.5	4.1	4.1	figures/SFig03/panels.py:stat_msfragger_receipts	source_data/SFig03/CAMPI_MSFragger_search_receipts.tsv	MATCH
+253	for all 15 CAMPI acquisitions with MSFragger 4.1 and Percolator 3.06.5	3.06.5	3.06.5	figures/SFig03/panels.py:stat_msfragger_receipts	source_data/SFig03/CAMPI_MSFragger_search_receipts.tsv	MATCH
+417	labels give the count and acquisitions/15	15	15	figures/SFig03/panels.py:recomputed_numbers	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+417	Specificity is relative to the eight supplied reference proteomes	eight	eight	figures/SFig03/panels.py:stat_line83_member_support	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+417	The 9–50-residue list is nested within the accepted 5–50 list	9	9	figures/SFig03/panels.py:MIN_LENGTHS	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+417	The 9–50-residue list is nested	50	50	figures/SFig03/panels.py:MAX_LENGTH	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+417	nested within the accepted 5–50 list	5	5	figures/SFig03/panels.py:MIN_LENGTHS	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+417	nested within the accepted 5–50 list	50	50	figures/SFig03/panels.py:MAX_LENGTH	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+417	c,d use peptides of 9–50 residues	9	9	figures/SFig03/panels.py:PLOTTED_MIN_LENGTH_CD	source_data/SFig03/CAMPI_reference_recovery.tsv	v28f_change:9
+417	c,d use peptides of 9–50 residues	50	50	figures/SFig03/panels.py:MAX_LENGTH	source_data/SFig03/CAMPI_reference_recovery.tsv	v28f_change:50
+685	For every search arm and each of the eight members	eight	eight	figures/SFig03/panels.py:stat_line83_member_support	source_data/SFig03/CAMPI_member_support_recount.tsv	MATCH
+685	Both the accepted 5–50-residue population	5	5	figures/SFig03/panels.py:MIN_LENGTHS	source_data/SFig03/CAMPI_member_acquisition_counts.tsv	MATCH
+685	Both the accepted 5–50-residue population	50	50	figures/SFig03/panels.py:MAX_LENGTH	source_data/SFig03/CAMPI_member_acquisition_counts.tsv	MATCH
+685	its nested 9–50-residue subset	9	9	figures/SFig03/panels.py:MIN_LENGTHS	source_data/SFig03/CAMPI_member_acquisition_counts.tsv	MATCH
+685	its nested 9–50-residue subset	50	50	figures/SFig03/panels.py:MAX_LENGTH	source_data/SFig03/CAMPI_member_acquisition_counts.tsv	MATCH

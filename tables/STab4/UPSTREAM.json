@@ -1,0 +1,47 @@
+{
+  "unit": "STab4",
+  "upstream": [
+    {
+      "id": "predict_eds_feature_selection",
+      "original_code_paths": [],
+      "uses": "fixed 20-feature selection (Fixed_feature_key and the 20-feature sheets); selection code not traced",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_eds_screen",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/eds_biochemistry.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/eds_refit/analyze.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/eds_refit/individual_followup.py"
+      ],
+      "uses": "259-observation and 85-patient values of the 20 features (All20_features_259_observations, Observation_metadata, 85_patient_order, 85_patient_raw, 85_patient_z); saved screen P values for the full-family q of Focused_pairs and Focused_features (source_data/SFig10)",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_eds_focused_pairs",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration2/cr003_followup/scripts/build_approved_eds_cr003.py"
+      ],
+      "uses": "Focused_raw, Focused_features, Focused_pairs, Focused_adjustments; statistics ported to panels.py and recomputed",
+      "pipeline_dir": null
+    },
+    {
+      "id": "predict_eds_pair_adjustments",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration1/fix_eggnog_native/downstream/verified50/B/eds_refit/separate_adjustments/run_analysis.py"
+      ],
+      "uses": "saved five-pair model table (source_data/STab4/five_pair_all_models.tsv) for the counts of v28d line 799; not part of the workbook",
+      "pipeline_dir": null
+    },
+    {
+      "id": "STab4_workbook_build",
+      "original_code_paths": [
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/iteration2/cr003_followup/scripts/tables_cr003.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/figure_sd/source_data/build/build_package.py",
+        "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/figure_sd/source_data/build/specials.py"
+      ],
+      "uses": "workbook assembly and Read_me text; logic ported to panels.build_sheets",
+      "pipeline_dir": null
+    }
+  ]
+}
