@@ -1,6 +1,8 @@
 # FastaLake paper repository
 
-Code, notebooks and source data that regenerate every figure panel and every number of the manuscript "FastaLake selects compact metaproteomic databases from large sequence reservoirs by de novo peptide lookup" (reference text v30). Every printed number is listed with the code and the source data table that produce it (`docs/REVIEWER_GUIDE.md`), every statistical test with its unit, n, correction and seed (`docs/STATISTICS.md`), and every choice (cutoffs, seeds, filters) in a Choices table in the README of the unit that makes it.
+Code, notebooks and source data for the figures, tables and registered numerical claims of "FastaLake selects compact metaproteomic databases from large sequence reservoirs by de novo peptide lookup" (reference text v30). The [reviewer guide](docs/REVIEWER_GUIDE.md) links registered claims to their code and source tables. [Statistical records](docs/STATISTICS.md) describe units, sample sizes, corrections and seeds; each unit README records its analysis choices.
+
+The number checker compares registered values. Supply the reference manuscript text to check quotations as well. Unresolved claims remain listed in each unit's `OPEN_ITEMS.md`; `--strict` makes these entries fail the check.
 
 The manuscript text is not part of the repository. The reference text is v30 (`visible_v30f.txt`, one paragraph per line as `<index><TAB><text>`). Units in `tables/` and `text_statistics/` give for every number the v30 paragraph, wording, printed value and status (`NUMBERS.tsv` columns `v30_*`) and check them with `python tools/check_numbers.py --manuscript-text visible_v30f.txt`. `v28d_line` is kept as the physical line number of the earlier accepted text v28d (`CONVENTIONS.md`); figure units still refer to it.
 

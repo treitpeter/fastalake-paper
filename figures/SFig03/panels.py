@@ -138,6 +138,7 @@ def init(base=BASE_FONT_PT):
     """
     plt.rcdefaults()   # the producer started from matplotlib defaults; undo any earlier style
     f = font_file()
+    _FONT.update(path=None, name=None)
     if f is not None:
         fm.fontManager.addfont(str(f))
         _FONT.update(path=f, name=fm.FontProperties(fname=str(f)).get_name())
@@ -954,7 +955,7 @@ def build_v30(t, out):
     """
     from style import fl_style as fl
     out = Path(out)
-    assert init()
+    have_font = init()
     old_fig, old_axes, old_plotted = build_figure(t)
     OLD = fingerprint(list(old_axes))
     old_text = texts(old_fig)
@@ -982,4 +983,5 @@ def build_v30(t, out):
     px = render_png(pdf, png, V30_PNG_DPI)
     return dict(values_identical=ok, panels=rep, plotted_table_equal_to_producer=plotted_equal,
                 value_labels_equal=labels_equal, label_strings_lost=lost, label_strings_added=added,
-                slanted=n_sl, pdf=pdf, png=png, png_px=px, plotted=newp)
+                slanted=n_sl, pdf=pdf, png=png, png_px=px, plotted=newp,
+                producer_font_available=have_font)
