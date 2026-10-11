@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check every number the manuscript prints against the value the repository recomputes.
+"""Check registered manuscript numbers against recorded recomputed values.
 
 Reads ``figures/*/NUMBERS.tsv``, ``tables/*/NUMBERS.tsv`` and
 ``text_statistics/*/NUMBERS.tsv``. Each row has the columns (tab-separated, header
@@ -356,6 +356,9 @@ def main(argv=None):
         return self_test()
     kind, text = load_text(a.manuscript_text) if a.manuscript_text else ("v28d", None)
     files = sorted(p for g in GLOBS for p in REPO.glob(g) if not a.unit or p.parent.name == a.unit)
+    if not files:
+        print("FAIL no NUMBERS.tsv files matched" + (f" unit {a.unit!r}" if a.unit else ""))
+        return 1
     failures, open_rows, nrows = [], [], 0
     for f in files:
         fl, op = check_file(f, text, a.strict, kind)
