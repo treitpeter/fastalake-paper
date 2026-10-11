@@ -2,6 +2,8 @@
 build/
 __pycache__/
 *.pyc
+.mpl/
+fontlist-v*.json
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 .venv/
