@@ -122,6 +122,11 @@
       "relation": "isCompiledBy",
       "identifier": "https://github.com/MannLabs/fasta-lake",
       "scheme": "url"
+    },
+    {
+      "relation": "isSupplementTo",
+      "identifier": "10.64898/2026.10.08.757395",
+      "scheme": "doi"
     }
   ],
   "notes": "Source data are released under CC BY 4.0 (LICENSE-DATA.md); both licences await author confirmation. The article DOI is added at release."
