@@ -1,0 +1,18 @@
+10c10
+< ROOT=HERE.parents[1]
+---
+> ROOT=Path('LAB_ROOT')  # phase3: fixed (was HERE.parents[1])
+12c12
+< OUT=HERE/'assignment_exports'
+---
+> import os;OUT=Path(os.environ['P3_EXPORT_OUT'])  # phase3: was HERE/'assignment_exports'
+38,39c38,39
+<  for cohort,folder in [('PREDICT','PREDICT_three_arm_2026-09-11_immediate'),('CAPSCAN','CAPSCAN_two_arm_282_2026-09-11_immediate')]:
+<   b=ROOT/'simplified_grouping_results'/folder;mm=json.loads((b/'manifest.json').read_text())
+---
+>  for cohort,folder in [('CAPSCAN',os.environ['P3_GROUPING_RUN'])]:  # phase3: was PREDICT three-arm + CAPSCAN_two_arm_282
+>   b=Path(folder);mm=json.loads((b/'manifest.json').read_text())
+175c175
+<  HERE.mkdir(exist_ok=True);write_json(HERE/'TASKS.json',{k:{a:b for a,b in v.items() if a not in ['search_inputs','static_inputs']} for k,v in alltasks.items()})
+---
+>  OUT.mkdir(parents=True,exist_ok=True);write_json(OUT/'TASKS.json',{k:{a:b for a,b in v.items() if a not in ['search_inputs','static_inputs']} for k,v in alltasks.items()})

@@ -29,6 +29,14 @@ import panels
 COMPOSITE_WIDTH_MM = 183
 #: Raster resolution of the composite PNG.
 COMPOSITE_DPI = 300
+
+# v33 (Fig2_v31): the d and e colour keys sit in one row directly above their axes,
+# left-aligned with the axes' left spine; entries spaced by measured text width.
+PT = 72 / 25.4
+AX_TOP = 112 * PT                   # top of the d and e axes (canvas ax(..., 112, ..., 27))
+D_AX_X0, E_AX_X0 = 43 * PT, 114 * PT
+KEY_GAP_PT = 4.5                    # key baseline above the axes top
+KEY_ITEM_GAP_PT = 8.0               # space between one key entry's text and the next swatch
 sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()  # noqa: E731
 
 
@@ -117,9 +125,11 @@ def assemble(canvas, out_dir, font_dir=None, stem='Figure2'):
     yy = tags[0]['origin'][1]
     p.draw_rect(f.Rect(44, yy - 7, 192, yy + 2), color=None, fill=(1, 1, 1))
     p.insert_font(fontname='legendreg', fontfile=str(FONTDIR / 'soehne-buch.ttf'))
-    for xx, lab, col in [(47.6, 'No exported prediction', (0, .447, .698)), (135, 'Prediction exists', (.902, .624, 0))]:
-        p.draw_rect(f.Rect(xx, yy - 4, xx + 5.7, yy), color=None, fill=col)
-        p.insert_text((xx + 10, yy), lab, fontname='legendreg', fontsize=5.7, color=(.306, .306, .306))
+    _lf = f.Font(fontfile=str(FONTDIR / 'soehne-buch.ttf')); xx = D_AX_X0; yyk = AX_TOP - KEY_GAP_PT
+    for lab, col in [('No exported prediction', (0, .447, .698)), ('Prediction exists', (.902, .624, 0))]:
+        p.draw_rect(f.Rect(xx, yyk - 4, xx + 5.7, yyk), color=None, fill=col)
+        p.insert_text((xx + 10, yyk), lab, fontname='legendreg', fontsize=5.7, color=(.306, .306, .306))
+        xx += 10 + _lf.text_length(lab, fontsize=5.7) + KEY_ITEM_GAP_PT
     dd = labels_and_small_fixes(dd, 2)
     dd, cuts = trim_blank_bands(dd)
     s1 = OUT / 'step1_Figure2.pdf'; dd.save(s1, garbage=4, deflate=True)
@@ -203,9 +213,11 @@ def assemble(canvas, out_dir, font_dir=None, stem='Figure2'):
     p.apply_redactions(images=0, graphics=0)
     p.draw_rect(legend, color=None, fill=(1, 1, 1))
     p.insert_font(fontname='SohneFix', fontfile=BUCH)
-    for x, txt, c in [(275, 'One member', (0, .447, .698)), (335, 'Several members', (.5, .5, .5)), (410, 'No member', (.85, .85, .85))]:
-        p.draw_rect(fitz.Rect(x, 287, x + 5, 291), color=None, fill=c)
-        p.insert_text((x + 9, 291.4), txt, fontname='SohneFix', fontsize=5.6, color=(.27, .27, .27))
+    _ef = fitz.Font(fontfile=BUCH); x = E_AX_X0; yk = AX_TOP - KEY_GAP_PT
+    for txt, c in [('One member', (0, .447, .698)), ('Several members', (.5, .5, .5)), ('No member', (.85, .85, .85))]:
+        p.draw_rect(fitz.Rect(x, yk - 4.4, x + 5, yk - .4), color=None, fill=c)
+        p.insert_text((x + 9, yk), txt, fontname='SohneFix', fontsize=5.6, color=(.27, .27, .27))
+        x += 9 + _ef.text_length(txt, fontsize=5.6) + KEY_ITEM_GAP_PT
     p.insert_text((75, 618), target, fontname='SohneFix', fontsize=6.3, rotate=90, color=(.27, .27, .27))
     nums = lambda pg: collections.Counter(re.findall(r'(?<![A-Za-z])\d[\d,.]*', pg.get_text()))  # noqa: E731
     assert nums(p) == nums(fitz.open(s2)[0])

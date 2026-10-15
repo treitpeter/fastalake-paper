@@ -51,9 +51,9 @@ produced by: cohort_selected_fasta_unions
 | fasta_sha256 | id | sha256 of the selected FASTA file |
 
 ## crossfit_lda_fallback_347.tsv
-sha256: b71bb459bb014a3315507f7309c7941a4f41e5847caa62114654f31b8becaf8d
-rows: 578 (one row per matched acquisition)
-produced by: A95_spectrum_crossfit (rerun with CapScan caches pooled over 347 acquisitions)
+sha256: 3376a7236aa524713cecb61c31f724b4308e9420e8cd54e5d71f4bf6d00408d9
+rows: 591 (one row per matched acquisition)
+produced by: A95_spectrum_crossfit (rerun with CapScan caches pooled over 347 acquisitions); rows 578-590 are the 13 CapScan acquisitions of the 295 matched benchmark, none with a fallback (pipelines/capscan_mg_benchmark_295)
 
 | column | unit | meaning |
 |---|---|---|

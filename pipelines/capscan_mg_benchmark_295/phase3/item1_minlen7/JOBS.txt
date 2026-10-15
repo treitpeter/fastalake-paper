@@ -1,0 +1,6 @@
+pilot_search(idx0 control 1311, idx6 largest 1803; 24G) 6085717
+negative_control(sha-corrupted task) 6085718
+reproduce282(16c,32G) 6085721
+search12(idx1-5,7-13; 20G = pilot MaxRSS 19.03GB x1.05) 6085785
+collect_final+edits(afterok) 6085786
+prepare(config control+build) 6085669

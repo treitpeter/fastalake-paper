@@ -59,6 +59,10 @@ JITTER_SEED = 5               # horizontal jitter of panel b points (display onl
 PAGE_W_PT = 518.7401733398438
 PAGE_H_PT = 688.2833251953125
 Y0 = 140.0                    # panel-a band ends here; panels b-g start below
+# v31 layout (v33 figure): panel e region labels 1.0 pt under the heatmap, legend raised, panel f two-line x labels
+E_LABEL_GAP_PT = 1.0
+E_LEGEND_LY = 483.0
+F_XLABELS = ['All\nfunctions', 'Well-resolved\nfunctions']
 
 INK = '#4e4f51'
 HOST, BLUE, ORANGE, SKY, GREY, LG = '#D55E00', '#0072B2', '#E69F00', '#56B4E9', '#7f7f7f', '#cfcfcf'
@@ -79,8 +83,8 @@ WORDS = {4: 'four', 5: 'five', 13: 'thirteen', 14: 'fourteen', 15: 'fifteen'}
 
 #: Files above 20 MB read from build/zenodo/Fig5/ (see source_data/Fig5/README.md), with their sha256.
 ZENODO_FILES = {
-    'OG_other_unresolved.npz': 'e277cb600c7ee2b6f6e94b0bbd0f86a32a90878cd1b082045c77ed55b7b946a1',
-    'OG_other_unresolved_axes.json': '3c3544a93f32ad1eacd55e3f1a9758265cf724fa3004aed0f13c3999e81af955',
+    'OG_other_unresolved.npz': 'e23d55a44eeb588caa9d4964ca6c707d934a567748b551eb3c3a326a353392ed',
+    'OG_other_unresolved_axes.json': 'bf88b28c6e715b3ba2a2334f6257726e80287b73448dd9eff9ec9941116954ad',
     'function_species.npz': '4182b86aeb96de12e95c0572c039445a00e3fd70abe91b3addcf7c585e76817d',
 }
 
@@ -263,7 +267,7 @@ def panel_c(cv):
     cv.letter(299.7, 149.0, 'c')
     cv.NUM['c'] = dict(n_closer=int((a_ < b_).sum()), own_mean=float(a_.mean()), other_mean=float(b_.mean()), p=float(sim.p),
                        features=int(sim.features))
-    assert cv.NUM['c']['n_closer'] == NP and abs(cv.NUM['c']['p'] - 1e-5) < 1e-12 and cv.NUM['c']['features'] == 73316
+    assert cv.NUM['c']['n_closer'] == NP and abs(cv.NUM['c']['p'] - 1e-5) < 1e-12 and cv.NUM['c']['features'] == 73228
     cv.data.update(own=own)
     return cv.NUM['c']
 
@@ -301,7 +305,7 @@ def panel_d(cv):
                                         facecolor=col, edgecolor='none'))
         cv.ftext(x + 7.5, y, lab, fontsize=5.4, va='center', color=INK)
     cv.letter(438.0, 149.0, 'd')
-    assert dl == ['45.0%', '56.9%', '10.7%', '4.2%', '5.3%'], dl
+    assert dl == ['44.9%', '56.9%', '10.8%', '4.2%', '5.3%'], dl
     cv.NUM['d'] = dl
     cv.data.update(part=part)
     return dl
@@ -348,7 +352,7 @@ def panel_e(cv):
     for i, name in enumerate(key.display_name):
         axF.text(-.8, i, name, ha='right', va='center', fontsize=5.5)
     for j, ch in enumerate('1234S'):
-        axF.text(j * cw + cw / 2, 24.1, ch, ha='center', va='top', fontsize=5.0, color='#8a8a8a')
+        axF.text(j * cw + cw / 2, 23.5 + E_LABEL_GAP_PT / ((MY1 - MY0) / 24), ch, ha='center', va='top', fontsize=5.0, color='#8a8a8a')
     axFb = cv.axpt(477, MY0, 508, MY1)
     axFb.barh(range(24), ab.mean_share_percent, color=GREY, height=.6); axFb.set_ylim(23.5, -.5); axFb.set_yticks([])
     axFb.spines[['top', 'right', 'left']].set_visible(False)
@@ -361,7 +365,7 @@ def panel_e(cv):
 
     def twidth(t):
         return t.get_window_extent(rend).width * 72 / fig.dpi
-    LX, LY, LS = 82.0, 501.5, 8.2
+    LX, LY, LS = 82.0, E_LEGEND_LY, 8.2
     for cidx in range(5):
         widths = []
         for ridx in range(3):
@@ -411,7 +415,7 @@ def panel_f(cv):
         axE.plot([x0 - .28, x0 + .28], [v, v], color='k', lw=1.1, zorder=3)
         axE.text(x0 + .32, v, f'{v:.1f}', ha='left', va='center', fontsize=5.5, bbox=dict(facecolor='white', edgecolor='none', pad=.3))
         fmeans.append(f'{v:.1f}')
-    axE.set_xlim(-.6, 1.75); axE.set_xticks(Xe, ['All eligible', 'Strict subset'], fontsize=6.5); axE.tick_params(axis='x', length=0)
+    axE.set_xlim(-.6, 1.75); axE.set_xticks(Xe, F_XLABELS, fontsize=6.5); axE.tick_params(axis='x', length=0)
     axE.set_ylabel('Same leading species,\ncapsule and own stool (%)', fontsize=6.5); axE.set_ylim(0, 100)
     axE.set_yticks([0, 25, 50, 75, 100]); axE.spines[['top', 'right']].set_visible(False)
     cv.letter(36.8, 527.0, 'f')

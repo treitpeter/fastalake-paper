@@ -14,6 +14,11 @@ A row passes when
 * ``status`` is ``v28f_change:<new>`` and ``recomputed_value`` agrees with ``<new>`` at the
   precision of ``<new>`` (the manuscript value changes in v28f).
 
+* ``status`` is ``SUPERSEDED_V33`` (optionally ``SUPERSEDED_V33:<previous status>``, e.g.
+  ``SUPERSEDED_V33:v28f_change:1.40``): the v28d (or v28f) printed value was superseded by a v33 value
+  computed on a changed roster (CapScan matched benchmark 282 -> 295 acquisitions); the row is
+  then checked only through its v42 columns, which must be present.
+
 ``OPEN`` rows are listed and do not fail unless ``--strict``. Any other status, a row whose
 status says MATCH but whose values disagree, or a malformed row, fails.
 
@@ -25,29 +30,27 @@ Superscript exponents (``6.1 × 10⁻⁴``) are read as ordinary exponents. A pr
 with trailing zeros (``250,000``) that fails the exact rule is accepted if the recomputed
 value rounds to it at its significant figures (``250,197`` -> 2 s.f.); such rows are
 reported as ROUNDED so the reader sees every one; the same rule and listing apply to
-``v28f_change:<new>`` values and to ``v30_printed_value``. A printed bound ``< v``, ``> v``,
+``v28f_change:<new>`` values and to ``v42_printed_value``. A printed bound ``< v``, ``> v``,
 ``more than v`` or ``fewer than v`` requires the recomputed value to satisfy it.
-Non-numeric values are compared as exact strings.
+English number words zero to twenty are read as integers. Other non-numeric values are compared
+as exact strings.
 
-v30 reference. A NUMBERS.tsv may carry four further columns after the seven above::
-
-    v30_para  v30_quote  v30_printed_value  v30_status
-
-``v30_para`` is the 0-based paragraph index of the v30 manuscript text (the first
-tab-separated field of each line of ``visible_v30f.txt``), ``v30_quote`` the v30 wording
-around the number and ``v30_printed_value`` the number as printed in v30. ``v30_status``
-is ``MATCH`` (recomputed value agrees with the v30 printed value under the same rounding
-rules), ``OPEN`` (does not agree or not traced; reason in OPEN_ITEMS.md) or
-``NOT_IN_V30`` (the v28d quote was not located in the v30 text; listed, fails only with
-``--strict``) or ``REMOVED_V30`` (the sentence was cut deliberately between v28d and v30;
-``v30_para`` and ``v30_printed_value`` are empty and ``v30_quote`` holds the reason, usually
-the edit id; listed, never fails). v30 values are checked whenever the columns are present.
+Current reference: v42. The four retained ``v36_*`` columns preserve the historical
+anchors. Seven ``v42_*`` fields follow: ``para``, ``quote``, ``printed_value``,
+``status``, ``recomputed_value``, ``code`` and ``source_data``. Current values and
+input populations may differ from the historical columns. The current manuscript
+has 494 paragraphs; paragraph indices are zero-based. MATCH checks recorded values
+and, when supplied, exact manuscript quotations. OPEN records an unresolved claim;
+NOT_IN_V42 records an unlocated quote. REMOVED_V30/V33/V36/V42 rows preserve an
+explicit disposition for a claim removed from the corresponding manuscript.
+The original tracked manuscript is never modified. Its accepted-text view and
+identity are specified by ``docs/MANUSCRIPT.json``.
 
 With ``--manuscript-text PATH`` (or env ``FASTALAKE_MANUSCRIPT_TXT``) the tool also checks
 quotes. The format is detected from the file: a paragraph-indexed text (every non-empty
-line ``<index>\t<paragraph>``, as ``visible_v30f.txt``) checks ``v30_quote`` inside
-paragraph ``v30_para`` and ``v30_printed_value`` inside ``v30_quote``; files without v30
-columns are then reported as not checked against v30. Any other file is read as the
+line ``<index>\t<paragraph>``, as ``visible_v42.txt``) checks ``v42_quote`` inside
+paragraph ``v42_para`` and ``v42_printed_value`` inside ``v42_quote``; files without v42
+columns are then reported as not checked against v42. Any other file is read as the
 accepted v28d text with physical line numbers, and ``quote`` is checked on ``v28d_line``
 and ``printed_value`` inside ``quote``. The manuscript text is not part of this repository.
 
@@ -58,6 +61,8 @@ Usage
 
 import argparse
 import csv
+import hashlib
+import json
 import math
 import os
 import re
@@ -70,11 +75,13 @@ REPO = Path(__file__).resolve().parents[1]
 #: Required NUMBERS.tsv columns, in order.
 COLUMNS = ["v28d_line", "quote", "printed_value", "recomputed_value", "code", "source_data", "status"]
 
-#: Optional v30 columns, appended after COLUMNS.
-V30_COLUMNS = ["v30_para", "v30_quote", "v30_printed_value", "v30_status"]
+#: Optional reference-text (v42) columns, appended after COLUMNS.
+REF = "v42"
+REF_COLUMNS = [f"{REF}_{key}" for key in ("para", "quote", "printed_value", "status", "recomputed_value", "code", "source_data")]
+HISTORICAL_REF_COLUMNS = [f"v36_{key}" for key in ("para", "quote", "printed_value", "status")]
 
-#: Allowed v30_status values.
-V30_STATUSES = ("MATCH", "OPEN", "NOT_IN_V30", "REMOVED_V30")
+#: Allowed v42_status values.
+REF_STATUSES = ("MATCH", "OPEN", "NOT_IN_V42", "REMOVED_V30", "REMOVED_V33", "REMOVED_V36", "REMOVED_V42")
 
 #: Glob patterns for NUMBERS.tsv files.
 GLOBS = ["figures/*/NUMBERS.tsv", "tables/*/NUMBERS.tsv", "text_statistics/*/NUMBERS.tsv"]
@@ -93,6 +100,11 @@ def _clean(s):
     return s
 
 
+#: English number words read as integers ("nineteen" agrees with 19, "10" with "ten").
+_WORDS = {w: i for i, w in enumerate("zero one two three four five six seven eight nine ten eleven twelve thirteen "
+                                     "fourteen fifteen sixteen seventeen eighteen nineteen twenty".split())}
+
+
 def parse(value):
     """Parse a printed value.
 
@@ -105,18 +117,24 @@ def parse(value):
     Returns
     -------
     tuple
-        ``(kind, number, precision)`` where kind is ``"num"``, ``"lt"``, ``"gt"`` or
-        ``"str"``; precision is ``("dp", n)`` decimals or ``("sf", n)`` significant figures.
+        ``(kind, number, precision)`` where kind is ``"num"``, ``"lt"``, ``"le"``,
+        ``"gt"``, ``"ge"``, ``"str"`` or ``"invalid"``. Non-finite numbers and
+        numbers outside the floating-point range are invalid. Precision is
+        ``("dp", n)`` decimals or ``("sf", n)`` significant figures.
     """
     s = _clean(value)
+    if s.lower() == "two thousand":
+        return "num", 2000.0, ("dp", 0)
+    if s.lower() in _WORDS:
+        return "num", float(_WORDS[s.lower()]), ("dp", 0)
     s = re.sub(r"^[A-Za-z][A-Za-z_ ]*\s*=\s*", "", s)  # drop a leading "P = ", "rho = "
     kind = "num"
     w = re.match(r"^(more|greater|fewer|less)(?:than|\s+than)\s*(.+)$", s, re.I)
     if w:
         s = (">" if w.group(1).lower() in ("more", "greater") else "<") + w.group(2)
-    m = re.match(r"^(?:[A-Za-z][A-Za-z_ ]*)?\s*([<>≤≥])\s*(.+)$", s)
+    m = re.match(r"^(?:[A-Za-z][A-Za-z_ ]*)?\s*(<=|>=|[<>≤≥])\s*(.+)$", s)
     if m:
-        kind = "lt" if m.group(1) in "<≤" else "gt"
+        kind = {"<": "lt", "≤": "le", "<=": "le", ">": "gt", "≥": "ge", ">=": "ge"}[m.group(1)]
         s = m.group(2).strip()
     s = re.sub(r"(%|×|-fold|fold|x)$", "", s).strip().replace(",", "")
     sci = _SCI.match(s.replace(" ", ""))
@@ -125,12 +143,21 @@ def parse(value):
             mant = sci.group("m")
             exp = int(sci.group("e1") or sci.group("e2"))
             digits = len(mant.replace("-", "").replace("+", "").replace(".", "").lstrip("0")) or 1
-            return kind, float(mant) * 10.0 ** exp, ("sf", digits)
-        d = Decimal(s)
+            d = Decimal(f"{mant}e{exp}")
+            precision = ("sf", digits)
+        else:
+            d = Decimal(s)
+            precision = None
     except (InvalidOperation, ValueError):
         return "str", value.strip(), None
-    dp = max(0, -d.as_tuple().exponent)
-    return kind, float(d), ("dp", dp)
+    if not d.is_finite():
+        return "invalid", value.strip(), None
+    number = float(d)
+    if not math.isfinite(number) or (number == 0 and d != 0):
+        return "invalid", value.strip(), None
+    if precision is None:
+        precision = ("dp", max(0, -d.as_tuple().exponent))
+    return kind, number, precision
 
 
 def rounded_integer_sf(printed):
@@ -165,15 +192,21 @@ def agrees(printed, recomputed):
         Full-precision value computed by the repository code.
     """
     kind, p, prec = parse(printed)
+    if kind == "invalid":
+        return False
     if kind == "str":
         return _clean(printed) == _clean(recomputed)
     rk, r, _ = parse(recomputed)
-    if rk == "str":
+    if rk != "num":
         return False
     if kind == "lt":
         return r < p
+    if kind == "le":
+        return r <= p
     if kind == "gt":
         return r > p
+    if kind == "ge":
+        return r >= p
     mode, n = prec
     if mode == "dp":
         q = Decimal(1).scaleb(-n)
@@ -190,14 +223,14 @@ def load_text(path):
     Returns
     -------
     tuple
-        ``("v30", {paragraph_index: text})`` for a paragraph-indexed text (every non-empty
+        ``("v42", {paragraph_index: text})`` for a paragraph-indexed text (every non-empty
         line ``<int>\t<text>``), else ``("v28d", {line_number: text})`` with physical,
         1-based line numbers of ``v28d_accepted.txt``.
     """
     lines = Path(path).read_text(encoding="utf-8").splitlines()
     body = [ln for ln in lines if ln.strip()]
     if body and all(re.match(r"^\d+\t", ln) for ln in body):
-        return "v30", {int(ln.split("\t", 1)[0]): ln.split("\t", 1)[1] for ln in body}
+        return "v42", {int(ln.split("\t", 1)[0]): ln.split("\t", 1)[1] for ln in body}
     return "v28d", dict(enumerate(lines, 1))
 
 
@@ -206,40 +239,41 @@ def agrees_any(printed, recomputed):
     return agrees(printed, recomputed) or agrees_rounded(printed, recomputed)
 
 
-def check_v30(row, where, text, strict):
-    """Check the v30 columns of one row; return (failures, open_rows)."""
+def check_ref(row, where, text, strict):
+    """Check the v42 columns of one row; return (failures, open_rows)."""
     fails, opens = [], []
-    st = (row.get("v30_status") or "").strip()
-    if st not in V30_STATUSES:
-        return [f"{where}: unknown v30_status {st!r}"], []
-    if st == "REMOVED_V30":
-        # deliberately cut from the v30 text; v30_quote holds the reason (edit id)
-        print(f"REMOVED_V30 {where}: {row['quote'][:60]!r}; reason: {row['v30_quote']}")
+    row = dict(row, recomputed_value=row["v42_recomputed_value"])
+    st = (row.get("v42_status") or "").strip()
+    if st not in REF_STATUSES:
+        return [f"{where}: unknown v42_status {st!r}"], []
+    if st.startswith("REMOVED_"):
+        # deliberately cut from the text; v42_quote holds the reason (edit id)
+        print(f"{st} {where}: {row['quote'][:60]!r}; reason: {row['v42_quote']}")
         return fails, opens
-    if st == "NOT_IN_V30":
-        opens.append(f"{where}: NOT_IN_V30 {row['quote'][:60]!r}")
+    if st == "NOT_IN_V42":
+        opens.append(f"{where}: NOT_IN_V42 {row['quote'][:60]!r}")
         if strict:
-            fails.append(f"{where}: NOT_IN_V30 (strict)")
+            fails.append(f"{where}: NOT_IN_V42 (strict)")
         return fails, opens
     if text is not None:
         try:
-            para = text.get(int(row["v30_para"]), "")
+            para = text.get(int(row["v42_para"]), "")
         except ValueError:
-            return [f"{where}: bad v30_para {row['v30_para']!r}"], []
-        if _clean(row["v30_quote"]) not in _clean(para):
-            fails.append(f"{where}: v30_quote not found in paragraph {row['v30_para']}")
-        if _clean(row["v30_printed_value"]) not in _clean(row["v30_quote"]):
-            fails.append(f"{where}: v30_printed_value not inside v30_quote")
+            return [f"{where}: bad v42_para {row['v42_para']!r}"], []
+        if _clean(row["v42_quote"]) not in _clean(para):
+            fails.append(f"{where}: v42_quote not found in paragraph {row['v42_para']}")
+        if _clean(row["v42_printed_value"]) not in _clean(row["v42_quote"]):
+            fails.append(f"{where}: v42_printed_value not inside v42_quote")
     if st == "OPEN":
-        opens.append(f"{where}: v30 OPEN printed {row['v30_printed_value']!r} recomputed {row['recomputed_value']!r}")
+        opens.append(f"{where}: v42 OPEN printed {row['v42_printed_value']!r} recomputed {row['recomputed_value']!r}")
         if strict:
-            fails.append(f"{where}: v30 OPEN (strict)")
-    elif agrees_rounded(row["v30_printed_value"], row["recomputed_value"]) and not agrees(
-        row["v30_printed_value"], row["recomputed_value"]
+            fails.append(f"{where}: v42 OPEN (strict)")
+    elif agrees_rounded(row["v42_printed_value"], row["recomputed_value"]) and not agrees(
+        row["v42_printed_value"], row["recomputed_value"]
     ):
-        print(f"ROUNDED {where}: v30 printed {row['v30_printed_value']!r} recomputed {row['recomputed_value']!r}")
-    elif not agrees(row["v30_printed_value"], row["recomputed_value"]):
-        fails.append(f"{where}: v30 MISMATCH printed {row['v30_printed_value']!r} recomputed {row['recomputed_value']!r}")
+        print(f"ROUNDED {where}: v42 printed {row['v42_printed_value']!r} recomputed {row['recomputed_value']!r}")
+    elif not agrees(row["v42_printed_value"], row["recomputed_value"]):
+        fails.append(f"{where}: v42 MISMATCH printed {row['v42_printed_value']!r} recomputed {row['v42_recomputed_value']!r}")
     return fails, opens
 
 
@@ -255,8 +289,8 @@ def line_numbers(spec):
 def check_file(path, text=None, strict=False, kind="v28d"):
     """Check one NUMBERS.tsv.
 
-    ``kind`` is ``"v28d"`` or ``"v30"`` (see :func:`load_text`); with ``"v30"`` the
-    ``text`` is paragraph-indexed and only the v30 columns are quote-checked.
+    ``kind`` is ``"v28d"`` or ``"v42"`` (see :func:`load_text`); with ``"v42"`` the
+    ``text`` is paragraph-indexed and only the v42 columns are quote-checked.
 
     Returns
     -------
@@ -267,19 +301,19 @@ def check_file(path, text=None, strict=False, kind="v28d"):
     relp = path.relative_to(REPO).as_posix()
     with open(path, newline="", encoding="utf-8") as fh:
         reader = csv.DictReader(fh, delimiter="\t")
-        if reader.fieldnames not in (COLUMNS, COLUMNS + V30_COLUMNS):
-            return [f"{relp}: header must be {COLUMNS} (optionally + {V30_COLUMNS}), found {reader.fieldnames}"], []
-        has_v30 = reader.fieldnames == COLUMNS + V30_COLUMNS
-        if kind == "v30" and not has_v30:
-            open_rows.append(f"{relp}: no v30 columns; not checked against the v30 text")
+        if reader.fieldnames not in (COLUMNS, COLUMNS + HISTORICAL_REF_COLUMNS + REF_COLUMNS):
+            return [f"{relp}: header must contain the base columns, retained v36 anchors and current v42 fields; found {reader.fieldnames}"], []
+        has_ref = reader.fieldnames == COLUMNS + HISTORICAL_REF_COLUMNS + REF_COLUMNS
+        if kind == "v42" and not has_ref:
+            open_rows.append(f"{relp}: no v42 columns; not checked against the v42 text")
         for i, row in enumerate(reader, 2):
             where = f"{relp}:{i} (v28d line {row['v28d_line']})"
             status = (row["status"] or "").strip()
-            if has_v30:
-                f30, o30 = check_v30(row, where + f" [v30 para {row['v30_para']}]", text if kind == "v30" else None, strict)
-                failures += f30
-                open_rows += o30
-            if kind == "v30":
+            if has_ref:
+                fref, oref = check_ref(row, where + f" [v42 para {row['v42_para']}]", text if kind == "v42" else None, strict)
+                failures += fref
+                open_rows += oref
+            if kind == "v42":
                 pass
             elif text is not None and status != "OPEN":
                 try:
@@ -312,6 +346,11 @@ def check_file(path, text=None, strict=False, kind="v28d"):
                     print(f"ROUNDED {where}: v28f value {new!r} recomputed {row['recomputed_value']!r}")
                 elif not agrees(new, row["recomputed_value"]):
                     failures.append(f"{where}: v28f value {new!r} disagrees with recomputed {row['recomputed_value']!r}")
+            elif status.split(":", 1)[0] == "SUPERSEDED_V33":
+                if not has_ref:
+                    failures.append(f"{where}: SUPERSEDED_V33 without v42 columns")
+                else:
+                    print(f"SUPERSEDED_V33 {where}: v28d printed {row['printed_value']!r}, v42 printed {row['v42_printed_value']!r}, recomputed {row['recomputed_value']!r}")
             else:
                 failures.append(f"{where}: unknown status {status!r}")
     return failures, open_rows
@@ -326,6 +365,7 @@ def self_test():
         ("20.0%", "19.96", True), ("SIHUMIx", "SIHUMIx", True),
         ("6.1 × 10⁻⁴", "0.0006103515625", True), ("6.1 × 10⁻⁴", "0.00063", False),
         ("more than 10,000", "11428.6", True), ("more than 10,000", "9999", False),
+        ("19", "nineteen", True), ("Nineteen", "19", True), ("10", "ten", True), ("10", "eleven", False),
     ]
     for printed, rec, want in [("250,000", "250197", True), ("29,700", "29663", True),
                                ("29,700", "29640", False), ("8,421", "8420", False)]:
@@ -355,6 +395,12 @@ def main(argv=None):
     if a.self_test:
         return self_test()
     kind, text = load_text(a.manuscript_text) if a.manuscript_text else ("v28d", None)
+    if a.manuscript_text and kind == "v42":
+        identity = json.loads((REPO / "docs/MANUSCRIPT.json").read_text())
+        actual = hashlib.sha256(Path(a.manuscript_text).read_bytes()).hexdigest()
+        if actual != identity["text_sha256"]:
+            print("FAIL manuscript text differs from the pinned v42 accepted-text view")
+            return 1
     files = sorted(p for g in GLOBS for p in REPO.glob(g) if not a.unit or p.parent.name == a.unit)
     if not files:
         print("FAIL no NUMBERS.tsv files matched" + (f" unit {a.unit!r}" if a.unit else ""))

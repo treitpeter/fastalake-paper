@@ -562,9 +562,13 @@ C_STUDY = fl.FL        # joint search, study-level confidence (study q)
 C_ACQ = fl.SKY         # joint search, per-acquisition confidence (acquisition q)
 C_JOINT_ORIG = fl.PURPLE   # joint search, original (uncorrected) build
 C_UNION = fl.GREEN     # common-FASTA (union) individual search
+#: v35: drawn names as in the manuscript; the producer/restyle check maps the producer's strings through these.
+V35_COHORT = {"CAPSCAN": "CapScan"}
+V35_TICK = {"union individual": "common-FASTA individual"}
 
 V30_XLABEL_A = "Healthy stool, 58 acquisitions"
-V30_XLABEL_CD = ["Technical replicates, 66 pairs", "Preparation replicates, 105 pairs"]
+#: v38: d "Preparation replicates" -> "Workflow replicates", the name of this series in Fig. 3a and Supplementary Fig. 12.
+V30_XLABEL_CD = ["Technical replicates, 66 pairs", "Workflow replicates, 105 pairs"]
 
 
 def v30_collect(axes):
@@ -631,12 +635,12 @@ def v30_compare(before, after, label_changes):
         ok("x and y limits identical", np.allclose(b["xlim"], a["xlim"], rtol=0, atol=1e-12) and np.allclose(b["ylim"], a["ylim"], rtol=0, atol=1e-12),
            f"x {a['xlim']} y {a['ylim']}")
         ok("scales identical", (b["xscale"], b["yscale"]) == (a["xscale"], a["yscale"]))
-        ok("x tick positions and labels identical (line breaks may differ)", b["xticks"] == a["xticks"] and [" ".join(t.split()) for t in b["xticklabels"]] == [" ".join(t.split()) for t in a["xticklabels"]])
+        ok("x tick positions and labels identical (line breaks may differ)", b["xticks"] == a["xticks"] and [V35_TICK.get(" ".join(t.split()), " ".join(t.split())) for t in b["xticklabels"]] == [" ".join(t.split()) for t in a["xticklabels"]])
         ok("y tick positions identical", np.allclose(b["yticks"], a["yticks"], rtol=0, atol=1e-12))
         ok("y label identical", b["ylabel"] == a["ylabel"], a["ylabel"])
         exp_x = label_changes.get(L, b["xlabel"])
         ok("x label identical or the documented title move", a["xlabel"] == exp_x, f"{b['xlabel']!r} -> {a['xlabel']!r}")
-        ok("legend entries identical", b["legend"] == a["legend"], str(a["legend"]))
+        ok("legend entries identical", [V35_COHORT.get(t, t) for t in b["legend"]] == a["legend"], str(a["legend"]))
     return rec
 
 
@@ -687,7 +691,7 @@ def v30_panel_a(ax, ident, mine):
          ("joint\noriginal\nstudy q", ident[ident.test.eq("joint_original")].original_identity_recovery, C_JOINT_ORIG),
          ("joint\ncorrected\nacquisition q", fq.original_identity_recovery, C_ACQ),
          ("repeat\nindividual", ident[ident.test.eq("repeat_individual")].original_identity_recovery, C_ORIG),
-         ("union\nindividual", ident[ident.test.eq("union_individual")].original_identity_recovery, C_UNION)]
+         ("common-FASTA\nindividual", ident[ident.test.eq("union_individual")].original_identity_recovery, C_UNION)]   # v35: legend name
     v30_dots(ax, A, "Original identities recovered (%)", True)
     ax.set_xlabel(V30_XLABEL_A)
 
@@ -697,10 +701,10 @@ def v30_panel_b(ax, pat):
     for co, g in pat.groupby("cohort"):
         if co == "CAPSCAN":
             ax.scatter(g.peptides_percent_difference, g.directlfq_groups_percent_difference, s=12,
-                       facecolors="none", edgecolors=C_UNION, linewidths=1.0, label=co, zorder=3)
+                       facecolors="none", edgecolors=C_UNION, linewidths=1.0, label=V35_COHORT.get(co, co), zorder=3)
         else:
             ax.scatter(g.peptides_percent_difference, g.directlfq_groups_percent_difference, s=12,
-                       alpha=V30_DOT_A, color=C_UNION, linewidths=0, label=co, zorder=2)
+                       alpha=V30_DOT_A, color=C_UNION, linewidths=0, label=V35_COHORT.get(co, co), zorder=2)
     ax.axhline(0, c=fl.GREY, lw=1.0, zorder=1)
     ax.axvline(0, c=fl.GREY, lw=1.0, zorder=1)
     ax.set(xlabel="Accepted peptides: common vs own (%)", ylabel="DirectLFQ groups: common vs own (%)")

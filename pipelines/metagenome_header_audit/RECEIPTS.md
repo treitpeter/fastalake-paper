@@ -10,6 +10,10 @@ Paths are relative to LAB_ROOT.
 | full PREDICT | 6025426 |
 | full CAPSCAN | 6025427 |
 | figures | 6025428 |
+| CapScan 295: manifest build | 6085728 |
+| CapScan 295: negative control (expected failure) | 6085729 |
+| CapScan 295: 282 control | 6085730 |
+| CapScan 295: full run | 6086073 |
 
 worker.py sha256 331ad8e43660a0e4a25d9d27cbd80b577d296b46519aca02a22ad4ef997a7fe2 (= code_sha256 in COMPLETE.json).
 
@@ -27,4 +31,9 @@ worker.py sha256 331ad8e43660a0e4a25d9d27cbd80b577d296b46519aca02a22ad4ef997a7fe
 | LAB_ROOT/review/v15_integration/analyses/sequence_accumulation_2026-09-29/figures/header_inconsistency_audit.pdf | 19310 | fbfa962dc4582e26b4a92e5f573059b78e9e6e55591e9b63318bd99f560bb6f3 |
 | LAB_ROOT/review/v15_integration/analyses/sequence_accumulation_2026-09-29/worker.py | 8399 | 331ad8e43660a0e4a25d9d27cbd80b577d296b46519aca02a22ad4ef997a7fe2 |
 
-Repository copy: source_data/supplementary_methods_1_5/header_audit.tsv, sha256 7a66dc68c0fe38b5885d9412e82dc7a0c71388d9e58aec5deaa536ab3ea751ce.
+| LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/mg295/phase3/item3_collision/lab/review/v15_integration/analyses/run295/manifest.json | 1226992 | 69e1d874396f4cefd7632fb30d54931510ec98fcc800512b7d9f848131798fc9 |
+| LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/mg295/phase3/item3_collision/lab/review/v15_integration/analyses/run295/full/CAPSCAN/COMPLETE.json | 592 | 54e11207adc291ace1cafe581f4f8f7fc7de8f490181e09d380c716652978712 |
+| LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/mg295/phase3/item3_collision/lab/review/v15_integration/analyses/run295/full/CAPSCAN/header_audit.tsv | 754 | 1341faa59f07d1fa47736a06b4503e7f469fec90438c3152f00afd5d7267e233 |
+| LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/mg295/phase3/item3_collision/lab/review/v15_integration/analyses/run295/full/CAPSCAN/MG_SEQUENCE_PRESERVATION.json | 32575 | e0bf88dc14780d5ab9eccb862921b66c7a73ababcd56b01babf1380fe3e2e69b |
+
+Repository copy: source_data/supplementary_methods_1_5/header_audit.tsv, sha256 f31ac81ead3ec695c159c93cde09db9dc1f2f2bce5725e0408984325699085b9 (PREDICT rows from the 296-specimen run, CapScan rows from the 295-acquisition run; the 282 version was f31ac81ead3ec695c159c93cde09db9dc1f2f2bce5725e0408984325699085b9).

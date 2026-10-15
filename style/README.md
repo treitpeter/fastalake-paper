@@ -9,8 +9,10 @@ behaviour, so nothing outside this repository is needed except the typeface.
 
 Usage in a notebook or `panels.py`:
 
-    from style import fl_style as fl
-    fl.init()
+```python
+from style import fl_style as fl
+fl.init()
+```
 
 ## Fonts
 
@@ -18,7 +20,9 @@ The figures are set in Söhne (Klim Type Foundry). The font is licensed and is n
 repository. To reproduce the published panels pixel for pixel, place `soehne-buch.otf`,
 `soehne-kraftig.otf` and `soehne-halbfett.otf` in a directory and set
 
-    export FASTALAKE_FONT_DIR=/path/to/that/directory
+```bash
+export FASTALAKE_FONT_DIR=/path/to/that/directory
+```
 
 (`FL_STYLE_DIR` is accepted as an alias.) Without it, `fl_style` warns once and text is
 drawn in the matplotlib default face (DejaVu Sans). Colours, sizes, line weights and

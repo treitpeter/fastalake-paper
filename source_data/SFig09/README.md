@@ -10,8 +10,8 @@ Participant identifiers (`subject`, 1 to 15) are the CapScan study's participant
 No clinical covariates are included.
 
 ## capscan_assembly_dna_yield_gain_by_acquisition.tsv
-sha256: 351bdf31dc30f108e11796f15614cb05299ba8d37a8991d6ca4f10f7fa1a9c4d
-rows: 282 (one row per matched CapScan acquisition; 226 intestinal fluid, 56 stool; 250 specimens; 15 participants)
+sha256: cb682c0f65e08c67359fa8f71feaf1dac4e5708e82a2325bff4adcd1159af556
+rows: 295 (one row per matched CapScan acquisition; 239 intestinal fluid, 56 stool; 263 specimens; 15 participants)
 produced by: capsule metagenome join (see `figures/SFig09/UPSTREAM.json`; join code not saved upstream)
 
 | column | unit | meaning |
@@ -29,8 +29,8 @@ produced by: capsule metagenome join (see `figures/SFig09/UPSTREAM.json`; join c
 | MG_identity_recovery | fraction | share of MG-search peptides also identified by FastaLake, rounded to 4 decimals; not used by the figure |
 
 ## capscan_acquisitions_9_50.tsv (v30 figure input)
-sha256: 5bb9ec898849e853e93ef0d01da9b7eaebab64db2b1a075b89f8d9d44fe5ad39
-rows: 282 (as `capscan_assembly_dna_yield_gain_by_acquisition.tsv`)
+sha256: 86fb90d088b3179324e60a83c0d49a2ac67950f16fdb8859e83066dc3dbf0920
+rows: 295 (as `capscan_assembly_dna_yield_gain_by_acquisition.tsv`)
 produced by: `figures/SFig09/panels.py:acquisitions_9_50` (lab: len950 build.py) from that table and `a08_benchmark282_old.tsv`
 
 Columns and meanings as in `capscan_assembly_dna_yield_gain_by_acquisition.tsv`, except:
@@ -46,7 +46,7 @@ This is the table the v30 figure is drawn from. When the CapScan MG benchmark is
 295 acquisitions, a replacement with the same columns is passed by `SFIG09_ACQ_TSV`.
 
 ## capsule_assembly_gain_tertiles_9_50.tsv (expected panel b values, v30)
-sha256: 761b3e620045ad96c4cdcaefb49ca4eb3bc6b8eeefb48c3e4e4b2719b8f2638f
+sha256: afd27f93ef4df261bcaaaf5505e5619accddd9633bd35b49f09d0c3bff25d6e6
 rows: 3
 
 | column | unit | meaning |
@@ -57,8 +57,8 @@ rows: 3
 | min_assembly, max_assembly | count of predicted-protein records | bounds of the third |
 
 ## capsule_assembly_gain_per_specimen.tsv
-sha256: 800c0e370c61f8557539c1ec149d981965c49c893797910301108ca49cc144e9
-rows: 250 (one row per specimen)
+sha256: ac31370e46b909d78efecf91bd4e8cd5991f40360d317840866924817a89433f
+rows: 263 (one row per specimen)
 produced by: aggregation in `figures/SFig09/panels.py:derive_tables` (ported from the v15 figure builder)
 
 | column | unit | meaning |
@@ -71,8 +71,8 @@ produced by: aggregation in `figures/SFig09/panels.py:derive_tables` (ported fro
 | acquisitions | count of acquisitions | acquisitions of this specimen |
 
 ## capsule_assembly_gain_acquisitions.tsv
-sha256: 89956d96f81cc50656da184c078c6f14b50e44381b4c1fe3131eb7eca4ddc1c9
-rows: 226 (one row per intestinal-fluid acquisition)
+sha256: dc4825c6c5cbbe951c5f6110ee988393d67547c7bd14286be9517836976bdb5b
+rows: 239 (one row per intestinal-fluid acquisition)
 produced by: aggregation in `figures/SFig09/panels.py:derive_tables`
 
 Columns as in `capscan_assembly_dna_yield_gain_by_acquisition.tsv`, plus
@@ -83,7 +83,7 @@ Columns as in `capscan_assembly_dna_yield_gain_by_acquisition.tsv`, plus
 | assembly_tertile | id | Smallest, Middle or Largest third of assembly_proteins (pandas.qcut, 3 equal-count bins) |
 
 ## capsule_assembly_gain_tertiles.tsv
-sha256: 9d9b3e2bf774245e74406e5111e69ad02654eebe4eea746641c48b4c71144796
+sha256: 8491e597adb69e940067f8f754c5521287365094efed539bf464539abbbb16c6
 rows: 3 (one row per third of MG database size)
 produced by: aggregation in `figures/SFig09/panels.py:derive_tables`
 
@@ -110,8 +110,8 @@ produced by: assembly sanitizer of the FastaLake chain (see `figures/SFig09/UPST
 | n_dup_conflicting | count of records | duplicate accessions with differing sequence removed (first kept) |
 
 ## a08_benchmark282_old.tsv
-sha256: 4c732679b085a01245d39f324d0884d2eff1986f73914bdd9f37c7ddec2eee44
-rows: 282 (one row per matched CapScan acquisition)
+sha256: 92dc2c255e4a448b1d8bdba273081e82c4c2ee30ed6cd5acd3a422bd24ccb14b
+rows: 295 (one row per matched CapScan acquisition)
 produced by: capscan_public_only_search (recount from the per-acquisition peptide sets of the production arm)
 
 | column | unit | meaning |
@@ -124,8 +124,8 @@ produced by: capscan_public_only_search (recount from the per-acquisition peptid
 | rec_9 | fraction | as rec_5, 9-50 residues |
 
 ## a08_benchmark282_new.tsv
-sha256: fa6eaf0fddd45be5a5dc989c5c64397421a82713beb0fd084a7dc9aea1700265
-rows: 282 (one row per matched CapScan acquisition)
+sha256: bab6d67f1ba2994964a34b0f8116f3de8274536061f1d729bf49a968f2950d37
+rows: 295 (one row per matched CapScan acquisition)
 produced by: capscan_public_only_search, rerun on the 347-acquisition roster (v28f)
 
 Columns as in `a08_benchmark282_old.tsv`.

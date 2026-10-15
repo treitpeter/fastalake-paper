@@ -63,3 +63,7 @@ differing pixels; needs `FASTALAKE_FONT_DIR`).
 Composite PDF it was rasterised from: `expected/SFig15_v30.pdf` (copy of
 `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/v30/figures_style/SFig15/SupplementaryFigure15.pdf`), sha256 `aec64c675e39d1561ab19e13196ad65e35520c9d5945786fa293f013fdf7661b`. The repository PDF differs from it only
 in metadata bytes; its 300 dpi rasterisation is the PNG above.
+
+## v35 label change
+
+Column label "Stool" -> "Healthy stool" in a-d, and cell values that `.2g` prints in scientific notation drawn as plain numbers (`_v35_plain`; b, CAMPI shared lookup "1.4e+02" -> "140"). v30 drawing only; the producer tick strings and cell texts are mapped to the new forms for the exact comparison. Expected render replaced: `expected/SFig15_v35.png` sha256 58aefdcd5eee4746dd9c671157ff3ac32a30d8caf89715f103c606ebeeccd7ec, `expected/SFig15_v35.pdf` sha256 1c34d2a4fa2c89210473721bef079b2179c96788c45281c7fd6101383b9d7ce5. Control builds of the previous code reproduced each previous expected PNG byte for byte.

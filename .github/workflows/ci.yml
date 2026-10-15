@@ -30,10 +30,16 @@ jobs:
           python tools/scan_release.py
       - name: Regression tests
         run: python -m unittest discover -s tests -v
-      - name: Number check
+      - name: Reviewer index matches registered claims
+        run: |
+          python tools/render_reviewer_guide.py --check
+          python tools/render_statistics.py --check
+      - name: Registered-number consistency
         run: |
           python tools/check_numbers.py --self-test
           python tools/check_numbers.py
+      - name: Updated held-out and error-control analyses
+        run: python tools/check_updated_analyses.py
       - name: Run notebooks
         env:
           MPLBACKEND: Agg

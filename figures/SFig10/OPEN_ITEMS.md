@@ -24,3 +24,7 @@
 
 - ENV: style/README.md names only the .otf Söhne files; this unit renders with soehne-buch.ttf (the file the original producer loaded) and needs it in FASTALAKE_FONT_DIR for pixel-identical text (panels.font_path). With only the .ttf present, fl.init() still warns that soehne-buch.otf is missing (the warning is in the stored notebook output), although the render is pixel-identical; the orchestrator should resolve this in style/
 - CONTROLLED: the orchestrator should copy the three CONTROLLED rows above (the two image rows replace the SFig10_v28f rows) into controlled/CONTROLLED_INPUTS.md (this unit may not write there)
+
+## v33 sync (2026-10-07)
+
+- RESOLVED: the final v33 text prints "19 rows" (numerals of 10 and above as digits); `tools/check_numbers.py` also reads number words as integers.

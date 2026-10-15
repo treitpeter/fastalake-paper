@@ -1,8 +1,8 @@
 {
  "new": "build/Fig5/panel_f.png",
- "new_sha256": "780fe4a9650a60588458d3a4e820281be3660eec873403b174af403dc90ce623",
+ "new_sha256": "31ad902a7c5b323b283af487d0e084b5a8adb1b1578bfde8070d7b3d9f2bd035",
  "expected": "figures/Fig5/expected/panel_f.png",
- "expected_sha256": "780fe4a9650a60588458d3a4e820281be3660eec873403b174af403dc90ce623",
+ "expected_sha256": "31ad902a7c5b323b283af487d0e084b5a8adb1b1578bfde8070d7b3d9f2bd035",
  "dpi": 300,
  "page": 0,
  "tolerance": 0,

@@ -135,10 +135,13 @@ def write_table(acq, summary, out):
     return {"by_acq": p_acq, "summary": p_sum, "xlsx": p_x}
 
 
-def compare_xlsx_values(new, expected):
+def compare_xlsx_values(new, expected, float_columns=None):
     """Compare two workbooks sheet by sheet and cell by cell (values only).
 
     Workbook bytes carry a save timestamp, so byte identity is not expected.
+    By default every cell is exact. Explicitly named floating-result columns
+    may use the repository's 1e-12 relative tolerance for Excel serialization.
+    All labels, count columns, seeds, thresholds and row identities stay exact.
 
     Returns
     -------
@@ -146,6 +149,8 @@ def compare_xlsx_values(new, expected):
         ``identical`` (bool), ``sheets``, and up to 20 ``differences``.
     """
     a, b = openpyxl.load_workbook(new), openpyxl.load_workbook(expected)
+    from tools.compare_values import same_numeric_value
+    float_columns = float_columns or {}
     diffs = []
     if a.sheetnames != b.sheetnames:
         diffs.append(f"sheet names {a.sheetnames} vs {b.sheetnames}")
@@ -154,12 +159,26 @@ def compare_xlsx_values(new, expected):
             continue
         va = list(a[name].iter_rows(values_only=True))
         vb = list(b[name].iter_rows(values_only=True))
+        allowed = float_columns.get(name, set())
+        if not allowed.issubset(set(vb[0] if vb else [])):
+            raise ValueError(f"Unknown numeric-result column in {name}: {allowed}")
         if len(va) != len(vb):
             diffs.append(f"{name}: {len(va)} vs {len(vb)} rows")
         for i, (x, y) in enumerate(zip(va, vb), 1):
-            if x != y:
+            equal = x == y
+            if not equal and i > 1 and len(x) == len(y) and va[0] == vb[0]:
+                equal = all(left == right or (
+                    va[0][col] in allowed and
+                    isinstance(left, (int, float)) and not isinstance(left, bool) and
+                    isinstance(right, (int, float)) and not isinstance(right, bool) and
+                    same_numeric_value(left, right)
+                ) for col, (left, right) in enumerate(zip(x, y)))
+            if not equal:
                 diffs.append(f"{name} row {i}: {x} vs {y}")
-    return {"identical": not diffs, "sheets": b.sheetnames, "differences": diffs[:20]}
+    result = {"identical": not diffs, "sheets": b.sheetnames, "differences": diffs[:20]}
+    a.close()
+    b.close()
+    return result
 
 
 def checks(d):

@@ -44,3 +44,7 @@ The notebook repeats steps 1-3 from `source_data/` (Slurm, paper environment, SÃ
 reproduces the step-1 PDF at 300 dpi and the v30 PNG pixel for pixel
 (`checks/SFig03_len950.json`, `checks/SFig03_v30.json`: IDENTICAL, 0 differing pixels); the
 plotted-values table equals the producer's.
+
+## v35 label change
+
+Panel d y-axis label "Reference identities recovered (%)" -> "Comparator identities recovered (%)" (`build_figure_v30` only; the len950 producer and every plotted value unchanged). Expected render replaced: `expected/SFig03_v35.png` sha256 5cd7aee4771ac3cd5a24a204400308990b5f99ff3fc8b226cc90c5cecd48fd5a, `expected/SFig03_v35.pdf` sha256 e02471346b2753f931f90305a0b671ac821af9321ef259a284e4c35e6eaab56b. A control build of the unchanged code reproduced the previous expected PNG byte for byte; the new PNG differs only in the panel d y-label box.

@@ -10,9 +10,11 @@ and never substitutes other data.
 Public tables use pseudonymised patient identifiers only. The mapping from pseudonym to
 clinical identifier is itself a controlled input.
 
-Access: requests go to the corresponding authors (contact details in the article). Access
-is subject to the ethics approval and data protection terms of the PREDICT study
-(AUTHOR INPUT NEEDED: committee, approval number, expected response time).
+Access: requests go through the PREDICT consortium data hub. Contact Jonel Trebicka
+(contact details in the article), who initiates the required data transfer agreement.
+Access is subject to the ethics approval and data protection terms of the PREDICT
+study. The manuscript reports approval 35281-2/2017/EKU for the MUCOSA-PREDICT
+sub-study at the University of Debrecen and written informed consent.
 
 ## Format
 
@@ -49,3 +51,7 @@ One row per file. sha256 is of the exact file the published results were compute
         print("SKIPPED: needs controlled input <file> (see controlled/CONTROLLED_INPUTS.md)")
     else:
         ...
+
+## Published Fig. 4 composites
+
+The published Fig. 4 composites show the per-patient antibiotic panels (e, g, h) and are held with the controlled inputs, not in the repository: `Fig4_expected/Fig4_v28f.{png,pdf}`, `Fig4_v30.{png,pdf}` and, for v33 (b,c at 295 CapScan acquisitions), `Fig4_v33.{png,pdf}` (sha256 of the PNG `3946a6c9ce18d7f8837faca3291a15179859618da4ac2943ec0bda2a60733974`), and, for v36 (b labels give the median paired change), `Fig4_v36.{png,pdf}` (PNG sha256 `f7c0eb116c5a93087ec0b22e124db248017447d50846fa220f2e2102f81a1b1b`, PDF sha256 `822ab39ec8a8d87bab763d1738fc108082ff9f97463fa3490a4cf776bec15ebd`; the PNG is the image embedded in `FastaLake_v36.docx`), plus `Fig4_artwork/panel_a.pdf`. `figures/Fig4/panels.py:check_against_v30` uses the newest of `Fig4_v36.png`, `Fig4_v33.png`, `Fig4_v30.png` that is present.

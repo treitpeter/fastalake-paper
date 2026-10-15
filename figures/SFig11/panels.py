@@ -68,9 +68,9 @@ NUMBER_WORDS = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 
 
 #: sha256 of the shared tables written by the Fig5 unit that this figure reads.
 FIG5_SHA256 = {
-    "functional_correlations.tsv": "4c3468fc11199d32c9dd99fbda823bb536f624d01102df87562b6e29906de3f8",
+    "functional_correlations.tsv": "455bfa9d3185aadaba071d640f77241fe9e11c898768ab8c6b86513b0cb1cbf4",
     "native_correlations.tsv": "0004f35d522422580e1d7cce3bbcbc2d2967a8fbc8af28668b73408d52305375",
-    "functional_distances_long.tsv": "006d3a0fa3201603f15f329846c11cc0b4f0f65da3584483eb51c363523353ad",
+    "functional_distances_long.tsv": "b0bd1978b64a802fb1874ec0a5e1c684fc286550b0ce172ef83443707d2b4fa4",
     "native_distances_long.tsv": "07bda50dc99acf5fc5e6a77ec91d9fd71bc90451a924c2413cac193de6de4530",
 }
 

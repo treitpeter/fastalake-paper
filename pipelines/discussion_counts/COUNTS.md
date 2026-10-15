@@ -85,3 +85,21 @@ These are cohort medians of per-acquisition medians. Output `E1_per_acquisition.
 **E2** A97 (`sample_specific_merge_all_raw/2026-09-11`): the PREDICT (306) and CapScan (331) joint union searches have no Sage output. Both the original and the 700 GiB retries ended OUT_OF_MEMORY in LFQ tracing (`STATUS_CHECK_2026-09-14.md`, jobs 5907491/5911555, 5907492/5911554). There is therefore no scored_candidates for the FL study union in PREDICT or CapScan. Union sizes are FL 555,987 (PREDICT 306), 452,255 (CapScan 331) and 460,977 (CapScan 347, A97 README). The MG unions, as database size only, are 44,771,168 (PREDICT 296) and 28,547,993 (CapScan 282).
 
 Only HSTOOL 58 has an FL study-union search: the A06 one-acquisition searches, each acquisition against its own FASTA and against the 153,267-sequence union, plus the 58-file joint search (9,001,927 rows). On 7,751,917 paired rank-one spectra the median is 237 for per-sample FL vs 1,745.5 for the study union (7.05x). At 9-50 it is 278 vs 2,063.5 (7.16x). The joint search gives identical per-spectrum values to the A06 union searches, which share the same database. Output `E2_hstool_per_acquisition.tsv`, `E2_RESULT.json`.
+
+## CapScan matched roster 282 -> 295 (7 October 2026; v33)
+
+The v33 matched CapScan roster adds the 13 participant-15 acquisitions of `pipelines/capscan_mg_benchmark_295` (295 acquisitions, 263 specimens). A and E1 were re-run for that roster with byte copies of `common.py`, `a_accumulation.py` and `e_candidates.py`; the only code difference is `common.py` line 8 (`ACC`, the tree being read; `run295/common_r295.diff`, `run295/common_c282.diff`). The upstream producers (sequence_accumulation `worker.py`, sha 331ad8e4..., and `candidates/worker.py`, sha e82ada22...) ran unchanged in mirror trees on the production manifest (578 rows unchanged) plus 13 rows (`run295/build_manifest295.py`; FL_public = A08_347, MG = mg295 databases and same-spectrum searches; specimen = `15|main:<workbook_Main>`). Scripts and launchers: `run295/`.
+
+| claim | 282 (archived) | 295 |
+|---|---|---|
+| CapScan MG union (printed "28.5 million" -> "29.2 million") | 28,547,993 | 29,184,216 |
+| CapScan FL union ("0.42 million") | 416,703 | 424,792 (unchanged as printed) |
+| CapScan specimens / acquisitions | 250 / 282 | 263 / 295 |
+| fold MG/FL ("69- to 84-fold") | CapScan 68.5, PREDICT 83.6 | CapScan 68.7; range unchanged |
+| E1 CapScan MG candidates, 9-50 median | 3,322.75 (printed 3,323) | 3,317.5 (printed 3,318) |
+| E1 CapScan FL candidates, 9-50 median | 277.5 (printed 278) | 276.0 (printed 276) |
+| PREDICT (44.8 M / 0.54 M / 6,083 / 277) | unchanged | unchanged |
+
+Controls (COLLECT.json, 23/23 true): the 282 re-run reproduces the archived accumulation, per_specimen, per_acquisition, header_audit, candidate per_acquisition and medians and the A_* and E1_* outputs byte for byte; in the 295 run all 578 pre-existing E1 rows and 564 accumulation acquisition-arm rows equal the 282 control. Negative controls: the roster gate rejects a dropped acquisition, merged specimens and swapped MG arms (job 6087486); swapping the MG results of two new rows makes worker.py fail its set assertion (job 6087505). A first producer negative control that swapped whole MG arms consistently passed the worker (job 6087489): the worker cannot detect a consistent arm-to-acquisition mis-assignment, which only the roster gate catches.
+
+Sections B (GMSC) and C, D were not re-run: B uses the 282 matched CapScan acquisitions for its "absent from matched MG" rows, and C, D do not involve CapScan.

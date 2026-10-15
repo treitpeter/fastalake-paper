@@ -2,7 +2,7 @@
 
 Every number typed in the schematic, as extracted from the text layer of
 `artwork/panel_a.pdf` (words above y = 372 pt). Since v30, `artwork/panel_a.pdf` is the
-panel-a crop of `artwork/Figure1_v30.pdf` (the Fig1_v2 funnel build). Values are recomputed by
+panel-a crop of `artwork/Figure1_v33.pdf` (the v33 funnel build, Fig1_v3 layout; v30 used `artwork/Figure1_v30.pdf`). Values are recomputed by
 `panels.py:artwork_numbers` and printed in the notebook section `Panel a`. The v30 column has
 no step badges, no lookup box and no "Pool queries across 58 acquisitions" box; those
 rows were removed (the 58 is stated in the legend and in NUMBERS.tsv, line 71).

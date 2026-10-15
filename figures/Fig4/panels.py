@@ -209,7 +209,7 @@ def load_crossfit():
     """
     x = _rd("crossfit_per_acquisition.tsv", dtype={"participant_id": str}, keep_default_na=False, na_values=[""])
     x["lda_fallback"] = x["lda_fallback"].fillna("")
-    assert len(x) == 578 and list(x.crossfit_index) == list(range(578))
+    assert len(x) == 591 and list(x.crossfit_index) == list(range(591))
     x["stratum"] = np.where(x.cohort.eq("PREDICT"), "PREDICT",
                             np.where(x.sampling_site.eq("stool"), "CAPSCAN_stool", "CAPSCAN_intestinal"))
     return x
@@ -332,11 +332,15 @@ def panel_bc(x, out_pdf):
             axB.scatter(x1 + j1, flv, s=2.5, color=fl.FL, alpha=.7, lw=0, zorder=2)
             for xx, v in ((x0, np.median(mg)), (x1, np.median(flv))):
                 axB.plot([xx - .3, xx + .3], [v, v], color='k', lw=1.0, zorder=3)
-                axB.text(xx, 53.0, f'{v:.1f}k', ha='center', va='center', fontsize=5.3, zorder=4)
+            # label: median paired change 100 x (FL/MG - 1), the statistic the text reports
+            # (per-arm medians can point the other way, e.g. PREDICT 18.8k vs 19.0k at -3.5%)
+            assert (mg > 0).all()
+            d = float(np.median(100 * (flv / mg - 1)))
+            axB.text((x0 + x1) / 2, 53.0, f'{d:+.1f}%'.replace('-', '−'), ha='center', va='center', fontsize=5.3, zorder=4)
         axB.set_xticks([p for s, _ in STRATA for p in POS[s]], ['MG', 'FL'] * 3)
         axB.set_ylabel('Peptides per acquisition\n(thousands; cross-fitted,\n9–50 residues)', labelpad=2)
         axB.set_ylim(0, YMAX); axB.set_yticks([0, 10, 20, 30, 40, 50]); axB.set_xlim(-.55, 6.15)
-        GL = {'PREDICT': 'PREDICT\n(n = 296)', 'CAPSCAN_stool': 'CapScan stool\n(n = 56)', 'CAPSCAN_intestinal': 'Intestinal fluid\n(n = 226)'}
+        GL = {'PREDICT': 'PREDICT\n(n = 296)', 'CAPSCAN_stool': 'CapScan stool\n(n = 56)', 'CAPSCAN_intestinal': 'Intestinal fluid\n(n = 239)'}
         for s, _ in STRATA:
             axB.text(np.mean(POS[s]), -.155, GL[s], ha='center', va='top', transform=axB.get_xaxis_transform(), fontsize=6.0, linespacing=1.1)
         for i, (s, lab) in enumerate(STRATA):
@@ -670,7 +674,7 @@ def _panel_h_figure(Z20, feat, tracks, abx):
     hx, hw = 0.0, 300.0
     row = 8.5; top = 5.0; trk_h = 7.0; trk_gap = 2.6
     trks = [(tracks.eds_score.to_numpy(), H_EDS_TRACK_LABEL, plt.get_cmap('Greys'), 1),
-            (100 * tracks.human_fraction.to_numpy(), 'Human signal (0–100%)', LinearSegmentedColormap.from_list('hum', ['white', fl.PURPLE]), 100),
+            (100 * tracks.human_fraction.to_numpy(), 'Human-assigned LFQ share (%)', LinearSegmentedColormap.from_list('hum', ['white', fl.PURPLE]), 100),
             (pd.Series(abx).map({'Off': 0, 'On': 1}).to_numpy(), 'Antibiotics (dark: on)', ListedColormap(['#ededed', '#333333']), 1)]
     axes = []
     for i, (v, lab, c, vmax) in enumerate(trks):
@@ -1077,7 +1081,7 @@ def stat_mixed_model(x, view='crossfit', L=MIXED_MODEL_LENGTH):
         estimates (log scale and fold), Wald CI, z, P, chi-square statistics.
     """
     import scipy.stats as st
-    a = x[x.cohort.eq('CAPSCAN')].copy(); assert len(a) == 282
+    a = x[x.cohort.eq('CAPSCAN')].copy(); assert len(a) == 295
     a['g'] = a.sampling_site.map(REGION_LABEL); a['subject_id'] = a.participant_id.astype(str)
     fl, mg = ('FL_pooled_{L}', 'MG_pooled_{L}') if view == 'crossfit' else ('frozen_fl_{L}', 'frozen_mg_{L}')
     d = a[['subject_id', 'g']].copy(); d['y'] = np.log(a[fl.format(L=L)].astype(float) / a[mg.format(L=L)].astype(float))
@@ -1303,7 +1307,7 @@ def stat_text_same_spectrum(bench, L=TEXT_LENGTH):
         out[f'{coh}_n_more'] = int((d.n_fl > d.n_mg).sum())
         out[f'{coh}_recovery_pct'] = float(100 * d.mg_recovery_fraction.median())
     c = bench[(bench.cohort == 'CAPSCAN') & (bench.min_length == L)]
-    assert len(c) == 282
+    assert len(c) == 295
     fl_ = c.sampling_site.ne('stool')
     for col, key in (('n_mg', 'MG'), ('n_fl', 'FL')):
         out[f'yield_fluid_over_stool_{key}_pct'] = float(100 * c.loc[fl_, col].median() / c.loc[~fl_, col].median())
@@ -1539,7 +1543,7 @@ def artwork_preview(composite_png, png):
 
 
 #: Pixel checks: (name, regenerated file in OUT, expected file, needs controlled input).
-PIXEL_CHECKS = [("panel_bc", "panel_bc.pdf", "panel_bc.pdf", False),
+PIXEL_CHECKS = [("panel_bc", "panel_bc.pdf", "panel_bc_v42.pdf", False),
                 ("panel_d", "panel_d.pdf", "panel_d.pdf", False),
                 ("panel_e", "panel_e.pdf", "panel_e.pdf", True),
                 ("panel_f", "panel_f.pdf", "panel_f.pdf", False),
@@ -1663,17 +1667,24 @@ def check_against_v30(out_dir, unit_dir, dpi=300):
         print("v30 pixel checks SKIPPED: fonts absent")
         return []
     v30p, v28p = held_file(unit_dir, "expected", "Fig4_v30.png"), held_file(unit_dir, "expected", "Fig4_v28f.png")
-    if v30p is None:
-        print("v30 composite checks SKIPPED: the published composite shows controlled panels e, g, h and is held with the controlled inputs")
+    # newest held composite is preferred: v36 (b labels give the median paired change), then v33
+    # (b,c at 295 CapScan acquisitions), then v30; all have the same layout and size
+    refp, tag = v30p, "v30"
+    for t in ("v33", "v36", "v42"):
+        q = held_file(unit_dir, "expected", f"Fig4_{t}.png")
+        if q is not None:
+            refp, tag = q, t
+    if refp is None:
+        print("composite checks SKIPPED: the published composite shows controlled panels e, g, h and is held with the controlled inputs")
         return []
-    v30 = np.asarray(_Im.open(v30p).convert("RGB"))
+    v30 = np.asarray(_Im.open(refp).convert("RGB"))
     res = []
-    jobs = [("v30_panel_bc", out_dir / "panel_bc.pdf", (0.0, 0.0, PAGE_W, PAGE_H_BC), BC_V30_BOX_PT, unit_dir / "checks")]
+    jobs = [(f"{tag}_panel_bc", out_dir / "panel_bc.pdf", (0.0, 0.0, PAGE_W, PAGE_H_BC), BC_V30_BOX_PT, unit_dir / "checks")]
     if (out_dir / "panel_h.pdf").is_file():
         cdir = out_dir / "checks_controlled"; cdir.mkdir(exist_ok=True)
-        jobs.append(("v30_panel_h", out_dir / "panel_h.pdf", H_V30_BAND_PT, H_V30_BAND_PT, cdir))
+        jobs.append((f"{tag}_panel_h", out_dir / "panel_h.pdf", H_V30_BAND_PT, H_V30_BAND_PT, cdir))
     else:
-        print("v30_panel_h: SKIPPED (controlled input absent)")
+        print(f"{tag}_panel_h: SKIPPED (controlled input absent)")
     for name, pdf, place, box, rdir in jobs:
         new = _crop_px(_page_rgb(pdf, dpi, place), box, dpi)
         exp = _crop_px(v30, box, dpi)
@@ -1681,6 +1692,8 @@ def check_against_v30(out_dir, unit_dir, dpi=300):
         r = compare(out_dir / f"{name}_new.png", out_dir / f"{name}_expected.png", rdir / name, dpi=dpi)
         res.append(dict(check=name, verdict=r["verdict"], differing_pixels=r.get("differing_pixels"),
                         diff_bbox_px=r.get("diff_bbox_px"), size_px=r["new_size_px"]))
+    if v30p is None or v28p is None:
+        return res
     r = compare(v30p, v28p, unit_dir / "checks" / "v30_vs_v28f", dpi=dpi)
     res.append(dict(check="v30_vs_v28f (composites)", verdict=r["verdict"], differing_pixels=r.get("differing_pixels"),
                     diff_bbox_px=r.get("diff_bbox_px"), size_px=r["new_size_px"]))

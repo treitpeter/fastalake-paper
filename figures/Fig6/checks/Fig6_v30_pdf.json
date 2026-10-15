@@ -1,6 +1,6 @@
 {
  "new": "build/Fig6/v30/Figure6_v30.pdf",
- "new_sha256": "76da04e0a7f5595eef0d7cfde738a0ff04995a864e6049172e9958d650859501",
+ "new_sha256": "e6fd1c9048b10c0b1c4384c699af183879f661be1d9984d316848470ef4768be",
  "expected": "figures/Fig6/expected/Fig6_v30.pdf",
  "expected_sha256": "07873927e9f96c65375376cbcdfe400f05eae21c44c661c0a04a56cd2c2ae26d",
  "dpi": 300,

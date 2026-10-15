@@ -1,0 +1,31 @@
+--- LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/design/common.py	2026-10-05 20:31:52.915139212 +0200
++++ design/common.py	2026-10-06 16:08:42.286297283 +0200
+@@ -15,8 +15,8 @@
+ SH = Path('LAB_ROOT/00_PACKAGE_2026-09-17/cleanup_2026-09-22/v10_mm_philip_comment_audit_2026-09-22/nine_point_followup/manuscript_final_pass_2026-09-23/mm_v11_revision_2026-09-23/reappraisal_2026-09-24/johannes_main_text_review_2026-09-24/codex_review_2026-09-25/split_half_repair')
+ REC = SH / 'mzml_recovery_2026-09-27'
+ PIPE_SHA = 'd983b1be57abbf8edee1a237fbaff633ee8353ff4e56098c1df3854078d511c4'
+-ROSTER = REVIEW / 'iteration3/disjoint/roster.tsv'
+-ROSTER_SHA = '33eb88f8877f260bba17b1c6ed20866c4fbebad94c49220d15d55fb26e38d5ab'
++ROSTER = Path('LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/mg295/disjoint/roster_mg295.tsv')  # mg295: production 578-row roster + 13 participant-15 MG-matched rows (578-590)
++ROSTER_SHA = '580795333e612c6a071b24fa20e10c96c4de7e78a230f498879014c5455c354c'
+ CONF_MAN = Path('LAB_ROOT/review/v15_integration/ready_integration_2026-09-28/source_additions/Review_v16/Confidence/lineage/manifest.json')
+ 
+ K = 10
+@@ -35,7 +35,7 @@
+ assert sha(SH / 'pipeline.py') == PIPE_SHA, 'frozen pipeline changed'
+ _spec = importlib.util.spec_from_file_location('splitpipe', SH / 'pipeline.py')
+ P = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(P)
+-MAN = json.loads((CF / 'inputs/MANIFEST_347.json').read_text())  # public347: production manifest, CAPSCAN tasks repointed to A08_347 + 16 appended
++MAN = json.loads(Path('LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/inputs/MANIFEST_347.json').read_text())  # mg295: the public347 manifest, read in place  # public347: production manifest, CAPSCAN tasks repointed to A08_347 + 16 appended
+ for _c in MAN['code']:
+     if Path(_c['path']).name in ('pipeline.py', 'fasta_extractor', 'parsimony_engine', 'sage'):
+         assert sha(_c['path']) == _c['sha256'], _c['path']
+--- LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/design/run.sbatch	2026-10-05 20:31:52.921241178 +0200
++++ design/run.sbatch	2026-10-06 16:08:42.294197628 +0200
+@@ -3,5 +3,5 @@
+ set -euo pipefail
+ export PYTHONNOUSERSITE=1
+ export RAYON_NUM_THREADS=${SLURM_CPUS_PER_TASK:-8}
+-cd LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/design
++cd LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/mg295/crossfit/design
+ exec /mpcdf/soft/SLE_15/packages/x86_64/anaconda/3/2023.03/bin/python worker.py "$1" "$2"

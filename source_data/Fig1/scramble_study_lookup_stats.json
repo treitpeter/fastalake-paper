@@ -1,0 +1,18 @@
+{
+  "avg_peptides_per_protein": 1.0011984249272385,
+  "core_proteome_added": 0,
+  "database": "HSTOOL_lake.fasta",
+  "match_rate": 2.501523548184641e-05,
+  "normalize_il": true,
+  "peptide_length_range": [
+    9,
+    50
+  ],
+  "proteins_matched": 5841,
+  "proteins_searched": 233497702,
+  "score_filter": "top_30%_per_sample",
+  "source_tag": "DB",
+  "total_output_proteins": 5841,
+  "total_peptides": 36588,
+  "total_seconds": 401.595631997
+}

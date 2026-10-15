@@ -656,6 +656,11 @@ def _v30_lum(rgb):
     return 0.2126 * r + 0.7152 * g + 0.0722 * b
 
 
+def _v35_plain(t):
+    """v35: a '.2g' cell value printed in scientific notation (e.g. '1.4e+02') as a plain number ('140')."""
+    return f'{float(t):.0f}' if 'e+' in t else t
+
+
 def figure_v30(s, out_stem, ref_pdf):
     """Draw Supplementary Figure 15 in the v30 house style and prove its values unchanged.
 
@@ -688,7 +693,10 @@ def figure_v30(s, out_stem, ref_pdf):
         fl = _v30_fl(); INK = fl.INK
         stages = STAGES
         n = {co: int(s[s.cohort.eq(co) & s.stage.eq(N_STAGE)].n_tasks.iloc[0]) for co in COHORTS}
-        xt = [f'CAMPI\n{n["CAMPI"]}', f'Stool\n{n["HSTOOL"]}', f'PREDICT\n{n["PREDICT"]}', f'CapScan\n{n["CAPSCAN"]}']
+        xt = [f'CAMPI\n{n["CAMPI"]}', f'Healthy stool\n{n["HSTOOL"]}', f'PREDICT\n{n["PREDICT"]}', f'CapScan\n{n["CAPSCAN"]}']   # v35: 'Stool' -> 'Healthy stool'
+        for r in ref:   # the producer's tick strings and cell texts, mapped to the v35 forms for the exact comparison
+            r['texts'] = sorted((_v35_plain(t), x) for t, x in r['texts'])
+            r['xticklabels'] = [t.replace('Stool\n', 'Healthy stool\n') for t in r['xticklabels']]
         coh = COHORTS
         namesst = STAGE_NAMES
         # white -> Okabe-Ito blue (fl.seq_cmap without its navy end, so ink and white text both stay legible)
@@ -704,7 +712,7 @@ def figure_v30(s, out_stem, ref_pdf):
             for y, st in enumerate(stages):
                 for x, co in enumerate(coh):
                     row = s[s.cohort.eq(co) & s.stage.eq(st)].iloc[0]; v = vals[y, x]
-                    label = ('NA' if not np.isfinite(v) or row.n_tasks == 0 else f'{v:.2g}') if i < 3 else (f'{row.n_memory_sampled}/{row.n_tasks}' if row.n_tasks else 'NA')
+                    label = ('NA' if not np.isfinite(v) or row.n_tasks == 0 else _v35_plain(f'{v:.2g}')) if i < 3 else (f'{row.n_memory_sampled}/{row.n_tasks}' if row.n_tasks else 'NA')
                     if np.isfinite(v):
                         bg = to_rgb(cmap((np.log10(1 + v) - lo) / (hi - lo) if hi > lo else 0.0))
                     else:

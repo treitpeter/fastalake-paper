@@ -1,0 +1,55 @@
+{
+  "status": "DIAGNOSTICS_COMPLETE",
+  "expected": 726,
+  "completed": 726,
+  "completed_by_cohort": {
+    "CAMPI": 15,
+    "HSTOOL": 58,
+    "CAPSCAN": 347,
+    "PREDICT": 306
+  },
+  "errors": [],
+  "control_60_receipts": {
+    "status": "REPRODUCED",
+    "receipts": 60,
+    "accepted": {
+      "exact": 0,
+      "bags": 0,
+      "mass": 13512,
+      "combined": 13518
+    },
+    "selected_proteins": {
+      "exact": 55229,
+      "bags": 78239,
+      "mass": 561126,
+      "combined": 561331
+    },
+    "max_accepted_per_acquisition_seed": {
+      "exact": 0,
+      "bags": 0,
+      "mass": 326,
+      "combined": 326
+    }
+  },
+  "roster_726": {
+    "receipts": 726,
+    "accepted": {
+      "exact": 190,
+      "bags": 178,
+      "mass": 170441,
+      "combined": 170686
+    },
+    "selected_proteins": {
+      "exact": 717471,
+      "bags": 928513,
+      "mass": 7557882,
+      "combined": 7559645
+    },
+    "max_accepted_per_acquisition_seed": {
+      "exact": 190,
+      "bags": 178,
+      "mass": 624,
+      "combined": 624
+    }
+  }
+}

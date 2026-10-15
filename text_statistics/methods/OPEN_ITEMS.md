@@ -19,3 +19,7 @@
 ## v30 reference (added 2026-10-06)
 
 - UNTRACED: the v28d quote of NUMBERS.tsv rows 3 (296), 4 (335), 11 (Five), 13 (three), 18 (555,987), 19 (452,255) was not located in the v30 text (`visible_v30f.txt`); the wording or the value changed or the sentence was removed. v30_status NOT_IN_V30; the v28d columns are unchanged.
+
+## v33 sync (2026-10-07)
+
+- UNTRACED: `source_data/methods/split_spectra_mg_per_acquisition.tsv` and the spectrum-split STATS rows (CapScan n = 282) were not extended to 295 acquisitions; no printed v33 number depends on them (the 295 spectrum-split MG outputs are in `pipelines/capscan_mg_benchmark_295`, disjoint step).

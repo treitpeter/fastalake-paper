@@ -49,3 +49,7 @@
 ## v30 reference (added 2026-10-06)
 
 - UNTRACED: the v28d quote of NUMBERS.tsv rows 4 (48), 5 (15), 6 (32), 7 (one), 32 (710), 33 (112,835,982), 40 (637), 41 (58), 43 (0.12%), 44 (0.60%), 45 (1.96%), 47 (17,935), 59 (fourteen), 60 (1 × 10⁻⁵) was not located in the v30 text (`visible_v30f.txt`); the wording or the value changed or the sentence was removed. v30_status NOT_IN_V30; the v28d columns are unchanged.
+
+## v33 sync (2026-10-07)
+
+- UNTRACED: v33 Supplementary Methods (paragraph about assembly-local names) prints the 295-acquisition header audit (2,393,928 of 29,163,863 sequences; 2,494,126 of 2,494,236 shared names). The table is `source_data/supplementary_methods_1_5/header_audit.tsv` (`pipelines/metagenome_header_audit`), but no NUMBERS row covers these values.
