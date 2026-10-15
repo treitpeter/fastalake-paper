@@ -1,0 +1,176 @@
+[
+  {
+    "path": "source_data/v42_updates/allocation_medians.tsv",
+    "source": "LAB_ROOT/v39_textpass/source_data_v40_addendum/SourceData_SuppMethods_allocation_accounting_medians.tsv",
+    "sha256": "e7abf1bccf069669808618cd4130d6553b3c0b08050d859c6cce5e5cea3afe61"
+  },
+  {
+    "path": "source_data/v42_updates/allocation_hstool.tsv",
+    "source": "LAB_ROOT/v39_textpass/source_data_v40_addendum/SourceData_SuppMethods_allocation_hstool_KO_precision.tsv",
+    "sha256": "18b478b3d8b7f84519853163ad0cb217215f72589be11913ebf3666435e60a5a"
+  },
+  {
+    "path": "source_data/v42_updates/allocation_own_stool.tsv",
+    "source": "LAB_ROOT/v39_textpass/source_data_v40_addendum/SourceData_SuppMethods_allocation_capscan347_own_stool.tsv",
+    "sha256": "c016e5717730caeab420f97e79e1f68536754df82966f830dc3539f99e4203ec"
+  },
+  {
+    "path": "source_data/v42_updates/allocation_predict.tsv",
+    "source": "LAB_ROOT/v39_textpass/source_data_v40_addendum/SourceData_SuppMethods_allocation_predict_crossomics_protein_rows.tsv",
+    "sha256": "aff2dbf278dc863c264d9dc0885e84e5dfc4409831611e5136002ee6f1d57c30"
+  },
+  {
+    "path": "source_data/v42_updates/eds_validation.tsv",
+    "source": "LAB_ROOT/v39_textpass/source_data_v40_addendum/SourceData_SuppMethods_EDS_prediction_validation_all_seeds.tsv",
+    "sha256": "87de5923726b6c079ee656416539d377978a0f8231d89f313b3fb4ebd08077de"
+  },
+  {
+    "path": "source_data/v42_updates/eds_permutation_metrics.tsv",
+    "source": "LAB_ROOT/v39_textpass/source_data_v40_addendum/SourceData_SuppMethods_EDS_permutation_metrics_all_seeds.tsv",
+    "sha256": "ee5b9880ab7c018ae18a254fb69f8840d25b5d6f60b9c6cd1c59b3fd9b4afd8a"
+  },
+  {
+    "path": "source_data/v42_updates/eds_permutations.tsv",
+    "source": "LAB_ROOT/v39_textpass/source_data_v40_addendum/SourceData_SuppMethods_EDS_permutation_nulls_all_seeds.tsv",
+    "sha256": "b73dd6e8140410f40f99430ee6ab434365b9170748737992f0be68de4f521ea8"
+  },
+  {
+    "path": "source_data/v42_updates/fold_fractions.tsv",
+    "source": "LAB_ROOT/v39_textpass/source_data_v40_addendum/SourceData_SuppMethods_crossfit_fold_fractions_591.tsv",
+    "source_sha256": "314a72f557c2740d76f24ac061d7d79337f77cedbbf4122930190dba1d00bd11",
+    "sha256": "b2673522966359d36374248e839eaa507e1d61559b4b9e7fa9e9baea00c03250",
+    "transformation": "Existing acquisition pseudonyms; subject_id and group fields omitted"
+  },
+  {
+    "path": "source_data/v42_updates/numerical_per_acquisition.tsv",
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-11_numerical_rescoring_sensitivity/PER_ACQUISITION.tsv",
+    "source_sha256": "94ad62508168fbf4635e85005646c03e1c96d05b3949411f3533c3c957662f28",
+    "sha256": "a627b4579f2656816507486406d3c2e7e2a487edfbf468139b83ef6d4cff98f5",
+    "transformation": "Existing acquisition pseudonyms; subject_id and group fields omitted"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0001_0050.tsv",
+    "sha256": "730cb32048ac1b022a973f57e5bf5b721f0dd145d0bbc6b2451bb5263d5697e8"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0051_0100.tsv",
+    "sha256": "2e1560dfb40928538aa77ca1f473263d89bb2a6e94f249e285cbd28db34e65cf"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0101_0150.tsv",
+    "sha256": "ec7eccf5034a621dce5c66bb4b9e6697461ebbb278cec0a9f5fe606d9c98099e"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0151_0200.tsv",
+    "sha256": "922736d792672ad3795d64cc21fe283c874d4594a45495a71135259cdeb4697a"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0201_0250.tsv",
+    "sha256": "d45a9d3659e6f4690b453edde53a134c061d712abd0ab5da229be64a12404ccd"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0251_0300.tsv",
+    "sha256": "18b5998b0b83c135a02d5925665d7049265e70e04e71c5345d05cffae257ab55"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0301_0350.tsv",
+    "sha256": "dad41a82a0f3e04a7b8cd2d491ed6e84330364c58b772fa3ddf227e63018eb47"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0351_0400.tsv",
+    "sha256": "803d9dbcb3582a8417651f83bfe2751a99eb49d730b1b64963e2d5f4e986dcd4"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0401_0450.tsv",
+    "sha256": "b4104f56649c2da0ba330dcdc308e4cfcdd96de15c6ca4177300658731278e14"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0451_0500.tsv",
+    "sha256": "78517b2c78b948713527eb840124a661d37e897a4c3811834180bf126bb0317f"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0501_0550.tsv",
+    "sha256": "004b93fc744bcd851f4ef3e5fc6d052f3834c3940916c3606c4a9b2dee2b82ab"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0551_0600.tsv",
+    "sha256": "f0c13560b21f4c1731d800ea714ad92b79b6518b05613de755997b4337876e1b"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0601_0650.tsv",
+    "sha256": "9033ac0e19df6046f2a055e04a37a5f4209d7132250ae4e0dfe842de5be7b3a3"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0651_0700.tsv",
+    "sha256": "38daecd76729b1ca2f051ad3313d83c14d7d245c4bc413e1b36d2b31eb7643c4"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0701_0750.tsv",
+    "sha256": "b929869337056dcefbe528a307997d78f6c17de4a96e4abaabd3dd32402b0871"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0751_0800.tsv",
+    "sha256": "018896c5996bc2660c2a8c329fd1366240beff5a6ba64ff9b879a66c2232bee6"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0801_0850.tsv",
+    "sha256": "95cf8ac581b30dbf58ddec072731b57aaf260ede2093cd8cff4309eba0210cb8"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0851_0900.tsv",
+    "sha256": "1b46ac1e91dd79f89e7018f456b62c88f8173b7191e4f0c5ea704bee844dba1d"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0901_0950.tsv",
+    "sha256": "6a2b4e7572174c3d59beb7d4e0131902ddece42780bee06f57d37a1e1e4ed4d1"
+  },
+  {
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-17_simulation_and_confidence_null/out/null/null_0951_1000.tsv",
+    "sha256": "d999619b78c840ef1c3f2ae86eb05b76067825d75f34aeeddd9a56265633d4ac"
+  },
+  {
+    "path": "source_data/v42_updates/group_folds_per_acquisition.tsv",
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/D-R04_precursor_group_folds/PER_ACQUISITION.tsv",
+    "source_sha256": "c15178cc3e2731e77529c1b1545a84e078ea10c5f7321634b21149c9c6183969",
+    "sha256": "1320081f90bb64541817533ffab4bb92288ca53f166f7cb27a4559bf9a718cdb",
+    "transformation": "PREDICT acquisition pseudonyms; clinical groups omitted; participant identifiers replaced by within-cohort cluster ranks"
+  },
+  {
+    "path": "source_data/v42_updates/group_folds_summary.tsv",
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/D-R04_precursor_group_folds/SUMMARY.tsv",
+    "sha256": "5552158ef857f2453b8e914959116b290b346aeafd45a3da17f7f5b06657c832"
+  },
+  {
+    "path": "source_data/v42_updates/entrapment_per_acquisition.tsv",
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-16_D-R03_crossfit_entrapment/PER_ACQUISITION.tsv",
+    "source_sha256": "c863f52f911799bd448b83ecdc70fc6d20a8d56d28935b6c6ad5d4c54b792127",
+    "sha256": "b589a0cd525052b5668693eb0000bb64f1495c1e6baa2d1f68d1bac012b5e58d",
+    "transformation": "PREDICT acquisition pseudonyms; clinical groups omitted; participant identifiers replaced by within-cohort cluster ranks"
+  },
+  {
+    "path": "source_data/v42_updates/entrapment_summary.tsv",
+    "source": "LAB_ROOT/next_week_runs_2026-10-08/A-16_D-R03_crossfit_entrapment/SUMMARY.tsv",
+    "sha256": "12255b4d3050b7e0a6bb16b496fcc61f20d74a93cea854b3fc40cd3e05b8c09b"
+  },
+  {
+    "path": "source_data/v42_updates/crossfit_per_acquisition.tsv",
+    "source": "LAB_ROOT/v39_textpass/source_data_v40_addendum/SourceData_SuppMethods_crossfit_per_acquisition_591.tsv",
+    "source_sha256": "4a8c7abf9beb3143e716181c2275eea82fda7484d961deb5000e238c4306b47b",
+    "sha256": "c226f7fa2d963993304a58b4bdadc4642addc630580cbadad113c8d2e1ff0516",
+    "transformation": "PREDICT acquisition pseudonyms; participant identifiers omitted; original cluster order retained"
+  },
+  {
+    "path": "source_data/v42_updates/crossfit_summary.tsv",
+    "source": "LAB_ROOT/v39_textpass/source_data_v40_addendum/SourceData_SuppMethods_crossfit_summary_591.tsv",
+    "source_sha256": "85873ab8ebd52a6e66a07ed08584ea3840f5e00af725d58dd4c6439065ccf461",
+    "sha256": "85873ab8ebd52a6e66a07ed08584ea3840f5e00af725d58dd4c6439065ccf461",
+    "transformation": "none"
+  },
+  {
+    "path": "source_data/v42_updates/crossfit_summary_by_region.tsv",
+    "source": "LAB_ROOT/v39_textpass/source_data_v40_addendum/SourceData_SuppMethods_crossfit_summary_by_region_591.tsv",
+    "source_sha256": "a6699eedec531c2abffe5b6d1a2c6fbcfd3284e591ed1513990f9012d64b3f9a",
+    "sha256": "a6699eedec531c2abffe5b6d1a2c6fbcfd3284e591ed1513990f9012d64b3f9a",
+    "transformation": "none"
+  }
+]

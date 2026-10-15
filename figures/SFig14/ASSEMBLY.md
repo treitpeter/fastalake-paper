@@ -66,3 +66,7 @@ differing pixels; needs `FASTALAKE_FONT_DIR`).
 Composite PDF it was rasterised from: `expected/SFig14_v30.pdf` (copy of
 `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/v30/figures_style/SFig14/SupplementaryFigure14.pdf`), sha256 `f5aa8c121daf384713fd195e1546f682f3a0aff27001304a98ced6493feb25e2`. The repository PDF differs from it only
 in metadata bytes; its 300 dpi rasterisation is the PNG above.
+
+## v35 label change
+
+x-axis label case IDs HIS_001-HIS_004 drawn as "Case 1"-"Case 4" (panel order a-d; Source Data folders keep the HIS_00k names). v30 drawing only; plotted values unchanged. Expected render replaced: `expected/SFig14_v35.png` sha256 cbc4afbd25d8615c711c145e5c385206524b1f2a1a805e52c2f14d74b2d7c384, `expected/SFig14_v35.pdf` sha256 dc8a9c563bb4675a5e98c4289f3693938a001deced4f43f100f4bb92c299c8ab. A control build of the previous code reproduced the previous expected PNG byte for byte.

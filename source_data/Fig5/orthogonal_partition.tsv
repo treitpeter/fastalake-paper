@@ -1,25 +1,25 @@
 population	component	fraction	prevalence
-All five regions	Participant	0.44990207622070705	0.0
-All five regions	Residual	0.4017293050988243	0.0
-All five regions	Capsules versus stool	0.10678430875644904	0.0
-All five regions	Between capsule regions	0.041584309924019534	0.0
-Capsules only	Participant	0.5685695553980448	0.0
-Capsules only	Residual	0.37884050201067176	0.0
+All five regions	Participant	0.4492809662076011	0.0
+All five regions	Residual	0.4011374344680116	0.0
+All five regions	Capsules versus stool	0.1078841000611323	0.0
+All five regions	Between capsule regions	0.0416974992632546	0.0
+Capsules only	Participant	0.5686020867065615	0.0
+Capsules only	Residual	0.3786222601804516	0.0
 Capsules only	Capsules versus stool	0.0	0.0
-Capsules only	Between capsule regions	0.05258994259128406	0.0
-All five regions	Participant	0.4500106288920836	0.1
-All five regions	Residual	0.40144181877846324	0.1
-All five regions	Capsules versus stool	0.10694722619589198	0.1
-All five regions	Between capsule regions	0.04160032613356077	0.1
-Capsules only	Participant	0.5688021603496572	0.1
-Capsules only	Residual	0.37858088178090293	0.1
+Capsules only	Between capsule regions	0.0527756531129866	0.0
+All five regions	Participant	0.449391163925887	0.1
+All five regions	Residual	0.4008453937666505	0.1
+All five regions	Capsules versus stool	0.1080498362971164	0.1
+All five regions	Between capsule regions	0.0417136060103459	0.1
+Capsules only	Participant	0.5688385002272672	0.1
+Capsules only	Residual	0.3783585183531766	0.1
 Capsules only	Capsules versus stool	0.0	0.1
-Capsules only	Between capsule regions	0.05261695786943937	0.1
-All five regions	Participant	0.4501316160612067	0.2
-All five regions	Residual	0.4010769736450121	0.2
-All five regions	Capsules versus stool	0.10716303455583331	0.2
-All five regions	Between capsule regions	0.04162837573794878	0.2
-Capsules only	Participant	0.5690552944333109	0.2
-Capsules only	Residual	0.3782853147230131	0.2
+Capsules only	Between capsule regions	0.0528029814195562	0.1
+All five regions	Participant	0.4495127829958611	0.2
+All five regions	Residual	0.4004759105709738	0.2
+All five regions	Capsules versus stool	0.1082688473102541	0.2
+All five regions	Between capsule regions	0.0417424591229113	0.2
+Capsules only	Participant	0.5690929276892202	0.2
+Capsules only	Residual	0.3780608935553975	0.2
 Capsules only	Capsules versus stool	0.0	0.2
-Capsules only	Between capsule regions	0.05265939084367577	0.2
+Capsules only	Between capsule regions	0.0528461787553818	0.2

@@ -1,0 +1,25 @@
+{
+ "new": "build/SFig06/SFig06.png",
+ "new_sha256": "467f7ca18fda57d5e580c619fa18888594c3641fb7bc2b5661c20f9e174096d9",
+ "expected": "figures/SFig06/expected/SFig06_v38.png",
+ "expected_sha256": "467f7ca18fda57d5e580c619fa18888594c3641fb7bc2b5661c20f9e174096d9",
+ "dpi": 300,
+ "page": 0,
+ "tolerance": 0,
+ "max_fraction": 0.0,
+ "new_size_px": [
+  2126,
+  2197
+ ],
+ "expected_size_px": [
+  2126,
+  2197
+ ],
+ "differing_pixels": 0,
+ "differing_fraction": 0.0,
+ "max_channel_difference": 0,
+ "diff_bbox_px": null,
+ "verdict": "IDENTICAL",
+ "passed": true,
+ "diff_png": "figures/SFig06/checks/SFig06_v38.diff.png"
+}

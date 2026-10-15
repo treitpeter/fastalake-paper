@@ -1,0 +1,17 @@
+ctl282 group FL 6085760 (3G)
+ctl282 group metaG 6085761 (19G)
+ctl282 collect 6085762
+ctl282 export FL 6085764 (48G pilot)
+ctl282 export metaG 6085765 (48G pilot)
+ctl282 h09 6085766
+CONTROL compare 6085767
+r295 group FL 6085768 (3G)
+r295 group metaG 6085769 (20G)
+r295 collect 6085770
+tail295 submitter 6085771
+ctl export MaxRSS-based mem: FL 2G metaG 3G
+RESUBMIT 2026-10-07 (tail 6085771 failed: dependency on finished job). 282 control: only float noise (max rel 1.8e-15) in BrayCurtis-derived cols -> PASS numerically
+r295 export FL 6087188 (2G)
+r295 export metaG 6087189 (3G)
+r295 h09 6087190
+negative control 6087191

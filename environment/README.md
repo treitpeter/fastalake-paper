@@ -16,27 +16,33 @@ records the difference.
 
 ## Install
 
-    python3.12 -m venv .venv
-    .venv/bin/python -m pip install --upgrade pip==25.2
-    .venv/bin/python -m pip install -r environment/requirements.lock.txt
-    .venv/bin/python -m ipykernel install --prefix .venv --name python3
+From the repository root (see the [quickstart](../README.md#quickstart) to clone it):
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip==25.2
+.venv/bin/python -m pip install -r environment/requirements.lock.txt
+.venv/bin/python -m ipykernel install --prefix .venv --name python3
+```
 
 Then, from the repository root:
 
-    .venv/bin/python paper.py list
-    .venv/bin/python paper.py build Fig2
-    .venv/bin/python paper.py check
+```bash
+.venv/bin/python paper.py list
+.venv/bin/python paper.py build STab2
+.venv/bin/python paper.py check
+```
 
 ## Optional inputs
 
 | variable | purpose |
 |---|---|
-| `FASTALAKE_FONT_DIR` | directory with the licensed Söhne fonts; needed only for pixel-exact text (see `style/README.md`) |
-| `FASTALAKE_CONTROLLED_DIR` | directory with controlled clinical inputs (see `controlled/CONTROLLED_INPUTS.md`); cells that need them skip without it |
+| `FASTALAKE_FONT_DIR` | Directory with the licensed Söhne fonts; needed for exact pixel checks (see [figure style](../style/README.md)) |
+| `FASTALAKE_CONTROLLED_DIR` | Directory with [controlled clinical inputs](../controlled/CONTROLLED_INPUTS.md); cells that need them skip without it |
 | `FASTALAKE_MANUSCRIPT_TXT` | accepted manuscript text; lets `tools/check_numbers.py` also verify quotes against line numbers |
 
 ## Adding a dependency
 
-Unit agents do not edit these files. A unit that needs a package writes
-`ENV: <package>==<version>, needed by <file:function>` in its `OPEN_ITEMS.md`; the
-orchestrator adds it here and regenerates the lock.
+Record the package, exact version and dependent analysis when proposing a dependency
+change. Update the direct requirements and regenerate the lock together, then run
+the affected notebooks and repository checks.

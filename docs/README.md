@@ -1,11 +1,13 @@
 # Documentation
 
-| file | content |
+| Document | Purpose |
 |---|---|
-| `REVIEWER_GUIDE.md` | every printed number in manuscript order with code, source data and status; per-unit index |
-| `STATISTICS.md` | every statistical test by figure, design hierarchy, gaps the manuscript text must close |
-| `REPORTING_SUMMARY.md` | Nature Portfolio Reporting Summary headings filled from the manuscript and code |
-| `CODE_AVAILABILITY.md`, `DATA_AVAILABILITY.md` | proposed statements with placeholders |
-| `MANUSCRIPT_CHANGES_FOR_V28F.md` | text changes found by the units |
+| [Reviewer guide](REVIEWER_GUIDE.md) | Registered manuscript claims, current code, inputs and unresolved entries |
+| [Manuscript identity](MANUSCRIPT.json) | Exact version and accepted-text checksums |
+| [Statistics](STATISTICS.md) | Statistical units, design, methods and recorded results |
+| [Code availability](CODE_AVAILABILITY.md) | Software and analysis versions and archival records |
+| [Data availability](DATA_AVAILABILITY.md) | Public records, staged deposits and controlled access |
 
-`REVIEWER_GUIDE.md`, `STATISTICS.md` and `MANUSCRIPT_CHANGES_FOR_V28F.md` are generated from the unit files (`NUMBERS.tsv`, `STATS.tsv`, `OPEN_ITEMS.md`); edit the unit files, not these.
+Regenerate the reviewer guide from the unit registers with
+`python tools/render_reviewer_guide.py`. Editorial planning and submission drafts
+are maintained separately from the analysis package.

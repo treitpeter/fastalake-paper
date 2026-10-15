@@ -3,8 +3,8 @@
 Tables read by `figures/Fig4/Fig4.ipynb`. They were cut from the analysis outputs by `figures/Fig4/prepare_source_data.py`; origins and checks against the published Source Data package are in `figures/Fig4/PROVENANCE.md`, input hashes in `EXTRACTION_RECEIPT.json`. PREDICT acquisitions are `PREDICT_A###` (numbered by sorted acquisition name over the 306 PREDICT acquisitions) and PREDICT patients `PREDICT_P###` (the pseudonyms of the Source Data package); no clinical covariate is in any table. CapScan participants keep their published numbers 1-15. Sampling sites of CapScan are the source labels duodenum, jejunum, ileum, colon (the manuscript's regions 1-4) and stool. Tables rewritten by the extraction store floats with 17 significant digits; `panels.py:load_table` reads them so that the values equal those the original producers used.
 
 ## crossfit_per_acquisition.tsv
-sha256: 5bcdbe883a9ddb41582de92d11c7ad3bc739fa272b71241fcc86244cd2b9b094
-rows: 578 (one row per acquisition with a matched metagenome: 296 PREDICT, 282 CapScan)
+sha256: 9672eafdba626af69782af5e4aa3a3f975e0d0a3ed8582b7013c5ffd1f2a5eb8
+rows: 591 (one row per acquisition with a matched metagenome: 296 PREDICT, 295 CapScan)
 produced by: capscan_crossfit_10fold
 
 | column | unit | meaning |
@@ -22,8 +22,8 @@ produced by: capscan_crossfit_10fold
 | recovery_cf_5_pct, recovery_cf_9_pct | % | share of the cross-fitted MG peptides also accepted by cross-fitted FL, 5-50 and 9-50 residues |
 
 ## same_spectrum_benchmark.tsv
-sha256: cb8248852f55dee7a8ac5fca054e88fd83cd85e2a84edfaed8a6543c2ec2e16b
-rows: 1156 (one row per acquisition and length window: 296 PREDICT and 282 CapScan acquisitions x 2)
+sha256: d17f6c15c7fb3bb6ac116c603e63489d213a16682fa35e4c3ce99af0b375e651
+rows: 1182 (one row per acquisition and length window: 296 PREDICT and 295 CapScan acquisitions x 2)
 produced by: clinical_public_only_comparison
 
 | column | unit | meaning |
@@ -169,8 +169,8 @@ produced by: predict_crossomics_refit
 | OG__metaG ... Pathway__metabolites (15 columns) | distance (dimensionless) | profile distance at eggNOG OG, KEGG KO and KEGG pathway level, all observed features |
 
 ## capscan_dna_yield_by_acquisition.tsv
-sha256: 351bdf31dc30f108e11796f15614cb05299ba8d37a8991d6ca4f10f7fa1a9c4d
-rows: 282 (one row per matched CapScan acquisition)
+sha256: cb682c0f65e08c67359fa8f71feaf1dac4e5708e82a2325bff4adcd1159af556
+rows: 295 (one row per matched CapScan acquisition)
 produced by: capscan_metagenome_yield_join
 
 | column | unit | meaning |

@@ -1,6 +1,5 @@
 # Open items: Fig5
 
-- UNTRACED: panel a "282 matched acquisitions" is a constant in the producer script; it is the matched CapScan metagenome benchmark roster owned by Fig4, not yet in the repository (ARTWORK_NUMBERS.md, last row).
 - UNTRACED: the 24 functions of panel e were "selected previously by abundance" (Methods line 787); the selection step and the display-name key `heatmap_function_key.tsv` come from an earlier analysis tree and are used as fixed inputs, not recomputed (panel e).
 - MISMATCH: Methods line 849 says evenness was calculated "for each participant and sampling region after averaging acquisitions within specimen and specimens within participant–region, then averaged the four capsule-region indices"; the code (`panels.stat_evenness`, ported from C4 dominance_evenness.py) computes the metrics per acquisition and compares each participant's median over all intestinal-fluid acquisitions with the median over stool acquisitions. Results line 159 ("a median 22.5%") matches the code. The Methods sentence must change for v28f (STATS.tsv evenness rows).
 - TEXT-GAP: the participant-bootstrap seed (20261003) and interval construction (percentile, 2,000 draws, the same resampled indices for all four regions and the own-stool interval) are not stated (lines 149, 155, 843, 849); the own-stool CI on line 155 has no stated construction at all (STATS.tsv rows 1-7).
@@ -25,3 +24,7 @@
 - TEXT-GAP: `NUMBERS.tsv` carries the tool-supported v30 columns (v30_para, v30_quote, v30_printed_value, v30_status): v28d_line and quote stay v28d, changed v28d rows carry `v28f_change:<v30 value>`, and every row's v30 paragraph, quote and value is checked against visible_v30f.txt (80 rows, all v30 MATCH). In v30 the number words fifteen/thirteen became 15/13, the line-849 percentages are printed to one decimal, and the v28d 42.5% and 58.3% (original protein grouping) are no longer printed (rows removed).
 - MISMATCH: source file name `participant_leaders_strict_both_methods.tsv` is kept from v28f so the plotting code is unchanged, but in v30 the strict subset is defined under direct assignment only (source_data/Fig5/README.md).
 - AUTHOR: insertion of Figure5.png into the v27 and v28d docx is not traced to a tool (ASSEMBLY.md step 5); the image bytes are verified identical.
+
+## v33 sync (2026-10-07)
+
+- RESOLVED: panel a now reads "295 matched acquisitions" (artwork rerun by the producer, `final/figs_v33_labels`); the notebook checks it against `source_data/Fig4/crossfit_per_acquisition.tsv`. `expected/Fig5_v33.{png,pdf}` is the v33 Figure 5 (byte-identical to the label rebuild).

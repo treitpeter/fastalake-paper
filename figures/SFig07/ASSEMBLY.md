@@ -35,3 +35,11 @@ The repository render (`build/SFig07/SupplementaryFigure7.png` and `.pdf`) is ID
 both at 300 dpi (`checks/SFig07_v30.json`, `checks/SFig07_v30_pdf.json`). The v28d/v28f
 composite (`Supplementary_Figure7_revised.png`, sha256 b88113c0...) is superseded and no longer
 kept in `expected/`.
+
+## v35 label change
+
+Panel a tick "union individual" -> "common-FASTA individual" (legend name); panel b legend "CAPSCAN" -> "CapScan" (`V35_TICK`, `V35_COHORT`; the producer/restyle check maps the producer strings through them, all value checks pass). Expected render replaced: `expected/SFig07_v35.png` sha256 82429dbec52b0c7fefb136fe95c2c868bf0629c263375f87f24708247f83f7f5, `expected/SFig07_v35.pdf` sha256 33ebc66374ec72c384fb22482c2ad4a7c18cadbd381c04ac07bf1a5dad8fc215. A control build of the unchanged code reproduced the previous expected PNG byte for byte.
+
+## v38 label change
+
+Panel d x label "Preparation replicates, 105 pairs" -> "Workflow replicates, 105 pairs" (`V30_XLABEL_CD`), the name of this healthy-stool series in Fig. 3a and Supplementary Fig. 12. Panel c ("Technical replicates, 66 pairs") and panel a labels unchanged; the producer title it replaces is still checked as removed. Expected render replaced: `expected/SFig07_v38.png` sha256 a5f9990df0c2ab97874e2b0c8fab5af1afd699de62a1bd8789d9e9455e0ead21, `expected/SFig07_v38.pdf` sha256 61eb042b757d563d289a96eadef07d7d04cd878da12b867a5d90ca748aa6f533. A control build of the unchanged code reproduced the previous expected PNG (= `word/media/image15.png` of `FastaLake_v37.docx`) byte for byte; against it the v38 render differs in 5,284 pixels, all in the d x-label row.

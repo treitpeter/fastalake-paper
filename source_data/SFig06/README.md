@@ -46,8 +46,8 @@ produced by: clinical_public_only_comparison (UPSTREAM.json)
 used by: panels d, e; v28d line 123 (rows with min_length 5, test_arm FL_public, reference_arm MG: 296)
 
 ## same_spectrum_benchmark_1_capscan.tsv
-sha256: 37b1cd553132ab1338efdf3dd8b93f5514078fe8d057dd4064e3666c8cc5355c
-rows: 1790 (as above; CapScan)
+sha256: ae70b2d912ff5b95c13b9af483d26ad6155405d14b3bee78c1085e066cda2805
+rows: 1842 (as above; CapScan)
 produced by: clinical_public_only_comparison (CapScan searches from capscan_public_only_search)
 used by: panels d, e; v28d line 123 (rows with min_length 5, FL_public vs MG: 282)
 

@@ -900,7 +900,7 @@ def build_figure_v30(t):
             rows.append(dict(panel='ab'[i], group=x.Index, value=x.pooled_specific_peptides, label=lab))
         a.set_xlim(*XLIM_AB)
 
-    def _dots(a, groups, cols, panel):
+    def _dots(a, groups, cols, panel, ylabel='Reference identities recovered (%)'):
         for i, (label, df) in enumerate(groups):
             v = df.reference_recovery.to_numpy(dtype=float); v = v[np.isfinite(v)] * 100
             x = i + np.linspace(-.16, .16, len(v))
@@ -909,14 +909,15 @@ def build_figure_v30(t):
             rows.extend(dict(panel=panel, group=label.replace('\n', ' '), sample=s_, value=vv) for s_, vv in zip(df['sample'], v))
             rows.append(dict(panel=panel, group=label.replace('\n', ' '), sample='median', value=float(np.median(v))))
         a.set_xticks(range(len(groups)), [g[0] for g in groups], fontsize=6.5)
-        a.set_ylabel('Reference identities recovered (%)')
+        a.set_ylabel(ylabel)
 
     rec = t['recovery']; g = rec[rec.min_length.eq(PLOTTED_MIN_LENGTH_CD)]
     _dots(ax[2], [(ARMLAB[k], g[g.arm.eq(k)]) for k in ARMS], [ARM_COL[k] for k in ARMS], 'c')
     ax[2].set_ylim(*YLIM_CD); ax[2].set_xlabel('Sage search arm')
     ms = t['msfragger']; g = ms[ms.min_length.eq(PLOTTED_MIN_LENGTH_CD)]
     # d: every dot is a FastaLake search (its recovery of the comparator's identities) -> FL blue
-    _dots(ax[3], [(ARMLAB[c], g[g.comparator.eq(c)]) for c in MSF_COMPARATORS], [fl.FL, fl.FL], 'd')
+    _dots(ax[3], [(ARMLAB[c], g[g.comparator.eq(c)]) for c in MSF_COMPARATORS], [fl.FL, fl.FL], 'd',
+          ylabel='Comparator identities recovered (%)')   # v35: d recovers the comparator's (Reference or MG) identities
     ax[3].set_ylim(*YLIM_CD); ax[3].set_xlabel('MSFragger comparator')
     for a in ax:
         fl.style(a)

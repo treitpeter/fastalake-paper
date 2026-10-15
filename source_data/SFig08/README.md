@@ -1,7 +1,9 @@
 # Source data: Supplementary Figure 8
 
-`PREDICT_curation_counts.tsv` and `clinical_fixed_dictionary_ablation.tsv` are the exact files
-the v28d producer read (byte-identical copies). `PREDICT_curation_counts_by_length.tsv` is the
+`PREDICT_curation_counts.tsv` is the exact file the v28d producer read (byte-identical copy).
+`clinical_fixed_dictionary_ablation.tsv` holds the v28d producer's 296 PREDICT rows unchanged and
+295 CapScan rows recomputed with the same producer chain on the 295-acquisition matched study
+dictionary (`pipelines/capscan_mg_benchmark_295`, phase 3 item 2). `PREDICT_curation_counts_by_length.tsv` is the
 9-50-residue recount the v30 panel a is drawn from.
 They contain no clinical covariates. Samples are identified by their LC-MS/MS
 acquisition file name; the run number in a PREDICT name links to a patient only through
@@ -33,8 +35,8 @@ produced by: predict_curated_mg_comparator (9-50 recount, `recount_curation.py`)
 | peptides_9_50 | count of peptides | the same accepted set restricted to 9-50 residues; plotted in panel a (v30) |
 
 ## clinical_fixed_dictionary_ablation.tsv
-sha256: e8f214c89a6670df364906ea34cf653932388d33e35a95342f2c521cccf70893
-rows: 578 (one row per acquisition; 296 PREDICT, 282 CapScan)
+sha256: 8512afb1938fd861f9fb86b3c69fd3cd2d920316e5042f4066c9c9f86fc179c3
+rows: 591 (one row per acquisition; 296 PREDICT, 295 CapScan)
 produced by: fixed_database_evidence_ablation
 
 Same values as Source Data package sheet `Supplementary_Figure_08/clinical_fixed_dictionary_ablation.tsv`;

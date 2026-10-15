@@ -150,7 +150,7 @@ def panel_a(unit, out, dpi=150):
 
 
 def build_panel_a_funnel(unit, out, python=None):
-    """Panel a: rebuild the v30 FastaLake column with ``artwork/build_fig1a_funnel.py``.
+    """Panel a: rebuild the v33 FastaLake column with ``artwork/build_fig1a_funnel.py``.
 
     Runs the ported producer in a subprocess (it is a script, not a module) with
     ``FASTALAKE_OUT_DIR = out / "funnel"``. Needs ``FASTALAKE_FONT_DIR`` (Soehne). The

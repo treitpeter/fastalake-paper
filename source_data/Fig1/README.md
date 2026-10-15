@@ -163,6 +163,15 @@ entries), `total_peptides` (250,197 distinct pooled queries), `proteins_matched`
 (18,007,876 study-supported proteins). Also `match_rate`, `normalize_il`,
 `peptide_length_range`, `score_filter`, `total_seconds`.
 
+## scramble_study_lookup_stats.json
+
+Study-level lookup of the composition-matched scrambled queries (seed 20260901; 36,588
+distinct queries) in the same 233,497,702-entry healthy-stool reservoir, as `stage1_stats.json`
+for the authentic queries. Keys used: `proteins_searched`, `proteins_matched` (5,841; the
+Fig. 1a table cell Scrambled / Study-supported proteins). Producer output
+`FINAL/v30/fig1_direct233M/scr/matches.stats.json` with `database` reduced to the file name.
+sha256: fc787f3313ecde21e191c954af2e27f56dfc9140a837760c2674e8ace94577a9
+
 ### worked_acquisition_accepted_peptides.tsv
 
 Every accepted peptide of the worked healthy-stool acquisition, flagged by whether it occurs

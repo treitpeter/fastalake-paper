@@ -626,7 +626,7 @@ def as_word(n):
 
 
 def numbers(d):
-    """Compute every value in ``NUMBERS.tsv``, in file order.
+    """Compute registered values in file order, using the v42 human-excluded KO scope.
 
     Parameters
     ----------
@@ -669,8 +669,8 @@ def numbers(d):
         ("L109 microbial PG CV interindividual", f.loc[("protein groups", "Interindividual", "microbial"), "median_cv"]),
         ("L109 microbial PG r technical", f.loc[("protein groups", "TechnicalReplicates", "microbial"), "median_r"]),
         ("L109 microbial PG r interindividual", f.loc[("protein groups", "Interindividual", "microbial"), "median_r"]),
-        ("L109 KO r technical", f.loc[("KO", "TechnicalReplicates", "new_all"), "median_r"]),
-        ("L109 KO r interindividual", f.loc[("KO", "Interindividual", "new_all"), "median_r"]),
+        ("L109 KO r technical", f.loc[("KO", "TechnicalReplicates", "new_other_unresolved"), "median_r"]),
+        ("L109 KO r interindividual", f.loc[("KO", "Interindividual", "new_other_unresolved"), "median_r"]),
         ("L739 acquisitions", a["total"]),
         ("L739 inter-individual acquisitions", as_word(a["per_design"]["Interindividual"])),
         ("L739 inter-individual targets", as_word(don["targets"])),
@@ -881,3 +881,85 @@ def assemble_v30(panel_bcde_pdf, base_pdf, out_stem):
     doc.save(str(out_stem) + ".pdf", garbage=4, deflate=True)
     fitz.open(str(out_stem) + ".pdf")[0].get_pixmap(dpi=300, alpha=False).save(str(out_stem) + ".png")
     return dict(pdf=Path(str(out_stem) + ".pdf"), png=Path(str(out_stem) + ".png"), retyped_spans=n)
+
+
+# ---------------------------------------------------------------------------------------
+# v38 relabel (ASSEMBLY.md step 17). The KO lower-triangle feature counts of f read
+# "<n> other"; the corner key reads "Lower: non-human" and the legend "human-assigned
+# signal excluded below", so the five labels become "<n> non-human". Only those five
+# spans of the v30 vector page are covered with white and retyped, centred where they
+# were, on the same baseline, Söhne Buch 6.5 pt #4e4f51. Nothing else on the page changes.
+# The panel_f producer reproduction keeps "other" (it is checked against the producer).
+# ---------------------------------------------------------------------------------------
+V38_OLD, V38_NEW = " other", " non-human"
+V38_N_LABELS = 5
+
+
+def relabel_v38(v30_pdf, out_stem):
+    """Retype the five "<n> other" KO labels of panel f as "<n> non-human".
+
+    Parameters
+    ----------
+    v30_pdf : pathlib.Path
+        The v30 vector page (``assemble_v30`` output, = ``expected/Fig3_v30_vector.pdf``).
+    out_stem : pathlib.Path
+        Writes ``<stem>.pdf`` (vector) and ``<stem>.png`` (300 dpi).
+
+    Returns
+    -------
+    dict
+        ``pdf``, ``png`` paths and the list of ``(old, new)`` labels.
+    """
+    import re
+    import fitz
+
+    reg = _FONT_DIR / FONT_F_REGULAR
+    doc = fitz.open(v30_pdf)
+    page = doc[0]
+    f_top = composite_rects()["f"][1]
+    spans = [sp for b in page.get_text("dict")["blocks"] for ln in b.get("lines", []) for sp in ln["spans"]
+             if re.fullmatch(r"\d{1,3}(?:,\d{3})*" + V38_OLD, sp["text"])]
+    assert len(spans) == V38_N_LABELS, [sp["text"] for sp in spans]
+    page.insert_font(fontname="V38Buch", fontfile=str(reg))
+    font = fitz.Font(fontfile=str(reg))
+    changed = []
+    for sp in spans:
+        box = fitz.Rect(sp["bbox"])
+        assert box.y0 >= f_top and abs(sp["size"] - V30_RELABEL_SIZE) < 1e-6, (sp["text"], box, sp["size"])
+        new = sp["text"][: -len(V38_OLD)] + V38_NEW
+        length = font.text_length(new, fontsize=V30_RELABEL_SIZE)
+        x = (box.x0 + box.x1) / 2 - length / 2
+        page.draw_rect(box + (-.2, -.2, .2, .2), color=None, fill=(1, 1, 1), overlay=True)
+        page.insert_text((x, sp["origin"][1]), new, fontname="V38Buch", fontsize=V30_RELABEL_SIZE, color=V30_INK)
+        changed.append((sp["text"], new))
+    out_stem = Path(out_stem)
+    out_stem.parent.mkdir(parents=True, exist_ok=True)
+    doc.save(str(out_stem) + ".pdf", garbage=4, deflate=True)
+    fitz.open(str(out_stem) + ".pdf")[0].get_pixmap(dpi=300, alpha=False).save(str(out_stem) + ".png")
+    return dict(pdf=Path(str(out_stem) + ".pdf"), png=Path(str(out_stem) + ".png"), labels=changed)
+
+
+def relabel_v42(v38_pdf, out_stem):
+    """Apply the manuscript's inter-individual-series legend to the rebuilt v38 page.
+
+    The orange series does not establish a different donor for every comparison.
+    Coordinates and style are from the saved v39 figure correction, retained in v42.
+    """
+    import fitz
+
+    doc = fitz.open(v38_pdf)
+    page = doc[0]
+    spans = [sp for block in page.get_text("dict")["blocks"]
+             for line in block.get("lines", []) for sp in line["spans"]
+             if sp["text"] == "Different donor"]
+    assert spans and all(abs(sp["origin"][1] - 202.56) < 1e-3 for sp in spans), spans
+    page.draw_rect(fitz.Rect(54.0, 195.6, 156.0, 204.7), color=None, fill=(1, 1, 1), overlay=True)
+    page.insert_font(fontname="V42Buch", fontfile=str(_FONT_DIR / FONT_F_REGULAR))
+    page.insert_text((54.517, 202.560), "Inter-individual series", fontname="V42Buch",
+                     fontsize=6.5, color=V30_INK)
+    out_stem = Path(out_stem)
+    pdf, png = out_stem.with_suffix(".pdf"), out_stem.with_suffix(".png")
+    doc.save(pdf, garbage=4, deflate=True)
+    with fitz.open(pdf) as rendered:
+        rendered[0].get_pixmap(dpi=300, alpha=False).save(png)
+    return {"pdf": pdf, "png": png}

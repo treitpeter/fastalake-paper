@@ -34,3 +34,11 @@ v29 and v30 and are reproduced exactly.
 
 `LAB_ROOT/.../` abbreviates
 `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/`.
+
+## v35 label change
+
+Drawn tick labels in the manuscript cohort name (`TICK_RENAME`): c "Healthy FL" -> "Healthy stool FL" (two lines), g "Healthy (58)" -> "Healthy stool (58)" (two lines). Plotted-values table unchanged (items keep the v33 labels). Expected render replaced: `expected/SFig04_v35.png` sha256 3ba4aaa20fd39addbe20cb6b55bc2d1ed52794ae7e6b68d9bc9f410b5da9963c, `expected/SFig04_v35.pdf` sha256 6b9923ef0f04bfb3d84e53ebecbc0c2adbb0c4f70f0c1315f0f36ca31bdf186a. A control build of the unchanged code reproduced the previous expected PNG byte for byte.
+
+## v38 label change
+
+Legend key "5–50 (published)" -> "5–50 (production)" (`LAB`). Plotted values unchanged. Expected render replaced: `expected/SFig04_v38.png` sha256 7e18a9303c2f1cc60734519294ab6e348c99cff0b69d40bce6ceea4f46b49058, `expected/SFig04_v38.pdf` sha256 e41abedf999f9b89c1297571a2d8601d9bb5376c67925abcccfec6cccf33dd17. A control build of the unchanged code reproduced the previous expected PNG (= `word/media/image11.png` of `FastaLake_v37.docx`) byte for byte; against it the v38 render differs in 14,958 pixels, all in the legend row (the centred five-entry legend shifts with the longer first key).

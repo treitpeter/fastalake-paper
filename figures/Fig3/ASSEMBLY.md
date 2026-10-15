@@ -103,3 +103,7 @@ The notebook rebuilds step 15 from the regenerated b-e canvas (`panels.assemble_
 `expected/Fig3_v30.png`: IDENTICAL, 0 differing pixels (`checks/composite_v30.json`). The band checks now compare
 against `expected/Fig3_v30_vector.pdf`: a 9,037 (1.2%), b-e 65,654 (2.7%) and f 10,629 (0.6%) differing pixels,
 at re-typeset or removed text and mark edges, as described above.
+
+## v38 label change
+
+17. `panels.relabel_v38` (8 October 2026): input the step-15 vector page (`assemble_v30` output, = `expected/Fig3_v30_vector.pdf`). The five KO lower-triangle feature-count labels of f, "6,788 other", "6,134 other", "5,496 other", "5,338 other", "6,577 other", are covered with white and retyped as "<n> non-human" (the corner key reads "Lower: non-human"), centred where they were, same baseline, Söhne Buch 6.5 pt #4e4f51. Nothing else changes. `panel_f` keeps the producer's "other" because it is checked against the producer (`expected/panel_f.pdf`). Outputs: `expected/Fig3_v38_vector.pdf` sha256 a773e2b1128f079dc651fc1c91c5de2edc05a3d85ed67c8d55347160ca5365c9 and its 300-dpi render `expected/Fig3_v38.png` (2162 x 2379 px) sha256 9c0ee0e6f7c01497cecdd1c8fec641a3a171b36cf01b1ee839ce2a2d4e475f96 (`checks/composite_v38.json`). A control build of the unchanged code reproduced `expected/Fig3_v30.png` (= `word/media/image3.png` of `FastaLake_v37.docx`) byte for byte; against it the v38 page differs in 11,919 pixels, all in the f label row (300-dpi rows 2338-2361). The v38 composite is not flattened (step 16).

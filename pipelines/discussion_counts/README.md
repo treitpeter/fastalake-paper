@@ -48,7 +48,7 @@ A_accumulation_readout.tsv, A_per_specimen_ids.tsv, A_per_specimen_medians.tsv, 
 | GMSC-only peptide | every searched protein containing it (I/L-equivalent substring) is GMSC-tagged | attributable to GMSC alone | B_per_acquisition.tsv |
 | absent from MG | not an I/L-equivalent exact substring of any sequence in the matched MG-plus-human FASTA searched | literal sequence absence, not spectral incompatibility | none |
 | homolog unit (C) | distinct sequences containing the peptide (I/L-equivalent) | counts the alternatives a peptide could explain | searched, candidate and reservoir levels |
-| CapScan roster | 347 acquisitions for FastaLake-only values; 282 for matched comparisons | MG exists only for 282 | A_RESULT.json |
+| CapScan roster | 347 acquisitions for FastaLake-only values; 295 for matched comparisons in v33 (282 before) | MG exists only for 295 (282 + 13 participant-15 acquisitions, `capscan_mg_benchmark_295`) | A_RESULT.json; COUNTS.md section "CapScan matched roster 282 -> 295" |
 | candidate population | rank-one spectrum IDs reported by both arms, before q filtering | same spectra in both arms | E1_per_acquisition.tsv |
 
 ## Known limitations

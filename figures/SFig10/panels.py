@@ -63,8 +63,8 @@ HEATMAP_RECT_Y = (0.19, 0.60)              # v30 build: heatmap bottom and heigh
 COLORBAR_RECT = [0.925, 0.25, 0.010, 0.48] # v30 build: colour bar axes
 PNG_DPI = 300                   # v30 build: PNG resolution
 CONTROLLED_FILE = "patient_order_and_covariates.tsv"   # controlled/CONTROLLED_INPUTS.md
-EXPECTED_PNG = "SFig10_v30.png"   # v30 figure PNG, controlled (shows the antibiotic track)
-EXPECTED_PDF = "SFig10_v30.pdf"   # v30 figure PDF, controlled (shows the antibiotic track)
+EXPECTED_PNG = "SFig10_v33.png"   # v33 figure PNG, controlled (shows the antibiotic track)
+EXPECTED_PDF = "SFig10_v33.pdf"   # v33 figure PDF, controlled (shows the antibiotic track)
 WORDS = {3: "three", 6: "six", 19: "nineteen"}   # numbers printed as words in the manuscript
 V30_PLOTTED_SHA256 = "de6c8bb6eef41fec138f0253497f0175c4bc785621c54033b73a7c50a9800d62"  # v30 build plotted_values.tsv
 
@@ -179,7 +179,7 @@ def tracks(fig, order, abx, left, right, top, height, fontsize):
         (track label, plotted values) for each track.
     """
     tt = [(order.dysbiosis_score.to_numpy(), 'EDS (0–1)', 'Greys', 1),
-          (100 * order.Human.to_numpy(), 'Human signal (0–100%)', LinearSegmentedColormap.from_list('human', ['white', '#CC79A7']), 100),
+          (100 * order.Human.to_numpy(), 'Human-assigned LFQ share (%)', LinearSegmentedColormap.from_list('human', ['white', '#CC79A7']), 100),
           (abx.antibiotic_state.map({'Off': 0, 'On': 1}).to_numpy(), 'Antibiotics (dark: on)', ListedColormap(['#ededed', '#333333']), 1)]
     out = []
     for i, (v, l, c, m) in enumerate(tt):

@@ -163,7 +163,7 @@ def stat_own_stool(sd_root, unit):
         ``tests`` (one row per prevalence filter) and ``max_abs_error`` against the
         producer's ``similarity_summary.tsv``.
     """
-    dm = read(sd_root, unit, 'own_stool_distance_matrices.tsv')
+    dm = read(sd_root, unit, 'own_stool_distance_matrices_checked.tsv')
     ref = read(sd_root, 'Fig5', 'similarity_summary.tsv').set_index('prevalence')
     rows = []
     for prev in OG_PREVALENCES:

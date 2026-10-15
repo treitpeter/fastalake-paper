@@ -208,8 +208,8 @@ CAMPI fusion searches under added confidence gates.
 
 ## confidence_ordinary_all_pairs.tsv
 
-sha256: 9567beaad2908f6fc2876f043fb6a42ce37f38bc95710ddb7fbeb1afd398ac3e  
-rows: 20,808  
+sha256: bfb591186d9aace576461f7e884a149a1058b2452f23bc7c0f51ac3b217beabc  
+rows: 21,276  
 produced by: clinical_public_only_comparison  
 used for v28d lines: 633, 777  
 Source Data package: Review_v16/Confidence/ordinary_all_pairs.tsv minus subject_id, specimen_id, specimen_basis, aliquot; PREDICT group values blanked
@@ -239,7 +239,7 @@ Matched FastaLake (public-sequence) and metagenome counts per acquisition, gate,
 
 ## confidence_ordinary_summary.tsv
 
-sha256: 34bf89615acb4953c21e06c2958d31ca485fb52be192fd18802aaa8996fed703  
+sha256: 5108ef1a8bc0742045240a3e0381f29656939fd0ba259b109f26ebe9d86767b9  
 rows: 72  
 produced by: clinical_public_only_comparison  
 used for v28d lines: 777  
@@ -396,8 +396,8 @@ The three acquisitions with a singular pooled fit, with producer and independent
 
 ## crossfit_per_acquisition.tsv
 
-sha256: d79e36d98bc77042ed9c98b5f4d1c54cdafe04e8b9050bc4cd04c168c6cb6579  
-rows: 578  
+sha256: 08f0913375b0b0cc0de3eb64407abc3bc042cea0325c55e75e4993a6545c2adc  
+rows: 591  
 produced by: capscan_crossfit_10fold  
 used for v28d lines: 775-777  
 Source Data package: Supplementary_Figure_06/metagenome_crossfit/per_acquisition.tsv plus column cluster_order; PREDICT group values blanked
@@ -521,7 +521,7 @@ q re-implementation and full rescoring against Sage on 36 unsplit searches (6 pi
 
 ## crossfit_summary.tsv
 
-sha256: abd33b20058b9cec3374d5b63f2afc9fd8718eeccf79e92421e17e54b070d85a  
+sha256: b9a2be7d3c2019d81527e41bbbdc729564f239d5deb187b0592de67f767bf3f6
 rows: 112  
 produced by: capscan_crossfit_10fold  
 used for v28d lines: 777  
@@ -549,7 +549,7 @@ Producer's stratum medians and intervals.
 
 ## crossfit_summary_by_region.tsv
 
-sha256: 64b4249c4bdde6cb47aa057bae06dc2277d9529cd8bacc1678d28c0c1a10a5cc  
+sha256: 8e39f6a3bb1f5d3ad345f485bb7646051eb713c7f5d44325a5b40c901fe244cf  
 rows: 140  
 produced by: capscan_crossfit_10fold  
 used for v28d lines: 777  
@@ -855,8 +855,8 @@ Per-pair agreement of microbial protein groups.
 
 ## minlen7_benchmark_per_acquisition.tsv
 
-sha256: d5b116ad56bbbafd81c81cc8feaa0465fa5eee117b16cb4de0dba9df37b6dd5d  
-rows: 1,734  
+sha256: 07ca109f6eeca2115b403da608fe1472c41b36c87921f87eebfdef42cb16c4eb  
+rows: 1,773  
 produced by: minlen7_search_sensitivity  
 used for v28d lines: 777  
 Source Data package: Supplementary_Figure_04/LENGTH_SENSITIVITY_source_data.xlsx sheet a_b_benchmark_per_acquisition (exported)
@@ -1279,7 +1279,7 @@ Adjacent-swap lookup of the representative healthy-stool acquisition against the
 
 ## crossfit_pep_summary.tsv
 
-sha256: e43dac3c0bb212ac762e0fd5f44fe2bf65328a129c2f41abe77ebb741500e7e2  
+sha256: 6ee68ef36f14689a9797718b9b3ff0628748d39656585215461fef255959a277  
 rows: 48  
 produced by: capscan_crossfit_10fold (cf_pep.py, cf_analyze.py; Slurm jobs 6057990, 6058010)  
 used for v30 paragraphs: 125, 326  
@@ -1300,7 +1300,7 @@ Cross-fitted FastaLake gain over the matched metagenome search with and without 
 
 ## crossfit_pep_summary_by_region.tsv
 
-sha256: 5ccc94fe30375b8da581aa1f251ec1aebf5df8cef98c1e6e38e2e00054af0f72  
+sha256: 73978e823366365636188d85f98c9d8b1a943d91a04440d7e9931a791e7065e9  
 rows: 60  
 produced by: capscan_crossfit_10fold (cf_analyze.py, Slurm job 6058010)  
 used for v30 paragraph: 326  
@@ -1310,8 +1310,8 @@ As crossfit_pep_summary.tsv, with CapScan split by sampling region (CAPSCAN_duod
 
 ## crossfit_pep_per_acquisition.tsv
 
-sha256: d46e9712efd7a4dc0e4d8393fc0ab1d916c34863da9e0bc41f7bf66f03790839  
-rows: 578  
+sha256: 457d13cc117e555197d02dd4bbb29cad808f617772324298c6b5c80766714e35  
+rows: 591  
 produced by: capscan_crossfit_10fold (cf_analyze.py, job 6058010), pseudonymised by export_pep_source_data.py  
 used for v30 paragraphs: 125, 326  
 Source Data package: not yet in the package. Differs from the producer's CF_PEP_PER_ACQUISITION.tsv only in `subject_id` (raw identifier replaced by the pseudonym of crossfit_per_acquisition.tsv) and `group` (blank for PREDICT)

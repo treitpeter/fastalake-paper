@@ -40,7 +40,7 @@ FUSION_WINDOWS_AB = (5, 9)          # minimum residues of a,b (max 50), legend l
 FUSION_MAX_RESIDUES = 50            # Methods line 367
 SHORT_WINDOW = (5, 8)               # panel c, legend line 227; Methods line 367
 FUSION_SEEDS = (20260907, 20260908) # two positional-permutation seeds; visible_v30f line 45 ("two randomizations"), values from data
-DONOR_TIERS = ("T0_self", "T1_within_group")  # self-selected (5) and donor-selected (58), legend line 227
+DONOR_TIERS = ("T0_self", "T1_within_group")  # self-selected (58) and donor-selected (58), legend line 227
 DONOR_SEEDS_PER_ACQUISITION = 3     # "averaged over three seeds", lines 227, 374
 SIM_ARMS = ("fixed", "independent", "self")   # Methods line 376
 SIM_REGIMES = ("baseline", "stress")          # Methods line 376
@@ -58,6 +58,8 @@ AF_SIZE_MM = (160.0, 189.3)         # placed size of a-f (docx extent)
 CONT_SIZE_MM = (180.0, 90.0)        # placed size of the continued page
 LETTER_X_MM = (1.0, 82.0)           # panel-letter x per column
 PNG_DPI = 300                       # PNGs rasterised from the PDFs at 300 dpi
+#: v35: drawn cohort names as the manuscript names them (source tables keep the internal codes).
+COHORT_LABEL = {'CAMPI': 'CAMPI', 'CAPSCAN': 'CapScan', 'HSTOOL': 'Healthy stool', 'PREDICT': 'PREDICT'}
 
 
 # ---------------------------------------------------------------- loading
@@ -118,7 +120,7 @@ def panel_ab(axes, fusion):
         ``fusion_pooled_current.tsv``.
     """
     for i, lo in enumerate([5, 9]):
-        g = fusion[fusion.q_threshold.eq(.01) & fusion.min_residues.eq(lo) & fusion.max_residues.eq(50)].copy(); g['label'] = g.cohort + '\n' + g.seed.astype(str).str[-2:]
+        g = fusion[fusion.q_threshold.eq(.01) & fusion.min_residues.eq(lo) & fusion.max_residues.eq(50)].copy(); g['label'] = g.cohort.map(COHORT_LABEL) + '\n' + g.seed.astype(str).str[-2:]
         axes[i].bar(np.arange(len(g)), g.paired_component * 100, label='Paired', color=PAIRED_COLOR)
         axes[i].bar(np.arange(len(g)), g.unpaired_component * 100, bottom=g.paired_component * 100, label='Unresolved / unpaired', color=UNRESOLVED_COLOR)
         axes[i].set_xticks(np.arange(len(g)), g.label, rotation=45, ha='right', rotation_mode='anchor')
@@ -137,7 +139,7 @@ def panel_c(ax, fusion):
         ``fusion_pooled_current.tsv``.
     """
     g = fusion[fusion.q_threshold.eq(.01) & fusion.min_residues.eq(5) & fusion.max_residues.eq(8)]
-    _dots(ax, [(co, g[g.cohort.eq(co)].diagnostic) for co in g.cohort.unique()], 'Fusion-linked diagnostic,\n5–8 residues (%)', True)
+    _dots(ax, [(COHORT_LABEL[co], g[g.cohort.eq(co)].diagnostic) for co in g.cohort.unique()], 'Fusion-linked diagnostic,\n5–8 residues (%)', True)
 
 
 def panel_d(ax, don):
@@ -166,7 +168,7 @@ def panel_ef(axes, sim, u):
     """
     for j, reg in enumerate(['baseline', 'stress']):
         ax = axes[j]; g = sim[sim.regime.eq(reg)]
-        _dots(ax, [(arm, g[g.arm.eq(arm)].realised_FDP) for arm in ['fixed', 'independent', 'self']], f'Realised FDP, {reg}\nsynthetic mixtures (%)', True)
+        _dots(ax, [(arm, g[g.arm.eq(arm)].realised_FDP) for arm in ['fixed', 'independent', 'self']], f'Realized FDP, {reg}\nsynthetic mixtures (%)', True)
         for k, arm in enumerate(['fixed', 'independent', 'self']):
             r = u[u.regime.eq(reg) & u.endpoint.eq(arm)].iloc[0]
             ax.errorbar(k + .27, r['mean'] * 100, yerr=[[100 * (r['mean'] - r.bootstrap_low)], [100 * (r.bootstrap_high - r['mean'])]], fmt='s', ms=3, c=fl.INK, capsize=3)
@@ -237,7 +239,7 @@ def figure_continued(tables, out):
     x = list(range(len(f)))
     ax.bar(x, f.paired_pct, label='Weighted paired contribution', color=PAIRED_COLOR); ax.bar(x, f.unresolved_pct, bottom=f.paired_pct, label='Unresolved contribution', color=UNRESOLVED_COLOR)
     ax.axhline(1, color=fl.GREY, linestyle=':', linewidth=.8)
-    ax.set_xticks(x, [f"{r['min']}–{r['max']} aa\n{r['seed']}" for _, r in f.iterrows()]); ax.set_ylabel('Fusion diagnostic (%)'); ax.set_xlabel('Peptide length and control seed')
+    ax.set_xticks(x, [f"{int(r['min'])}–{int(r['max'])} aa\n{int(r['seed'])}" for _, r in f.iterrows()]); ax.set_ylabel('Fusion diagnostic (%)'); ax.set_xlabel('Peptide length and control seed')   # v35: integer lengths and seeds (table columns are float)
     ax.legend(frameon=False)
     for i, r in f.iterrows(): ax.text(i, r.total_pct + .18, f'{r.total_pct:.2f}', ha='center', fontsize=6.5)
     ax.set_ylim(0, 14)
@@ -330,7 +332,7 @@ def stat_d_donor_seed_means(recount):
     """Average the three entrapment seeds within target acquisition (panel d; Methods line 729).
 
     Ported from the control-reconciliation script. Statistical unit: acquisition
-    (58 donor-selected targets, 5 self-selected targets), three seeds averaged within each.
+    (58 donor-selected targets, 58 self-selected targets), three seeds averaged within each.
 
     Parameters
     ----------
@@ -351,7 +353,7 @@ def stat_d_donor_seed_means(recount):
 def stat_d_donor_summary(seed_means, q=Q_CUTOFF):
     """Median and quartiles of acquisition seed means per tier and length (line 65, panel d).
 
-    Statistical unit: acquisition (n = 58 donor-selected, 5 self-selected); descriptive,
+    Statistical unit: acquisition (n = 58 donor-selected, 58 self-selected); descriptive,
     no test. Quartiles use pandas linear interpolation, as in the producer.
 
     Returns
@@ -541,7 +543,7 @@ def numbers(tables):
     return vals + words
 
 
-_WORDS = {2: 'two', 3: 'three', 5: 'five', 12: 'twelve', 15: 'fifteen'}
+_WORDS = {58: "58", 2: 'two', 3: 'three', 5: 'five', 12: 'twelve', 15: 'fifteen'}
 
 
 def as_word(n, capital=False):

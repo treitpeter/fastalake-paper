@@ -23,7 +23,9 @@ RESULTS.md, RESULTS_CAPSCAN_FL347.md, results_per_task.tsv, results_paired.tsv, 
 
 Headline (RESULTS.md): median FL/MG peptide-count ratio at 9-50 residues 1.051 in PREDICT (291 of 296 paired; Sage on the same acquisitions 1.095) and 1.364 in CapScan FL_public (281 of 282; Sage 1.428); healthy stool MSFragger/Sage 0.998 (58 of 58).
 
-Failed tasks (13 of 1,626, listed in results_per_task.tsv): 5 PREDICT acquisitions in both arms (MicrobPred_13, 44, 90, 115, 181; MSFragger exits on these inputs, which are the five reconverted mzML files; see slurm/truncation_check.sh, job 6068722), and CapScan T760_1341 (FL_public and FL_cohortMG; one task out of memory at 14 GB) and T760_2200 (FL_public).
+Failed tasks (13 of 1,626, listed in results_per_task.tsv): 5 PREDICT acquisitions in both arms (MicrobPred_13, 44, 90, 115, 181; MSFragger exits on these inputs, which are the five reconverted mzML files; see slurm/truncation_check.sh, job 6068722), and CapScan T760_1341 (FL_public and FL_cohortMG; both tasks failed the frozen Percolator minimum of 100 decoy PSMs in search.py, not memory: logs SE_FL_CAPSCAN_6064501_71.err "AssertionError: Counter({'1': 797, '-1': 77})" and _402.err "AssertionError: Counter({'1': 785, '-1': 69})"; a low-yield acquisition, not rerun because the frozen minimum would have to change) and T760_2200 (FL_public, task 906; out of memory at 14 GB).
+
+T760_2200 FL_public was rerun with 32 GB (Slurm job 6098609, COMPLETED) and completes the CapScan matched set at 295 acquisitions: median MSFragger FL_public/MG ratio at 9-50 residues 1.3466 (Sage on the same acquisitions 1.4011); FL_cohortMG/MG 1.3475 (Sage 1.4035); FastaLake more peptides in 294 of 295 (lab file final/mg295/phase2_v2/SECOND_ENGINE_295_v2.json).
 
 ## Resources and run time (from sacct)
 

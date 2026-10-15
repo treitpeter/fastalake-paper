@@ -8,7 +8,7 @@ sequence reservoir to accepted peptides. Panels b to e give the sizes of all 726
 databases, the chance-match rate of scrambled queries by length, how many selected
 proteins rest on a single query, and the donor-selected entrapment estimate.
 
-The figure in the v30 manuscript is `expected/Fig1_v30.png` (`artwork/Figure1_v30.pdf`).
+The figure in the v33 manuscript is `expected/Fig1_v33.png` (`artwork/Figure1_v33.pdf`); v30 used `artwork/Figure1_v30.pdf`, kept as an input of the funnel build.
 `NUMBERS.tsv` keeps the v28d line numbers and quotes and carries the v30 paragraph, wording,
 printed value and status in the appended `v30_*` columns (values unchanged).
 

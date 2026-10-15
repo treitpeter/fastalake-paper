@@ -1,0 +1,28 @@
+3c3
+< import json, glob
+---
+> import json, glob, sys
+6a7,11
+> # PHASE3 item 4: inputs/outputs parameterised; statistics unchanged. mode control = C1 578 per_acq -> control/ ; mode n295 = C1 578 + per_acq13 -> out295/
+> C1 = Path('LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/coauthor_comment_check_v25_2026-10-05/compute/C1_pep_primary/crossfit')
+> MODE = sys.argv[1]; FILES = sorted(glob.glob(str(C1 / 'per_acq/*.json'))) + (sorted(glob.glob(str(H / 'per_acq13/*.json'))) if MODE == 'n295' else [])
+> EXP = {'control': {'PREDICT': 296, 'CAPSCAN': 282}, 'n295': {'PREDICT': 296, 'CAPSCAN': 295}}[MODE]
+> OUTD = H / ('control' if MODE == 'control' else 'out295'); OUTD.mkdir(exist_ok=True)
+8c13
+< for f in sorted(glob.glob(str(H / 'per_acq/*.json'))):
+---
+> for f in FILES:
+24,25c29,30
+< assert len(a) == 578 and a.groupby('cohort').size().to_dict() == {'PREDICT': 296, 'CAPSCAN': 282}, a.groupby('cohort').size()
+< a.to_csv(H / 'CF_PEP_PER_ACQUISITION.tsv', sep='\t', index=False)
+---
+> assert len(a) == sum(EXP.values()) and a.groupby('cohort').size().to_dict() == EXP, a.groupby('cohort').size()
+> a.to_csv(OUTD / 'CF_PEP_PER_ACQUISITION.tsv', sep='\t', index=False)
+44c49
+< s.to_csv(H / 'CF_PEP_SUMMARY.tsv', sep='\t', index=False)
+---
+> s.to_csv(OUTD / 'CF_PEP_SUMMARY.tsv', sep='\t', index=False)
+46c51
+< reg.to_csv(H / 'CF_PEP_SUMMARY_BY_REGION.tsv', sep='\t', index=False)
+---
+> reg.to_csv(OUTD / 'CF_PEP_SUMMARY_BY_REGION.tsv', sep='\t', index=False)

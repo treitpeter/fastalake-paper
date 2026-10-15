@@ -24,3 +24,22 @@ def same_numeric_value(actual, expected):
         and math.isfinite(right)
         and math.isclose(left, right, rel_tol=1e-12, abs_tol=0.0)
     )
+
+
+def same_prefixed_numeric_value(actual, expected, prefix):
+    """Compare a single numeric result after an exact, explicitly allowed label.
+
+    This is for formatted result fields such as ``Mantel rho 0.46``. It is not
+    a general prose comparison: both prefixes must match and the entire suffix
+    must be a finite numeric value. Counts, seeds and methods remain exact.
+    """
+    left, right = str(actual), str(expected)
+    if not left.startswith(prefix) or not right.startswith(prefix):
+        return False
+    left, right = left[len(prefix):], right[len(prefix):]
+    try:
+        float(left)
+        float(right)
+    except ValueError:
+        return False
+    return same_numeric_value(left, right)

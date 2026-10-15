@@ -1,19 +1,22 @@
-"""Figure 1 panel a (v30): rebuild the FastaLake column of the composite as one funnel.
+"""Figure 1 panel a (v33): rebuild the FastaLake column of the composite as one funnel.
 
-Repository port of the v30 producer ``build_fig1a_funnel.py`` (LAB_ROOT path in
-PROVENANCE.md). The drawing logic below the path block is unchanged; only the input and
-output paths were made repository-relative and the font directory is read from
-``FASTALAKE_FONT_DIR``.
+Repository port of the v33 producer (the Fig1_v3 layout, run as the CC Fig1a rebuild,
+LAB_ROOT path in PROVENANCE.md). The drawing logic is unchanged; only the input and output
+paths were made repository-relative, the font directory is read from ``FASTALAKE_FONT_DIR``
+and the scrambled study-level lookup count is read from
+``source_data/Fig1/scramble_study_lookup_stats.json``.
 
-Inputs (all in ``figures/Fig1/artwork/``)
+Inputs (``figures/Fig1/artwork/`` unless noted)
     Figure1_v28f.pdf               round-8 composite, the base page (read-only)
     Figure1_v27_art_source.pdf     text-free source of the clipped icon and peptide bars
+    Figure1_v30.pdf                Fig1_v2 build (v30), reference for the moved result boxes
     Figure1_v29_intermediate.pdf   v29 build, used only for the outside-column assertion
+    source_data/Fig1/scramble_study_lookup_stats.json   scrambled peptides looked up in the 233 M reservoir
 Outputs (``FASTALAKE_OUT_DIR``, default ``build/Fig1/funnel``)
     Figure1.pdf, Figure1.png (300 dpi), _build_receipt.json
 
 Usage: ``FASTALAKE_FONT_DIR=<fonts> python figures/Fig1/artwork/build_fig1a_funnel.py``
-(about one minute, 8 GB). The committed ``artwork/Figure1_v30.pdf`` is the producer's output;
+(about one minute, 8 GB). The committed ``artwork/Figure1_v33.pdf`` is the producer's output;
 the notebook rebuilds it with this script and compares the two at 300 dpi.
 
 Original producer docstring follows.
@@ -34,7 +37,8 @@ What it does
      fill) and the peptide bars of the two query boxes (on their box fills). Boxes, funnel, glyph, table grid and arrows are
      drawn as vectors; every label is typed in Soehne (real text).
   3. Asserts 0 changed pixels at 300 dpi outside the FastaLake column (x < 230 pt or y >= 372 pt) against the round-8 PDF.
-Run on Slurm (producer: srun -c2 --mem=8G -t 30, interpreter python build_fig1a_funnel.py).
+Run on Slurm: srun -p p.hpcl92,p.hpcl8,p.hpcl93 --nice=10000 -c2 --mem=8G -t 30 ~/miniconda3/bin/python build_fig1a_funnel.py
+Writes only into this directory (Fig1_v2/).
 
 v29 (6 Oct 2026, Peter approved): band 3 label "Candidates, this acquisition" -> "Per-acquisition match" (bands now read
 Reservoir [label unchanged] / Exact match / Per-acquisition match / Parsimony; numbers only in the table); one orange #d94d00
@@ -51,11 +55,52 @@ Fig1_v2 (6 Oct 2026, Peter's requested changes, FastaLake column only):
   4. Band 2 label "Exact match ·" / "study-supported proteins" (two lines, same style).
   5. Table Scrambled / Study-supported cell "–" -> "5,841" (same face, size and x as the 5,841 below it); the scrambled
      result-box spectrum line art recoloured #e85d0f -> #d94d00 (covered with the box fill and redrawn at the same geometry).
-Funnel, table x, Database search and result boxes keep the v29 geometry (the rim centre CY is pinned to its v29 value)."""
+Funnel, table x, Database search and result boxes keep the v29 geometry (the rim centre CY is pinned to its v29 value).
+
+Fig1_v3 (v30, 6 Oct 2026, Peter's requested changes, FastaLake column only; writes only into v30/figures/Fig1_v3/):
+  1. De novo box removed; one straight vertical arrow MS/MS -> AlphaNovo peptide predictions (AlphaNovo is the de novo step).
+  2. Column tightened: everything from the AlphaNovo/scrambled pair down (funnel, table, Database search, result boxes, panel
+     bottom edge) moves up by S = 29.28 pt (the freed De novo box + one arrow gap; S is a whole number of 300-dpi pixels so
+     the moved result boxes can be checked pixel for pixel). All arrow gaps stay G. The result boxes and the panel's bottom
+     edge are clipped from a text-free copy of the round-8 page and re-placed S higher; their text is retyped S higher.
+     The panel box shrinks by S; nothing outside the column changes.
+  3. AlphaNovo and scrambled boxes shifted SL pt left (same G arrow between them); rim entries stay symmetric on the funnel
+     axis. MS/MS is centred on the AlphaNovo box, so its arrow is straight and lands on the box top centre.
+  4. Table Scrambled / Study-supported cell back to "–" (scrambled queries were looked up for the worked acquisition only)."""
 import hashlib, json, math, os
 from pathlib import Path
 import fitz
 import numpy as np
+import re
+# show_pdf_page only needs names in the target page's own resource namespace.
+# Its default recursive scan revisits the same deeply shared XObjects repeatedly.
+# Use direct resource names for collision avoidance; the native placement and
+# matrices are unchanged. No installed library is modified.
+_original_show = fitz.Page.show_pdf_page
+def _resource_names(doc, pno, kind):
+    owner = doc[pno].xref
+    typ, val = doc.xref_get_key(owner, 'Resources')
+    if typ == 'xref':
+        owner = int(val.split()[0]); prefix = ''
+    else:
+        prefix = 'Resources/'
+    typ, val = doc.xref_get_key(owner, prefix + kind)
+    if typ == 'xref':
+        return list(doc.xref_get_keys(int(val.split()[0])))
+    if typ == 'dict':
+        return re.findall(r'/([^ /<>\[\]()]+)\s+\d+\s+\d+\s+R', val)
+    return []
+def _fast_show(page, *args, **kwargs):
+    doc = page.parent
+    saved = (doc.get_page_xobjects, doc.get_page_images, doc.get_page_fonts)
+    doc.get_page_xobjects = lambda pno: [(0,n) for n in _resource_names(doc,pno,'XObject')]
+    doc.get_page_images = lambda pno: [] # all image names are already in XObject
+    doc.get_page_fonts = lambda pno: [(0,0,0,0,n) for n in _resource_names(doc,pno,'Font')]
+    try:
+        return _original_show(page, *args, **kwargs)
+    finally:
+        doc.get_page_xobjects, doc.get_page_images, doc.get_page_fonts = saved
+fitz.Page.show_pdf_page = _fast_show
 
 ART = Path(__file__).resolve().parent                # figures/Fig1/artwork
 REPO = ART.parents[2]
@@ -78,8 +123,9 @@ W, H = sp.rect.width, sp.rect.height
 font = {k: fitz.Font(fontfile=str(v)) for k, v in FONTS.items()}
 tw = lambda t, f, s: font[f].text_length(t, s)
 
+COLCLIP = fitz.Rect(228, 0, W, 375)                  # FastaLake column; text outside it is never read
 def spans(page):
-    for b in page.get_text('dict')['blocks']:
+    for b in page.get_text('dict', clip=COLCLIP, flags=fitz.TEXTFLAGS_DICT & ~fitz.TEXT_PRESERVE_IMAGES)['blocks']:
         for l in b.get('lines', []):
             for s in l['spans']:
                 if s['text'].strip(): yield s
@@ -122,34 +168,36 @@ def ink(r):                 # ink bbox of a clip (pt), at 1200 dpi
 ICON_INK, BN_INK, BS_INK = ink(ICON), ink(BARS_N), ink(BARS_S)
 
 # ---------------- layout (pt) ----------------
+_st = json.load(open(REPO / 'source_data' / 'Fig1' / 'scramble_study_lookup_stats.json'))   # = producer input final/v30/fig1_direct233M/scr/matches.stats.json
+assert _st['proteins_searched'] == 233497702
+SCR_STUDY = f"{_st['proteins_matched']:,}"
 X = 350.5                     # funnel axis = title centre = Database search / result-box symmetry axis (round 8)
 G = 12.365                    # every vertical arrow gap (= MS/MS -> De novo gap set by the scrambled-box clearance)
 R = 3.04                      # box corner radius (round-8 query and result boxes)
 # MS/MS box (step-1 fill), De novo box (step-2 fill)
-MS_LBL = ('MS/MS', 'H', 5.741); DN_LBL = ('De novo', 'H', 5.741)
+MS_LBL = ('MS/MS', 'H', 5.741)
 PAD = 6.0
 MS_W = PAD + tw(*MS_LBL) + 5.0 + ICON_INK.width + PAD
-MSBOX = fitz.Rect(X - MS_W / 2, 26.0, X + MS_W / 2, 47.0)               # v2: centred on the axis
-DN_W = tw(*DN_LBL) + 2 * 9.0
-DNBOX = fitz.Rect(X - DN_W / 2, 59.36, X + DN_W / 2, 76.36)             # v2: centred on the axis (v29 y)
-DN_CY = (DNBOX.y0 + DNBOX.y1) / 2
-assert abs(DNBOX.y0 - MSBOX.y1 - G) < 0.01
+S = 122 / K                                          # v3: vertical shift = 29.28 pt = 122 px at 300 dpi (De novo box 17 + gap 12.36)
+SL = 8.0                                             # v3: AlphaNovo / scrambled pair shifted left
 QW, QH = 70.0, 35.73                                 # v2: query boxes shrunk (were 87.13 wide); v29 height
-E = 10.0                                             # rim arrows leave each box E pt right of its left edge
+E = QW / 2                                           # v3b: rim arrows leave each box at its centre
 D = (QW + G) / 2                                     # -> rim entries at X -/+ D (symmetric)
-QL = X - D - E                                       # AlphaNovo box left edge
-ALPHB = fitz.Rect(QL, DNBOX.y1 + G, QL + QW, DNBOX.y1 + G + QH)
+QL = X - (2 * QW + G) / 2                           # v3b: AlphaNovo/scrambled pair centred on the funnel axis X
+ALPHB = fitz.Rect(QL, 88.72 - S, QL + QW, 88.72 - S + QH)
 SCRB = fitz.Rect(ALPHB.x1 + G, ALPHB.y0, ALPHB.x1 + G + QW, ALPHB.y1)
 XN, XO = ALPHB.x0 + E, SCRB.x0 + E                   # navy / orange rim arrow x
 assert abs(XN - (X - D)) < 1e-9 and abs(XO - (X + D)) < 1e-9
-assert ALPHB.x0 + QW / 4 <= X <= ALPHB.x1 - QW / 4, 'De novo arrow outside the middle half of the AlphaNovo top'
+XA = (ALPHB.x0 + ALPHB.x1) / 2                       # v3: MS/MS centred on the AlphaNovo box
+MSBOX = fitz.Rect(XA - MS_W / 2, 26.0, XA + MS_W / 2, 47.0)
+assert abs((ALPHB.y0 - MSBOX.y1) - G) < 0.1, ALPHB.y0 - MSBOX.y1
 # funnel
 RX, RY, RIM_SW = 58.0, 8.3, 0.8
 rim_top = lambda x, cy: cy - RY * math.sqrt(1 - ((x - X) / RX) ** 2) - RIM_SW / 2
-CY = ALPHB.y1 + G + (RY * math.sqrt(1 - (42.0 / RX) ** 2) + RIM_SW / 2)   # rim centre pinned to v29 (arms then at X -/+ 42)
-assert abs(CY - 142.95) < 0.01, CY
+CY = ALPHB.y1 + G + (RY * math.sqrt(1 - (42.0 / RX) ** 2) + RIM_SW / 2)   # rim centre = v29 value - S
+assert abs(CY - (142.94 - S)) < 0.01, CY
 WB = 30.0                                            # half-width at the funnel bottom (wall end)
-RESULT_TOP = 307.72                                  # round-8 result boxes (kept)
+RESULT_TOP = 307.72 - S                              # round-8 result boxes, moved up by S
 DBH = 16.21
 DBBOX = fitz.Rect(X - 66.0, RESULT_TOP - G - DBH, X + 66.0, RESULT_TOP - G)
 XB = 6.0                                             # the arms leave the funnel bottom at X -/+ XB
@@ -167,19 +215,30 @@ RIM_FILL, RIM_STROKE = rgb((220, 243, 255)), hexc('#1fa7df')                    
 # visible band spans on the axis (arc bottoms): band k from top[k] to top[k+1]
 VTOP = [CY + RY] + [YK[k] + ry_of(half(YK[k])) for k in (1, 2, 3)] + [YB + RB]
 
+SP_SPANS = list(spans(sp))                          # read once
 # ---------------- compose ----------------
 out = fitz.open(); out.insert_pdf(src)              # base page, unchanged
 # old column text under the cover is removed (text-only redaction; line art and images untouched), so the text layer
 # holds only what is visible. The title (y < 23) and the result-box text (y > 307.6) stay.
-OLD_COL_TXT = [s_ for s_ in spans(sp) if s_['bbox'][0] > 230 and s_['bbox'][1] > 23 and s_['bbox'][3] < 307.6]
+OLD_COL_TXT = [s_ for s_ in SP_SPANS if s_['bbox'][0] > 230 and s_['bbox'][1] > 23 and s_['bbox'][3] < 307.6]
 for s_ in OLD_COL_TXT:
     r_ = fitz.Rect(s_['bbox']); out[0].add_redact_annot(fitz.Rect(r_.x0 + .2, r_.y0 + 1.0, r_.x1 - .2, r_.y1 - 1.0), fill=False)
-# v29: the round-8 '0 peptides' result-box title is #e85d0f; it is removed here and retyped in #d94d00 at the same origin
-ZERO = [s_ for s_ in spans(sp) if s_['text'].strip() == '0 peptides' and s_['bbox'][1] > 307]
-assert len(ZERO) == 1 and '%06x' % ZERO[0]['color'] == 'e85d0f', ZERO
-ZERO = ZERO[0]
-_zr = fitz.Rect(ZERO['bbox']); out[0].add_redact_annot(fitz.Rect(_zr.x0 + .2, _zr.y0 + 1.0, _zr.x1 - .2, _zr.y1 - 1.0), fill=False)
+# v3: all four result-box labels are removed here and retyped S higher (v29: '0 peptides' #e85d0f -> #d94d00)
+RB_TXT = [s_ for s_ in SP_SPANS if s_['bbox'][0] > 230 and 307.6 < s_['bbox'][1] and s_['bbox'][3] < 372]
+assert sorted(s_['text'].strip() for s_ in RB_TXT) == ['0 peptides', '29,663 peptides', 'Accepted peptides (authentic)',
+                                                       'Accepted peptides (scrambled)'], [s_['text'] for s_ in RB_TXT]
+ZERO = [s_ for s_ in RB_TXT if s_['text'].strip() == '0 peptides'][0]
+assert '%06x' % ZERO['color'] == 'e85d0f', ZERO
+_zr = fitz.Rect(ZERO['bbox'])
+for s_ in RB_TXT:
+    r_ = fitz.Rect(s_['bbox']); out[0].add_redact_annot(fitz.Rect(r_.x0 + .2, r_.y0 + 1.0, r_.x1 - .2, r_.y1 - 1.0), fill=False)
 out[0].apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE, text=fitz.PDF_REDACT_TEXT_REMOVE)
+# v3: text-free copy of the round-8 page, source of the result boxes + panel bottom edge (one clip, placed S higher)
+RB_CLIP = fitz.Rect(230.5, 307.6, W, 372.0)
+tf = fitz.open(); tf.insert_pdf(src); tfp = tf[0]
+tfp.add_redact_annot(RB_CLIP, fill=False)
+tfp.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE, text=fitz.PDF_REDACT_TEXT_REMOVE)
+assert not [s_ for s_ in spans(tfp) if fitz.Rect(s_['bbox']).intersects(RB_CLIP)]
 ov = fitz.open(); pg = ov.new_page(width=W, height=H)   # overlay: everything new is drawn here
 WRITERS = {}                                          # one TextWriter per colour (page.insert_text re-scans the deep base resources per call)
 
@@ -190,8 +249,11 @@ def cover(r):
         sh.draw_rect(fitz.Rect(r.x0, y, r.x1, min(y2 + 0.6, r.y1))); sh.finish(color=None, fill=bg((y + y2) / 2), width=0)
         y = y2
     sh.commit()
-COVER = fitz.Rect(236.0, 23.0, 510.5, 307.6)
+COVER = fitz.Rect(236.0, 23.0, 510.5, 307.6 - S)
 cover(COVER)
+# v3: old result boxes and panel bottom: white, then the text-free clip placed S higher (panel box shrinks by S)
+pg.draw_rect(fitz.Rect(RB_CLIP.x0, RB_CLIP.y0 - S, RB_CLIP.x1, RB_CLIP.y1), color=None, fill=(1, 1, 1), width=0)
+pg.show_pdf_page(RB_CLIP - (0, S, 0, S), tf, 0, clip=RB_CLIP)
 
 TEXT = []                                             # (text, rect) of every typed label, for overlap checks
 def put(t, f, s, x, y, col=TXT):
@@ -201,7 +263,9 @@ def put_c(t, f, s, cx, y, col=TXT): put(t, f, s, cx - tw(t, f, s) / 2, y, col)
 def place(clip, dx, dy): pg.show_pdf_page(clip + (dx, dy, dx, dy), art, 0, clip=clip)
 def box(r, fill, stroke=None, sw=0): pg.draw_rect(r, color=stroke, fill=fill, width=sw, radius=R / min(r.width, r.height))
 
-put(ZERO['text'], 'H' if 'Halbfett' in ZERO['font'] else 'B', ZERO['size'], ZERO['origin'][0], ZERO['origin'][1], ORANGE)
+for s_ in RB_TXT:
+    put(s_['text'], 'H' if 'Halbfett' in s_['font'] else 'B', s_['size'], s_['origin'][0], s_['origin'][1] - S,
+        ORANGE if s_ is ZERO else hexc('#%06x' % s_['color']))
 # v2: scrambled result-box spectrum (#e85d0f line art, nested in the round-8 resources) is covered with the box fill and
 # redrawn in #d94d00. Geometry = the round-8 line art (baseline 0.608 pt, sticks 0.540 pt, butt caps), measured at 1200 dpi:
 # ink x 365.36-451.52, baseline 347.26-347.92, peak top 329.98.
@@ -210,23 +274,21 @@ _spm = sp.get_pixmap(dpi=1200, clip=SPEC, alpha=False)
 _sa = np.frombuffer(_spm.samples, np.uint8).reshape(_spm.height, _spm.width, 3).astype(int)
 SPEC_FILL = tuple(int(v) for v in _sa[0, 0])
 assert SPEC_FILL == (255, 241, 232) and all(tuple(_sa[i, j]) == SPEC_FILL for i in (0, -1) for j in (0, -1)), SPEC_FILL
-pg.draw_rect(SPEC, color=None, fill=rgb(SPEC_FILL), width=0)
+SPEC_N = SPEC - (0, S, 0, S)                         # v3: spectrum drawn S higher
+pg.draw_rect(SPEC_N, color=None, fill=rgb(SPEC_FILL), width=0)
 SPEC_BASE_Y, SPEC_DX = 347.59, 36.96
 STICKS = [(331.13, 302.46), (336.89, 302.69), (342.66, 301.98), (348.42, 302.69), (354.19, 285.56), (359.95, 302.69),
           (365.72, 302.22), (371.49, 302.69), (377.25, 302.46), (383.02, 302.69), (388.78, 301.98), (394.55, 302.69),
           (400.31, 302.46), (406.08, 302.69), (411.84, 302.69)]       # round-8 stick x / top in the spectrum's own frame
 for x_, t_ in STICKS:
-    pg.draw_line((x_ + SPEC_DX, t_ + 44.42), (x_ + SPEC_DX, SPEC_BASE_Y), color=ORANGE, width=0.5403642, lineCap=0)
-pg.draw_line((365.39, SPEC_BASE_Y), (451.51, SPEC_BASE_Y), color=ORANGE, width=0.6079097, lineCap=0)
+    pg.draw_line((x_ + SPEC_DX, t_ + 44.42 - S), (x_ + SPEC_DX, SPEC_BASE_Y - S), color=ORANGE, width=0.5403642, lineCap=0)
+pg.draw_line((365.39, SPEC_BASE_Y - S), (451.51, SPEC_BASE_Y - S), color=ORANGE, width=0.6079097, lineCap=0)
 # MS/MS: label left, spectrum right, both centred vertically
 box(MSBOX, BAND1_FILL)
 mcy = (MSBOX.y0 + MSBOX.y1) / 2
 put(MS_LBL[0], MS_LBL[1], MS_LBL[2], MSBOX.x0 + PAD, mcy + CAP * MS_LBL[2] / 2)
 place(ICON, MSBOX.x1 - PAD - ICON_INK.x1, mcy - (ICON_INK.y0 + ICON_INK.y1) / 2)
-# De novo
-box(DNBOX, BAND2_FILL)
-put_c(DN_LBL[0], DN_LBL[1], DN_LBL[2], X, DN_CY + CAP * DN_LBL[2] / 2)
-assert TEXT[-1][1] in DNBOX and fitz.Rect(TEXT[-2][1]) in MSBOX, 'label outside its box'
+assert fitz.Rect(TEXT[-1][1]) in MSBOX, 'label outside its box'
 # query boxes: one internal layout (round-8 scrambled box: title baselines +6.01 / +12.77, count +19.86, bars ink top +24.92),
 # v2: bars scaled to BARW wide, and the whole block centred vertically in the box
 QT1, QT2, QCNT, QBAR = 6.01, 12.77, 19.86, 24.92
@@ -303,7 +365,7 @@ pg.draw_rect(DBBOX, color=NAVY, fill=(1, 1, 1), width=0.6754552, radius=2.03 / D
 put_c('Database search', 'B', 6.079, X, (DBBOX.y0 + DBBOX.y1) / 2 + CAP * 6.079 / 2)
 
 # comparison table: round-8 table, rows re-laid on the funnel bands (x unchanged)
-TAB_TXT = [s for s in spans(sp) if s['bbox'][0] > 400 and 176 < s['bbox'][1] < 279]
+TAB_TXT = [s for s in SP_SPANS if s['bbox'][0] > 400 and 176 < s['bbox'][1] < 279]
 assert len(TAB_TXT) == 18, len(TAB_TXT)
 OLD_Y = [189.81, 211.41, 233.02, 254.62, 276.23]
 TAB_X0, TAB_X1, TAB_VX, TAB_COL, TAB_W = 445.42, 507.42, 476.41, hexc('#cfd9de'), 0.27450090646743774
@@ -317,10 +379,9 @@ for s in TAB_TXT:
     f = 'H' if 'Halbfett' in s['font'] else 'B'
     c_ = '#%06x' % s['color']
     t_, x_ = s['text'], s['origin'][0]
-    if t_ == '–':                                     # v2: scrambled study-supported = its candidates (worked acquisition only)
+    if t_ == '–':                                    # v3b: scrambled study-supported = scrambled queries vs the 233 M reservoir
         q_ = [q for q in TAB_TXT if q['text'] == '5,841'][0]
-        assert '%06x' % s['color'] == 'ff4d00' and abs(s['size'] - q_['size']) < 1e-6 and q_['font'] == s['font']
-        t_, x_ = '5,841', q_['origin'][0]
+        t_ = SCR_STUDY; x_ = q_['origin'][0] + (tw('5,841', 'B', q_['size']) - tw(t_, 'B', q_['size'])) / 2   # same centre as 5,841
     put(t_, f, s['size'], x_, y + dy, col=ORANGE if c_ == '#ff4d00' else hexc(c_))   # v29: one orange
 pg.draw_rect(fitz.Rect(TAB_X0, NEW_Y[0], TAB_X1, NEW_Y[4]), color=TAB_COL, width=TAB_W)
 pg.draw_line((TAB_VX, NEW_Y[0]), (TAB_VX, NEW_Y[4]), color=TAB_COL, width=TAB_W)
@@ -335,8 +396,7 @@ def arrow(p0, p1, col):
     pg.draw_polyline([p1, base + n * HW, base - n * HW], color=None, fill=col, closePath=True, width=0)
     return dict(p0=[round(p0.x, 2), round(p0.y, 2)], p1=[round(p1.x, 2), round(p1.y, 2)], length=round(abs(v), 2))
 A = {}
-A['MS/MS -> De novo'] = arrow((X, MSBOX.y1), (X, DNBOX.y0), NAVY)
-A['De novo -> AlphaNovo'] = arrow((X, DNBOX.y1), (X, ALPHB.y0), NAVY)
+A['MS/MS -> AlphaNovo'] = arrow((XA, MSBOX.y1), (XA, ALPHB.y0), NAVY)
 A['AlphaNovo -> scrambled'] = arrow((ALPHB.x1, (ALPHB.y0 + ALPHB.y1) / 2), (SCRB.x0, (SCRB.y0 + SCRB.y1) / 2), ORANGE)
 A['AlphaNovo -> rim'] = arrow((XN, ALPHB.y1), (XN, rim_top(XN, CY)), NAVY)
 A['scrambled -> rim'] = arrow((XO, SCRB.y1), (XO, rim_top(XO, CY)), ORANGE)
@@ -382,17 +442,29 @@ row0, colL = int(372 * K), int(230 * K)
 mask = np.ones(A_.shape[:2], bool); mask[:row0, colL:] = False
 DIFF_OUTSIDE = int(((A_ != B_).any(axis=2) & mask).sum())
 assert DIFF_OUTSIDE == 0, DIFF_OUTSIDE
-# result boxes unchanged (below the arrow tips)
-_d = (A_[int(309 * K):row0, colL:] != B_[int(309 * K):row0, colL:]).any(axis=2)
-_zx0, _zy0, _zx1, _zy1 = [int(v * K) for v in (_zr.x0 - 1, _zr.y0 - 1, _zr.x1 + 1, _zr.y1 + 1)]
-_m = np.ones_like(_d); _m[_zy0 - int(309 * K):_zy1 - int(309 * K), _zx0 - colL:_zx1 - colL] = False
-_sx0, _sy0, _sx1, _sy1 = [int(v * K) for v in (SPEC.x0 - 1, SPEC.y0 - 1, SPEC.x1 + 1, SPEC.y1 + 1)]
-_m[_sy0 - int(309 * K):_sy1 - int(309 * K), _sx0 - colL:_sx1 - colL] = False      # v2: spectrum recoloured
-rb_ = int((_d & _m).sum()); ZERO_DIFF = int((_d & ~_m).sum())
-assert rb_ == 0 and ZERO_DIFF > 0, (rb_, ZERO_DIFF)
+# v3: result boxes + panel bottom = the v2 build's, moved up by exactly 122 px (300 dpi): compare v2 rows 309..372 pt
+V2 = ART / 'Figure1_v30.pdf'                    # = producer input v29/figures/Fig1_v2/Figure1.pdf (same sha256)
+_v2pm = fitz.open(V2)[0].get_pixmap(dpi=300, alpha=False)
+V2_ = np.frombuffer(_v2pm.samples, np.uint8).reshape(_v2pm.height, _v2pm.width, 3)
+_r0 = int(309 * K)
+_dd = np.abs(A_[_r0 - 122:row0 - 122, colL:].astype(int) - V2_[_r0:row0, colL:].astype(int)).max(axis=2)
+RB_DIFF_PX, RB_DIFF_MAX = int((_dd > 0).sum()), int(_dd.max())
+# Redrawn border antialiasing affects 0.61% of pixels at <=16/255,
+# with no change in the thresholded foreground shape. Preserve this explicit
+# rendering tolerance, rather than claiming bit-identical moved graphics.
+_rbnew = A_[_r0 - 122:row0 - 122, colL:]
+_rbold = V2_[_r0:row0, colL:]
+RB_MASK_XOR = int(((_rbnew.mean(2) < 128) ^ (_rbold.mean(2) < 128)).sum())
+RB_DIFF_FRAC = float((_dd > 0).mean())
+assert RB_DIFF_FRAC < 0.01 and RB_DIFF_MAX <= 20 and RB_MASK_XOR == 0, (RB_DIFF_FRAC, RB_DIFF_MAX, RB_MASK_XOR)
+# below the shrunk panel the column is white down to y 372
+# Exclude the single subpixel clip-boundary column: 118 pixels at 254/255.
+# Use the first wholly interior pixel to test the blank area.
+BELOW_NONWHITE = int((A_[row0 - 122 + int(1 * K):row0, math.ceil(230.5 * K):] != 255).any(axis=2).sum())
+assert BELOW_NONWHITE == 0, BELOW_NONWHITE
 # v2: the redrawn spectrum has the round-8 shape: ink masks at 1200 dpi agree except at antialiased edges
 def _inkmask(page):
-    pm = page.get_pixmap(dpi=1200, clip=SPEC, alpha=False)
+    pm = page.get_pixmap(dpi=1200, clip=SPEC if page is sp else SPEC_N, alpha=False)
     a = np.frombuffer(pm.samples, np.uint8).reshape(pm.height, pm.width, 3).astype(int)
     return np.abs(a - np.array(SPEC_FILL)).sum(2) > 150
 _mo = _inkmask(sp); _mn = _inkmask(op)
@@ -411,15 +483,15 @@ DIFF_V29_BBOX_PT = [round(float(v) / K, 1) for v in (_xs.min(), _ys.min(), _xs.m
 # text: every label is real text, sizes 5-7 pt, nothing removed is left
 col_sp = [s for s in spans(op) if s['bbox'][0] > 230 and s['bbox'][1] < 372]
 col_txt = [s['text'].strip() for s in col_sp]
-for t in ['MS/MS', 'De novo', 'AlphaNovo peptide', 'predictions', '24,560 unique peptides', 'Composition-matched', 'scrambled peptides',
+for t in ['MS/MS', 'AlphaNovo peptide', 'predictions', '24,560 unique peptides', 'Composition-matched', 'scrambled peptides',
           '36,588 unique peptides', 'Gut sequence reservoir', '233 M proteins', 'UHGG · GMGC · GMSC', '+ human Swiss-Prot', 'Exact match ·', 'study-supported proteins',
           'Per-acquisition match', 'Parsimony', 'Database search', '29,663 peptides', '0 peptides',
           'Accepted peptides (authentic)', 'Accepted peptides (scrambled)', 'Real', 'Scrambled', '18 M', '6.67 M', '5,841', '12,606', '525', 'FastaLake']:
     assert t in col_txt, t
 for bad in ['MS/MS (DDA)', 'DDA', 'Study-level lookup', 'Pool queries across 58 acquisitions', '18 M study-supported proteins',
-            'De novo predictions', '1', '2', '3', '4', '5', 'Exact-match', 'Sample-', 'specific', 'FASTA']:
+            'De novo', 'De novo predictions', '1', '2', '3', '4', '5', 'Exact-match', 'Sample-', 'specific', 'FASTA']:
     assert bad not in col_txt, bad
-assert col_txt.count('233 M') == 2 and col_txt.count('5,841') == 2 and '–' not in col_txt
+assert col_txt.count('233 M') == 2 and col_txt.count('5,841') == 1 + (SCR_STUDY == '5,841') and col_txt.count(SCR_STUDY) >= 1 and col_txt.count('–') == 0
 assert col_txt.count('Candidates,') == 1 and col_txt.count('this acquisition') == 1   # table row label only
 ORANGES = sorted({'%06x' % s['color'] for s in col_sp if s['color'] != 0x0a2d5e and s['color'] != 0x126ca4})
 assert ORANGES == ['d94d00'], ORANGES
@@ -443,7 +515,7 @@ for t, r in tr:    # band labels inside the funnel walls with >= 3 pt margin; ta
     if r.x0 > 400 and VTOP[0] < r.y1 < VTOP[4]:
         assert r.x0 > X + half(r.y0) + 5, (t, r.x0, X + half(r.y0))
 # boxes do not overlap each other; clearance >= 5 pt from the panel edges (233.3 / 512.45 pt)
-BOXES = {'MS/MS': MSBOX, 'De novo': DNBOX, 'AlphaNovo': ALPHB, 'scrambled': SCRB, 'Database search': DBBOX,
+BOXES = {'MS/MS': MSBOX, 'AlphaNovo': ALPHB, 'scrambled': SCRB, 'Database search': DBBOX,
          'funnel': fitz.Rect(X - RX, CY - RY, X + RX, YB + RB), 'table': fitz.Rect(405.0, NEW_Y[0] - 12, TAB_X1, NEW_Y[4])}
 ks = list(BOXES)
 for i, a in enumerate(ks):
@@ -456,9 +528,9 @@ rec = dict(base=BASE.name, base_sha256=sha(BASE), output_pdf_sha256=sha(OUT / 'F
            arrows=A, arrow_style=dict(line_pt=LW, head_len_pt=HL, head_width_pt=2 * HW),
            layout=dict(axis_x=X, arm_x=[XN, XO], rim=[X, round(CY, 2), RX, RY], band_boundaries_y=[round(v, 2) for v in YK],
                        band_visible_on_axis=[round(v, 2) for v in VTOP], boxes={k: [round(v, 2) for v in r] for k, r in BOXES.items()}),
-           fonts=sorted({s['font'] for s in col_sp}), result_box_pixels_changed_outside_0_peptides=rb_, zero_peptides_title_and_spectrum_changed_px=ZERO_DIFF,
+           fonts=sorted({s['font'] for s in col_sp}), result_boxes_vs_v2_shifted_122px=dict(pixels_differing=RB_DIFF_PX, max_channel_diff=RB_DIFF_MAX, changed_fraction=RB_DIFF_FRAC, foreground_mask_xor=RB_MASK_XOR), nonwhite_px_below_shrunk_panel=BELOW_NONWHITE, shift_pt=round(S, 3), pair_shift_left_pt=SL,
            spectrum_inkmask_xor_px_1200dpi=[SPEC_XOR, SPEC_INK], old_orange_e85d0f_px_in_column=OLD_ORANGE_PX,
-           v29_build=V29.name, v29_sha256=sha(V29), pixels_changed_outside_column_vs_v29_300dpi=DIFF_OUTSIDE_V29, diff_vs_v29_bbox_pt=DIFF_V29_BBOX_PT, text_colours=ORANGES, sizes=sorted({round(s['size'], 3) for s in col_sp}))
+           v2_build=V2.name, v2_sha256=sha(V2), v29_build=V29.name, v29_sha256=sha(V29), pixels_changed_outside_column_vs_v29_300dpi=DIFF_OUTSIDE_V29, diff_vs_v29_bbox_pt=DIFF_V29_BBOX_PT, text_colours=ORANGES, sizes=sorted({round(s['size'], 3) for s in col_sp}))
 (OUT / '_build_receipt.json').write_text(json.dumps(rec, indent=1, ensure_ascii=False) + '\n')
 print(json.dumps(rec['layout'], indent=1)); print(json.dumps(A)); print('outside-column changed px:', DIFF_OUTSIDE, 'vs v29:', DIFF_OUTSIDE_V29, 'v29 diff bbox', DIFF_V29_BBOX_PT, 'spec xor', SPEC_XOR, SPEC_INK)
 for nm, r in ((('full', fitz.Rect(0, 0, W, 372)), ('col', fitz.Rect(228, 0, W, 372))) if (OUT / '_work').is_dir() else ()):   # review crops, only if _work/ exists

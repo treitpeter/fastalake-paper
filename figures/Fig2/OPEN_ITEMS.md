@@ -22,3 +22,7 @@
 - PIXEL: per-panel checks are not possible for v30: the producer kept no per-panel renders (its work/ directory is gone). The composite check is IDENTICAL; the v28f per-panel expected files (5-50) were removed from expected/ because they no longer correspond to the figure (`expected/Fig2_v28f.*` kept as history).
 - AUTHOR: the v30 legend still says "multi-omic co-assembly proteins (MG)" (para 42), as v28d did (see the AUTHOR item on line 87 above).
 - TEXT-GAP: NUMBERS.tsv carries the v30 columns (v30_para, v30_quote, v30_printed_value, v30_status; quotes checked against visible_v30f.txt paragraphs 36-40 and 42). 54 v28d rows map to a v30 number; 7 v28d rows are NOT_IN_V30 (rows listed in the AUTHOR item above); 16 numbers printed only in v30 are rows with quote "(not printed in v28d)", printed "-" and v28d status OPEN. v30 status: 67 MATCH, 3 OPEN (30%, >=2, q<=0.01, as in v28d).
+
+## v33 sync (2026-10-07)
+
+- RESOLVED: the v33 Figure 2 (`final/v30/figures/Fig2_v31`, embedded in FastaLake_v33.docx) moves the d and e colour keys into one row above their axes. `assembly.py` carries that change (constants `AX_TOP`, `D_AX_X0`, `E_AX_X0`, `KEY_GAP_PT`, `KEY_ITEM_GAP_PT`); the regenerated composite is IDENTICAL (0 px) to `expected/Fig2_v33.png`. The v30 composite (`Fig2_v30.*`) was removed; it remains in git history.

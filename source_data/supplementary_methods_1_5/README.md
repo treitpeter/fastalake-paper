@@ -218,8 +218,8 @@ produced by: functional_allocation_sensitivity
 The producers' own result tables, copied byte for byte. The notebook compares its recomputed results with them (`stats.py:check_against_producers`); they are not used to compute any printed number. Columns as written by the producer: allocated-fraction medians (`arm, level, variant, allocated_fraction`); own-stool results for the 331 and 347 rosters (`variant, prevalence`, then `features, own_closer, mean_own, mean_other, mean_advantage, p` with suffix `_331` or `_347`, `participants`, `acquisitions_without_allocated_signal_*`); PREDICT rows (`variant, cohort, scope, level, layer_a, layer_b, prevalence, n_units, n_donors, rho, p`); healthy-stool medians (`design, r_per_pair, cv_per_pair_pct, n_features_per_pair, profile, variant`).
 
 ## header_audit.tsv
-sha256: 7a66dc68c0fe38b5885d9412e82dc7a0c71388d9e58aec5deaa536ab3ea751ce
-rows: 8 (one row per cohort and accession namespace; PREDICT 296 specimens, CapScan 250 specimens of the 282 matched acquisitions)
+sha256: f31ac81ead3ec695c159c93cde09db9dc1f2f2bce5725e0408984325699085b9
+rows: 8 (one row per cohort and accession namespace; PREDICT 296 specimens, CapScan 263 specimens of the 295 matched acquisitions)
 produced by: metagenome_header_audit (the two `full/<cohort>/header_audit.tsv` outputs of worker.py, concatenated with a cohort column; values unchanged)
 
 Sequence identity is the SHA-256 of the exact amino-acid string (no I/L collapse); header identity is the first whitespace-delimited header token. Namespaces: `FL_public_as_searched` (public-sequence FastaLake FASTAs as searched), `MG_as_searched` (matched metagenome plus human Swiss-Prot FASTAs as searched, hashed accessions), `MG_original_prefixed_headers` (specimen assembly proteins under their original sample-prefixed contig names), `MG_assembly_local_headers` (the same with the sample prefix stripped, from `k141_`). Rates are empty where the denominator is zero.

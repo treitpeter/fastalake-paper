@@ -108,6 +108,12 @@ KEY_B_HUMAN = "Human-assigned"
 KEY_B_OLD = "Host: capsule > stool in 15/15, q < 0.001"
 KEY_B_NEW = "Human-assigned: capsule > stool in 15/15, q < 0.001"
 FLATTEN_DPI = 600              # v30 PDF holds one 600 dpi raster only (covered text removed)
+#: v33 (producer Fig6_v31): shared d-f route key raised by this many points, the same 6 pt
+#: band cut at the page bottom instead of between x labels and key, and 21 white rows
+#: (300 dpi; 42 at 600 dpi) cropped from the flattened figure.
+V33_LEGEND_UP_PT = 11.0
+V33_CROP_BOTTOM_PT = 6.0
+V33_CROP_BOTTOM_PX = 21
 COVER_PAD_PT = 0.3             # white cover box padding around the old span, points
 
 # Palette and ink exactly as resolved by the producer's style module (Okabe-Ito).
@@ -501,7 +507,7 @@ def panel_e(fig, ax_mm, state, S, R):
     return _boundary_panel(1, fig, ax_mm, state, S, R)
 
 
-def panel_f(fig, ax_mm, state, S, R):
+def panel_f(fig, ax_mm, state, S, R, legend_up_pt=0.0):
     """Panel f: complementary-product rate at histidine minus matched non-histidine boundaries.
 
     Also draws the shared route legend at the bottom of the figure (drawn last in the
@@ -514,8 +520,18 @@ def panel_f(fig, ax_mm, state, S, R):
     ax = _boundary_panel(2, fig, ax_mm, state, S, R)
     for route, rl, col, mk in FR:
         fig.axes[-1].scatter([], [], s=12, color=col, marker=mk, label=rl)
-    fig.legend(*fig.axes[-1].get_legend_handles_labels(), frameon=False, loc="lower center", ncol=3, bbox_to_anchor=(.55, -.005), handletextpad=.2, columnspacing=1.2)
+    fig.legend(*fig.axes[-1].get_legend_handles_labels(), frameon=False, loc="lower center", ncol=3, bbox_to_anchor=(.55, legend_y(legend_up_pt)), handletextpad=.2, columnspacing=1.2)
     return ax
+
+
+def legend_y(up_pt=0.0):
+    """Figure-fraction y of the shared route key: -0.005 (v28f/v30) raised by ``up_pt`` points (v33: 11)."""
+    return -.005 + up_pt / (H_MM / 25.4 * 72)
+
+
+def raise_route_key(fig, up_pt=V33_LEGEND_UP_PT):
+    """Move the shared route key (the last figure legend, drawn by :func:`panel_f`) to its v33 position."""
+    fig.legends[-1].set_bbox_to_anchor((.55, legend_y(up_pt)), transform=fig.transFigure)
 
 
 def save_builder(fig, out):
@@ -574,7 +590,7 @@ def crop_image(im, letter):
 # =======================================================================================
 # Post-processing (postprocess_fig6.py, relabel_regions.py, final re-save)
 # =======================================================================================
-def _trim_blank_bands(doc, threshold=TRIM_THRESHOLD_PX, pad=TRIM_PAD_PX):
+def _trim_blank_bands(doc, threshold=TRIM_THRESHOLD_PX, pad=TRIM_PAD_PX, crop_bottom_pt=0.0):
     """Remove horizontal all-white bands taller than ``threshold`` px (72 dpi) from page 1.
 
     A row is white when every pixel channel is above 249. ``pad`` px are kept at each
@@ -599,6 +615,8 @@ def _trim_blank_bands(doc, threshold=TRIM_THRESHOLD_PX, pad=TRIM_PAD_PX):
         elif not v and start is not None:
             if y - start > threshold: cuts.append((start + pad, y - pad))
             start = None
+    if crop_bottom_pt > 0:   # v33: drop the bottom margin freed by the raised key
+        cuts.append((p.rect.height - crop_bottom_pt, p.rect.height))
     if not cuts: return doc, []
     out = f.open(); dest = out.new_page(width=p.rect.width, height=p.rect.height - sum(b - a for a, b in cuts)); srcy = 0; dsty = 0
     for a, b in cuts + [(p.rect.height, p.rect.height)]:
@@ -635,7 +653,7 @@ def _labels_and_small_fixes(doc, font_dir):
     return doc
 
 
-def postprocess(builder_pdf, outdir, font_dir):
+def postprocess(builder_pdf, outdir, font_dir, crop_bottom_pt=0.0):
     """Panel letters to Söhne Halbfett 8 pt, trim blank bands, export at 183 mm width, 300 dpi PNG.
 
     Moved from ``postprocess_fig6.py`` (k = 6 branch of the original r12 loop).
@@ -655,7 +673,7 @@ def postprocess(builder_pdf, outdir, font_dir):
     import fitz
     import pymupdf as f
     O = Path(outdir); O.mkdir(parents=True, exist_ok=True)
-    d = f.open(builder_pdf); d = _labels_and_small_fixes(d, font_dir); d, cuts = _trim_blank_bands(d)
+    d = f.open(builder_pdf); d = _labels_and_small_fixes(d, font_dir); d, cuts = _trim_blank_bands(d, crop_bottom_pt=crop_bottom_pt)
     p = O / "Figure6_r12.pdf"
     if p.exists(): p.unlink()
     d.save(p, garbage=4, deflate=True)
@@ -802,6 +820,34 @@ def relabel_and_flatten(v28f_pdf, out, font_dir, old=None, new=None, dpi=FLATTEN
     pn = wp.get_pixmap(dpi=RENDER_DPI, alpha=False); pn.set_dpi(RENDER_DPI, RENDER_DPI); pn.save(png)
     rec["flat_pdf_raster_px"] = [pm6.width, pm6.height]
     return dict(pdf=pdf, png=png, receipt=rec)
+
+
+def crop_bottom(flat_pdf, flat_png, out_pdf, out_png, n=V33_CROP_BOTTOM_PX):
+    """v33 step (producer ``crop_bottom.py``): remove ``n`` white rows from the 300 dpi PNG and
+    ``2n`` from the 600 dpi raster of the flattened PDF; asserts the removed rows are white.
+
+    Returns
+    -------
+    dict
+        ``pdf``, ``png`` and the new page size in points.
+    """
+    import fitz
+    from PIL import Image
+    im = np.asarray(Image.open(flat_png).convert("RGB"))
+    assert (im[-n:] == 255).all(), "rows to crop are not white (300 dpi)"
+    Image.fromarray(im[:-n]).save(out_png, dpi=(300, 300))
+    src = fitz.open(flat_pdf); pg = src[0]
+    pix = fitz.Pixmap(src, pg.get_images()[0][0])
+    a = np.frombuffer(pix.samples, np.uint8).reshape(pix.height, pix.width, pix.n)
+    assert (a[-2 * n:] == 255).all(), "rows to crop are not white (600 dpi)"
+    b = np.ascontiguousarray(a[:-2 * n])
+    newpix = fitz.Pixmap(fitz.csRGB, b.shape[1], b.shape[0], b.tobytes(), False)
+    W, H = pg.rect.width, pg.rect.height - n * 72 / 300
+    out = fitz.open(); o = out.new_page(width=W, height=H); o.insert_image(o.rect, pixmap=newpix)
+    if Path(out_pdf).exists(): Path(out_pdf).unlink()
+    out.save(out_pdf, garbage=4, deflate=True)
+    q = fitz.open(out_pdf)[0]; assert q.get_text().strip() == "" and len(q.get_images()) == 1
+    return dict(pdf=Path(out_pdf), png=Path(out_png), page_pt=[W, H])
 
 
 # =======================================================================================

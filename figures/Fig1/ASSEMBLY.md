@@ -88,6 +88,18 @@ hashes.
    `FINAL/v29/figures/Fig1_v2/Figure1.pdf` (sha256 `0f686c53...`) and `Figure1.png`
    (sha256 `b1481ff6...`). Panels b to e are unchanged from step 9.
 
+12. v33 funnel, Fig1_v3 (6 Oct 2026, run as the CC Fig1a rebuild, Slurm job 6077891). Tool:
+   `FINAL/v30/figures/Fig1_v3/build_fig1a_funnel.py` (sha256 `246265e5...`), adapted in
+   `LAB_ROOT/CODEX_TASKS_2026-10-07_v30/out/cc_comments_v30mm2_PeTr/fig1a/build/build_fig1a_funnel.py`
+   (sha256 `faac9ca9...`: text-only span extraction, faster resource-name lookup in
+   `show_pdf_page`, moved-box check as a tolerance of <1% changed pixels at <=20/255 with no
+   foreground-mask change, blank-area test from the first interior pixel; no text, geometry or
+   number change). Layout, FastaLake column only: the column moved down by 122 px (29.28 pt),
+   the AlphaNovo / scrambled pair shifted 8 pt left; the scrambled study-supported cell reads the
+   233 M direct lookup (5,841, `source_data/Fig1/scramble_study_lookup_stats.json`). Base and
+   inputs as step 11 plus the step-11 PDF as the moved-box reference. Output `Figure1.pdf`
+   (sha256 `696cdc04...`) and `Figure1.png` (sha256 `763ca611...`) = the v33 manuscript figure.
+
 ## In this repository
 
 - `artwork/Figure1_v28f.pdf` is the step-9 PDF, byte-identical (sha256
@@ -105,6 +117,13 @@ hashes.
   (Slurm job 6075277) and the result is pixel-identical to `expected/Fig1_v30.png` at
   300 dpi (`checks/Fig1_v30_rebuild.json`); `artwork/Figure1_v30.pdf` is too
   (`checks/Fig1_v30.json`).
+
+- v33: `artwork/Figure1_v33.pdf` and `expected/Fig1_v33.png` are the step-12 PDF and PNG,
+  byte-identical; `artwork/build_fig1a_funnel.py` is the step-12 tool with repository paths;
+  `artwork/panel_a.pdf` is now the step-12 PDF with CropBox (0, 0, 518.74, 372) pt (sha256
+  `160223603bb05de0...`). The notebook rerun (Slurm job 6093613) is pixel-identical to
+  `expected/Fig1_v33.png` (`checks/Fig1_v33_rebuild.json`), as is `artwork/Figure1_v33.pdf`
+  (`checks/Fig1_v33.json`). The step-11 PNG `expected/Fig1_v30.png` was removed (git history).
 
 v30 composite: `expected/Fig1_v30.png` sha256
 `b1481ff689fb4439824ec5ec4f567b03e2d14860fa2445e6dfbabb94cd4fcb95`, rasterised from

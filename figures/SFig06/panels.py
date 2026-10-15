@@ -68,7 +68,7 @@ JITTER_SEED_BC = 20260927      # producer: default_rng(20260927 + panel index), 
 JITTER_SEED_DE = 4             # producer: default_rng(4) for d and e
 BENCH_TEST_ARM = "FL_public"   # public-sequence FastaLake
 BENCH_REF_ARM = "MG"           # matched metagenome search
-BENCH_N = {"PREDICT": 296, "CAPSCAN": 282}   # matched acquisitions (v30 legend line 231)
+BENCH_N = {"PREDICT": 296, "CAPSCAN": 295}   # matched acquisitions (v33 legend)
 FIG_W_MM, FIG_H_MM = 180.0, 186.0             # one canvas at the placed size (v30 build)
 PNG_DPI = 300                  # PNG rasterised from the PDF at 300 dpi
 PAIR_LINE_COLOR = "#cfcfcf"    # d pairing lines (v30 build LG)
@@ -142,7 +142,8 @@ def font_dir():
 # Colours by meaning: all-prediction database = neutral grey, same-half = FastaLake blue,
 # disjoint = green; d,e: MG orange, FL blue.
 COL = {'all': fl.GREY, 'same': fl.FL, 'disjoint': fl.GREEN}
-LABELS_BC = ['CAMPI\n15 runs', 'Healthy stool\n58 runs', 'PREDICT\n306 runs', f'CapScan\n{N_CAPSCAN} runs']
+#: v38: "<n> runs" -> "n = <n>" (acquisitions; "<n> acquisitions" overlaps its neighbours at the placed size)
+LABELS_BC = ['CAMPI\nn = 15', 'Healthy stool\nn = 58', 'PREDICT\nn = 306', f'CapScan\nn = {N_CAPSCAN}']
 
 
 def _axmm(fig, x0, y0, x1, y1, W=FIG_W_MM, H=FIG_H_MM):
@@ -231,7 +232,11 @@ def panel_de(fig, pa):
         axD.scatter(x1 + j1, d.n_test / 1e3, s=3, color=fl.FL, alpha=.7, lw=0, zorder=2)
         for xx, v in ((x0, d.n_reference.median()), (x1, d.n_test.median())):
             axD.plot([xx - .3, xx + .3], [v / 1e3] * 2, color=fl.INK, lw=1.4, zorder=3)
-            axD.text(xx + .34, v / 1e3, f'{v / 1e3:.1f}k', ha='left', va='center', fontsize=6.5, zorder=4)
+        # label: median paired gain 100 x (FL/MG - 1), the statistic the text reports
+        # (per-arm medians overstate it: PREDICT 18.8k vs 21.5k reads +14.0%, paired +9.4%)
+        assert (d.n_reference > 0).all()
+        g = float(np.median(100 * (d.n_test / d.n_reference - 1)))
+        axD.text((x0 + x1) / 2, 53.0, f'{g:+.1f}%'.replace('-', '−'), ha='center', va='center', fontsize=6.5, zorder=4)
         for _, r in d.iterrows():
             pv6.append(dict(panel='SuppFig6d,e', cohort=coh, sample=r['sample'], participant=r.subject_id, **{f'mg_peptides_{MIN_LENGTH}_50': int(r.n_reference)},
                             **{f'fl_peptides_{MIN_LENGTH}_50': int(r.n_test), f'recovery_pct_{MIN_LENGTH}_50': 100 * r.reference_recovery},

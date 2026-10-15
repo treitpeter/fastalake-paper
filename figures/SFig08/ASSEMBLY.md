@@ -33,3 +33,7 @@ The repository render is IDENTICAL to both at 300 dpi (`checks/SFig08_v30.json`,
 `checks/SFig08_v30_pdf.json`). The v28d producer files (`CLINICAL_COMPARATOR_SCOPE.pdf/.png`)
 and the title-redacted v28d composite are superseded and no longer kept in `expected/`;
 `panels.py:figure` and `redact_title` remain as the v28d producer code.
+
+## v35 label change
+
+Panel a arm tick labels replaced by short forms of the legend names (`ARM_TICK`): FL_cohortMG -> "FastaLake + cohort MG", FL_public -> "Public FastaLake", MG -> "Specimen MG", MG_own_curated -> "Curated specimen MG"; drawn order unchanged (alphabetical by arm key). The producer/restyle tick check maps the producer labels through `TICK_RENAME`; all 40 value checks pass. Expected render replaced: `expected/SFig08_v35.png` sha256 041f4960c1bf572e6b1278de0969f3d95dbc333b769c2064e239c63fa1a72fb6, `expected/SFig08_v35.pdf` sha256 832bfaa2a6a44a60be942aa0a8e7ad4fb23f9a2bfd0bae3ea249f55025e395e4. A control build of the unchanged code reproduced the previous expected PNG byte for byte.

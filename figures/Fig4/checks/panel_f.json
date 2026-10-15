@@ -1,6 +1,6 @@
 {
  "new": "build/Fig4/panel_f.pdf",
- "new_sha256": "91ae01c54e170637a6e851dd9caa1bdee287d3a5b6d6a7a630733ca5874322b5",
+ "new_sha256": "0250c64459bc1ecf4899358bd87ec09f7c8dac67848a9020f61e7da6d2cfaa17",
  "expected": "figures/Fig4/expected/panel_f.pdf",
  "expected_sha256": "722b30382734da2c931b6b6028556a4774ecfb44a988ff70329e5c9bc88a025d",
  "dpi": 300,
