@@ -48,3 +48,9 @@ all 295 CapScan acquisitions use the 347-acquisition cache roster, alongside
 296 PREDICT acquisitions. Earlier cross-fit tables in the Supplementary Methods
 unit are retained for the historical comparisons in that notebook. Use these
 updated tables for the current comparison.
+
+The Supplementary Methods 6–7 notebook uses `tools/current_crossfit.py` to
+recompute 30 registered current claims from this acquisition table, including
+the participant-bootstrap bounds. It retains the historical calculations in
+the preceding cells. The archived fallback-control table remains an additional
+input for the two PREDICT medians calculated after replacing fallback results.

@@ -655,7 +655,7 @@ def crossfit_bootstrap(a, strata, columns, seed=CROSSFIT_BOOTSTRAP_SEED):
     return pd.DataFrame(rows)
 
 
-def stat_crossfit(sd, bootstrap=True):
+def stat_crossfit(sd, bootstrap=True, acquisitions=None):
     """10-fold spectrum cross-fitting: checks, sensitivities and gains.
 
     Unit: acquisition (578 matched: 296 PREDICT, 282 CapScan = 56 stool + 226 intestinal
@@ -668,13 +668,17 @@ def stat_crossfit(sd, bootstrap=True):
         Directory ``source_data/supplementary_methods_6_7``.
     bootstrap : bool
         Also run the participant cluster bootstraps (``cf_boot``, ``cf_boot_regions``).
+    acquisitions : DataFrame or None
+        Override the historical acquisition table for current comparisons. The
+        archived pilot and fallback-control inputs still come from ``sd``.
 
     Returns
     -------
     dict
         named values (keys as used in NUMBER_SPEC and stats_rows).
     """
-    a = load(sd, "crossfit_per_acquisition.tsv", dtype={"subject_id": str})
+    a = (load(sd, "crossfit_per_acquisition.tsv", dtype={"subject_id": str})
+         if acquisitions is None else acquisitions.copy())
     a["lda_fallback"] = a.lda_fallback.fillna("")
     st = _strata(a)
     med = lambda m, col: float(np.nanmedian(a.loc[m, col]))
