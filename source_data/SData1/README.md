@@ -246,8 +246,8 @@ origin: sheet of Source Data package Supplementary_Data_1/Sample_rosters.xlsx; v
 | inclusion_rule | text | rule that defines membership |
 
 ## v28d_capscan_mg_pairs.tsv
-sha256: f8e31247da901dd94983ee60b9c03b7dd934081732e90ca4acff5aa5fd22ec52
-rows: 282 (one row per matched acquisition)
+sha256: d6bf44441bc1c40732b2a4847fb24183cf84745de47ca05ad4a8d47071399f51
+rows: 295 (one row per matched acquisition)
 produced by: sample_rosters_workbook; pseudonymised by source_data_package
 origin: sheet of Source Data package Supplementary_Data_1/Sample_rosters.xlsx; values agree with the package (checked by the notebook)
 

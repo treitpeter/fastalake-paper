@@ -53,7 +53,7 @@ SLANT_SHEAR = 0.20           # synthetic slant of the three taxon labels in d (n
 PNG_DPI = 300                # v30 build: 300 dpi PNG from the PDF (1890 x 2457 px)
 MIN_TEXT_PT = 5              # smallest text at placed size, asserted by the producer
 CAPSCAN_ROSTER = 347         # v28f CapScan roster for c (FL_public) and g (FL_cohortMG)
-MATCHED_N = {"PREDICT": 296, "CAPSCAN": 282}   # legend v28d line 421, matched FL_public vs MG pairs
+MATCHED_N = {"PREDICT": 296, "CAPSCAN": 295}   # legend v28d line 421 (295 in v33), matched FL_public vs MG pairs
 POPS_AB = ["baseline5", "fresh7", "nested9"]   # populations drawn in a and b
 D_MEMBERS = ["Lactobacillus plantarum", "Clostridium butyricum", "Bifidobacterium longum"]  # three least represented
 TAXON_LABELS = {"L. plantarum", "C. butyricum", "B. longum"}
@@ -61,11 +61,14 @@ TAXON_LABELS = {"L. plantarum", "C. butyricum", "B. longum"}
 # and MG orange are not used; the production baseline stays neutral grey.
 C = {"baseline5": fl.GREY, "nested7": fl.lighten(fl.GREY, 0.55), "fresh7": fl.SKY, "nested9": fl.VERM, "fresh7_nested9": fl.PURPLE}
 # '7-50' / '9-50' in place of '>=7' / '>=9' (Soehne has no >= glyph; same meaning, maximum 50 residues)
-LAB = {"baseline5": "5–50 (published)", "nested7": "7–50, filtered", "fresh7": "7–50, new search",
+#: v38: legend key "5–50 (published)" -> "5–50 (production)" (manuscript wording).
+LAB = {"baseline5": "5–50 (production)", "nested7": "7–50, filtered", "fresh7": "7–50, new search",
        "nested9": "9–50, filtered", "fresh7_nested9": "9–50 subset of new search"}
 LETTER_X_MM = (1.0, 82.0)    # panel-letter x per column (v30 build XL, XR)
 C_ARMS = [("PREDICT", "FL_public", "PREDICT FL"), ("PREDICT", "MG", "PREDICT MG"), ("CAPSCAN", "FL_public", "CapScan FL"),
           ("CAPSCAN", "MG", "CapScan MG"), ("HSTOOL", "FL", "Healthy FL"), ("CAMPI", "FL", "CAMPI FL")]
+#: v35: drawn tick labels in the manuscript's cohort names (plotted-values items keep the v33 labels).
+TICK_RENAME = {"Healthy FL": "Healthy\nstool FL", "Healthy (58)": "Healthy stool\n(58)"}
 MM = 72 / 25.4
 
 UNIT = Path(__file__).resolve().parent
@@ -161,7 +164,7 @@ def load(sd=SD_DEFAULT):
     w = pd.read_csv(sd / "per_acquisition_length_counts.tsv", sep="\t")
     n16 = pd.read_csv(sd / "per_acquisition_length_counts_participant15.tsv", sep="\t")
     assert len(n16) == 16 and set(n16.cohort) == {'CAPSCAN'} and set(n16.arm) == {'FL_public'}
-    assert not set(n16['sample']) & set(w['sample'])
+    assert not set(zip(n16["sample"], n16["arm"])) & set(zip(w["sample"], w["arm"]))  # the 13 participant-15 MG rows are in w; FL_public rows must not overlap
     w = pd.concat([w, n16[[c for c in n16.columns if c in w.columns]]], ignore_index=True)
     assert len(w[(w.cohort == 'CAPSCAN') & (w.arm == 'FL_public')]) == CAPSCAN_ROSTER
     mem = pd.read_csv(sd / "campi_member_counts.tsv", sep="\t")
@@ -194,7 +197,7 @@ def _panel_ab(fig, gs, k, d, rng, rec):
             ax.annotate(f'{np.median(v):.1f}', (x, np.median(v)), xytext=(0, 1.6), textcoords='offset points', fontsize=5.5, va='bottom', ha='center',
                         bbox=dict(boxstyle='square,pad=0.08', fc='white', ec='none', alpha=.85), zorder=5)
             rec(letter, cohort=co, population=pop, item='median', sample='', x=x, value=float(np.median(v)), plotted=float(np.median(v)), label=f'{np.median(v):.1f}')
-    ax.set_xticks([1, 5], ['PREDICT (n = 296)', 'CapScan (n = 282)']); ax.set_ylabel(yl)
+    ax.set_xticks([1, 5], ['PREDICT (n = 296)', 'CapScan (n = 295)']); ax.set_ylabel(yl)
     if k == 0: ax.axhline(0, color=fl.GREY, lw=.5); ax.set_ylim(-60, 280)
     return ax
 
@@ -236,7 +239,7 @@ def panel_c(fig, gs, d, rec):
         ax.barh(i + .18, a, height=.34, color=C['nested7']); ax.barh(i - .18, b, height=.34, color=C['fresh7'])
         rec('c', cohort=co, population='nested7', item=lab, sample='', x=i + .18, value=a, plotted=a, label='')
         rec('c', cohort=co, population='fresh7', item=lab, sample='', x=i - .18, value=b, plotted=b, label='')
-    ax.set_yticks(range(len(C_ARMS)), [a[2] for a in C_ARMS]); ax.invert_yaxis(); ax.axvline(0, color=fl.GREY, lw=.5)
+    ax.set_yticks(range(len(C_ARMS)), [TICK_RENAME.get(a[2], a[2]) for a in C_ARMS]); ax.invert_yaxis(); ax.axvline(0, color=fl.GREY, lw=.5)
     ax.set_xlabel('Median change in peptides vs 5–50 (%)')
     return ax
 
@@ -318,7 +321,7 @@ def panel_g(fig, gs, d, rec):
     names = {'HSTOOL_noclust': 'Healthy (58)', 'PREDICT_noclust': 'PREDICT (306)', 'CAPSCAN_noclust': f'CapScan ({CAPSCAN_ROSTER})', 'CAMPI_FL_UNIPROT': 'CAMPI\nFL',
              'CAMPI_FL_REF': 'CAMPI\nFL + Reference', 'CAMPI_FL_REF_MG': 'CAMPI\nFL + Reference\n+ MG', 'CAMPI_REF': 'CAMPI\nReference', 'CAMPI_MG': 'CAMPI\nMG'}
     gr['label'] = gr.task.map(names); gr = gr.set_index('task').loc[list(names)].reset_index()
-    ax.bar(range(len(gr)), gr.change_pct, color=C['fresh7']); ax.set_xticks(range(len(gr)), gr.label, rotation=0)
+    ax.bar(range(len(gr)), gr.change_pct, color=C['fresh7']); ax.set_xticks(range(len(gr)), [TICK_RENAME.get(x, x) for x in gr.label], rotation=0)
     ax.tick_params(axis='x', labelsize=6)   # 6 pt as in v29; at 7 pt neighbouring labels touch
     ax.axhline(0, color=fl.GREY, lw=.5); ax.set_ylim(-3, 3); ax.set_yticks(range(-3, 4)); ax.set_ylabel('Study groups, 7–50 vs 5–50 (%)')
     for i, v in enumerate(gr.change_pct):
@@ -488,7 +491,7 @@ def stat_search_count(d):
 def stat_ab_matched(d, cohort, population):
     """Median paired gain and identity recovery of public FastaLake over the matched metagenome database.
 
-    Statistical unit: acquisition; n = 296 PREDICT or 282 CapScan matched pairs.
+    Statistical unit: acquisition; n = 296 PREDICT or 295 CapScan matched pairs.
 
     Returns
     -------
@@ -506,7 +509,7 @@ def stat_gain_5_8(d, cohort):
     """Median per-acquisition gain restricted to peptides of 5-8 residues.
 
     The 5-8 count of each arm is the 5-50 count minus the nested 9-50 count of the same
-    search (production q values). Statistical unit: acquisition; n = 296 or 282.
+    search (production q values). Statistical unit: acquisition; n = 296 or 295.
 
     Returns
     -------
@@ -621,4 +624,6 @@ def numbers(sd=SD_DEFAULT):
             ('L777 PREDICT more FL nested9', p9['n_more_fl']), ('L777 PREDICT n', p9['n']),
             ('L777 CapScan more FL nested9', c9['n_more_fl']), ('L777 CapScan n', c9['n']),
             ('L777 PREDICT gain 5-8', stat_gain_5_8(d, 'PREDICT')['median_gain_pct']), ('L777 CapScan gain 5-8', stat_gain_5_8(d, 'CAPSCAN')['median_gain_pct'])]
+    # v33 Results paragraph 69 repeats the minimum-length-7 gains (no v28d line)
+    out += [('P69 PREDICT gain fresh7', p7['median_gain_pct']), ('P69 CapScan gain fresh7', c7['median_gain_pct'])]
     return out

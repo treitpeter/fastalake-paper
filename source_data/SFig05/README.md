@@ -4,7 +4,7 @@ Acquisition names are the raw-file names of the public acquisitions. No clinical
 is present.
 
 ## fusion_pooled_current.tsv
-sha256: 0f90dc0a3003ae3f5097832ec9c5cd55404647d065593adda72d04bc77ba121e
+sha256: 08aac72bc1b9e61526996c1b94a3545161d69abf9de27f1d94c98f33957fe7d9
 rows: 120 (one row per cohort, control seed, q threshold and length window)
 produced by: healthy_stool_donor_entrapment (healthy stool, PREDICT, CapScan); campi_fusion_375m (CAMPI)
 Drawn in panels a-c. Byte-identical to Source Data package sheet `Supplementary_Figure_05/fusion_pooled_current.tsv`.
@@ -27,7 +27,7 @@ Drawn in panels a-c. Byte-identical to Source Data package sheet `Supplementary_
 | n_entrapment_q_tied | count of peptides | accepted entrapments with peptide q tied to their accepted target (filled for HSTOOL, PREDICT and CAPSCAN rows only) |
 
 ## fusion_acquisition_components.tsv
-sha256: 84243602ce1bdac6cf5270e110a6be9d2e9d751ce95525ef89eec8ba0bd5961c
+sha256: ed976b62d4086564f3b11a6ed3674f5ec7154b870f8a907646bd7c3cb50ed740
 rows: 21,300 (one row per acquisition, seed, q threshold and length window)
 produced by: healthy_stool_donor_entrapment; campi_fusion_375m
 Byte-identical to package sheet `Supplementary_Figure_05/fusion_acquisition_components.tsv`. CAMPI rows carry the cohort label `CAMPI_MOCK`.
@@ -75,7 +75,7 @@ Drawn on the continuation page; the exact input of its producer. The package she
 | unresolved_share_pct | % | 100 × U / (E + E0 + 2B + U) |
 
 ## donor_entrapment_seed_means.tsv
-sha256: f1b4658e64b3a0e4b854ad38fb5b38145b30f6ec0438d6891bdaa0703a43581a
+sha256: 4104368943f9f523642725216cb862fe30a1dfb4dba0406e840ee5aeacd4aadb
 rows: 630 (one row per target acquisition, length and q threshold; 63 targets)
 produced by: healthy_stool_donor_entrapment
 Drawn in panel d. Byte-identical to package sheet `Supplementary_Figure_05/donor_entrapment_seed_means.tsv`.
@@ -94,7 +94,7 @@ Drawn in panel d. Byte-identical to package sheet `Supplementary_Figure_05/donor
 | combined_estimate | fraction | 2E/(T + E), mean of 3 seeds |
 
 ## donor_recount.tsv
-sha256: 5510b874ec3fa9559597edbf8a9ef430e62a5b9d72e612d941f4a72a3ead7e0e
+sha256: 9431fa74ad656bfc4c85c2cb14d8b33d230fc33011cd775449ca978504237d7f
 rows: 1,890 (one row per target, seed, length and q threshold)
 produced by: healthy_stool_donor_entrapment
 Per-seed records from which `donor_entrapment_seed_means.tsv` is recomputed. The original file's leading pandas `index` column was removed (`cut -f2-`); all other bytes are unchanged.

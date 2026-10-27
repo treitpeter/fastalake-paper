@@ -655,7 +655,7 @@ def crossfit_bootstrap(a, strata, columns, seed=CROSSFIT_BOOTSTRAP_SEED):
     return pd.DataFrame(rows)
 
 
-def stat_crossfit(sd, bootstrap=True):
+def stat_crossfit(sd, bootstrap=True, acquisitions=None):
     """10-fold spectrum cross-fitting: checks, sensitivities and gains.
 
     Unit: acquisition (578 matched: 296 PREDICT, 282 CapScan = 56 stool + 226 intestinal
@@ -668,13 +668,17 @@ def stat_crossfit(sd, bootstrap=True):
         Directory ``source_data/supplementary_methods_6_7``.
     bootstrap : bool
         Also run the participant cluster bootstraps (``cf_boot``, ``cf_boot_regions``).
+    acquisitions : DataFrame or None
+        Override the historical acquisition table for current comparisons. The
+        archived pilot and fallback-control inputs still come from ``sd``.
 
     Returns
     -------
     dict
         named values (keys as used in NUMBER_SPEC and stats_rows).
     """
-    a = load(sd, "crossfit_per_acquisition.tsv", dtype={"subject_id": str})
+    a = (load(sd, "crossfit_per_acquisition.tsv", dtype={"subject_id": str})
+         if acquisitions is None else acquisitions.copy())
     a["lda_fallback"] = a.lda_fallback.fillna("")
     st = _strata(a)
     med = lambda m, col: float(np.nanmedian(a.loc[m, col]))
@@ -920,7 +924,7 @@ C_ = "text_statistics/supplementary_methods_6_7/stats.py:"
 # (v28d_line, quote, printed_value, key, function, source_data files, status)
 NUMBER_SPEC = [
     (633, "fixed 296-PREDICT and 282-CapScan matched acquisition rosters", "296", "conf_predict", "stat_confidence_rosters", "confidence_ordinary_all_pairs.tsv", "MATCH"),
-    (633, "fixed 296-PREDICT and 282-CapScan matched acquisition rosters", "282", "conf_capscan", "stat_confidence_rosters", "confidence_ordinary_all_pairs.tsv", "MATCH"),
+    (633, "fixed 296-PREDICT and 282-CapScan matched acquisition rosters", "282", "conf_capscan", "stat_confidence_rosters", "confidence_ordinary_all_pairs.tsv", "SUPERSEDED_V33"),
     (633, "all 30 broad-reservoir CAMPI fusion searches", "30", "conf_fusion_searches", "stat_confidence_rosters", "confidence_fusion_all.tsv", "MATCH"),
     (633, "All three affected PREDICT FastaLake acquisitions", "three", "conf_zero_yield_predict", "stat_confidence_rosters", "confidence_pep01_zero_yield_cases.tsv", "MATCH"),
     (665, "against the same 233,497,702-sequence reservoir", "233,497,702", "reservoir_public", "stat_database_sizes", "acquisition_sizes_726.tsv", "MATCH"),
@@ -1090,12 +1094,12 @@ NUMBER_SPEC = [
     (775, "with 3,047 against 3,100 peptides at 5–50 residues", "3,100", "cf_k1_252_frozen_5", "stat_crossfit", "crossfit_k1_control.tsv", "MATCH"),
     (775, "2,361 against 2,429 at 9–50 residues", "2,361", "cf_k1_252_pooled_9", "stat_crossfit", "crossfit_k1_control.tsv", "MATCH"),
     (775, "2,361 against 2,429 at 9–50 residues", "2,429", "cf_k1_252_frozen_9", "stat_crossfit", "crossfit_k1_control.tsv", "MATCH"),
-    (775, "Across all 578 acquisitions", "578", "cf_acquisitions", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
-    (775, "with median differences of at most 0.02 points in every cohort stratum", "0.02", "cf_calib_max", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
+    (775, "Across all 578 acquisitions", "578", "cf_acquisitions", "stat_crossfit", "crossfit_per_acquisition.tsv", "SUPERSEDED_V33"),
+    (775, "with median differences of at most 0.02 points in every cohort stratum", "0.02", "cf_calib_max", "stat_crossfit", "crossfit_per_acquisition.tsv", "SUPERSEDED_V33"),
     (777, "changed stratum medians by at most 0.16 points", "0.16", "cf_pert_shift_max", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "but changed 25 and 28 of 578 acquisitions (4–5%)", "25", "cf_moved_pert1", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "but changed 25 and 28 of 578 acquisitions (4–5%)", "28", "cf_moved_pert2", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
-    (777, "but changed 25 and 28 of 578 acquisitions (4–5%)", "578", "cf_acquisitions", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
+    (777, "but changed 25 and 28 of 578 acquisitions (4–5%)", "578", "cf_acquisitions", "stat_crossfit", "crossfit_per_acquisition.tsv", "SUPERSEDED_V33"),
     (777, "but changed 25 and 28 of 578 acquisitions (4–5%)", "4", "cf_moved_pert1_pct", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "but changed 25 and 28 of 578 acquisitions (4–5%)", "5%", "cf_moved_pert2_pct", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "The three differences in the rescoring check and the two in the one-fold control", "three", "cf_rescoring_differ", "stat_crossfit", "crossfit_q_validation.tsv", "v28f_change:five"),
@@ -1118,35 +1122,35 @@ NUMBER_SPEC = [
     (777, "(−8.4 to −2.5% instead of −8.4 to −2.3%)", "−2.5%", "cf_stool9_region_hi", "crossfit_bootstrap", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "(−8.4 to −2.5% instead of −8.4 to −2.3%)", "−8.4", "cf_stool9_lo", "crossfit_bootstrap", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "(−8.4 to −2.5% instead of −8.4 to −2.3%)", "−2.3%", "cf_stool9_hi", "crossfit_bootstrap", "crossfit_per_acquisition.tsv", "MATCH"),
-    (777, "changed the cohort, stool and intestinal-fluid medians by at most 2 points", "2", "cf_union_shift_max", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
-    (777, "single sampling-region medians by up to 6.4 points", "6.4", "cf_union_region_shift_max", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
+    (777, "changed the cohort, stool and intestinal-fluid medians by at most 2 points", "2", "cf_union_shift_max", "stat_crossfit", "crossfit_per_acquisition.tsv", "SUPERSEDED_V33"),
+    (777, "single sampling-region medians by up to 6.4 points", "6.4", "cf_union_region_shift_max", "stat_crossfit", "crossfit_per_acquisition.tsv", "SUPERSEDED_V33"),
     (777, "In two CapScan acquisitions every fold's metagenome search accepted no peptides", "two", "cf_mg_union_zero_capscan", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "in 106 of 296 PREDICT", "106", "cf_PREDICT_pos9", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "in 106 of 296 PREDICT", "296", "cf_PREDICT_n", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "16 of 56 CapScan stool", "16", "cf_CAPSCAN_stool_pos9", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "16 of 56 CapScan stool", "56", "cf_CAPSCAN_stool_n", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
-    (777, "206 of 226 intestinal-fluid acquisitions", "206", "cf_CAPSCAN_intestinal_pos9", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
-    (777, "206 of 226 intestinal-fluid acquisitions", "226", "cf_CAPSCAN_intestinal_n", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
+    (777, "206 of 226 intestinal-fluid acquisitions", "206", "cf_CAPSCAN_intestinal_pos9", "stat_crossfit", "crossfit_per_acquisition.tsv", "SUPERSEDED_V33"),
+    (777, "206 of 226 intestinal-fluid acquisitions", "226", "cf_CAPSCAN_intestinal_n", "stat_crossfit", "crossfit_per_acquisition.tsv", "SUPERSEDED_V33"),
     (777, "identified a median 9.8% (PREDICT) and 14.2% (CapScan) fewer peptides", "9.8%", "cf_PREDICT_fewer_5", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
-    (777, "identified a median 9.8% (PREDICT) and 14.2% (CapScan) fewer peptides", "14.2%", "cf_CAPSCAN_all_fewer_5", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
+    (777, "identified a median 9.8% (PREDICT) and 14.2% (CapScan) fewer peptides", "14.2%", "cf_CAPSCAN_all_fewer_5", "stat_crossfit", "crossfit_per_acquisition.tsv", "SUPERSEDED_V33"),
     (777, "gave lower gains of −1.0%, −10.5% and 22.9% at 5–50 residues", "−1.0%", "cf_PREDICT_odd_disjoint_5", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "gave lower gains of −1.0%, −10.5% and 22.9% at 5–50 residues", "−10.5%", "cf_CAPSCAN_stool_odd_disjoint_5", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
-    (777, "gave lower gains of −1.0%, −10.5% and 22.9% at 5–50 residues", "22.9%", "cf_CAPSCAN_intestinal_odd_disjoint_5", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
+    (777, "gave lower gains of −1.0%, −10.5% and 22.9% at 5–50 residues", "22.9%", "cf_CAPSCAN_intestinal_odd_disjoint_5", "stat_crossfit", "crossfit_per_acquisition.tsv", "SUPERSEDED_V33"),
     (777, "gave median gains of 12.4% in PREDICT, 11.6% in CapScan stool and 52.9% in intestinal fluid", "12.4%", "cf_PREDICT_odd_self_5", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
     (777, "gave median gains of 12.4% in PREDICT, 11.6% in CapScan stool and 52.9% in intestinal fluid", "11.6%", "cf_CAPSCAN_stool_odd_self_5", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
-    (777, "gave median gains of 12.4% in PREDICT, 11.6% in CapScan stool and 52.9% in intestinal fluid", "52.9%", "cf_CAPSCAN_intestinal_odd_self_5", "stat_crossfit", "crossfit_per_acquisition.tsv", "MATCH"),
+    (777, "gave median gains of 12.4% in PREDICT, 11.6% in CapScan stool and 52.9% in intestinal fluid", "52.9%", "cf_CAPSCAN_intestinal_odd_self_5", "stat_crossfit", "crossfit_per_acquisition.tsv", "SUPERSEDED_V33"),
     (777, "reduced the median gains to 14.5% (PREDICT) and 45.0% (CapScan)", "14.5%", "ml7_PREDICT_gain", "stat_same_spectrum", "minlen7_benchmark_per_acquisition.tsv", "MATCH"),
-    (777, "reduced the median gains to 14.5% (PREDICT) and 45.0% (CapScan)", "45.0%", "ml7_CAPSCAN_gain", "stat_same_spectrum", "minlen7_benchmark_per_acquisition.tsv", "MATCH"),
+    (777, "reduced the median gains to 14.5% (PREDICT) and 45.0% (CapScan)", "45.0%", "ml7_CAPSCAN_gain", "stat_same_spectrum", "minlen7_benchmark_per_acquisition.tsv", "SUPERSEDED_V33"),
     (777, "identity recovery remained 85.4% and 84.0%", "85.4%", "ml7_PREDICT_recovery", "stat_same_spectrum", "minlen7_benchmark_per_acquisition.tsv", "MATCH"),
     (777, "identity recovery remained 85.4% and 84.0%", "84.0%", "ml7_CAPSCAN_recovery", "stat_same_spectrum", "minlen7_benchmark_per_acquisition.tsv", "MATCH"),
     (777, "reduced the gains to 9.4% and 42.4%", "9.4%", "ss_PREDICT_9_50_median", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "MATCH"),
-    (777, "reduced the gains to 9.4% and 42.4%", "42.4%", "ss_CAPSCAN_9_50_median", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "MATCH"),
+    (777, "reduced the gains to 9.4% and 42.4%", "42.4%", "ss_CAPSCAN_9_50_median", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "SUPERSEDED_V33"),
     (777, "in 272 of 296 and 281 of 282 acquisitions", "272", "ss_PREDICT_9_50_pos", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "MATCH"),
     (777, "in 272 of 296 and 281 of 282 acquisitions", "296", "ss_PREDICT_9_50_n", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "MATCH"),
-    (777, "in 272 of 296 and 281 of 282 acquisitions", "281", "ss_CAPSCAN_9_50_pos", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "MATCH"),
-    (777, "in 272 of 296 and 281 of 282 acquisitions", "282", "ss_CAPSCAN_9_50_n", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "MATCH"),
+    (777, "in 272 of 296 and 281 of 282 acquisitions", "281", "ss_CAPSCAN_9_50_pos", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "SUPERSEDED_V33"),
+    (777, "in 272 of 296 and 281 of 282 acquisitions", "282", "ss_CAPSCAN_9_50_n", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "SUPERSEDED_V33"),
     (777, "showed gains of 67% and 96%", "67%", "ss_PREDICT_5_8_median", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "MATCH"),
-    (777, "showed gains of 67% and 96%", "96%", "ss_CAPSCAN_5_8_median", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "MATCH"),
+    (777, "showed gains of 67% and 96%", "96%", "ss_CAPSCAN_5_8_median", "stat_same_spectrum", "confidence_ordinary_all_pairs.tsv", "SUPERSEDED_V33"),
 ]
 
 

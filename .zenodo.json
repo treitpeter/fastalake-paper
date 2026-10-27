@@ -1,7 +1,7 @@
 {
-  "title": "FastaLake paper repository: code and source data for every figure and number",
+  "title": "FastaLake paper resources: analysis code, notebooks and source data",
   "upload_type": "software",
-  "description": "Code, notebooks, source data and provenance that regenerate every figure panel and every printed number of the manuscript \"FastaLake selects compact metaproteomic databases from large sequence reservoirs by de novo peptide lookup\" (version v28f).",
+  "description": "Analysis code, notebooks and source data for the FastaLake study. Includes updated held-out testing, error controls, functional annotations and validation; the corresponding bioRxiv manuscript revision is pending. Controlled clinical inputs and large external datasets have separate access requirements.",
   "creators": [
     {
       "name": "Treit, Peter V.",
@@ -114,15 +114,15 @@
   ],
   "related_identifiers": [
     {
-      "relation": "isSupplementTo",
-      "identifier": "AUTHOR INPUT NEEDED: article DOI",
-      "scheme": "doi"
-    },
-    {
       "relation": "isCompiledBy",
       "identifier": "https://github.com/MannLabs/fasta-lake",
       "scheme": "url"
+    },
+    {
+      "relation": "isSupplementTo",
+      "identifier": "10.64898/2026.10.08.757395",
+      "scheme": "doi"
     }
   ],
-  "notes": "Source data are released under CC BY 4.0 (LICENSE-DATA.md); both licences await author confirmation. The article DOI is added at release."
+  "notes": "Code is licensed under MIT. Source-data terms are described in LICENSE-DATA.md; controlled clinical inputs are not included."
 }

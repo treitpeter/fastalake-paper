@@ -21,3 +21,8 @@
 
 - `source_data/SFig02/selection_length_lookup.tsv` is byte-identical to Source Data package `Figure1/length_by_arm.tsv`; if the Fig1 unit needs it, it should reference this file rather than copy it.
 - The fragment audit contains one PREDICT acquisition, renamed `PREDICT_acq_01` in `source_data/SFig02/bags_fragment_audit_summary.tsv`. A repository-wide pseudonym scheme for PREDICT acquisitions would keep names consistent across units; the mapping to the raw file name is not in the repository.
+
+## v33 sync (2026-10-07)
+
+- UNTRACED: v33 (2026-10-07) prints 13,512, 60 and 233,497,702 again (Supplementary Methods paragraphs 301 and 311); NUMBERS rows 45, 46 and 54 are v33 OPEN because no repository code recomputes them (see the UNTRACED items above).
+- MISMATCH: the final v33 text says "for 18 distinct settings"; the code counts 19 settings (the nine-residue, top-30% setting appears in both series). The 19 arms are 18 distinct settings, so the text is correct; the NUMBERS row stays v33 OPEN because the code returns 19 (see the AUTHOR item on line 679 in SFig02).

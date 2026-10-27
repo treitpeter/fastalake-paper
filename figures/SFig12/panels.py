@@ -50,6 +50,9 @@ import numpy as np
 import pandas as pd
 
 # ---- choices (named constants) ------------------------------------------------------
+#: v35: panel b tick labels = the series names of main Fig. 3 (Fig3/panels.py DESIGN_LABELS, one line).
+SERIES_LABEL = {"TechnicalReplicates": "Technical replicates", "WorkflowReplicates": "Workflow replicates",
+                "OnePiece": "Spatial sampling", "Intra": "Intra-individual", "Interindividual": "Inter-individual"}
 COHORTS = ["HSTOOL", "PREDICT", "CAPSCAN"]          # producer line 175; panel a order
 RAREFACTION_DEPTH = 8          # legend, v30 paragraph 243; upstream derive_hstool_pc.py (math.comb(n, 8))
 ELIGIBILITY_FRACTION = 0.8     # upstream derive_hstool_pc.py: leader in >= ceil(0.8 n) acquisitions of a design
@@ -183,6 +186,7 @@ def render(t, out_stem):
     # b
     ax = ax_mm(108, 4, 66, 40); letter(93, 3, 'b')
     dots(ax, [(k.replace('Replicates', ''), v.expected_distinct_leaders_in_8_resolved_acquisitions) for k, v in leaders.groupby('tier')], False, 'b')
+    ax.set_xticklabels([SERIES_LABEL[k] for k, _ in leaders.groupby('tier')])   # v35; plotted summary keeps the internal names
     ax.tick_params(axis='x', rotation=30); [x.set_ha('right') for x in ax.get_xticklabels()]
     labels(ax, y='Expected distinct leaders\nin 8 acquisitions')
     # c, d
@@ -197,7 +201,7 @@ def render(t, out_stem):
     assert len(g) == 4
     ax = ax_mm(16, 120, 66, 36); letter(1, 119, 'e')
     ax.scatter(np.arange(len(g)), g.equal_KO_agreement * 100, s=14, color=fl.BLUE, lw=0, zorder=3)
-    ax.set_xticks(np.arange(len(g)), [x.replace('Replicates', '') + '\n' + f.replace('_', ' ') for x, f in zip(g.tier, g['filter'])])
+    ax.set_xticks(np.arange(len(g)), [SERIES_LABEL[x].replace(' ', '\n') + '\n(' + f.replace('_', ' ') + ')' for x, f in zip(g.tier, g['filter'])])   # v35: series names as in b
     ax.set_xlim(-.5, len(g) - .5); labels(ax, y='Equal-function leader\nagreement (%)')
     plotted += [dict(panel='e', group=f'{x}/{f}', n=int(k), value_pct=float(v * 100)) for x, f, k, v in zip(g.tier, g['filter'], g.n_kos, g.equal_KO_agreement)]
     # f: direct peptide assignment only

@@ -61,3 +61,11 @@ fills them from the code where the code answers, and OPEN_ITEMS.md lists each as
 the 347-roster values (73,316 / 53,023 / 44,330), which the Fig5 unit recomputes. M-XOMICS (120 functional,
 32 native results) agrees; here the 120 and 32 are counted from the PREDICT rows (SFig11) plus the 347
 CapScan rows (Fig5). ST5-n (30,581) and M-EDS rows agree with the STab5 and SFig10 units.
+
+## Corrected functional inputs
+
+The current functional correlations, own-stool statistics and variance shares
+use the corrected Figure 5 source tables. The own-stool distance reconstruction
+is in `prepare_checked_distances.py`; its input/output hashes are recorded in
+`source_data/supplementary_methods_8_11/own_stool_distance_matrices_checked.json`.
+The current STATS rows follow these inputs; earlier inputs remain available.

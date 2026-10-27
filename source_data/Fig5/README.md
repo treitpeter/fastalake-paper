@@ -62,7 +62,7 @@ produced by: capscan_functional_profiles (recomputed by `panels.stat_b_region_te
 | q | dimensionless | Benjamini-Hochberg q over the four regions |
 
 ## similarity_summary.tsv
-sha256: ac61627e0eb03c7893603819a7f7b590172cfec50b8d59eb7c30699699f69a39
+sha256: 660bec3ff392c449853596062462ec533c4618e34f1d54c0fcd28d10b7bc574e
 rows: 3 (one row per OG prevalence filter)
 produced by: capscan_functional_profiles (recomputed by `panels.stat_cd_profiles`)
 
@@ -78,7 +78,7 @@ produced by: capscan_functional_profiles (recomputed by `panels.stat_cd_profiles
 | p | dimensionless | two-sided permutation P (99,999 permutations) |
 
 ## own_stool_participants.tsv
-sha256: 67f22f573d418bdee6e7b2a7ed0bc1ccc2fc140ee5793ab10db2455f6002ff0e
+sha256: 9d6e3a215b0df2837918afb75095bf6f49d00d54da8978845d4e24c36aa42b30
 rows: 45 (one row per participant and prevalence filter)
 produced by: capscan_functional_profiles
 
@@ -90,7 +90,7 @@ produced by: capscan_functional_profiles
 | other_stool_mean_distance | Euclidean distance | mean distance to the 14 other stools |
 
 ## orthogonal_partition.tsv
-sha256: 035057c305e7196665b92f91525f4038176d7d41f25a4f4b09cfab51a1921319
+sha256: 32baea50c5ebe08ec826d32c9f3becf97c394775e3b6814c62220e3cbb2f0a24
 rows: 24 (one row per population, component and prevalence filter)
 produced by: capscan_functional_profiles
 
@@ -223,7 +223,7 @@ produced by: capscan_crossomics (rows of `sensitivity_all_features` recomputed b
 | permutations, n_profiles, n_participants | count | 1,999; 65; 13 |
 
 ## functional_correlations.tsv
-sha256: 4c3468fc11199d32c9dd99fbda823bb536f624d01102df87562b6e29906de3f8
+sha256: 455bfa9d3185aadaba071d640f77241fe9e11c898768ab8c6b86513b0cb1cbf4
 rows: 64 (one row per scope, representation, layer pair and prevalence)
 produced by: capscan_crossomics (rows of scope `matched12`, prevalence 0, recomputed by `panels.stat_g_functional`)
 
@@ -237,7 +237,7 @@ produced by: capscan_crossomics (rows of scope `matched12`, prevalence 0, recomp
 | rho, p, q | dimensionless | Spearman rho, permutation P, BH q (16 per scope and prevalence) |
 
 ## native_distances_long.tsv, functional_distances_long.tsv
-sha256: 07bda50dc99acf5fc5e6a77ec91d9fd71bc90451a924c2413cac193de6de4530 and 006d3a0fa3201603f15f329846c11cc0b4f0f65da3584483eb51c363523353ad
+sha256: 07bda50dc99acf5fc5e6a77ec91d9fd71bc90451a924c2413cac193de6de4530 and b0bd1978b64a802fb1874ec0a5e1c684fc286550b0ce172ef83443707d2b4fa4
 rows: 8320 and 24960 (one row per profile pair, i < j, per layer; 2,080 pairs of 65 profiles)
 produced by: capscan_crossomics (upper triangles of the producer's distance matrices; read with `float_precision='round_trip'`)
 

@@ -23,8 +23,8 @@ reference proteomes; `FL_R` FastaLake plus reference; `FL_R_M` FastaLake plus re
 plus metagenome.
 
 ## benchmark_matched_per_acquisition.tsv
-sha256: 0d0e4cb3340b2ed8db6943a0e97e834a663f1872a6c3ab1695b3d75a835b6753
-rows: 2890 (one row per acquisition and length population; 296 PREDICT and 282 CapScan matched pairs, 5 populations)
+sha256: d6d61a15c29323018f398823455e0f4bef49edafd402ad64527cbdbdde2e90a5
+rows: 2955 (one row per acquisition and length population; 296 PREDICT and 295 CapScan matched pairs, 5 populations)
 produced by: minlen7_search_sensitivity
 
 | column | unit | meaning |
@@ -41,8 +41,8 @@ produced by: minlen7_search_sensitivity
 | comparator_identity_recovery_pct | % | 100 shared / comparator_peptides |
 
 ## per_acquisition_length_counts.tsv
-sha256: 4ba1f5dcd266997502f4e96de7dfc2897e524310df3b43baf37067cb650c058e
-rows: 1990 (one row per repeated search: acquisition and database arm, v28d roster with 331 CapScan)
+sha256: 31d60e9a285ca1b4d7d1ef0bef6c47c2062409e9c13d63f7d5c5d32599cde309
+rows: 2019 (one row per acquisition and database arm: the v28d roster with 331 CapScan, plus the 13 CapScan MG acquisitions added for the 295 matched benchmark, plus the 16 CapScan participant-15 FL_cohortMG acquisitions of the 347 roster, giving 347 FL_cohortMG rows; FL_cohortMG is not drawn in panel c)
 produced by: minlen7_search_sensitivity
 
 | column | unit | meaning |
@@ -142,13 +142,13 @@ produced by: minlen7_search_sensitivity
 | fresh7 | count of protein groups | inferred study groups, new minimum-7 searches |
 
 ## search_inventory.tsv
-sha256: 5b8811d1f533088cf0f59875da8373abaf8fce113000a2d51629e5ebb91e2bd9
-rows: 2022 (one row per repeated search)
+sha256: 12eb545d146e14cec44a39ca1c54495432993d4915ea964a2c3c2297c4f6ee82
+rows: 2035 (one row per repeated search)
 produced by: minlen7_search_sensitivity
 
 | column | unit | meaning |
 |---|---|---|
-| run | id | M09_331 (1,990 original searches), A2_347 (16 CapScan FL_cohortMG participant-15 searches), public347 (16 CapScan FL_public participant-15 searches) |
+| run | id | M09_331 (1,990 original searches), A2_347 (16 CapScan FL_cohortMG participant-15 searches), public347 (16 CapScan FL_public participant-15 searches), mg295 (13 CapScan MG participant-15 searches of the 295 matched benchmark; pipelines/capscan_mg_benchmark_295) |
 | task_index | id | task index within the run |
 | cohort | id | cohort |
 | arm | id | database arm |

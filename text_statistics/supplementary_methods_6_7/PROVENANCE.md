@@ -1,5 +1,15 @@
 # Provenance: Supplementary Methods 6-7
 
+Current native-scan claims use the 591-acquisition table in
+[`source_data/v42_updates`](../../source_data/v42_updates/README.md), with all
+295 CapScan acquisitions evaluated against the 347-acquisition cache roster
+(G5c). `tools/current_crossfit.py` supplies this table to `stat_crossfit` and
+recomputes the 30 linked current claims in the notebook, including bootstrap
+bounds (10,000 participant-cluster draws, seed 20261004). The archived
+`crossfit_lda_fallback_acquisitions.tsv` supplies the replacement values for the
+two PREDICT fallback-adjusted medians. The historical calculations and source
+identities below are retained separately.
+
 `LAB_ROOT` is the lab project directory that contains the manuscript. Tables were copied or flattened from the origins below by `prepare_source_data.py` (maintainer script, sha256 `184bde94129477ace8ced69697d50c083ca1e7d3992694a2852e3384740bec3c`, kept in the work area beside the repository because it names lab paths; run on Slurm with the repository environment). Two tables were copied from other units' source_data in this repository.
 
 ## Panels

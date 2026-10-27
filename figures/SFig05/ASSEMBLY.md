@@ -42,3 +42,9 @@ edited by hand. `FINAL` is defined in `PROVENANCE.md`.
 The repository renders are pixel-identical to both PNGs (`checks/SFig05_v30.json`,
 `checks/SFig05_continued_v30.json`); the repository PDFs differ from the v30 PDFs only in
 metadata and rasterise to identical pixels at 300 dpi.
+
+## v35 label change
+
+Drawn cohort codes replaced by manuscript names in a-c (`COHORT_LABEL`: CAPSCAN -> CapScan, HSTOOL -> Healthy stool; CAMPI, PREDICT unchanged); values and layout unchanged; continuation page unchanged. Expected render replaced: `expected/SFig05_v35.png` sha256 a39777df3a828e0cea6ec6665bb021177239114b4f38f481bc557f6be2fe61c1, `expected/SFig05_v35.pdf` sha256 5650d2bd2bc315c9460c91baa44bccaf47cfbd472bcc640f6f0e5cab7932151b. A control build of the unchanged code reproduced the previous expected PNG byte for byte.
+
+Continuation page (v35): tick labels print the length window and seed as integers ("5–8 aa", "20260907"; were "5.0–8.0 aa", "20260907.0" from float table columns). Expected render replaced: `expected/SFig05_continued_v35.png` sha256 55f53f5565029de0ca4785b512987c4fc4ee5d189ad8651ec5f500210e632d50, `expected/SFig05_continued_v35.pdf` sha256 7fd6836444455e3e6473b96c8d1e2ef8e1031f3a294395fff4839ce829cd8a1a. A control build of the previous code reproduced the previous expected PNG byte for byte.

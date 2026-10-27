@@ -25,3 +25,9 @@
 
 - UNTRACED: the v28d quote of NUMBERS.tsv rows 21 (710), 22 (233,497,702), 80 (72), 109 (555,987), 110 (452,255), 119 (15), 120 (331), 125 (One), 127 (0.0473), 133 (twelve), 134 (twelve), 135 (fifteen), 163 (33), 164 (36), 181 (three), 222 (9.4%), 223 (42.4%), 224 (272), 225 (296), 226 (281), 227 (282) was not located in the v30 text (`visible_v30f.txt`); the wording or the value changed or the sentence was removed. v30_status NOT_IN_V30; the v28d columns are unchanged.
 - MISMATCH: NUMBERS.tsv row 115: v30 prints 347 (paragraph 387) but the code recomputes 331 (v28d status MATCH).
+
+## v33 sync (2026-10-07)
+
+- RESOLVED: the final v33 text prints "at most 1.4 points" (recomputed 1.41 at 295 acquisitions); NUMBERS row 199 is MATCH.
+- UNTRACED: v33 paragraph 325 prints 295-acquisition PEP-gate values (84.7% retention in CapScan; cross-fitted intestinal-fluid gain 26.2% to 34.7%; CapScan 5-50 gains 49.3% to 59.9%, 10 acquisitions decreased). Their tables are in `source_data/supplementary_methods_6_7/confidence_ordinary_summary.tsv` and `crossfit_pep_summary*.tsv` (`pipelines/capscan_mg_benchmark_295`, phase 3 item 4), but no NUMBERS row covers them (no notebook recomputes the PEP summaries).
+- MISMATCH: the final v33 text says "for 18 distinct settings"; the code counts 19 settings (the nine-residue, top-30% setting appears in both series). The 19 arms are 18 distinct settings, so the text is correct; the NUMBERS row stays v33 OPEN because the code returns 19 (see the AUTHOR item on line 679 in SFig02).

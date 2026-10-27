@@ -8,7 +8,7 @@ b  LFQ intensity removed when FastaLake-only peptide evidence is dropped
 c  KEGG orthologs (KOs) losing all support
 d  Bray-Curtis distance between normalized all-evidence and shared-only KO profiles
    (b-d: ``source_data/SFig08/clinical_fixed_dictionary_ablation.tsv``, 296 PREDICT and
-   282 CapScan acquisitions)
+   295 CapScan acquisitions)
 
 The original producer drew a-d as one matplotlib figure (block "Clinical comparator scope"
 of ``build_revision.py``) and a second script removed the figure title from the PDF and
@@ -67,7 +67,7 @@ ARMS = {"FL_cohortMG": "full FastaLake including cohort metagenomes",
         "MG_own_curated": "curated specimen MG"}
 #: Expected number of rows per arm and per cohort (legend, v28d line 441).
 N_PREDICT = 296
-N_CAPSCAN = 282
+N_CAPSCAN = 295
 #: Spelled-out counts, to compare with numbers the legend prints as words.
 NUMBER_WORDS = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five"}
 
@@ -110,7 +110,7 @@ def check_tables(counts, abl):
         abl.fraction_intensity_removed, abl.FL_only_LFQ_intensity / abl.all_LFQ_intensity))
     out["ablation_KO_fraction"] = bool(np.allclose(
         abl.KO_support_lost_percent, 100 * (abl.all_KOs - abl.shared_KOs) / abl.all_KOs))
-    # Roster: four arms on the same 296 acquisitions; 296 PREDICT and 282 CapScan rows.
+    # Roster: four arms on the same 296 acquisitions; 296 PREDICT and 295 CapScan rows.
     per_arm = counts.groupby("arm")["sample"].agg(["size", "nunique"])
     out["four_arms"] = sorted(per_arm.index) == sorted(ARMS)
     out["296_per_arm"] = bool((per_arm["size"] == N_PREDICT).all() and (per_arm["nunique"] == N_PREDICT).all())
@@ -176,7 +176,7 @@ def _panel_ablation(ax, abl, i):
 
 
 def panel_b(ax, abl):
-    """Panel b: LFQ intensity removed (%) per acquisition, by cohort (CapScan 282, PREDICT 296).
+    """Panel b: LFQ intensity removed (%) per acquisition, by cohort (CapScan 295, PREDICT 296).
 
     Parameters
     ----------
@@ -353,7 +353,7 @@ def stat_a_n_arms(counts):
 def stat_bcd_medians(abl):
     """Per-cohort medians of the three ablation endpoints (unit: acquisition).
 
-    n = 296 PREDICT and 282 CapScan acquisitions. Medians are those drawn as bars in b-d;
+    n = 296 PREDICT and 295 CapScan acquisitions. Medians are those drawn as bars in b-d;
     the manuscript prints none of them.
 
     Returns
@@ -383,6 +383,11 @@ V30_W_MM, V30_H_MM = 160.0, 134.0   # v30 placed size (v29 docx extent 160 x 146
 V30_TICK_PT, V30_LAB_PT = 6.5, 7.0  # type sizes (pt) at placed size
 V30_DOT_S, V30_DOT_A = 9, 0.6       # dot size (pt^2) and alpha
 ARM_COLOUR = {"FL_cohortMG": fl.FL, "FL_public": fl.FL, "MG": fl.METAG, "MG_own_curated": fl.METAG}  # colours by meaning (main Fig. 4)
+#: v35: drawn arm names, short forms of the legend names in ``ARMS`` (order unchanged: groupby, alphabetical).
+ARM_TICK = {"FL_cohortMG": "FastaLake +\ncohort MG", "FL_public": "Public\nFastaLake",
+            "MG": "Specimen\nMG", "MG_own_curated": "Curated\nspecimen MG"}
+#: producer tick label -> v35 drawn label, for the before/after tick check
+TICK_RENAME = {k.replace("_", "\n"): v for k, v in ARM_TICK.items()}
 COHORT_COLOUR = {"CapScan": fl.FL, "PREDICT": fl.FL}   # b-d: FastaLake-only evidence; cohort is the x axis
 
 
@@ -454,7 +459,7 @@ def v30_compare(before, after):
         ok("bars identical", b["bars"] == a["bars"])
         ok("texts identical", b["texts"] == a["texts"])
         ok("x and y limits identical", np.allclose(b["xlim"], a["xlim"], rtol=0, atol=1e-12) and np.allclose(b["ylim"], a["ylim"], rtol=0, atol=1e-12), f"x {a['xlim']} y {a['ylim']}")
-        ok("x ticks and labels identical", b["xticks"] == a["xticks"] and b["xticklabels"] == a["xticklabels"], str(a["xticklabels"]))
+        ok("x ticks and labels identical", b["xticks"] == a["xticks"] and [TICK_RENAME.get(t, t) for t in b["xticklabels"]] == a["xticklabels"], str(a["xticklabels"]))
         ok("y tick positions identical", np.allclose(b["yticks"], a["yticks"], rtol=0, atol=1e-12))
         ok("axis labels identical", (b["xlabel"], b["ylabel"]) == (a["xlabel"], a["ylabel"]), a["ylabel"])
     return rec
@@ -508,7 +513,7 @@ def render_v30(sd, out):
     axes = axes.ravel()
     fig.subplots_adjust(left=0.08, right=0.985, bottom=0.04, top=0.965, wspace=0.26, hspace=0.30)
     arms = [(k, g) for k, g in c9.groupby("arm")]
-    v30_dots(axes[0], [(k.replace("_", "\n"), g.peptides / 1000) for k, g in arms], "Accepted peptides (thousands)",
+    v30_dots(axes[0], [(ARM_TICK[k], g.peptides / 1000) for k, g in arms], "Accepted peptides (thousands)",
              [ARM_COLOUR[k] for k, _ in arms])
     for i, ax in enumerate(axes[1:]):
         col, label = ABLATION_COLUMNS[i]

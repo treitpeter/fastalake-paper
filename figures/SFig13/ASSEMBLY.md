@@ -67,3 +67,7 @@ differing pixels; needs `FASTALAKE_FONT_DIR`).
 Composite PDF it was rasterised from: `expected/SFig13_v30.pdf` (copy of
 `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/v30/figures_style/SFig13/SupplementaryFigure13.pdf`), sha256 `6b650c4281252cb75b1c234c70917f49af0d9d90c775b41248f107152ad5daa6`. The repository PDF differs from it only
 in metadata bytes; its 300 dpi rasterisation is the PNG above.
+
+## v35 label change
+
+Panels g,h legend entries renamed to the route names of main Fig. 6 (`V30_ROUTE_LAB`): "PREDICT: de novo top 30%" -> "PREDICT: de novo (top 30%)", "PREDICT: unspecific Sage; both q gates" -> "PREDICT: Sage non-specific". Expected render replaced: `expected/SFig13_v35.png` sha256 555b9682fd7d24546dea068fb99e003f138a66e93182d1150840ec0f6ef4a9bd, `expected/SFig13_v35.pdf` sha256 fb983c742ea36265aed166c2fb518ea2ce20d679be6883de1c7feefec17064ae. A control build of the unchanged code reproduced the previous expected PNG byte for byte.

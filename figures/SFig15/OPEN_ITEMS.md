@@ -14,3 +14,7 @@
 - AUTHOR: the task records originally carried raw acquisition file names in `sample`; this repository ships a pseudonymous `acquisition` id instead (prepare_source_data.py:pseudonymise_records). Decide whether the deposited raw-file names may be shipped, which would let a reader link each task to its raw file.
 - shared requests: this unit reads `source_data/Fig1/acquisition_sizes_726.tsv` (owned by Fig1) and checks its sha256 (panels.SIZES_SHA256); the file must not be renamed or changed.
 - TEXT-GAP: v30f (Results, line tagged 103) no longer prints the per-acquisition selection (1-3 min) and Sage (<1 min) times of v28d line 193; their NUMBERS.tsv rows were removed. `stat_selection_per_acquisition` and `stat_sage_max` still compute them (notebook, Checks and numbers).
+
+## v33 sync (2026-10-07)
+
+- UNTRACED: v33 (2026-10-07) prints the node memory (512 GB) again; it is a hardware fact, not computed (NUMBERS row 6, v33 OPEN).

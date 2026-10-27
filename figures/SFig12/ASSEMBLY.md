@@ -31,3 +31,7 @@ sha256 548d5790055d8754f15f15d050ef4520802abe2f32000968e0e84ac9f910681b.
 The notebook repeats step 1 from `source_data/`; PNG and PDF (at 300 dpi) are pixel-identical,
 0 differing pixels (`checks/SFig12_v30.json`, `checks/SFig12_v30_pdf.json`), and the plotted
 summary is byte-identical.
+
+## v35 label change
+
+Panels b and e: internal series names replaced by the series names of main Fig. 3 (`SERIES_LABEL`; Fig3/panels.py DESIGNS/DESIGN_LABELS): Interindividual -> Inter-individual, Intra -> Intra-individual, OnePiece -> Spatial sampling, TechnicalReplicates -> Technical replicates, WorkflowReplicates -> Workflow replicates. Panel e ticks read "<series> (primary)" / "<series> (well resolved)". Drawn order and plotted summary unchanged. Expected render replaced: `expected/SFig12_v35.png` sha256 4888ee3ca2b5be196ce4ba145eed05a8e9c2f739ea56a7049b56138ec60b1564, `expected/SFig12_v35.pdf` sha256 f2aa7f7342c489a4f1d41b463981f0dc53eaf93fdf69a70e95de7da9b45691e0. A control build of the unchanged code reproduced the previous expected PNG byte for byte.

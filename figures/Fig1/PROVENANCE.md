@@ -8,7 +8,7 @@
 
 | panel | producer script (LAB_ROOT/...) | producer output (LAB_ROOT/...) | sha256 of producer output | Slurm job id(s) | interpreter and key package versions |
 |---|---|---|---|---|---|
-| a (v30) | `FINAL/v29/figures/Fig1_v2/build_fig1a_funnel.py` (sha256 `de4b12164674b5eddb6e28f4f55ed4a7373b04d086fefa7d13b754c36e8abee0`), ported as `artwork/build_fig1a_funnel.py` (sha256 `60d054a8ef50554a7f98bcc506ff69188f1654cf66b1c25766f30c0a66cfd20f`, paths only); inputs `FINAL/fig1a_perfecter/Figure1.pdf` (8bc5a81b...), `FINAL/fig_v27/Figure1.pdf` (432699de...), `FINAL/v29/figures/Fig1/Figure1.pdf` (cb28f0d2...) | `FINAL/v29/figures/Fig1_v2/Figure1.pdf` and `Figure1.png` (receipt `_build_receipt.json`, sha256 `5eaf0fe166cb117fc9653e8c155f717eb7a9a10e1b4d9c191c67839e8f99b3f6`) | PDF `0f686c53a29d7c360ace01aceae7c2918d8aed450f40311c4016c35e4e6cc23f`; PNG `b1481ff689fb4439824ec5ec4f567b03e2d14860fa2445e6dfbabb94cd4fcb95` | producer: not recorded (CHANGES.md: run on Slurm); repository rebuild: 6075277 (notebook) | producer: miniconda python, PyMuPDF; rebuild: CPython 3.12.4, PyMuPDF 1.27.1 |
+| a (v33) | `FINAL/v30/figures/Fig1_v3/build_fig1a_funnel.py` as adapted in `LAB_ROOT/CODEX_TASKS_2026-10-07_v30/out/cc_comments_v30mm2_PeTr/fig1a/build/` (sha256 `faac9ca93ef1e37973b79e4252605925e9f7de5ecec6dbb25956978a3401213a`), ported as `artwork/build_fig1a_funnel.py` (sha256 `9f63a756d40739981a4ebb5183be47201b28f4c4b53effd63cc92ed8ec774da6`). v30 was | a (v30) | `FINAL/v29/figures/Fig1_v2/build_fig1a_funnel.py` (sha256 `de4b12164674b5eddb6e28f4f55ed4a7373b04d086fefa7d13b754c36e8abee0`), ported as `artwork/build_fig1a_funnel.py` (sha256 `60d054a8ef50554a7f98bcc506ff69188f1654cf66b1c25766f30c0a66cfd20f`, paths only); inputs `FINAL/fig1a_perfecter/Figure1.pdf` (8bc5a81b...), `FINAL/fig_v27/Figure1.pdf` (432699de...), `FINAL/v29/figures/Fig1/Figure1.pdf` (cb28f0d2...) | `FINAL/v29/figures/Fig1_v2/Figure1.pdf` and `Figure1.png` (receipt `_build_receipt.json`, sha256 `5eaf0fe166cb117fc9653e8c155f717eb7a9a10e1b4d9c191c67839e8f99b3f6`) | PDF `0f686c53a29d7c360ace01aceae7c2918d8aed450f40311c4016c35e4e6cc23f`; PNG `b1481ff689fb4439824ec5ec4f567b03e2d14860fa2445e6dfbabb94cd4fcb95` | producer: not recorded (CHANGES.md: run on Slurm); repository rebuild: 6075277 (notebook) | producer: miniconda python, PyMuPDF; rebuild: CPython 3.12.4, PyMuPDF 1.27.1 |
 | a (v28f base) | chain of edit scripts ending in `FINAL/fig1a_perfecter/build_fig1a.py` (sha256 `26714201117a52ccf6ddc0c0aeec77a45b7df110dbaab61a02c18f305a13ccfa`); see ASSEMBLY.md | `FINAL/fig1a_perfecter/Figure1.pdf` (panel a = CropBox 0, 0, 518.74, 372 pt) | `8bc5a81b489f1ab5fb7ec23f695c0cc60e92d26346faff4255973acb952c5128` | not recorded (CHANGES.md: run with miniconda python) | PyMuPDF 1.27 |
 | b | `FINAL/fig1bd_n15/code/build_panels_bd_n15.py` mode `n15` (sha256 `45c06b21f0252e53feb057d74b3d2d92b5665628b97464c1e7ddb4ef108b73c5`), style `LAB_ROOT/figure_style/fl_style.py` (sha256 `58b64c343f095cbace09c3e9766e3e78060c1c8cf522b075c4047300322164c3`) | `FINAL/fig1bd_n15/panel_b.pdf` | `1fcc8730a6f64fb6320ad1027f10e08256bfdd6de11a2f22ea0d2e302a3e916c` | 6064327 | anaconda 2023.03, CPython 3.10.9, matplotlib 3.10.8, numpy 1.26.4, pandas 2.3.3 |
 | c | `FAR/build_FAR12.py` (sha256 `757b492fe3224100eb4319dea63e6032384ea767079e52834cfe66513dd1e8af`), same style module | `FAR/FAR12_figure1c_applied/Figure1c.pdf` | `ecff68781c968ced8e2ef9439f2226383fb7d114a44e774bfc900a1349289671` | not recorded | not recorded |
@@ -26,8 +26,8 @@ Regeneration here: `panels.py` with CPython 3.12.4, matplotlib 3.10.7, numpy 2.2
 | panel_e | build/Fig1/panel_e.png (crop of the regenerated row) | expected/panel_e.png (same crop of the v10 row) | IDENTICAL, 0 differing pixels |
 | panel_e_expected_derivation | crop re-derived from expected/panels_bcde_row_v10.pdf | expected/panel_e.png | IDENTICAL |
 | Fig1_v28f | artwork/Figure1_v28f.pdf at 300 dpi | expected/Fig1_v28f.png | IDENTICAL |
-| Fig1_v30 | artwork/Figure1_v30.pdf at 300 dpi | expected/Fig1_v30.png | IDENTICAL, 0 differing pixels |
-| Fig1_v30_rebuild | build/Fig1/funnel/Figure1.pdf (artwork/build_fig1a_funnel.py rerun, Slurm job 6075277) | expected/Fig1_v30.png | IDENTICAL, 0 differing pixels; the rebuilt 300 dpi PNG is also byte-identical to the producer PNG (b1481ff6...) |
+| Fig1_v33 | artwork/Figure1_v33.pdf at 300 dpi | expected/Fig1_v33.png | IDENTICAL, 0 differing pixels |
+| Fig1_v33_rebuild | build/Fig1/funnel/Figure1.pdf (artwork/build_fig1a_funnel.py rerun, Slurm job 6093613) | expected/Fig1_v33.png | IDENTICAL, 0 differing pixels (the v30 rebuild, job 6075277, matched the v30 figure the same way) |
 
 The panel checks are pixel-exact only with the producers' style values, which `panels.py`
 applies (see its module comment and `OPEN_ITEMS.md`). With `style/fl_style.py` alone,
@@ -62,10 +62,11 @@ or for Results lines 51 to 65; nothing to reconcile there.
 | file | origin (LAB_ROOT/...) | sha256 | note |
 |---|---|---|---|
 | artwork/Figure1_v30.pdf | `FINAL/v29/figures/Fig1_v2/Figure1.pdf` | `0f686c53a29d7c360ace01aceae7c2918d8aed450f40311c4016c35e4e6cc23f` | byte-identical copy; the v30 manuscript figure |
-| expected/Fig1_v30.png | `FINAL/v29/figures/Fig1_v2/Figure1.png` | `b1481ff689fb4439824ec5ec4f567b03e2d14860fa2445e6dfbabb94cd4fcb95` | byte-identical copy |
+| artwork/Figure1_v33.pdf | `LAB_ROOT/CODEX_TASKS_2026-10-07_v30/out/cc_comments_v30mm2_PeTr/fig1a/build/Figure1.pdf` | `696cdc045cd159a36d0f91a5cb194f89f72580209c2c29e5f7ca12de383088c5` | byte-identical copy; the v33 manuscript figure |
+| expected/Fig1_v33.png | same directory, `Figure1.png` (= image1.png of FastaLake_v33.docx) | `763ca611bb227a44a33225ef3930a233a8a0c18045294aec00930d9b183c1a6f` | byte-identical copy |
 | artwork/Figure1_v27_art_source.pdf | `FINAL/fig_v27/Figure1.pdf` | `432699dea4b0f12142de3ef76c96e9adffa8bb26b3ac7b7debaf336a66e6140d` | build input (clipped icon and peptide bars) |
 | artwork/Figure1_v29_intermediate.pdf | `FINAL/v29/figures/Fig1/Figure1.pdf` | `cb28f0d27cfcae47f432e7357aa0ad5f9b5b2fee6daed1774f60efff8d57a968` | build input (outside-column assertion only) |
-| artwork/panel_a.pdf | crop of artwork/Figure1_v30.pdf, CropBox (0, 0, 518.74, 372) pt, PyMuPDF `set_cropbox` | `26dd41a212b8e277cdf7666ab770afa0c27f107a22b89c742522bfc61ef6ae7c` | replaces the v28f crop (92a13d81...) |
+| artwork/panel_a.pdf | crop of artwork/Figure1_v33.pdf, CropBox (0, 0, 518.74, 372) pt, PyMuPDF `set_cropbox` | `160223603bb05de0935267144fd0b9645fd5ae9b381c7dc2c417991ab9860094` | replaces the v28f crop (92a13d81...) |
 
 ## Source data
 

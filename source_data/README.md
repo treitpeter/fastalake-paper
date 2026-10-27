@@ -16,6 +16,18 @@ path; it is never duplicated.
 Tables are tab-separated UTF-8 with one header row, no index column and no comment lines.
 Missing values are empty fields. Each file is at most 20 MB.
 
+## CapScan matched benchmark at 295 acquisitions (v33)
+
+In v33 the CapScan public-sequence FastaLake versus matched-metagenome benchmark covers 295
+acquisitions (263 specimens, 15 participants) instead of 282: the 13 participant-15
+intestinal-fluid acquisitions whose specimens have a public shotgun assembly were added
+(`pipelines/capscan_mg_benchmark_295`). In every CapScan-matched table the 282 existing rows
+are unchanged and 13 rows are appended, except `SFig08/clinical_fixed_dictionary_ablation.tsv`,
+whose CapScan rows are recomputed because the matched study dictionary depends on the roster,
+and `supplementary_methods_1_5/header_audit.tsv`, whose CapScan rows are the 295-acquisition
+audit. File names that contain `282` (`SFig09/a08_benchmark282_*.tsv`) are kept so that the
+code and receipts that name them stay valid; they now hold 295 rows.
+
 ## Data dictionary
 
 Each `source_data/<Unit>/README.md` describes every file in that directory:

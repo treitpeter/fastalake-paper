@@ -8,3 +8,7 @@
 - AUTHOR: PREDICT and CapScan acquisitions are identified by their LC-MS/MS file names in the source tables (as in the Source Data package). The PREDICT run number in a name links to a patient only through a controlled file; confirm that releasing the file names is acceptable (source_data/SFig08/README.md).
 - PIPELINE: predict_curated_mg_comparator: not ported to pipelines/; the curated specimen MG searches (search.py, Sage 0.14.6), the collector (collect_parallel.py) and the 9-50 recount (`len950/SFig08/build/recount_curation.py`) are referenced in UPSTREAM.json only (UPSTREAM.json).
 - PIPELINE: fixed_database_evidence_ablation: not ported to pipelines/; PREDICT (evidence_ablation/code/prepare.py, partition.py) and CapScan (H09 h09_evidence_ablation.py) partition code and plot_corrected_ablation.py are referenced in UPSTREAM.json only.
+
+## v33 sync (2026-10-07)
+
+- RESOLVED: expected renders are now `expected/SFig08_v33.{png,pdf}` = the 295 rebuild embedded in v33 (`final/figs295`, Supplementary Figure 8).

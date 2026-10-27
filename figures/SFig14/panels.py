@@ -926,8 +926,9 @@ def figure_v30(sd, out_stem, ref_stem):
                                     f'{series}{x.ordinal}' + ('$^{2+}$' if two else ''), rotation=90,
                                     fontsize=V30_ION2_PT if two else V30_ION_PT, ha='center', va='bottom', color=INK)
                         ion_texts.append(t)
-            # v29 panel title content (case ID, peptide, origin, boundary) kept as x-axis label text
-            ax.set(xlabel='m/z; ' + cid + ' ' + r.peptide + ' (' + r.origin + ', ' + r.side + ' boundary)',
+            # v29 panel title content (case ID, peptide, origin, boundary) kept as x-axis label text;
+            # v35: case IDs HIS_001-HIS_004 drawn as 'Case 1'-'Case 4' (panel order a-d)
+            ax.set(xlabel=f'm/z; Case {i + 1} ' + r.peptide + ' (' + r.origin + ', ' + r.side + ' boundary)',
                    ylabel='Relative intensity (%)', ylim=YLIM)
             ax.legend(frameon=False, loc='upper right', fontsize=7)
             fl.panel(ax, 'abcd'[i])

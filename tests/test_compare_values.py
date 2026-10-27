@@ -2,7 +2,7 @@
 
 import unittest
 
-from tools.compare_values import same_numeric_value
+from tools.compare_values import same_numeric_value, same_prefixed_numeric_value
 
 
 class NumericComparisonTests(unittest.TestCase):
@@ -24,6 +24,17 @@ class NumericComparisonTests(unittest.TestCase):
     def test_result_labels_are_exact(self):
         self.assertTrue(same_numeric_value("NA", "NA"))
         self.assertFalse(same_numeric_value("NA", "not measured"))
+
+    def test_mantel_cpu_roundoff_preserves_the_label(self):
+        self.assertTrue(same_prefixed_numeric_value(
+            "Mantel rho 0.46298900555207534", "Mantel rho 0.4629890055520753", "Mantel rho "))
+        self.assertFalse(same_prefixed_numeric_value(
+            "Pearson r 0.4629890055520753", "Mantel rho 0.4629890055520753", "Mantel rho "))
+
+    def test_mantel_changed_result_and_invalid_suffix_fail(self):
+        for value in ("0.463", "nan", "inf", "NA", "0.4629890055520753 (n=77)"):
+            self.assertFalse(same_prefixed_numeric_value(
+                "Mantel rho " + value, "Mantel rho 0.4629890055520753", "Mantel rho "))
 
 
 if __name__ == "__main__":

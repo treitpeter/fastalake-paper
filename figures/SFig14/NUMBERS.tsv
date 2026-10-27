@@ -1,2 +1,2 @@
-v28d_line	quote	printed_value	recomputed_value	code	source_data	status
-465	Four selected PREDICT spectra from the non-specific search	Four	Four	figures/SFig14/panels.py:stat_n_cases	source_data/SFig14/PREDICT_spectrum_case_review.tsv	MATCH
+v28d_line	quote	printed_value	recomputed_value	code	source_data	status	v36_para	v36_quote	v36_printed_value	v36_status	v42_para	v42_quote	v42_printed_value	v42_status	v42_recomputed_value	v42_code	v42_source_data
+465	Four selected PREDICT spectra from the non-specific search	Four	Four	figures/SFig14/panels.py:stat_n_cases	source_data/SFig14/PREDICT_spectrum_case_review.tsv	MATCH	256	Four selected PREDICT spectra from the non-specific search	Four	MATCH	260	Four selected PREDICT spectra from the non-specific search	Four	MATCH	Four	figures/SFig14/panels.py:stat_n_cases	source_data/SFig14/PREDICT_spectrum_case_review.tsv

@@ -57,3 +57,32 @@ Per-acquisition GMSC-only peptide lists (`B_gmsc_only/<cohort>/`): digest = sha2
 | LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/discussion_counts/B_gmsc_only/CAPSCAN | 347 | 5a4b2af5fdeb230695670489acdfe1fb65b0b2898193987f3e5c6997a8dea75d |
 | LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/discussion_counts/B_gmsc_only/HSTOOL | 58 | 6361b9a077fdb14c3fc2cbc186ccd8eb7ecbfca154b680592448db8784a7328d |
 | LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/discussion_counts/B_gmsc_only/PREDICT | 306 | 4a151eaf367be0da818f3e223d3fc66b56f043afb945e7c6a5a467a595425c60 |
+
+## CapScan 295 re-run (7 October 2026)
+
+Code: `run295/`. Producer location: LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/discussion_counts_295/.
+
+| stage | Slurm job id | state |
+|---|---|---|
+| manifest build and roster-gate negative controls | 6087486 | COMPLETED |
+| 282 control, accumulation | 6087487 | COMPLETED |
+| 282 control, candidates | 6087488 | COMPLETED |
+| producer negative control, whole-arm swap (passed the worker; see COUNTS.md) | 6087489 | COMPLETED |
+| 295 accumulation | 6087490 | COMPLETED |
+| 295 candidates | 6087491 | COMPLETED |
+| 282 control, discussion_counts A and E1 | 6087492 | COMPLETED |
+| 295 discussion_counts A and E1 | 6087493 | COMPLETED |
+| collect and checks | 6087499 | COMPLETED |
+| producer negative control, two-row swap | 6087505 | COMPLETED (worker.py set assertion failed inside the job, as required) |
+
+| file (relative to final/discussion_counts_295/) | sha256 |
+|---|---|
+| COLLECT.json | 9c7f2fb4749216c4b331c1c9d96b134057146be54fa7682e52231e789f616eb5 |
+| MANIFEST295.json | 98b7631b5ca324e39752e0e2c1492e96a77c41b22aeb3881f649332fd6b50460 |
+| out_r295/A_RESULT.json | 8e04fb4d0974a2ce535dfe870d942b228ad5cc9ed58ca0565049aed7dbbf9a1e |
+| out_r295/A_accumulation_readout.tsv | d32cfdcc2d48e5b85bca1b9b2bcc1b6e1365f539700128f36e9dbc29d1587385 |
+| out_r295/A_per_specimen_ids.tsv | 254286c68cbbd4ffee8351a26caee6d63f86a6ca34ba03546105b3ff2b8c92c9 |
+| out_r295/A_per_specimen_medians.tsv | 005224a6dbb30468a221a166d482227bbda8fae25828bd5fc69f3a1e71e0cd9a |
+| out_r295/E1_RESULT.json | 18b9a82e49066cd3bdf338df428687299025f35c39bbec5950d2ab44a27cc4bd |
+| out_r295/E1_per_acquisition.tsv | 052e688426fca5eb21e2de79625c99917e4c55b1833e934a46ec7f73dc43587a |
+| out_r295/E1_summary.tsv | ba4db0d52273969cd45ebc4125ac95717d3a3c42eee5dc8fbb59a8665bb9a4e6 |

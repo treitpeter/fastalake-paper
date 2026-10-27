@@ -908,8 +908,8 @@ V30_SIZE_MM = (160, 243.4)                 # placed size in the v29b docx
 V30_HEIGHT_RATIOS = [1.1, 1.1, 1.1, .95]
 V30_W_PAD, V30_H_PAD, V30_HSPACE, V30_WSPACE = 2 / 72, 4 / 72, 0.03, 0.04   # constrained layout
 V30_REGION_LABEL = {'proximal': 'Regions 1–2', 'distal': 'Regions 3–4'}     # v29 relabel; stool -> "Stool"
-V30_ROUTE_LAB = {'denovo_top30': 'PREDICT: de novo top 30%',
-                 'sage_unspecific_bothq': 'PREDICT: unspecific Sage;\nboth q gates'}   # v29 titles, verbatim
+V30_ROUTE_LAB = {'denovo_top30': 'PREDICT: de novo (top 30%)',
+                 'sage_unspecific_bothq': 'PREDICT: Sage non-specific'}   # v35: route names as in Fig. 6 (v29: 'de novo top 30%', 'unspecific Sage; both q gates')
 
 
 def _v30_dots(ax, groups, ylabel, col, ink, percent=False):

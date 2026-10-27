@@ -1,0 +1,11 @@
+b_mg_same_spectrum 6075257
+d_mg_odd 6075258
+e_manifest 6075259
+e_second_engine_mg 6075260
+c_crossfit 6075396
+c_crossfit_retry_if_missing(36G) 6075405
+6075435
+6075469
+6075490
+c_crossfit OOM at 18G: tasks 4 (…1803) and 7 (…1807) -> rerun by 6075405 at 36G, COMPLETED (MaxRSS 17.5 GB); all 13 COMPLETE
+phase2: per_acq13 6075435; baseline notebooks 6075469; baseline harvest 6075490; srun harvests 6075506/6075511/6075517/6076815/6076843; extra (mixed model, summaries) 6076856

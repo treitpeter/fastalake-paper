@@ -164,7 +164,22 @@ Tab-separated, this header exactly:
 | `recomputed_value` | full-precision value printed by the notebook (no rounding) |
 | `code` | `figures/<U>/panels.py:stat_b_fdp` |
 | `source_data` | `source_data/<U>/<table>.tsv` |
-| `status` | `MATCH`, `v28f_change:<new printed value>`, or `OPEN` |
+| `status` | `MATCH`, `v28f_change:<new printed value>`, `OPEN`, or `SUPERSEDED_V33` (the v28d printed value was replaced in v33 by a value on a changed roster, the CapScan matched benchmark at 295 acquisitions; checked through the reference-text columns) |
+
+Every NUMBERS.tsv also carries four reference-text columns after these seven:
+
+    v36_para	v36_quote	v36_printed_value	v36_status
+
+`v36_para` is the 0-based paragraph index of the v36 manuscript text (`visible_v36.txt`, one
+paragraph per line as `<index><TAB><text>`, made from `FastaLake_v36.docx` with
+`tools/visible_text.py`), `v36_quote` the v36 wording around the number,
+`v36_printed_value` the number as printed in v36, and `v36_status` one of `MATCH`, `OPEN`,
+`NOT_IN_V36`, `REMOVED_V30`, `REMOVED_V33` or `REMOVED_V36` (for the REMOVED statuses `v36_quote`
+gives the reason). Until the v33 sync the same columns were `v30_*`, anchored to
+`visible_v30f.txt`; until the v36 sync they were `v33_*`, anchored to `visible_v33.txt` (v33 and
+v36 have the same 493 paragraphs in the same order, so a "v33 para" index elsewhere in the
+repository is also the v36 index). STATS.tsv files of tables and text_statistics carry
+`v36_para` in the same way.
 
 One row per printed number, including numbers in figure legends. `tools/check_numbers.py`
 checks each row; read its docstring for the agreement rule. `OPEN` means the number could

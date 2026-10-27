@@ -1,0 +1,42 @@
+{
+  "endpoint": "G5c",
+  "n_acquisitions": 591,
+  "n_predict": 296,
+  "n_capscan": 295,
+  "cache_roster": "CapScan fold caches pooled over 347 acquisitions for all 295",
+  "gate_new_295": {
+    "n_rows": 295,
+    "cache_dirs": [
+      "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/caches/CAPSCAN/fold0",
+      "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/caches/CAPSCAN/fold1",
+      "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/caches/CAPSCAN/fold2",
+      "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/caches/CAPSCAN/fold3",
+      "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/caches/CAPSCAN/fold4",
+      "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/caches/CAPSCAN/fold5",
+      "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/caches/CAPSCAN/fold6",
+      "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/caches/CAPSCAN/fold7",
+      "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/caches/CAPSCAN/fold8",
+      "LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/final/public347/crossfit_capscan347/caches/CAPSCAN/fold9"
+    ],
+    "cache_fasta_sha256": {
+      "0": "7913c45c56cd08e5eb768989d837f8c1547617d78e4ca824e3bcbccec1ce9e57",
+      "1": "4035fa37bdfdd2eb5732aa7f43f1bca9a92372699802b8709768126438d84346",
+      "2": "a9fbcdc8f9a4af9ea26ed2141d35e678eb4912cbb94f3de109f7a9a9a74e1276",
+      "3": "8d08f4e442f2a3121ce9409a93d8e4af4ef4cf43d02249785b12493060641f56",
+      "4": "535f27be6e3afa1c30ed6ed9846a63a919e56848bb32cccd3bb87a4dce837766",
+      "5": "2a1e4152c01fa38477a3b6369116b94eeb6d5f75a865913b51241642836230f8",
+      "6": "e176c7c6158dff9723cc491db224067b60d60ad259d81a2e93762a79a4915bd9",
+      "7": "275237b624ad6bff89e810a14462b891e8ee8371e5bedf856f8fcd2199932566",
+      "8": "ac0225c6cffc966fdc3d9c1c1140cf317043550592891ef18d6f6f7429c71c8f",
+      "9": "ee358b372e42779a6730a5db353fcf6fcb3c74e327266eed9e002c031848030d"
+    }
+  },
+  "controls": {
+    "old_578_equals_iteration4": true,
+    "predict_public347_equals_production": true,
+    "old13_reproduce_from_mg295_COMPLETE": true,
+    "public347_282_reproduce_from_COMPLETE": true,
+    "non_cache_columns_identical_282": true,
+    "old_summaries_reproduce_phase2_591": true
+  }
+}

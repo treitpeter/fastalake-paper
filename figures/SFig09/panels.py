@@ -60,10 +60,10 @@ STOOL = "stool"
 #: Symmetric-log threshold of the gain axis in panel a: "linear up to 50%" (v28d line 445).
 LINTHRESH = 50
 #: Expected roster sizes (v28d lines 129, 445).
-N_MATCHED_ACQUISITIONS = 282
-N_SPECIMENS = 250
-N_FLUID_ACQUISITIONS = 226
-EXPECTED_BIN_N = [76, 75, 75]
+N_MATCHED_ACQUISITIONS = 295
+N_SPECIMENS = 263
+N_FLUID_ACQUISITIONS = 239
+EXPECTED_BIN_N = [80, 79, 80]
 #: Regions in plotting order with the producer's colours and labels.
 REGION_COLORS = {"duodenum": "#2878a3", "jejunum": "#60a5bf", "ileum": "#8ba777",
                  "colon": "#df8f44", "stool": "#777777"}
@@ -521,9 +521,9 @@ def acquisitions_9_50(t):
     """
     acq = t['acq282']
     chk = check_counts_against_recount(t)
-    assert chk == dict(rows_joined=282, unmatched=0, fl_disagree=0, mg_disagree=0, region_disagree=0), chk
+    assert chk == dict(rows_joined=295, unmatched=0, fl_disagree=0, mg_disagree=0, region_disagree=0), chk
     m = acq.merge(t['a08_old'][['sample', 'n_fl_5', 'n_mg_5', 'n_fl_9', 'n_mg_9']], on='sample', validate='1:1')
-    assert len(m) == 282 and (m.n_fl_5 == m.FL_peptides).all() and (m.n_mg_5 == m.MG_peptides).all()
+    assert len(m) == 295 and (m.n_fl_5 == m.FL_peptides).all() and (m.n_mg_5 == m.MG_peptides).all()
     acq9 = m.assign(FL_peptides=m.n_fl_9, MG_peptides=m.n_mg_9).drop(columns=['n_fl_5', 'n_mg_5', 'n_fl_9', 'n_mg_9'])
     acq9['gain_percent'] = (100 * (acq9.FL_peptides / acq9.MG_peptides - 1)).round(3)
     return acq9

@@ -33,3 +33,11 @@ differs from it only in PDF metadata.
 
 `LAB_ROOT/.../` abbreviates
 `LAB_ROOT/review/v15_integration/jess_integration_2026-09-29/analysis_followup/manuscript_completion_2026-10-01/biology_refit/claude_review_2026-10-03/`.
+
+## v36 label change
+
+Panel d labels print the median paired gain 100 x (FL/MG - 1) per cohort (PREDICT +9.4%, CapScan +40.1%), the statistic the text reports, instead of the per-arm medians (`panels.py:panel_de`). Plotted-values table unchanged. Expected render replaced by the rebuild embedded in v36 (`LAB_ROOT/.../final/figs_v34_fig4b/sf6/SFig06.{png,pdf}`): `expected/SFig06_v36.png` sha256 e9c32339e5f0d46138d496205934487acc53fe7e41e75478f60a63e222b1aae4, `expected/SFig06_v36.pdf` sha256 3fae003aebaa46532671d7a809327b03d45b43c9cf389e7dea1fa24e736df659.
+
+## v38 label change
+
+Panels b and c tick labels "<n> runs" -> "n = <n>" (`LABELS_BC`; "<n> acquisitions" was tried and overlaps neighbouring labels at the placed size). Panel d keeps the v36 median paired change labels. Plotted values unchanged. Expected render replaced: `expected/SFig06_v38.png` sha256 467f7ca18fda57d5e580c619fa18888594c3641fb7bc2b5661c20f9e174096d9, `expected/SFig06_v38.pdf` sha256 1acefc7cd4c9c86aa1d5a74d2f534b9244036d9fd34603b217f54c972ed0aa84. A control build of the unchanged code reproduced the previous expected PNG (= `word/media/image14.png` of `FastaLake_v37.docx`) byte for byte; against it the v38 render differs in 9,296 pixels, all in the second tick-label line of b and c.

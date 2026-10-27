@@ -76,3 +76,12 @@ The text does state these settings, so they are not gaps: 10,000 participant-lev
 
 - The v28f 347-acquisition CapScan roster does not change any Fig. 4 value: the benchmark and cross-fit use the 282 acquisitions with a matched metagenome (participant 15 has metagenomes for stool only), and the 347-roster rerun (LAB_ROOT/.../final/public347/RESULTS.md section 3) reproduced the primary cross-fit and same-spectrum CapScan values exactly when run with the producer's code and random stream. Codex N0206 recomputed the same 347-roster run with its own bootstrap implementation and gets a different stool CI upper bound (−2.47); see the Monte Carlo note above.
 - PREDICT inputs: the repaired mzMLs were used for these searches (task statement); not re-checked here.
+
+## v33 sync (2026-10-07)
+
+- RESOLVED: `expected/panel_bc.pdf` is the 295-acquisition b,c page embedded in v33 (`final/figs295/Figure4/panel_bc_295.pdf`, byte-identical); the full v33 composite (`Figure4_295.{png,pdf}`) is held with the controlled inputs as `Fig4_expected/Fig4_v33.*` and `check_against_v30` compares with it when present.
+- RESOLVED: the v33 Fig. 4 (final docx, `final/figs_v33_labels/Figure4`) and Supplementary Fig. 10 carry the track label "Human-assigned LFQ share (%)" drawn by the code; the controlled package holds them as `Fig4_expected/Fig4_v33.*` and `SFig10_v33.*`.
+
+## v36 sync (2026-10-07)
+
+- RESOLVED: panel b labels now print the median paired change 100 x (FL/MG - 1) per stratum (e.g. -3.5% in PREDICT), the statistic the v36 text reports, instead of the per-arm medians (`panels.py:panel_bc`). `expected/panel_bc.pdf` is the rebuilt b,c page (`LAB_ROOT/.../final/figs_v34_fig4b/chain/panel_bc.pdf`, sha256 d5612bd9912a65c145fef755ce294b6e00858067386c8cf1306e777c7934a8b2). The full composite embedded in v36 (`.../figs_v34_fig4b/chain/step5_stars/Figure4.{png,pdf}`, PNG sha256 f7c0eb116c5a93087ec0b22e124db248017447d50846fa220f2e2102f81a1b1b, PDF sha256 822ab39ec8a8d87bab763d1738fc108082ff9f97463fa3490a4cf776bec15ebd) is held with the controlled inputs as `Fig4_expected/Fig4_v36.*`; `check_against_v30` prefers it.

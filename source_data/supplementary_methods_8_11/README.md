@@ -165,3 +165,13 @@ produced by: healthy_stool_study_grouping
 |---|---|---|
 | key | id | acquisitions; quantified protein groups under direct peptide assignment and under original grouping; eligible LFQ features; the KO refit's quantified features and positive acquisitions |
 | value | count | value recorded in the receipt |
+
+## Corrected own-stool distances
+
+`own_stool_distance_matrices_checked.tsv` is rebuilt from the corrected OG
+profiles used by Figure 5. The original matrix is retained separately.
+`text_statistics/supplementary_methods_8_11/prepare_checked_distances.py`
+checks the input hashes, reconstructs all 675 distances, and verifies the own
+and other-stool means against `source_data/Fig5/own_stool_participants.tsv`.
+The adjacent JSON records the input and output hashes. The current statistics
+use the checked matrix.

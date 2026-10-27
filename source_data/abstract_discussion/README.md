@@ -6,7 +6,7 @@ a table is never duplicated). The data dictionaries are in those directories' RE
 
 | table | sha256 | used for (v28d line) |
 |---|---|---|
-| source_data/Fig4/crossfit_per_acquisition.tsv | 5bcdbe883a9ddb41582de92d11c7ad3bc739fa272b71241fcc86244cd2b9b094 | cross-fitted gains, columns `FL_pooled_9`, `MG_pooled_9`, `cohort`, `sampling_site`, `participant_sort_rank` (35, 183) |
+| source_data/Fig4/crossfit_per_acquisition.tsv | 9672eafdba626af69782af5e4aa3a3f975e0d0a3ed8582b7013c5ffd1f2a5eb8 | cross-fitted gains, columns `FL_pooled_9`, `MG_pooled_9`, `cohort`, `sampling_site`, `participant_sort_rank` (35, 183) |
 | source_data/Fig1/acquisition_sizes_726.tsv | fd9ade3bb4ebd2ee6c129f69819b9697cf20abd7c10c77a12644bef25396e386 | database entry counts, `entries`; reservoir sizes, `reservoir_entries` (35, 181, 193) |
 | source_data/Fig1/human_reference.json | 64363c011e5b760663f7735ac0f4a7740d686d0c05af9e5e5e5098fd5af5648c | human reference entries, `entries` (35, 181) |
 | source_data/SFig15/compute_stage_summary.tsv | 37c1d94d821d5ba9defb5ff5c8495905ce93209a136952dec8b600b74816498f | lookup and Sage wall times, `wall_median_min` (193) |

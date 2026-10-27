@@ -1,6 +1,6 @@
 {
  "new": "build/Fig3/panel_bcde.pdf",
- "new_sha256": "e572e6de9e94b1aed594ac68102eefae1a2ac035b07dee6f257e2783e7546049",
+ "new_sha256": "088d009b6494cc65b94946cbff01c027438990acfbc488fd0ac6b7d57cb2ccdf",
  "expected": "figures/Fig3/expected/panel_bcde.pdf",
  "expected_sha256": "27247c89159e291d249d94db4663abc77b39bd944dddd15bda3c1c31c01e14e1",
  "dpi": 300,
